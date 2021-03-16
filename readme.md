@@ -1,0 +1,79 @@
+# freeCodeCamp project solutions
+
+This repo contains my final projects solutions for web-related cources I've done
+on [freeCodeCamp][fcc].
+
+> TODO: make header clickable and generate anchor links
+
+## JavaScript Algorithms and Data Structures
+
+- [Cource link][fcc_algo]
+- [Cert](https://www.freecodecamp.org/certification/letientai299/javascript-algorithms-and-data-structures)
+- Total time: 10h
+
+This is easy if since I already have
+[some experience with leetcode](https://github.com/letientai299/leetcode), just
+need to get a bit more familiar with data structure in JS. Thankfully, JS has
+strong support for functinal programming.
+
+## Responsive Web Design
+
+- [Course link][fcc_web]
+- Cert: TODO
+
+| Task                                                    | Site                           |
+| ------------------------------------------------------- | ------------------------------ |
+| [Build a Tribute Page][fcc_web_tribute]                 | [./web-tribute](./web-tribute) |
+| [Build a Survey Form][fcc_web_survey]                   | [./web-survey](./web-survey)   |
+| [Build a Product Landing Page][fcc_web_landing]         | [./](./)                       |
+| [Build a Technical Documentation Page][fcc_web_doc]     | [./](./)                       |
+| [Build a Personal Portfolio Webpage][fcc_web_portfolio] | [./](./)                       |
+
+Note
+
+> TODO
+
+## Data Visualization
+
+- [Course link][fcc_web]
+- Cert: TODO
+
+| Task                                                          | Site                 |
+| ------------------------------------------------------------- | -------------------- |
+| [Visualize Data with a Bar Char][fcc_d3_bar]                  | [./d3-bar](./d3-bar) |
+| [Visualize Data with a Scatterplot Graph][fcc_d3_scatterplot] | [./](./)             |
+| [Visualize Data with a Heat Map][fcc_d3_heat]                 | [./](./)             |
+| [Visualize Data with a Choropleth Map][fcc_d3_choropleth]     | [./](./)             |
+| [Visualize Data with a Treemap Diagram][fcc_d3_treemap]       | [./](./)             |
+
+Note:
+
+> TODO
+
+<!-- ref -->
+
+[fcc]: https://www.freecodecamp.org/
+[fcc_algo]:
+  https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/
+[fcc_web]: https://www.freecodecamp.org/learn/responsive-web-design/
+[fcc_web_tribute]:
+  https://www.freecodecamp.org/learn/responsive-web-design/responsive-web-design-projects/build-a-tribute-page
+[fcc_web_survey]:
+  https://www.freecodecamp.org/learn/responsive-web-design/responsive-web-design-projects/build-a-survey-form
+[fcc_web_landing]:
+  https://www.freecodecamp.org/learn/responsive-web-design/responsive-web-design-projects/build-a-product-landing-page
+[fcc_web_doc]:
+  https://www.freecodecamp.org/learn/responsive-web-design/responsive-web-design-projects/build-a-technical-documentation-page
+[fcc_web_portfolio]:
+  https://www.freecodecamp.org/learn/responsive-web-design/responsive-web-design-projects/build-a-personal-portfolio-webpage
+[fcc_d3]: https://www.freecodecamp.org/learn/data-visualization/
+[fcc_d3_bar]:
+  https://www.freecodecamp.org/learn/data-visualization/data-visualization-projects/visualize-data-with-a-bar-chart
+[fcc_d3_scatterplot]:
+  https://www.freecodecamp.org/learn/data-visualization/data-visualization-projects/visualize-data-with-a-scatterplot-graph
+[fcc_d3_heat]:
+  https://www.freecodecamp.org/learn/data-visualization/data-visualization-projects/visualize-data-with-a-heat-map
+[fcc_d3_choropleth]:
+  https://www.freecodecamp.org/learn/data-visualization/data-visualization-projects/visualize-data-with-a-choropleth-map
+[fcc_d3_treemap]:
+  https://www.freecodecamp.org/learn/data-visualization/data-visualization-projects/visualize-data-with-a-treemap-diagram

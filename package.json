@@ -1,0 +1,14 @@
+{
+  "name": "freecodecamp-projects",
+  "version": "1.0.0",
+  "description": "This repo is used to setting up a comfortable working env on AWS EB. This used some of my [my dotfiles](https://github.com/letientai299/dotfiles/), trimmed down for working on the cloud.",
+  "main": "index.js",
+  "scripts": {
+    "render": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "marked": "2.0.1"
+  }
+}
