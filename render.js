@@ -20,5 +20,4 @@ marked.setOptions({
 const rendered = marked(md).toString();
 
 let html = tpl.replace("{{readme}}", rendered);
-console.log(html);
 fs.writeFileSync(OUT, html);
