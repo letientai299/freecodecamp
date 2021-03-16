@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Anime survey</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+
+    <!-- Optimize google font loading -->
+    <!-- https://pagespeedchecklist.com/asynchronous-google-fonts#all-together -->
+    <!-- connect to domain of font files -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com/css2?family=Alegreya&family=Handlee&family=Lato&family=Lora&family=Roboto&display=swap"
+    />
+
+    <!-- async CSS -->
+    <link
+      rel="stylesheet"
+      media="print"
+      onload="this.onload=null;this.removeAttribute('media');"
+      href="(font CSS URL here)"
+    />
+
+    <!-- no-JS fallback -->
+    <noscript>
+      <link rel="stylesheet" href="(font CSS URL here)" />
+    </noscript>
+
+    <style>
+      html {
+        min-height: 100%;
+        font-family: "Handlee", cursive;
+        -webkit-appearance: none;
+      }
+      a {
+        color: pink;
+      }
+
+      a:visited {
+        color: hotpink;
+      }
+
+      body {
+        margin: 20px;
+
+        animation-name: bg-fading;
+        animation-iteration-count: infinite;
+        animation-duration: 91s;
+        animation-timing-function: ease-in-out;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+
+      @keyframes bg-fading {
+        0% {
+          background-image: url(./img/death-note-1.webp);
+        }
+        8% {
+          background-image: url(./img/death-note-2.webp);
+        }
+        16% {
+          background-image: url(./img/code-geass-1.webp);
+        }
+        24% {
+          background-image: url(./img/code-geass-2.webp);
+        }
+        32% {
+          background-image: url(./img/code-geass-3.webp);
+        }
+        40% {
+          background-image: url(./img/death-note-3.webp);
+        }
+        48% {
+          background-image: url(./img/death-note-4.webp);
+        }
+        56% {
+          background-image: url(./img/eften-lied-1.webp);
+        }
+        64% {
+          background-image: url(./img/eften-lied-2.webp);
+        }
+        72% {
+          background-image: url(./img/parasyte-1.webp);
+        }
+        80% {
+          background-image: url(./img/parasyte-2.webp);
+        }
+        88% {
+          background-image: url(./img/tokyo-ghoul-1.webp);
+        }
+        100% {
+          background-image: url(./img/tokyo-ghoul-2.webp);
+        }
+      }
+
+      #submit {
+        background-color: rgba(0, 0, 0, 0.8);
+        color: white;
+      }
+
+      #main {
+        background-color: rgba(0, 0, 0, 0.8);
+        color: white;
+        max-width: 800px;
+        padding: 40px;
+        padding-bottom: 80px;
+        height: 100%;
+        margin: auto;
+        font-size: 1.4em;
+        line-height: 1.3em;
+      }
+
+      #survey-form fieldset {
+        min-width: inherit;
+        display: grid;
+        grid-template-columns: auto 4fr;
+        grid-column-gap: 20px;
+        grid-row-gap: 10px;
+        margin-left: 20px;
+        margin-right: 20px;
+      }
+
+      #survey-form fieldset legend,
+      #survey-form fieldset textarea {
+        grid-column: 1/3;
+      }
+
+      #survey-form fieldset textarea {
+        max-height: 100%;
+      }
+
+      @media screen and (-webkit-min-device-pixel-ratio: 0) {
+        /*
+         * Fuck chrome and safari for unable to compute the select width
+         * properly
+         */
+        select {
+          max-width: 95%;
+        }
+      }
+
+      option,
+      label,
+      textarea,
+      select,
+      input {
+        background-color: transparent;
+        color: white;
+        padding: 5px;
+        align-self: center;
+        text-overflow: ellipsis;
+      }
+
+      #submit {
+        float: right;
+        text-transform: uppercase;
+        font-size: 1em;
+        font-family: inherit;
+      }
+    </style>
+  </head>
+  <body>
+    <main id="main">
+      <h1 id="title">Anime survey</h1>
+      <p id="description">
+        This is a simple survey build for following
+        <a target="_blank" href="https://www.freecodecamp.org/">FreeCodeCamp</a>
+        <a
+          target="_blank"
+          href="https://www.freecodecamp.org/learn/responsive-web-design/responsive-web-design-projects/build-a-survey-form"
+        >
+          Build a Seurvey Form project.
+        </a>
+      </p>
+
+      <form action="#" id="survey-form">
+        <fieldset>
+          <legend>Do you like anime?</legend>
+          <input type="radio" name="like-anime" value="yes" />
+          <label>Yes</label>
+          <input type="radio" name="like-anime" value="no" />
+          <label>No</label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Anime types</legend>
+          <label id="dropdown-label" for="genre">Genre</label>
+          <select name="genre" id="dropdown">
+            <option> Kodomo (Aimed at children) </option>
+            <option> Shōnen (Young teen boys) </option>
+            <option> Shōjo (Young teen girls) </option>
+            <option> Seinen (Young adult men) </option>
+            <option> Josei (Young adult women) </option>
+            <option> Harem (Boy surrounded by girls) </option>
+            <option> Reverse Harem (Girl surrounded by boys) </option>
+            <option> Hentai (Erotic and pornographic themes) </option>
+            <option> Romance (Aimed at people falling in love) </option>
+            <option>
+              Horror (Intended to invoke fear, anxiety or dread in its viewers)
+            </option>
+            <option> Comedy </option>
+            <option> Fantasy </option>
+            <option> Ecchi (Sexual content, but not as much as hentai) </option>
+            <option> Mecha (About robots and war) </option>
+            <option>
+              Lolicon (About very young girls, often with flat chests)
+            </option>
+            <option> Shotacon (Attraction to young boys) </option>
+            <option>
+              Isekai (Protagonist transported to a different world.)
+            </option>
+            <option>
+              Yaoi or shounen-ai (Anime about boys who are in love with other
+              boys.)
+            </option>
+            <option>
+              Yuri or shojo-ai (Anime about girls who are in love with other
+              girls.)
+            </option>
+            <option> Drama </option>
+            <option>
+              Supernatural (About witches, magic, ghosts, deities)
+            </option>
+            <option> Thriller </option>
+            <option>
+              Slice of Life (Contains moe, but usually about things people do
+              every day)
+            </option>
+            <option>
+              Adventure (The main and the characters embark on a journey)
+            </option>
+          </select>
+        </fieldset>
+
+        <fieldset>
+          <legend>
+            Did you have watched any of following animes?
+          </legend>
+
+          <input
+            type="checkbox"
+            id="checkbox-death-note"
+            name="death-note"
+            value="Death Note"
+          />
+          <label for="death-note">
+            <a target="_blank" href="https://en.wikipedia.org/wiki/Death_Note">
+              Death note (my favoritest)
+            </a>
+          </label>
+
+          <input
+            type="checkbox"
+            id="checkbox-code-geass"
+            name="code-geass"
+            value="Code Geass"
+          />
+          <label for="code-geass">
+            <a target="_blank" href="https://en.wikipedia.org/wiki/Code_Geass">
+              Code Geass (my 2nd favoritest)
+            </a>
+          </label>
+
+          <input
+            type="checkbox"
+            id="checkbox-tokyo-ghoul"
+            name="tokyo-ghoul"
+            value="Tokyo Ghoul"
+          />
+          <label for="tokyo-ghoul">
+            <a target="_blank" href="https://en.wikipedia.org/wiki/Tokyo_Ghoul">
+              Tokyo Ghoul
+            </a>
+          </label>
+
+          <input
+            type="checkbox"
+            id="checkbox-eften-lied"
+            name="eften-lied"
+            value="Eften Lied"
+          />
+          <label for="eften-lied">
+            <a target="_blank" href="https://en.wikipedia.org/wiki/Elfen_Lied">
+              Eften Lied
+            </a>
+          </label>
+
+          <input
+            type="checkbox"
+            id="checkbox-parasyte"
+            name="parasyte"
+            value="Parasyte"
+          />
+          <label for="parasyte">
+            <a target="_blank" href="https://en.wikipedia.org/wiki/Parasyte">
+              Parasyte
+            </a>
+          </label>
+
+          <input
+            value="boku-no-pico"
+            type="checkbox"
+            name="boku-no-pico"
+            value=""
+          />
+          <label for="boku-no-pico">
+            <a
+              target="_blank"
+              href="https://en.wikipedia.org/wiki/Boku_no_Pico"
+            >
+              Boku no Pico (please don't watch it, it's a meme)
+            </a>
+          </label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Personal info</legend>
+
+          <label for="name" id="name-label">Name</label>
+          <input
+            type="text"
+            id="name"
+            required
+            name="name"
+            placeholder="Your name"
+          />
+
+          <label for="email" id="email-label">Email</label>
+          <input
+            required
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Your email"
+          />
+
+          <label for="number" id="number-label">Age</label>
+          <input
+            type="number"
+            id="number"
+            required
+            name="age"
+            min="7"
+            max="100"
+            placeholder="Your age"
+          />
+        </fieldset>
+
+        <fieldset>
+          <legend>
+            Any anime suggestions (just for fun, though, because this form
+            doesn't have a backend)
+          </legend>
+          <textarea
+            placeholder="Your favorite animes"
+            id="suggestion"
+          ></textarea>
+        </fieldset>
+
+        <input type="submit" value="Submit" id="submit" />
+      </form>
+    </main>
+    <script
+      src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"
+      charset="utf-8"
+    ></script>
+  </body>
+</html>

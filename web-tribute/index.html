@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Tribute</title>
+
+    <style>
+      :root {
+        --cell: 10px;
+      }
+      #main {
+        margin: auto;
+        padding-left: 50px;
+        padding-right: 50px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        max-width: 800px;
+        background-image: linear-gradient(
+            to bottom,
+            transparent 50%,
+            #faf9e1 97%
+          ),
+          linear-gradient(to right, #f0efe9 97%, #faf9e1 50%);
+        background-size: var(--cell) var(--cell), var(--cell) var(--cell);
+        font-size: 1.4em;
+        line-height: 1.3em;
+      }
+
+      #image {
+        display: block;
+        align: center;
+        width: 850px;
+        height: 400px;
+        max-width: 100%;
+        height: auto;
+      }
+
+      #quote-list {
+        list-style-type: none;
+      }
+
+      .blockquote-footer {
+        margin-top: -1rem;
+        margin-bottom: 1rem;
+        font-size: 0.875em;
+        color: #6c757d;
+      }
+
+      .blockquote {
+        margin-bottom: 1rem;
+        font-size: 1.25rem;
+        margin: 0 0 1rem;
+      }
+
+      .blockquote-footer:before {
+        content: "--";
+      }
+
+      @media only screen and (min-width: 300px) {
+        #timeline-list li {
+          display: grid;
+          grid-template-columns: 1fr;
+          grid-column-gap: 30px;
+          margin-top: 10px;
+          align-items: start;
+        }
+        #timeline-list li time {
+          margin-bottom: 10px;
+          margin-bottom: 10px;
+        }
+
+        #timeline-list li p {
+          margin-left: 10px;
+        }
+      }
+
+      @media only screen and (min-width: 800px) {
+        #timeline-list li {
+          display: grid;
+          grid-template-columns: auto 1fr;
+          grid-column-gap: 30px;
+          margin-top: 10px;
+          align-items: start;
+        }
+
+        #timeline-list li time {
+          display: block;
+          text-align: right;
+          min-width: 80px;
+        }
+      }
+
+      #timeline-list li p {
+        margin-top: 0px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <main id="main">
+      <h1 id="title">Dennis Ritchie</h1>
+
+      <section id="tribute-info">
+        <h2>About</h2>
+
+        <p>
+          <strong>Dennis MacAlistair Ritchie</strong>
+          (<time datetim="1941-09-09">September 9, 1941</time> –
+          <time datetime="2011-10-12">October 12, 2011</time>) was an American
+          computer scientist.
+        </p>
+
+        <p>
+          He created the <em>C programming language</em> and, with long-time
+          colleague Ken Thompson, the
+          <em>Unix operating system and B programming language </em>. Ritchie
+          and Thompson were awarded the Turing Award from the ACM in 1983, the
+          Hamming Medal from the
+          <abbr title="Institute of Electrical and Electronics Engineers">
+            IEEE
+          </abbr>
+
+          in 1990 and the National Medal of Technology from President Bill
+          Clinton in 1999. Ritchie was the head of Lucent Technologies System
+          Software Research Department when he retired in 2007.
+        </p>
+
+        <p>
+          Learn more about him in
+          <a
+            href="https://en.wikipedia.org/wiki/Dennis_Ritchie"
+            id="tribute-link"
+            target="_blank"
+          >
+            this Wiki article.
+          </a>
+        </p>
+
+        <figure id="img-div">
+          <img id="image" src="./img/dmr.webp" alt="Dennis Ritchie quote" />
+          <figcaption id="img-caption">Dennis Ritchie 2011</figcaption>
+        </figure>
+
+        <p>
+          He was the "R" in <em>K&R</em> C, and commonly known by his username
+          <strong>dmr</strong>.
+        </p>
+      </section>
+
+      <section id="timeline">
+        <h2>Timeline and contributions</h2>
+        <ul id="timeline-list">
+          <li>
+            <time datetime="1941-09-09">Sep 9, 1941</time>
+            <p>
+              Born in Bronxville NY
+            </p>
+          </li>
+          <li>
+            <time datetime="1967-01-01">Jan 1, 1967</time>
+            <p>
+              Ritchie started working at Bell Labs in 1967. Here is where he
+              worked on Multics operating system.
+            </p>
+          </li>
+          <li>
+            <time datetime="1968-05-01">May 1, 1968</time>
+            <p>
+              Ritchie earned his bachelor's degree in Physics in 1963, and
+              completed his Doctorate degree in Mathematics in 1968 from Harvard
+              University.
+            </p>
+          </li>
+          <li>
+            <time datetime="1969-01-01">Jan 1, 1969</time>
+            <p>
+              Bell Labs dropped the Multics operating systems project in 1969.
+              This prompted Ritchie to develop C programming language and, with
+              Thompson, create the UNIX operating system.
+            </p>
+          </li>
+          <li>
+            <time datetime="1971-11-03">Nov 3, 1971</time>
+            <p>
+              Unix was released on November 3rd, 1971, opening a operating
+              system to work on a variety of platforms with highly adapted
+              quality.
+            </p>
+          </li>
+          <li>
+            <time datetime="1972-01-01">Jan 1, 1972</time>
+            <p>
+              Ritchie and Thompson's operating system was not functioning on the
+              more advanced PDP-11 mini computer in 1971. This prompted Ritchie
+              to create C programming lanuage. C programming lanuage is very
+              popular and important to the development of software including
+              programs such as C++ and Java.
+            </p>
+          </li>
+          <li>
+            <time datetime="1973-01-01">Jan 1, 1973</time>
+            <p>
+              Ritchie and Thompson wrote UNIX using C programming language. This
+              allowed for UNIX to work a wide variety of computers in a range of
+              large and minicomputers and advanced to simple computers.
+            </p>
+          </li>
+          <li>
+            <time datetime="1983-01-01">Jan 1, 1983</time>
+            <p>
+              Cowinner (with Ken Thompson) of the A.M. Turing Award. It is a
+              prestigious award and the top achievement in Computer Science.
+              They recieved this award for, "their development of generic
+              operating systems theory and specifically for the implementation
+              of the UNIX operating system" (Hosch).
+            </p>
+          </li>
+          <li>
+            <time datetime="1988-01-01">Jan 1, 1988</time>
+            <p>
+              Ritchie was elected into the U.S National Academy of Engineering
+              in 1988.
+            </p>
+          </li>
+          <li>
+            <time datetime="1990-01-01">Jan 1, 1990</time>
+            <p>
+              Ritchie was appointed the head of the System Software Research
+              Department at Bell Labs in 1990.
+            </p>
+          </li>
+          <li>
+            <time datetime="1994-01-01">Jan 1, 1994</time>
+            <p>
+              Awarded the 1994 Computer Pioneer Award, "In recognition of
+              contribution to the development of Unix" (Dennis).
+            </p>
+          </li>
+          <li>
+            <time datetime="1995-01-01">Jan 1, 1995</time>
+            <p>
+              In 1995 Ritchie (and his team) released Plan 9 operating system.
+              Plan 9 attempted to integrate graphics and networking into a Unix
+              platform. "They kept the Unix choice to mediate access to as many
+              system services as possible through a single big file-hierarchy
+              name space" (Plan 9).
+            </p>
+          </li>
+          <li>
+            <time datetime="1996-04-01">Apr 1, 1996</time>
+            <p>
+              Ritchie (with team members) released the inferno Operating System
+              in April 1996. Inferno is a operating system for building
+              distributed and networked systems on a large range of platforms
+              and systems. "You can fectch it now as Free Software, on similar
+              terms to Linux orxBSD" (Inferno).
+            </p>
+          </li>
+          <li>
+            <time datetime="1999-04-21">Apr 21, 1999</time>
+            <p>
+              Richie and Thompson are awarded the U.S. National Medal of
+              Technology Award from President Bill Clinton for inventing UNIX
+              and C programming language.
+            </p>
+          </li>
+          <li>
+            <time datetime="2011-Oct-12">Oct 12, 2011</time>
+            <p>
+              Death
+            </p>
+          </li>
+        </ul>
+      </section>
+
+      <section id="quotes">
+        <h2>Some quotes</h2>
+        <!-- https://en.wikiquote.org/wiki/Dennis_Ritchie -->
+        <ul id="quote-list">
+          <li>
+            <figure>
+              <blockquote class="blockquote">
+                <p>
+                  UNIX is very simple, it just needs a genius to understand its
+                  simplicity.
+                </p>
+              </blockquote>
+              <figcaption class="blockquote-footer">
+                USENET: net.unix-wizards (1984-03-13)
+              </figcaption>
+            </figure>
+          </li>
+          <li>
+            <figure>
+              <blockquote class="blockquote">
+                <p>
+                  C is quirky, flawed, and an enormous success.
+                </p>
+              </blockquote>
+              <figcaption class="blockquote-footer">
+                The Development of the C Language.
+              </figcaption>
+            </figure>
+          </li>
+          <li>
+            <figure>
+              <blockquote class="blockquote">
+                <p>
+                  Life's a bitch and then your feet wear down.
+                </p>
+              </blockquote>
+              <figcaption class="blockquote-footer">
+                Plan 9 fortunes file.
+              </figcaption>
+            </figure>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <script
+      src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"
+      async
+      defer
+    ></script>
+  </body>
+</html>
