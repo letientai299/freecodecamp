@@ -1,13 +1,17 @@
 # freeCodeCamp project solutions
 
+![GH Pages](https://github.com/letientai299/freecodecamp/actions/workflows/gh-pages.yml/badge.svg)
+[![GitHub stars](https://img.shields.io/github/stars/letientai299/freecodecamp?style=social&label=Star&maxAge=2592000)](https://GitHub.com/letientai299/freecodecamp/stargazers/)
+
 This repo contains my final projects solutions for web-related cources I've done
 on [freeCodeCamp][fcc].
+
+[Visit here here to see actual web pages.](https://letientai.io/freecodecamp/)
 
 > TODO:
 >
 > - get all the certs
 > - make header clickable and generate anchor links
-> - get github pages done right
 
 ## JavaScript Algorithms and Data Structures
 
