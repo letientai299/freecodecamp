@@ -1,0 +1,5 @@
+tabWidth: 2
+printWidth: 80
+
+# always hard wrap markdown lines.
+proseWrap: always
