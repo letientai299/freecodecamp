@@ -3,7 +3,10 @@
 This repo contains my final projects solutions for web-related cources I've done
 on [freeCodeCamp][fcc].
 
-> TODO: make header clickable and generate anchor links
+> TODO:
+>
+> - make header clickable and generate anchor links
+> - get all the certs
 
 ## JavaScript Algorithms and Data Structures
 
