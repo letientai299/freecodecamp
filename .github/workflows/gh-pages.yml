@@ -1,0 +1,32 @@
+name: Github Pages
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          submodules: true  # Fetch Hugo themes (true OR recursive)
+          fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
+
+      - name: Build and push to gh-pages branch
+        run: |
+          npm install
+
+          git config --global user.name 'CI bot'
+          git config --global user.email 'letientai299@bot.noreply.github.com'
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY
+          git checkout gh-pages --force
+
+          git checkout master readme.md
+          make index
+
+          git add index.html readme.md
+          git commit -m "Generate index.html from ${GITHUB_SHA}"
+          git push
+
