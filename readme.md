@@ -5,8 +5,8 @@ on [freeCodeCamp][fcc].
 
 > TODO:
 >
-> - make header clickable and generate anchor links
 > - get all the certs
+> - make header clickable and generate anchor links
 
 ## JavaScript Algorithms and Data Structures
 
