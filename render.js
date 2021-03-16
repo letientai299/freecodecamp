@@ -1,7 +1,7 @@
 const marked = require("marked");
 const fs = require("fs");
 
-const TEMPLATE_FILE = "./index.html.tpl";
+const TEMPLATE_FILE = "./index.tpl.html";
 const README = "./readme.md";
 const OUT = "./index.html";
 
