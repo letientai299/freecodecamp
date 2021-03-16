@@ -23,10 +23,10 @@ jobs:
           git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY
           git checkout gh-pages --force
 
-          git checkout master readme.md
+          git checkout master readme.md Makefile index.tpl.html render.js
           make index
 
-          git add index.html readme.md
+          git add index.html readme.md Makefile index.tpl.html render.js
           git commit -m "Generate index.html from ${GITHUB_SHA}"
           git push
 
