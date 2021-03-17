@@ -25,8 +25,12 @@ jobs:
 
           git checkout master readme.md Makefile index.tpl.html render.js
           make index
-
           git add index.html readme.md Makefile index.tpl.html render.js
-          git commit -m "Generate index.html from ${GITHUB_SHA}"
+
+          git checkout master web
+          git checkout master d3
+          git add web d3
+
+          git commit -m "Generate index.html from ${GITHUB_SHA}" --allow-empty
           git push
 

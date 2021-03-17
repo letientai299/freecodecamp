@@ -31,8 +31,8 @@ strong support for functinal programming.
 
 | Task                                                    | Site                           |
 | ------------------------------------------------------- | ------------------------------ |
-| [Build a Tribute Page][fcc_web_tribute]                 | [./web-tribute](./web-tribute) |
-| [Build a Survey Form][fcc_web_survey]                   | [./web-survey](./web-survey)   |
+| [Build a Tribute Page][fcc_web_tribute]                 | [./web/tribute](./web/tribute) |
+| [Build a Survey Form][fcc_web_survey]                   | [./web/survey](./web/survey)   |
 | [Build a Product Landing Page][fcc_web_landing]         | [./](./)                       |
 | [Build a Technical Documentation Page][fcc_web_doc]     | [./](./)                       |
 | [Build a Personal Portfolio Webpage][fcc_web_portfolio] | [./](./)                       |
@@ -48,7 +48,7 @@ Note
 
 | Task                                                          | Site                 |
 | ------------------------------------------------------------- | -------------------- |
-| [Visualize Data with a Bar Char][fcc_d3_bar]                  | [./d3-bar](./d3-bar) |
+| [Visualize Data with a Bar Char][fcc_d3_bar]                  | [./d3/bar](./d3/bar) |
 | [Visualize Data with a Scatterplot Graph][fcc_d3_scatterplot] | [./](./)             |
 | [Visualize Data with a Heat Map][fcc_d3_heat]                 | [./](./)             |
 | [Visualize Data with a Choropleth Map][fcc_d3_choropleth]     | [./](./)             |
