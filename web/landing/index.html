@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Landing Page about Vim</title>
+    <link rel="stylesheet" rel="preload" as="style" href="./style.css" />
+    <link rel="shortcut icon" href="./img/vim.png" type="image/x-icon" />
+  </head>
+  <body>
+    <main id="main">
+      <header id="header">
+        <div class="brand">
+          <img
+            id="header-img"
+            class="icon"
+            src="./img/vim.png"
+            alt="Vim icon"
+          />
+          <strong>the ubiquitous text editor</strong>
+        </div>
+
+        <nav id="nav-bar">
+          <a class="nav-link" href="#features">Features</a>
+          <a class="nav-link" href="#history">History</a>
+          <a class="nav-link" href="#learn-more">Learn more</a>
+        </nav>
+      </header>
+
+      <section id="features">
+        <a href="#features">
+          <h2>Features</h2>
+        </a>
+
+        <article>
+          <p class="item"><strong>Ubiquitous</strong></p>
+          <p class="comment">
+            It's available on any Unix box, so you can just ssh into the box and
+            start working. With little configuration, you'll feel right at home.
+          </p>
+
+          <p class="item"><strong>Fast</strong></p>
+          <p class="comment">
+            Its performance on large file (100+ MB) is ridiculously amazing. And
+            yes,
+            <a
+              target="_blank"
+              href="https://blog.codinghorror.com/performance-is-a-feature/"
+            >
+              Performance is a Feature.
+            </a>
+          </p>
+
+          <p class="item"><strong>Reliable</strong></p>
+          <p class="comment">
+            Vim is 29 year olds and actively maintained. Its predecessor,
+            <a href="https://en.wikipedia.org/wiki/Vi" target="_blank">Vi</a>,
+            is more than 45 years old. There's also many successors, most
+            notably is the
+            <a href="https://neovim.io/" target="_blank">Neovim</a>
+            fork with even more features and optimizations. You can safely
+            assume that Vim is still there for 50 more years.
+          </p>
+
+          <p class="item"><strong>Text Editing Language</strong></p>
+          <p class="comment">
+            As you use it you begin to think in it. Vim is set up to function
+            like a language, complete with nouns, verbs, and adverbs. Once you
+            learn the language, you will see there's no better way to edit text.
+            The side-effect is you'll stuck with it, no way to
+            <a
+              href="https://github.com/hakluke/how-to-exit-vim"
+              target="_blank"
+            >
+              exit </a
+            >.
+          </p>
+        </article>
+      </section>
+
+      <!-- ------------------------------------------------------------ -->
+      <section id="history">
+        <a href="#history">
+          <h2>History</h2>
+        </a>
+
+        <article>
+          <p class="item"><strong>1988</strong></p>
+          <p class="comment">Vim 1.0 Vi IMitation on the Amiga.</p>
+
+          <p class="item"><strong>1991 Nov 2</strong></p>
+          <p class="comment">
+            Vim 1.14: First release (on Fred Fish disk #591).
+          </p>
+
+          <p class="item"><strong>1992</strong></p>
+          <p class="comment">
+            Vim 1.22: Port to Unix. Vim now competes with Vi.
+          </p>
+
+          <p class="item"><strong>1994 Aug 12</strong></p>
+          <p class="comment">
+            Vim 3.0: Support for multiple buffers and windows.
+          </p>
+
+          <p class="item"><strong>1996 May 29</strong></p>
+          <p class="comment">
+            Vim 4.0: Graphical User Interface.
+          </p>
+
+          <p class="item"><strong>1998 Feb 19</strong></p>
+          <p class="comment">Vim 5.0: Syntax coloring/highlighting.</p>
+
+          <p class="item"><strong>2001 Sep 26</strong></p>
+          <p class="comment">Vim 6.0: Folding, plugins, vertical split.</p>
+
+          <p class="item"><strong>2006 May 8</strong></p>
+          <p class="comment">
+            Vim 7.0: Spell check, omni completion, undo branches, tabs.
+          </p>
+
+          <p class="item"><strong>2015 Nov 2</strong></p>
+          <p class="comment">
+            The Neovim fork released
+            <a
+              href="https://github.com/neovim/neovim/releases/tag/v0.1.0"
+              target="_blank"
+            >
+              v0.1.0
+            </a>
+            with many enhancement, arguably help boost the original Vim
+            development.
+          </p>
+
+          <p class="item"><strong>2016 Sep 12</strong></p>
+          <p class="comment">Vim 8.0: Jobs, async I/O, native packages.</p>
+        </article>
+        <p>
+          See also:
+          <a
+            href="https://twobithistory.org/2018/08/05/where-vim-came-from.html"
+            target="_blank"
+            >Where Vim Came From
+          </a>
+        </p>
+
+        <h3>Vim 25 presentation by Bram Moolenaar on 2016 November 2</h3>
+        <article>
+          <iframe
+            id="video"
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/ayc_qpB-93o"
+            loading="lazy"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </article>
+      </section>
+
+      <section id="learn-more">
+        <a href="#learn-more">
+          <h2>Learn more</h2>
+        </a>
+
+        <p>
+          Among many things I have read and used, these are the most useful.
+        </p>
+
+        <h3>Inspiration</h3>
+        <article>
+          <a class="item" href="https://rudism.com/vim-creep/" target="_blank">
+            <strong>Vim Creep</strong>
+          </a>
+
+          <p class="comment">
+            <a
+              href="https://news.ycombinator.com/item?id=25371020"
+              target="_blank"
+            >
+              Truly a great story!</a
+            >
+            It doesn't teach you anything about using Vim. It, however, gives
+            you a sense of how it feels once your master Vim.
+          </p>
+
+          <a
+            class="item"
+            href="https://www.reddit.com/r/vimporn/"
+            target="_blank"
+          >
+            <strong>r/vimporn</strong>
+          </a>
+
+          <p class="comment">
+            See how other people customize their Vim. However, don't blindly
+            copy their config and then struggle to use it.
+          </p>
+
+          <a
+            class="item"
+            href="https://stackoverflow.com/a/1220118/3869533"
+            target="_blank"
+          >
+            <strong>Grok vi</strong>
+          </a>
+
+          <p class="comment">
+            A fantastic answer for the question "What is your most productive
+            shortcut with Vim?". This changes me from "memorize all the
+            shortcuts" to "understand Vim".
+          </p>
+        </article>
+
+        <h3>Books</h3>
+        <article>
+          <a class="item" href="https://vimhelp.org/" target="_blank">
+            <strong>Vim help files</strong>
+          </a>
+
+          <p class="comment">
+            Must read if you're serious about learning Vim. It might be daunting
+            at first consider the total content is equivalent to
+            <a href="https://nathangrigg.com/vimhelp/" , target="_blank">
+              a 11MB PDF with 4197 pages </a
+            >, but, trust me, they are worths studying. The more I read them,
+            the more I appeciate the effort behind those amazing documentation.
+            Sadly, not many softwares nowaday can match such quality.
+          </p>
+          <a
+            class="item"
+            href="https://pragprog.com/titles/dnvim2/practical-vim-second-edition/"
+            target="_blank"
+          >
+            <strong>Practical Vim, 2nd Edition</strong>
+          </a>
+
+          <p class="comment">
+            Great book. It's easier to follow than the help files and cover many
+            topics that will be helpful for day to day work with Vim.
+          </p>
+        </article>
+
+        <h3>Similar tools</h3>
+        <article>
+          <a
+            class="item"
+            href="https://pwmt.org/projects/zathura/"
+            target="_blank"
+          >
+            <strong>zathura</strong>
+          </a>
+
+          <p class="comment">
+            A PDF reader with Vim key-binding. Sadly, it's Linux only.
+          </p>
+
+          <a
+            class="item"
+            href="https://github.com/tmux/tmux/wiki"
+            target="_blank"
+          >
+            <strong>tmux</strong>
+          </a>
+
+          <p class="comment">
+            A terminal multiplexer, which enables a number of terminals to be
+            created, accessed, and controlled from a single screen, both locally
+            and remotely.
+          </p>
+
+          <a
+            class="item"
+            href="https://github.com/ranger/ranger"
+            target="_blank"
+          >
+            <strong>ranger</strong>
+          </a>
+
+          <p class="comment">
+            A VIM-inspired file-manager for the console, with tons of helpful
+            extensions.
+          </p>
+
+          <a class="item" href="http://w3m.sourceforge.net/" target="_blank">
+            <strong>w3m</strong>
+          </a>
+
+          <p class="comment">
+            A text-based web browser as well as a pager like <code>less</code>,
+            very helpful when you mess up your X, can't start any window
+            manager, thus, can't run Firefox to look up for the fix. BTW, try
+            viewing this site in w3m.
+          </p>
+
+          <a
+            class="item"
+            href="https://github.com/JetBrains/ideavim"
+            target="_blank"
+          >
+            <strong>IdeaVim</strong>
+          </a>
+
+          <p class="comment">
+            Vim emulation plugin for IDEs based on the IntelliJ Platform. No
+            matter how hard you try, Vim <em>is not an IDE</em>. Right now
+            (2021), the best IDEs are Jetbrains', and the best Vim emulation are
+            IdeaVim.
+          </p>
+        </article>
+      </section>
+
+      <section>
+        <form
+          action="https://letientai.io/freecodecamp/"
+          method="get"
+          accept-charset="utf-8"
+          id="form"
+        >
+          <input
+            type="email"
+            name="email"
+            id="email"
+            value=""
+            placeholder="Your
+                                 email"
+          />
+          <input type="submit" value="Submit" id="submit" />
+        </form>
+      </section>
+
+      <footer id="footer">
+        <hr />
+        <p>
+          The author of this site loves Vim. Thank to Vim, he considers
+          softwares that don't have a good key-binding, force us to use the
+          mouse and low-effort documentations is bad. He learned the habit of
+          RTFM to deeply understand whatever he use and use them efficiently.
+          The way he manipulates his terminal tools, IDE is insane. If you're
+          interesting, see his
+          <a href="https://github.com/letientai299/dotfiles/" target="_blank">
+            dotfiles</a
+          >.
+        </p>
+
+        <p>
+          He obviously has no idea what to put in the footer, though.
+        </p>
+
+        <p>
+          BTW, total time to build this site is 5h
+        </p>
+      </footer>
+    </main>
+    <script
+      src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"
+      async
+      defer
+    ></script>
+  </body>
+</html>

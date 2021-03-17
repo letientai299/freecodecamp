@@ -1,0 +1,42 @@
+<p class="item"><strong>1988</strong></p>
+<p class="comment"/>Vim 1.0 Vi IMitation on the Amiga
+</p>
+
+<p class="item"><strong>1991 Nov 2</strong></p>
+<p class="comment"/>Vim 1.14: First release (on Fred Fish disk #591).
+</p>
+
+<p class="item"><strong>1992</strong></p>
+<p class="comment"/>Vim 1.22: Port to Unix. Vim now competes with Vi.
+</p>
+
+<p class="item"><strong>1994 Aug 12</strong></p>
+<p class="comment"/>Vim 3.0: Support for multiple buffers and windows.
+</p>
+
+<p class="item"><strong>1996 May 29</strong></p>
+<p class="comment"/>Vim 4.0: Graphical User Interface (largely by Robert Webb).
+</p>
+
+<p class="item"><strong>1998 Feb 19</strong></p>
+<p class="comment"/>Vim 5.0: Syntax coloring/highlighting.
+</p>
+
+<p class="item"><strong>2001 Sep 26</strong></p>
+<p class="comment"/>Vim 6.0: Folding, plugins, vertical split.
+</p>
+
+<p class="item"><strong>2006 May 8</strong></p>
+<p class="comment"/>Vim 7.0: Spell check, omni completion, undo branches, tabs.
+</p>
+
+<p class="item"><strong>2015 Nov 2</strong></p>
+<p class="comment"/>The Neovim forke released v0.1.0 with many enhancement, arguably help boost the original Vim development. https://github.com/neovim/neovim/releases/tag/v0.1.0
+</p>
+
+<p class="item"><strong>2016 Sep 12</strong></p>
+<p class="comment"/>Vim 8.0: Jobs, async I/O, native packages.
+</p>
+
+https://twobithistory.org/2018/08/05/where-vim-came-from.html
+
