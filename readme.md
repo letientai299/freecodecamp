@@ -33,7 +33,7 @@ strong support for functinal programming.
 | ------------------------------------------------------- | ------------------------------ |
 | [Build a Tribute Page][fcc_web_tribute]                 | [./web/tribute](./web/tribute) |
 | [Build a Survey Form][fcc_web_survey]                   | [./web/survey](./web/survey)   |
-| [Build a Product Landing Page][fcc_web_landing]         | [./](./)                       |
+| [Build a Product Landing Page][fcc_web_landing]         | [./web/landing](./web/landing) |
 | [Build a Technical Documentation Page][fcc_web_doc]     | [./](./)                       |
 | [Build a Personal Portfolio Webpage][fcc_web_portfolio] | [./](./)                       |
 

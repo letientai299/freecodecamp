@@ -1,0 +1,175 @@
+:root {
+  --default-width: 600px;
+}
+
+* {
+  box-sizing: border-box;
+  line-height: 1.2em;
+  font-family: monospace;
+  text-align: justify;
+}
+
+#footer {
+  margin-top: 10px;
+}
+
+hr {
+  border-top: 1px dashed black;
+}
+
+code {
+  background-color: lightgray;
+  padding: 2px 4px;
+  border-radius: 3px;
+}
+
+
+#header {
+  position: fixed;
+  top: 0;
+  margin: 1px 1px;
+
+  width: var(--default-width);
+  max-width: var(--default-width);
+  background-color: #eeeeee;
+  flex-direction: row;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.icon {
+  width: 30px;
+  height: 30px;
+  margin-right: 5px;
+}
+
+.brand {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  align-self: flex-start;
+}
+
+#main {
+  width: var(--default-width);
+  max-width: var(--default-width);
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+  display: block;
+}
+
+
+section {
+  display: block;
+}
+
+article {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+article .item {
+  width: 20%;
+  text-align: right;
+}
+
+article .comment {
+  height: 100%;
+  width: 78%;
+}
+
+@media (max-width: 600px) {
+  #main {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  #header {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+#nav-bar a:before {
+  content: "<";
+}
+#nav-bar a:after {
+  content: ">";
+}
+
+
+@media (max-width: 500px) {
+  #header {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+
+  .brand {
+    justify-content: center;
+    width: 100%;
+  }
+
+  #nav-bar {
+    width: 100%;
+    text-align: center;
+  }
+
+  iframe {
+    width: 100% !important;
+  }
+}
+
+
+@media (max-width: 400px) {
+  * {
+    text-align: left;
+  }
+
+  article {
+    flex-direction: column;
+  }
+
+  article .item {
+    width: 100%;
+    align-self: flex-start;
+    text-align: left;
+  }
+
+  article .comment {
+    width: 100%;
+    align-self: flex-start;
+  }
+}
+
+@media (max-width: 320px) {
+  .brand {
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+  }
+  .brand * {
+    text-align: center;
+  }
+
+  #nav-bar {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  #nav-bar *{
+    text-align: center;
+  }
+}
+
+
+form {
+  visibility: collapse;
+}
