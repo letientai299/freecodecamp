@@ -1,10 +1,10 @@
 "use strict";
 
-window.addEventListener("load", function () {
+window.addEventListener("load", function() {
   load();
 });
 
-window.addEventListener("resize", function () {
+window.addEventListener("resize", function() {
   resizeChart();
 });
 
@@ -31,7 +31,7 @@ function resizeChart() {
     w = 0.95 * mainW;
   }
 
-  const h = Math.floor(w * 9.0 / 16);
+  const h = Math.floor((w * 9.0) / 16);
   e.style.width = `${w}px`;
   e.style.height = `${h}px`;
 
@@ -40,17 +40,17 @@ function resizeChart() {
 }
 
 function processData(json) {
-  return json.data.map(v => {
-    return {
-      rawDate: v[0],
-      date: new Date(v[0]),
-      gdp: parseFloat(v[1]),
-    };
-  })
+  return json.data
+    .map(v => {
+      return {
+        rawDate: v[0],
+        date: new Date(v[0]),
+        gdp: parseFloat(v[1])
+      };
+    })
     .sort((a, b) => {
       return a.date.getTime() - b.date.getTime();
     });
-
 }
 
 function loadData() {
@@ -68,7 +68,11 @@ function loadData() {
 }
 
 function displayRaw(data) {
-  document.getElementById("raw").textContent = JSON.stringify(data, null, "    ");
+  document.getElementById("raw").textContent = JSON.stringify(
+    data,
+    null,
+    "    "
+  );
 }
 
 function getChartSize() {
@@ -91,10 +95,9 @@ function showTooltip(e, d) {
   quarter += d.date.getMonth() / 3 + 1;
   tooltip.innerHTML = `<time datetime="${d.rawDate}">${quarter}</time> - $${d.gdp} Billion`;
   const offset = 10;
-  tooltip.style.left = (e.clientX + offset) + "px";
-  tooltip.style.top = (e.clientY + offset) + "px";
+  tooltip.style.left = e.clientX + offset + "px";
+  tooltip.style.top = e.clientY + offset + "px";
 }
-
 
 function draw(gdpData) {
   const [w, h] = getChartSize();
@@ -104,11 +107,13 @@ function draw(gdpData) {
   const latest = gdpData[gdpData.length - 1];
   const oldest = gdpData[0];
 
-  const xScale = d3.scaleTime()
+  const xScale = d3
+    .scaleTime()
     .domain([oldest.date, latest.date])
     .range([yAxisWidth + padding, w - padding]);
 
-  const yScale = d3.scaleLinear()
+  const yScale = d3
+    .scaleLinear()
     .domain([0, latest.gdp])
     .range([h - padding - xAxisHeight, padding]);
 
@@ -116,7 +121,8 @@ function draw(gdpData) {
     .selectAll("svg")
     .remove();
 
-  const svg = d3.select("#chart")
+  const svg = d3
+    .select("#chart")
     .append("svg")
     .attr("id", "vis")
     .attr("width", w)
@@ -137,15 +143,15 @@ function draw(gdpData) {
     .on("mouseover", (e, d) => showTooltip(e, d))
     .on("mouseleave", hideTooltip);
 
-
-  svg.append("g")
+  svg
+    .append("g")
     .call(d3.axisBottom(xScale))
     .attr("height", xAxisHeight)
     .attr("id", "x-axis")
     .attr("transform", `translate(0, ${h - padding - xAxisHeight})`);
 
-
-  svg.append("g")
+  svg
+    .append("g")
     .call(d3.axisLeft(yScale))
     .attr("id", "y-axis")
     .attr("width", yAxisWidth)
