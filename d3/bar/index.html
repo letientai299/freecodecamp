@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Visualize Data with a Bar Chart</title>
+  </head>
+  <body>
+    <main id="main">
+      <h1 id="title">United States GDP</h1>
+      <hr />
+      <article id="chart">
+        <div id="tooltip"></div>
+      </article>
+
+      <hr />
+      <article id="info">
+        <p><strong> Total time wasted here: </strong> 5h</p>
+
+        <p><strong> Additional features beside FCC requirements </strong></p>
+        <ul>
+          <li>Make the chart responsively resize together with the window</li>
+          <li>Store data in local storage to reduce network call</li>
+        </ul>
+
+        <p><strong> Tried, but not yet success </strong></p>
+        <ul>
+          <li>Pan and Zoom</li>
+          <li>
+            Vertically center the whole view while maintain good tooltip
+            position
+          </li>
+        </ul>
+      </article>
+
+      <hr />
+
+      <details>
+        <summary><strong>Raw JSON data</strong></summary>
+        <pre id="raw" class="scrollable"></pre>
+      </details>
+    </main>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <link rel="stylesheet" rel="preload" as="style" href="./style.css" />
+    <script src="index.js" defer async></script>
+    <script
+      src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"
+      async
+      defer
+    ></script>
+  </body>
+</html>
