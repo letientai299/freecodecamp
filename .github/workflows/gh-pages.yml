@@ -16,20 +16,24 @@ jobs:
 
       - name: Build and push to gh-pages branch
         run: |
-          npm install
 
           git config --global user.name 'CI bot'
           git config --global user.email 'letientai299@bot.noreply.github.com'
           git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY
+
           git checkout gh-pages --force
+          find . -type d | grep -v '.git' | grep -vE '^\.$' | xargs rm -rf
 
-          git checkout master readme.md Makefile index.tpl.html render.js
+          git checkout master .
+          npm install
           make index
-          git add index.html readme.md Makefile index.tpl.html render.js
 
-          git checkout master web
-          git checkout master d3
-          git add web d3
+          echo
+          echo "Remove every thing non-web"
+          find . -type d | grep 'node_modules' | xargs rm -rf
+          find . -type f | grep -v .git | grep -vE '\.(json|html|css|js|png|webp)$' | xargs rm
+
+          git add .
 
           git commit -m "Generate index.html from ${GITHUB_SHA}" --allow-empty
           git push

@@ -1,23 +1,46 @@
 const marked = require("marked");
 const fs = require("fs");
+const glob = require("glob");
 
 const TEMPLATE_FILE = "./index.tpl.html";
-const README = "./readme.md";
-const OUT = "./index.html";
-
 const tpl = fs.readFileSync(TEMPLATE_FILE).toString();
-const md = fs.readFileSync(README).toString();
 
-let renderer = new marked.Renderer();
-renderer.link = function(href, title, text) {
-  var link = marked.Renderer.prototype.link.call(this, href, title, text);
-  return link.replace("<a", "<a target='_blank' ");
-};
-marked.setOptions({
-  renderer: renderer
+glob("**/*.md", {}, function(err, files) {
+  if (err) {
+    console.log(err);
+    return;
+  }
+  files.filter(f => !f.includes("node_modules")).forEach(render);
 });
 
-const rendered = marked(md).toString();
+const render = function(mdFile) {
+  const out = mdFile.replace(/readme.md/i, "index.html");
+  const md = fs.readFileSync(mdFile).toString();
 
-let html = tpl.replace("{{readme}}", rendered);
-fs.writeFileSync(OUT, html);
+  let renderer = new marked.Renderer();
+  renderer.link = linkRender;
+  marked.setOptions({
+    renderer: renderer
+  });
+
+  const rendered = marked(md).toString();
+
+  let subtitle = mdFile
+    .replace(/readme.md/i, "")
+    .replace(/\.\//, "")
+    .toUpperCase();
+
+  if (subtitle.includes("/")) {
+    subtitle = `${subtitle.replace("/", "")} | `;
+  }
+
+  let html = tpl
+    .replace("{{readme}}", rendered)
+    .replace("{{subtitle}}", subtitle);
+  fs.writeFileSync(out, html);
+};
+
+const linkRender = function(href, title, text) {
+  let link = marked.Renderer.prototype.link.call(this, href, title, text);
+  return link.replace("<a", "<a target='_blank' ");
+};

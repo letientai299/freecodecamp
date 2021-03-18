@@ -6,7 +6,7 @@
 This repo contains my final projects solutions for web-related cources I've done
 on [freeCodeCamp][fcc].
 
-[Visit here here to see actual web pages.](https://letientai.io/freecodecamp/)
+[Visit here to see actual web pages.](https://letientai.io/freecodecamp/)
 
 > TODO:
 >
@@ -63,15 +63,24 @@ Note:
 - [Course link][fcc_qa]
 - Cert: TODO
 
-This course requires a public page for their
-[boilerplate code](https://www.freecodecamp.org/learn/quality-assurance), so
-[here is it](./qa/chai/public), and [here is the modified code](./qa/chai)
+This course requires more thought, so see [its note here](./qa).
+
+| Task                                             | Site                               |
+| ------------------------------------------------ | ---------------------------------- |
+| [Metric-Imperial Converter][fcc_qa_converter]    | [./qa/converter](./qa/converter)   |
+| [Issue Tracker][fcc_qa_tracker]                  | [./qa/tracker](./qa/tracker)       |
+| [Personal Library][fcc_qa_lib]                   | [./qa/lib](./qa/lib)               |
+| [Sudoku Solver][fcc_qa_sudoku]                   | [./qa/sudoku](./qa/sudoku)         |
+| [American British Translator][fcc_qa_translator] | [./qa/translator](./qa/translator) |
 
 <!-- ref -->
 
 [fcc]: https://www.freecodecamp.org/
 [fcc_algo]:
   https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/
+
+<!-- ==================== -->
+
 [fcc_web]: https://www.freecodecamp.org/learn/responsive-web-design/
 [fcc_web_tribute]:
   https://www.freecodecamp.org/learn/responsive-web-design/responsive-web-design-projects/build-a-tribute-page
@@ -83,6 +92,9 @@ This course requires a public page for their
   https://www.freecodecamp.org/learn/responsive-web-design/responsive-web-design-projects/build-a-technical-documentation-page
 [fcc_web_portfolio]:
   https://www.freecodecamp.org/learn/responsive-web-design/responsive-web-design-projects/build-a-personal-portfolio-webpage
+
+<!-- ==================== -->
+
 [fcc_d3]: https://www.freecodecamp.org/learn/data-visualization/
 [fcc_d3_bar]:
   https://www.freecodecamp.org/learn/data-visualization/data-visualization-projects/visualize-data-with-a-bar-chart
@@ -94,4 +106,17 @@ This course requires a public page for their
   https://www.freecodecamp.org/learn/data-visualization/data-visualization-projects/visualize-data-with-a-choropleth-map
 [fcc_d3_treemap]:
   https://www.freecodecamp.org/learn/data-visualization/data-visualization-projects/visualize-data-with-a-treemap-diagram
+
+<!-- ==================== -->
+
 [fcc_qa]: https://www.freecodecamp.org/learn/quality-assurance
+[fcc_qa_converter]:
+  https://www.freecodecamp.org/learn/quality-assurance/quality-assurance-projects/metric-imperial-converter
+[fcc_qa_tracker]:
+  https://www.freecodecamp.org/learn/quality-assurance/quality-assurance-projects/issue-tracker
+[fcc_qa_lib]:
+  https://www.freecodecamp.org/learn/quality-assurance/quality-assurance-projects/personal-library
+[fcc_qa_sudoku]:
+  https://www.freecodecamp.org/learn/quality-assurance/quality-assurance-projects/sudoku-solver
+[fcc_qa_translator]:
+  https://www.freecodecamp.org/learn/quality-assurance/quality-assurance-projects/american-british-translator
