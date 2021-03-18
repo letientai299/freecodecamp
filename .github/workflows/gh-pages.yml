@@ -29,11 +29,12 @@ jobs:
           npm install
           make index
 
-          echo "Remove every thing non-web"
+          echo "\n\nRemove every thing non-web"
+          find . -type d | grep - 'node_modules' | xargs rm -rf
           find . -type f | grep -vE '\.(git|json|html|css|js|png|webp)'
           find . -type f | grep -vE '\.(git|json|html|css|js|png|webp)' | xargs rm
 
-          echo "Add web stuff"
+          echo "\n\nAdd web stuff"
           find . -type f | grep -E '\.(json|html|css|js|png|webp)'
           find . -type f | grep -E '\.(json|html|css|js|png|webp)' | xargs git add -f
 
