@@ -55,11 +55,13 @@
 <a class="nav-link nav-level-3" href="#task_lists">Task Lists</a>
 <a class="nav-link nav-level-3" href="#tables">Tables</a>
 <a class="nav-link nav-level-3" href="#commit_references">Commit references</a>
-<a class="nav-link nav-level-3" href="#issue_references_within_a_repository">Issue references within a repository</a>
+<a class="nav-link nav-level-3" href="#issue/pr_references">Issue/PR references</a>
 <a class="nav-link nav-level-3" href="#username_mentions">Username mentions</a>
 <a class="nav-link nav-level-3" href="#emoji">Emoji</a>
 <a class="nav-link nav-level-2" href="#gitlab_flavored_markdown">Gitlab Flavored Markdown</a>
-<a class="nav-link nav-level-2" href="#references">References</a>
+<a class="nav-link nav-level-3" href="#math">Math</a>
+<a class="nav-link nav-level-3" href="#plantuml">PlantUML</a>
+<a class="nav-link nav-level-3" href="#mermaid">Mermaid</a>
 </nav>
       </article>
       <article id="container" class="markdown-body">
@@ -73,12 +75,12 @@ a Technical Documentation Page</a> on freeCodeCamp.</p>
 left corner is to run freeCodeCamp tests. If you want to try it, make sure to
 select &quot;Technical Documentation Page&quot; in the drop down.</p>
 <p>The main content on this page is actually just
-<a target='_blank'  href="https://github.com/letientai299/freecodecamp/blob/master/web/doc/readme.md">a Markdown file</a>,
-rendered using <a target='_blank'  href="https://github.com/markedjs/marked">marked.js</a> with a
-<a target='_blank'  href="https://github.com/letientai299/freecodecamp/blob/master/web/doc/render-doc.js">custom scripts</a>.
+<a target='_blank'  href="https://Github.com/letientai299/freecodecamp/blob/master/web/doc/readme.md">a Markdown file</a>,
+rendered using <a target='_blank'  href="https://Github.com/markedjs/marked">marked.js</a> with a
+<a target='_blank'  href="https://Github.com/letientai299/freecodecamp/blob/master/web/doc/render-doc.js">custom scripts</a>.
 Original content is copied and modified from
-<a target='_blank'  href="https://gist.github.com/cuonggt/9b7d08a597b167299f0d">this gist</a> by
-<a target='_blank'  href="https://github.com/cuonggt">cuonggt</a>.</p>
+<a target='_blank'  href="https://gist.Github.com/cuonggt/9b7d08a597b167299f0d">this gist</a> by
+<a target='_blank'  href="https://Github.com/cuonggt">cuonggt</a>.</p>
 <p>Hope you enjoy this page. See also my
 <a target='_blank'  href="https://letientai.io/freecodecamp/">other freeCodeCamp solutions</a>.</p>
 <p>BTW, the total time for this page is TODO.</p>
@@ -415,12 +417,14 @@ function fancyAlert(arg) {
 <section class="main-section header-3" id="task_lists">
 <header>Task Lists</header>
 <pre><code class="language-txt">- [x] Basic
+- [x] Advanced
 - [x] Github Flavored Markdown
 - [ ] Gitlab Flavored Markdown
 </code></pre>
 <p>Result:</p>
 <ul>
 <li><input checked="" disabled="" type="checkbox"> Basic</li>
+<li><input checked="" disabled="" type="checkbox"> Advanced</li>
 <li><input checked="" disabled="" type="checkbox"> Github Flavored Markdown</li>
 <li><input disabled="" type="checkbox"> Gitlab Flavored Markdown</li>
 </ul>
@@ -510,42 +514,71 @@ separator.</p>
 <section class="main-section header-3" id="commit_references">
 <header>Commit references</header>
 <p>Any reference to a commit’s SHA-1 hash will be automatically converted into a
-link to that commit on GitHub.</p>
-<p>For example, if you view
-<a target='_blank'  href="https://github.com/letientai299/freecodecamp/blob/master/web/doc/readme.md">the markdown source of this page on Github</a>,
-then the following SHA hash 215227d10d48035949c697e21e9c410ca8d7df3b will be
-rendered nicely like this</p>
+link to that commit on Github. This only work somewhere in Github, such as PR or
+commit message, but not on those readme docs, though.</p>
+<p>See
+<a target='_blank'  href="https://Github.com/letientai299/freecodecamp/commit/69334ecd4e1bf90ba8305bb55df3704cfc00ddf4#r48420898">here</a>
+for an example.</p>
 </section>
-<section class="main-section header-3" id="issue_references_within_a_repository">
-<header>Issue references within a repository</header>
+<section class="main-section header-3" id="issue/pr_references">
+<header>Issue/PR references</header>
 <p>Any number that refers to an Issue or Pull Request will be automatically
 converted into a link.</p>
-<pre><code class="language-txt">#1
-mojombo#1
-mojombo/github-flavored-markdown#1
+<pre><code class="language-txt">golang/go#1
 </code></pre>
+<p>Result (see it on Github instead):</p>
+<p>golang/go#1</p>
+<p>You can skip the group and repository name if you are refer to a PR/issue within
+your repository.</p>
 </section>
 <section class="main-section header-3" id="username_mentions">
 <header>Username mentions</header>
-<p>Typing an <code>@</code> symbol, followed by a username, will notify that person to come
-and view the comment. This is called an “@mention”, because you’re mentioning
-the individual. You can also @mention teams within an organization.</p>
+<p>This is simlar to twitter, user <code>@&lt;username&gt;</code> syntax to mention someone in issue
+or PR comments.</p>
 </section>
 <section class="main-section header-3" id="emoji">
 <header>Emoji</header>
-<p>GitHub supports emoji! Check out the
+<p>Github supports emoji! Check out the
 <a target='_blank'  href="http://www.emoji-cheat-sheet.com/">Emoji Cheat Sheet</a>.</p>
 </section>
 <section class="main-section header-2" id="gitlab_flavored_markdown">
 <header>Gitlab Flavored Markdown</header>
-<p><a target='_blank'  href="https://docs.gitlab.com/ee/user/markdown.html">https://docs.gitlab.com/ee/user/markdown.html</a></p>
+<p>Gitlab support most, if not all, extensions that Github has and more.</p>
+<p>See <a target='_blank'  href="https://guides.github.com/features/mastering-markdown/">Gitlab docs</a> for
+more detail</p>
+<p>Here, we will only cover some cool extensions from them (honestly, I add this
+sections to just to see if I could render this page nicely like Gitlab).</p>
 </section>
-<section class="main-section header-2" id="references">
-<header>References</header>
-<ul>
-<li><a target='_blank'  href="http://blog.ghost.org/markdown/">http://blog.ghost.org/markdown/</a></li>
-<li><a target='_blank'  href="https://guides.github.com/features/mastering-markdown/">https://guides.github.com/features/mastering-markdown/</a></li>
-</ul>
+<section class="main-section header-3" id="math">
+<header>Math</header>
+<p>It’s possible to have math written with LaTeX syntax rendered using
+<a target='_blank'  href="https://github.com/KaTeX/KaTeX">KaTeX</a>.</p>
+<pre><code class="txt">
+If
+
+```math
+lim_{x\rightarrow 8}\frac{1}{x{-}8}=\infty
+```
+
+then
+
+```math
+lim_{x\rightarrow 5}\frac{1}{x{-}5}= ?
+```
+</code></pre>
+
+<p>If</p>
+<pre><code class="language-math">lim_{x\rightarrow 8}\frac{1}{x{-}8}=\infty
+</code></pre>
+<p>then</p>
+<pre><code class="language-math">lim_{x\rightarrow 5}\frac{1}{x{-}5}= ?
+</code></pre>
+</section>
+<section class="main-section header-3" id="plantuml">
+<header>PlantUML</header>
+</section>
+<section class="main-section header-3" id="mermaid">
+<header>Mermaid</header>
 <!-- ref -->
 
 
@@ -554,11 +587,32 @@ the individual. You can also @mention teams within an organization.</p>
     </main>
     <script>
       hljs.highlightAll();
+      window.onload = function() {
+        let es = document.getElementsByClassName("language-math")
+        for (let e of es) {
+          katex.render(e.innerHTML, e);
+        }
+      }
     </script>
     <script
       src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"
       async
       defer
+    ></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.css"
+      integrity="sha384-t5CR+zwDAROtph0PXGte6ia8heboACF9R5l/DiY+WZ3P2lxNgvJkQk5n7GPvLMYw"
+      crossorigin="anonymous"
+    />
+
+    <!-- The loading of KaTeX is deferred to speed up page rendering -->
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.js"
+      integrity="sha384-FaFLTlohFghEIZkw6VGwmf9ISTubWAVYW8tG8+w2LAIftJEULZABrF9PPFv+tVkH"
+      crossorigin="anonymous"
     ></script>
   </body>
 </html>

@@ -163,3 +163,12 @@ td, th {
   padding-right: 10px;
   border: 1px solid #ccc;
 }
+
+
+.language-math {
+  background-color: inherit;
+  margin:auto;
+  display: block;
+  width: 100%;
+}
+
