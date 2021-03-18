@@ -35,10 +35,7 @@ jobs:
           find . -type f | grep -vE '\.(git|json|html|css|js|png|webp)'
           find . -type f | grep -vE '\.(git|json|html|css|js|png|webp)' | xargs rm
 
-          echo
-          echo "Add web stuff"
-          find . -type f | grep -E '\.(json|html|css|js|png|webp)'
-          find . -type f | grep -E '\.(json|html|css|js|png|webp)' | xargs git add -f
+          git add .
 
           git commit -m "Generate index.html from ${GITHUB_SHA}" --allow-empty
           git push
