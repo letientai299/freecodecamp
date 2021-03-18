@@ -1,8 +1,67 @@
 # Markdown Guide
 
-## Basic
+## About this site
+
+If you came across this by accident and wonder what freeCodeCamp has anything to
+do with this page, then, it's because this page is the result to pass the [Build
+a Technical Documentation Page][fcc_web_doc] on freeCodeCamp.
+
+The [hamburger button](https://en.wikipedia.org/wiki/Hamburger_button) on top
+left corner is to run freeCodeCamp tests. If you want to try it, make sure to
+select "Technical Documentation Page" in the drop down.
+
+The main content on this page is actually just
+[a Markdown file](https://github.com/letientai299/freecodecamp/blob/master/web/doc/readme.md),
+rendered using [marked.js](https://github.com/markedjs/marked) with a
+[custom scripts](https://github.com/letientai299/freecodecamp/blob/master/web/doc/render-doc.js).
+Original content is copied and modified from
+[this gist](https://gist.github.com/cuonggt/9b7d08a597b167299f0d) by
+[cuonggt](https://github.com/cuonggt).
+
+Hope you enjoy this page. See also my
+[other freeCodeCamp solutions](https://letientai.io/freecodecamp/).
+
+BTW, the total time for this page is TODO.
+
+## A bit about Markdown
+
+The
+[canonical guide and also first converter for Markdown](https://daringfireball.net/projects/markdown/)
+is by John Gruber, since 2004. It is short, very easy to read and understand.
+But, there's one problem, his format is ambiguous, thus, each implementation
+might choose to handle the ambiguities differently, lead to many issues. To
+solve that, there's a community effort specification called
+[CommonMark](https://commonmark.org/) aims to propose a standard, unambiguous
+syntax specification for Markdown, along with a suite of comprehensive tests.
+It's now considered the standard of Markdown.
+
+That said, the formal spec by CommonMark might be too long or too technical for
+you. If you just want to use it for email, social network, chat application, the
+basic features should be enough.
+
+## Where can we use Markdown?
+
+- Most chat applications like Discord, Whatapp, Messenger, Slack, Mattermost
+  support some subset of Markdown syntax. The most common ones are **bold**,
+  _italic_, ~strike-through~. You might want to experiment with these
+  applications to find what they can handle.
+
+- Although Gmail doesn't directly support Markdown, there's
+  [Markdown Here](https://markdown-here.com/), a cool browser extension that
+  convert your Markdown text to email with just a single click.
+
+- Developer-oriented sites like Github, Gitlab, Bicbutket should support
+  Markdown to some extends. In fact, Github and Gitlab provides many additional
+  syntax to help developers write great documentation.
+
+I hope by now you are more interested in learning Markdown. So, let's move on
+the Basic syntax.
+
+## Basic syntax
 
 ### Headings
+
+[ATX-styles](https://spec.commonmark.org/0.29/#atx-headings)
 
 ```txt
 # This is an <h1> tag
@@ -12,6 +71,27 @@
 ##### This is an <h5> tag
 ###### This is an <h6> tag
 ```
+
+[Setext-styles](https://spec.commonmark.org/0.29/#setext-heading)
+
+```txt
+This is an <h1> tag
+===================
+
+This is an <h2> tag
+-------------------
+```
+
+The "Basic syntax" you just pass through is an example of `<h2>`, while the
+"Headings" is a `<h3>`.
+
+Note:
+
+- We can't show the rendered result for above snippets because it will not look
+  good in the middle of the page.
+- The Setext style looks nicer in plain text, but it only supports 2 level of
+  headers. So, for more consistent within your document, **stick with ATX
+  style.**
 
 ### Emphasis
 
@@ -37,72 +117,135 @@ _This will also be italic_
 
 _You **can** combine them_
 
+### Paragraphs
+
+Example of a paragraph:
+
+```txt
+This sentence starts a paragraph.
+This sentence in the same paragraph,
+even though it is splitted in several lines.
+```
+
+Result:
+
+This sentence starts a paragraph. This sentence in the same paragraph, even
+though it is splitted in several lines.
+
+To split the text into 2 paragraphs, we need more than 1 line break.
+
+```txt
+This sentence starts a paragraph.
+
+The blank line between this and previous sentence
+cause this line on a new paragraph.
+```
+
+Result:
+
+This sentence starts a paragraph.
+
+The blank line between this and previous sentence cause this line on a new
+paragraph.
+
 ### Lists
 
 #### Unordered
 
 ```txt
-- Milk
-- Bread
-  - Wholegrain
-- Butter
+- Editor
+  - Vim
+    - Neovim
+  - VSCode
+  - Atom
+- Tmux
 ```
 
 Result:
 
--   Milk
--   Bread
-    -   Wholegrain
--   Butter
+- Editor
+  - Vim
+    - Neovim
+  - VSCode
+  - Atom
+- Tmux
 
 #### Ordered
 
+The follow snippet
+
 ```txt
-1. Tidy the kitchen
-2. Prepare ingredients
-3. Cook delicious things
+1. Learn HTML first
+2. Then CSS
+3. Then JS
+4. Before any shiny JS frameworks
 ```
 
-Result:
+and this snippet (if you're lazy to increase the number)
 
-1. Tidy the kitchen
-2. Prepare ingredients
-3. Cook delicious things
+```txt
+1. Learn HTML first
+1. Then CSS
+1. Then JS
+1. Before any shiny JS frameworks
+```
+
+Will be rendered to the same result:
+
+1. Learn HTML first
+1. Then CSS
+1. Then JS
+1. Before any shiny JS frameworks
 
 ### Images
 
-```txt
-![Alt Text](url)
+Syntax:
+
+```md
+![Alternative text, for screen-reader](url)
+```
+
+Example using an image on this server
+
+```md
+![Cute cat](./unhappy-cat.jpg)
 ```
 
 Result:
 
-![m'lady](http://i.imgur.com/v8IVDka.jpg)
+![Cute cat](./unhappy-cat.jpg)
 
 ### Links
 
-```txt
-[link](http://example.com)
+Syntax:
+
+```md
+[Link text](url).
+```
+
+Example:
+
+```md
+[freeCodeCamp solutions](https://letientai.io/freecodecamp/).
 ```
 
 Result:
 
-[link](http://example.com)
+[freeCodeCamp solutions](https://letientai.io/freecodecamp/).
 
-### Blockquotes
+### Block quotes
 
 ```txt
-As Kanye West said:
+Ritchie once said:
 
-> We're living the future so
-> the present is our past.
+> UNIX is very simple, it just needs a genius to understand its simplicity
 ```
 
 Result:
 
-As Kanye West said:
+Ritchie once said:
 
-> We're living the future so the present is our past.
+> UNIX is very simple, it just needs a genius to understand its simplicity
 
 ### Horizontal Rules
 
@@ -114,22 +257,37 @@ Result:
 
 ---
 
+### Inline code
+
+```txt
+Wrap some words with single quotation mark `like this` make an inline code
+snippet.
+```
+
+Wrap some words with single quotation mark `like this` make an inline code
+snippet.
+
 ### Code Snippets
 
-```
+```txt
     Indenting by 4 spaces will turn an entire paragraph into a code-block.
 ```
 
 Result:
 
-    .my-link {
-        text-decoration: underline;
-    }
+```txt
+.my-link {
+    text-decoration: underline;
+}
+```
+
+In practice, you should use [Code fence](#code_fence) to get syntax-highlighting
+support from popular site and tools.
 
 ### Reference Lists And Titles
 
-```
-**The quick brown [fox][1], jumped over the lazy [dog][2].**
+```md
+The quick brown [fox][1], jumped over the lazy [dog][2].
 
 [1]: https://en.wikipedia.org/wiki/Fox "Wikipedia: Fox"
 [2]: https://en.wikipedia.org/wiki/Dog "Wikipedia: Dog"
@@ -137,7 +295,7 @@ Result:
 
 Result:
 
-**The quick brown [fox][1], jumped over the lazy [dog][2].**
+The quick brown [fox][1], jumped over the lazy [dog][2].
 
 [1]: https://en.wikipedia.org/wiki/Fox "Wikipedia: Fox"
 [2]: https://en.wikipedia.org/wiki/Dog "Wikipedia: Dog"
@@ -152,65 +310,80 @@ Result:
 
 ### Embedding HTML
 
-    <button class="button-save large">Big Fat Button</button>
+```html
+<button>Click me</button>
+```
 
 Result:
 
-<button class="button-save large">Big Fat Button</button>
+<button onclick="function hi(){alert('Don\'t click random button on the internet. Or you will be hacked!')};hi()">
+Click me
+</button>
+
+A cool trick with HTML embedding is to use
+[`<detail>` and `<summary>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details)
+to make a collapsible block like the following.
+
+<details>
+  <summary>Long list of JS frameworks, sigh</summary>
+  <ul>
+    <li>Angular</li>
+    <li>React</li>
+    <li>Vue</li>
+    <li>Stelve</li>
+    <li>Mithril</li>
+    <li>Aurelia</li>
+    <li>Preact</li>
+    <li>Next</li>
+    <li>Nuxt</li>
+    <li>wtfjs</li>
+  </ul>
+</details>
 
 ## Advanced Markdown
 
-Note: Some syntax which is not standard to native Markdown. They're extensions
-of the language.
+Some of these syntaxes are not standard in CommonMark, but are widely supported.
 
-### Strike throughs
+### Strike Through
 
-    ~~deleted words~~
+```txt
+~~deleted words~~
+```
 
 Result:
 
 ~~deleted words~~
 
-### Highlights
-
-Work in [Ghost](https://ghost.org/):
-
-    ==oooh fancy==
-
-Result:
-
-==oooh fancy==
-
 ### Automatic Links
 
-    https://ghost.org
+```
+https://letientai.io/freecodecamp/
+```
 
 Result:
 
-https://ghost.org
+https://letientai.io/freecodecamp/
 
 ### Markdown Footnotes
 
-Work in [Ghost](https://ghost.org/):
+Work in [Ghost](https://ghost.org/) ans some other
+[static side generators](https://staticsitegenerators.net)
 
-    The quick brown fox[^1] jumped over the lazy dog[^2].
-
-    [^1]: Foxes are red
-    [^2]: Dogs are usually not red
-
-Result:
-
+```txt
 The quick brown fox[^1] jumped over the lazy dog[^2].
 
 [^1]: Foxes are red
 [^2]: Dogs are usually not red
+```
 
-## GitHub Flavored Markdown
+Sadly, it doesn't work on this page.
 
-### Syntax Highlighting
+## Github Flavored Markdown
+
+### Code fence
 
 <pre><code class="txt">
-````javascript
+``javascript
 function fancyAlert(arg) {
   if(arg) {
     $.facebox({div:'#foo'})
@@ -223,26 +396,47 @@ Result:
 
 ```javascript
 function fancyAlert(arg) {
-    if (arg) {
-        $.facebox({ div: "#foo" });
-    }
+  if (arg) {
+    $.facebox({ div: "#foo" });
+  }
+}
+```
+
+Another example using CSS
+
+<pre><code class="txt">
+```css
+@media (max-width: 800px) {
+  #toc {
+    max-width: 200px;
+  }
+}
+```
+</code></pre>
+
+Result:
+
+```css
+@media (max-width: 800px) {
+  #toc {
+    max-width: 200px;
+  }
 }
 ```
 
 ### Task Lists
 
-    - [x] @mentions, #refs, [links](), **formatting**, and <del>tags</del> supported
-    - [x] list syntax required (any unordered or ordered list supported)
-    - [x] this is a complete item
-    - [ ] this is an incomplete item
+```txt
+- [x] Basic
+- [x] Github Flavored Markdown
+- [ ] Gitlab Flavored Markdown
+```
 
 Result:
 
--   [x] @mentions, #refs, [links](), **formatting**, and <del>tags</del>
-        supported
--   [x] list syntax required (any unordered or ordered list supported)
--   [x] this is a complete item
--   [ ] this is an incomplete item
+- [x] Basic
+- [x] Github Flavored Markdown
+- [ ] Gitlab Flavored Markdown
 
 ### Tables
 
@@ -250,21 +444,54 @@ You can create tables by assembling a list of words and dividing them with
 hyphens `-` (for the first row), and then separating each column with a pipe
 `|`:
 
-| First Header                | Second Header                |
-| --------------------------- | ---------------------------- |
-| Content from cell 1         | Content from cell 2          |
-| Content in the first column | Content in the second column |
+```txt
+| Editor | Initial release | Age at 2021 |
+| ------ | --------------- | ----------- |
+| ed     | 1973            | 48          |
+| Vi     | 1976            | 45          |
+| Vim    | 1988            | 33          |
+| Neovim | 2014            | 7           |
+```
 
-### SHA references
+Result
+
+| Editor | Initial release | Age at 2021 |
+| ------ | --------------- | ----------- |
+| ed     | 1973            | 48          |
+| Vi     | 1976            | 45          |
+| Vim    | 1988            | 33          |
+| Neovim | 2014            | 7           |
+
+You can also align column by adding `:` to left or right in the header
+separator.
+
+```txt
+| Editor | Initial release | Age at 2021 |
+| ------ | --------------: | ----------: |
+| ed     | 1973            | 48          |
+| Vi     | 1976            | 45          |
+| Vim    | 1988            | 33          |
+| Neovim | 2014            | 7           |
+```
+
+Result
+
+| Editor | Initial release | Age at 2021 |
+| ------ | --------------: | ----------: |
+| ed     |            1973 |          48 |
+| Vi     |            1976 |          45 |
+| Vim    |            1988 |          33 |
+| Neovim |            2014 |           7 |
+
+### Commit references
 
 Any reference to a commit’s SHA-1 hash will be automatically converted into a
 link to that commit on GitHub.
 
-```txt
-16c999e8c71134401a78d4d46435517b2271d6ac
-mojombo@16c999e8c71134401a78d4d46435517b2271d6ac
-mojombo/github-flavored-markdown@16c999e8c71134401a78d4d46435517b2271d6ac
-```
+For example, if you view
+[the markdown source of this page on Github](https://github.com/letientai299/freecodecamp/blob/master/web/doc/readme.md),
+then the following SHA hash 215227d10d48035949c697e21e9c410ca8d7df3b will be
+rendered nicely like this
 
 ### Issue references within a repository
 
@@ -294,5 +521,10 @@ https://docs.gitlab.com/ee/user/markdown.html
 
 ## References
 
--   http://blog.ghost.org/markdown/
--   https://guides.github.com/features/mastering-markdown/
+- http://blog.ghost.org/markdown/
+- https://guides.github.com/features/mastering-markdown/
+
+<!-- ref -->
+
+[fcc_web_doc]:
+  https://www.freecodecamp.org/learn/responsive-web-design/responsive-web-design-projects/build-a-technical-documentation-page
