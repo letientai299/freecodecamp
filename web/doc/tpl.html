@@ -8,19 +8,34 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <title>{{subtitle}} FreeCodeCamp solutions</title>
+
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/dreampulse/computer-modern-web-font/master/fonts.css">
+
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/4.0.0/github-markdown.min.css"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/styles/default.min.css"
     />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/highlight.min.js"></script>
   </head>
   <body>
-  <main id="main-doc">
-    <article class="toc">
-      {{toc}}
-    </article>
-    <article class="markdown-body">
-      {{readme}}
-    </article>
-  </main>
+    <main id="main-doc">
+      <article id="toc">
+        {{toc}}
+      </article>
+      <article id="container" class="markdown-body">
+        <div id="content">
+          {{readme}}
+        </div>
+      </article>
+    </main>
+    <script>
+      hljs.highlightAll();
+    </script>
+    <script
+      src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"
+      async
+      defer
+    ></script>
   </body>
 </html>

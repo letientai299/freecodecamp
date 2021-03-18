@@ -51,10 +51,9 @@ const linkRenderer = function(href, title, text) {
 // custom heading renderer to collect all headers in the document,
 // so that we can generate the TOC (table of content) later.
 const headingRenderer = function(toc) {
-  let hasH2Before = false;
+  let hasOtherHeaderBefore = false;
   return function(text, level, raw) {
-    let anchor = this.options.headerPrefix + raw.toLowerCase()
-      .replace(/[^\w]+/g, "_");
+    let anchor = raw.replace(/\s+/g, "_");
     toc.push({
       anchor: anchor,
       level: level,
@@ -67,17 +66,14 @@ const headingRenderer = function(toc) {
     }
 
     // treat h2 specially, for the FCC exercise
-    if (level === 2) {
-      let s = `<section class="main-section" id="${anchor}"><header>${text}</header>\n`;
-      if (!hasH2Before) {
-        hasH2Before = true;
-        return s;
-      }
-
-      return `</section>\n${s}`;
+    let s = `<section class="main-section header-${level}" id="${anchor}">
+<header>${text}</header>\n`;
+    if (!hasOtherHeaderBefore) {
+      hasOtherHeaderBefore = true;
+      return s;
     }
 
-    return `<h${level} id="${anchor}">${text}</h${level}>\n`;
+    return `</section>\n${s}`;
   };
 };
 
@@ -87,10 +83,10 @@ const renderToc = function(toc) {
   let s = toc
     .map(h => {
       if (h.level === 1) {
-        return `<header>>${h.text}</header>`;
+        return `<header class="nav-level-1">${h.text}</header>`;
       }
 
-      return `<a class="nav-link" href="#${h.anchor}">${h.text}</a>`;
+      return `<a class="nav-link nav-level-${h.level}" href="#${h.anchor}">${h.text}</a>`;
     })
     .join("\n");
   return pre + s + post;
