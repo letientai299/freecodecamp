@@ -58,6 +58,15 @@ Note:
 
 > TODO
 
+## Quality assurange
+
+- [Course link][fcc_qa]
+- Cert: TODO
+
+This course requires a public page for their
+[boilerplate code](https://www.freecodecamp.org/learn/quality-assurance), so
+[here is it](./qa/chai/public), and [here is the modified code](./qa/chai)
+
 <!-- ref -->
 
 [fcc]: https://www.freecodecamp.org/
@@ -85,3 +94,4 @@ Note:
   https://www.freecodecamp.org/learn/data-visualization/data-visualization-projects/visualize-data-with-a-choropleth-map
 [fcc_d3_treemap]:
   https://www.freecodecamp.org/learn/data-visualization/data-visualization-projects/visualize-data-with-a-treemap-diagram
+[fcc_qa]: https://www.freecodecamp.org/learn/quality-assurance
