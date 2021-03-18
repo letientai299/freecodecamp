@@ -16,13 +16,15 @@ jobs:
 
       - name: Build and push to gh-pages branch
         run: |
-          npm install
 
           git config --global user.name 'CI bot'
           git config --global user.email 'letientai299@bot.noreply.github.com'
           git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY
-          git checkout gh-pages --force
 
+          git checkout gh-pages --force
+          find . -type d | grep -vE '(\.git|\.\.|\.)' | xargs rm -rf
+
+          npm install
           git checkout master .
           make index
           git add .
