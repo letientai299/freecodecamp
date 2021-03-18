@@ -28,8 +28,8 @@ jobs:
           git checkout master .
           make index
 
-          find . -type f | grep -vE '\.(git|json|html|css|js)' | xargs rm
-          find . -type f | grep -E '\.(json|html|css|js)' | xargs git add -f
+          find . -type f | grep -vE '\.(git|json|html|css|js|png|webp)' | xargs rm
+          find . -type f | grep -E '\.(json|html|css|js|png|webp)' | xargs git add -f
 
           git commit -m "Generate index.html from ${GITHUB_SHA}" --allow-empty
           git push
