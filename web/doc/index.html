@@ -62,6 +62,7 @@
 <a class="nav-link nav-level-3" href="#math">Math</a>
 <a class="nav-link nav-level-3" href="#plantuml">PlantUML</a>
 <a class="nav-link nav-level-3" href="#mermaid">Mermaid</a>
+<a class="nav-link nav-level-2" href="#final_note">Final note</a>
 </nav>
       </article>
       <article id="container" class="markdown-body">
@@ -126,7 +127,7 @@ the Basic syntax.</p>
 <section class="main-section header-3" id="headings">
 <header>Headings</header>
 <p><a target='_blank'  href="https://spec.commonmark.org/0.29/#atx-headings">ATX-styles</a></p>
-<pre><code class="language-txt"># This is an &lt;h1&gt; tag
+<pre><code class="txt"># This is an &lt;h1&gt; tag
 ## This is an &lt;h2&gt; tag
 ### This is an &lt;h3&gt; tag
 #### This is an &lt;h4&gt; tag
@@ -134,7 +135,7 @@ the Basic syntax.</p>
 ###### This is an &lt;h6&gt; tag
 </code></pre>
 <p><a target='_blank'  href="https://spec.commonmark.org/0.29/#setext-heading">Setext-styles</a></p>
-<pre><code class="language-txt">This is an &lt;h1&gt; tag
+<pre><code class="txt">This is an &lt;h1&gt; tag
 ===================
 
 This is an &lt;h2&gt; tag
@@ -153,7 +154,7 @@ style.</strong></li>
 </section>
 <section class="main-section header-3" id="emphasis">
 <header>Emphasis</header>
-<pre><code class="language-txt">*This text will be italic*
+<pre><code class="txt">*This text will be italic*
 _This will also be italic_
 
 **This text will be bold**
@@ -171,7 +172,7 @@ _You **can** combine them_
 <section class="main-section header-3" id="paragraphs">
 <header>Paragraphs</header>
 <p>Example of a paragraph:</p>
-<pre><code class="language-txt">This sentence starts a paragraph.
+<pre><code class="txt">This sentence starts a paragraph.
 This sentence in the same paragraph,
 even though it is splitted in several lines.
 </code></pre>
@@ -179,7 +180,7 @@ even though it is splitted in several lines.
 <p>This sentence starts a paragraph. This sentence in the same paragraph, even
 though it is splitted in several lines.</p>
 <p>To split the text into 2 paragraphs, we need more than 1 line break.</p>
-<pre><code class="language-txt">This sentence starts a paragraph.
+<pre><code class="txt">This sentence starts a paragraph.
 
 The blank line between this and previous sentence
 cause this line on a new paragraph.
@@ -194,7 +195,7 @@ paragraph.</p>
 </section>
 <section class="main-section header-4" id="unordered">
 <header>Unordered</header>
-<pre><code class="language-txt">- Editor
+<pre><code class="txt">- Editor
   - Vim
     - Neovim
   - VSCode
@@ -218,13 +219,13 @@ paragraph.</p>
 <section class="main-section header-4" id="ordered">
 <header>Ordered</header>
 <p>The follow snippet</p>
-<pre><code class="language-txt">1. Learn HTML first
+<pre><code class="txt">1. Learn HTML first
 2. Then CSS
 3. Then JS
 4. Before any shiny JS frameworks
 </code></pre>
 <p>and this snippet (if you&#39;re lazy to increase the number)</p>
-<pre><code class="language-txt">1. Learn HTML first
+<pre><code class="txt">1. Learn HTML first
 1. Then CSS
 1. Then JS
 1. Before any shiny JS frameworks
@@ -240,10 +241,10 @@ paragraph.</p>
 <section class="main-section header-3" id="images">
 <header>Images</header>
 <p>Syntax:</p>
-<pre><code class="language-md">![Alternative text, for screen-reader](url)
+<pre><code class="md">![Alternative text, for screen-reader](url)
 </code></pre>
 <p>Example using an image on this server</p>
-<pre><code class="language-md">![Cute cat](./unhappy-cat.jpg)
+<pre><code class="md">![Cute cat](./unhappy-cat.jpg)
 </code></pre>
 <p>Result:</p>
 <p><img src="./unhappy-cat.jpg" alt="Cute cat"></p>
@@ -251,17 +252,17 @@ paragraph.</p>
 <section class="main-section header-3" id="links">
 <header>Links</header>
 <p>Syntax:</p>
-<pre><code class="language-md">[Link text](url).
+<pre><code class="md">[Link text](url).
 </code></pre>
 <p>Example:</p>
-<pre><code class="language-md">[freeCodeCamp solutions](https://letientai.io/freecodecamp/).
+<pre><code class="md">[freeCodeCamp solutions](https://letientai.io/freecodecamp/).
 </code></pre>
 <p>Result:</p>
 <p><a target='_blank'  href="https://letientai.io/freecodecamp/">freeCodeCamp solutions</a>.</p>
 </section>
 <section class="main-section header-3" id="block_quotes">
 <header>Block quotes</header>
-<pre><code class="language-txt">Ritchie once said:
+<pre><code class="txt">Ritchie once said:
 
 &gt; UNIX is very simple, it just needs a genius to understand its simplicity
 </code></pre>
@@ -280,7 +281,7 @@ paragraph.</p>
 </section>
 <section class="main-section header-3" id="inline_code">
 <header>Inline code</header>
-<pre><code class="language-txt">Wrap some words with single quotation mark `like this` make an inline code
+<pre><code class="txt">Wrap some words with single quotation mark `like this` make an inline code
 snippet.
 </code></pre>
 <p>Wrap some words with single quotation mark <code>like this</code> make an inline code
@@ -288,10 +289,10 @@ snippet.</p>
 </section>
 <section class="main-section header-3" id="code_snippets">
 <header>Code Snippets</header>
-<pre><code class="language-txt">    Indenting by 4 spaces will turn an entire paragraph into a code-block.
+<pre><code class="txt">    Indenting by 4 spaces will turn an entire paragraph into a code-block.
 </code></pre>
 <p>Result:</p>
-<pre><code class="language-txt">.my-link {
+<pre><code class="txt">.my-link {
     text-decoration: underline;
 }
 </code></pre>
@@ -300,7 +301,7 @@ support from popular site and tools.</p>
 </section>
 <section class="main-section header-3" id="reference_lists_and_titles">
 <header>Reference Lists And Titles</header>
-<pre><code class="language-md">The quick brown [fox][1], jumped over the lazy [dog][2].
+<pre><code class="md">The quick brown [fox][1], jumped over the lazy [dog][2].
 
 [1]: https://en.wikipedia.org/wiki/Fox &quot;Wikipedia: Fox&quot;
 [2]: https://en.wikipedia.org/wiki/Dog &quot;Wikipedia: Dog&quot;
@@ -317,7 +318,7 @@ support from popular site and tools.</p>
 </section>
 <section class="main-section header-3" id="embedding_html">
 <header>Embedding HTML</header>
-<pre><code class="language-html">&lt;button&gt;Click me&lt;/button&gt;
+<pre><code class="html">&lt;button&gt;Click me&lt;/button&gt;
 </code></pre>
 <p>Result:</p>
 <button onclick="function hi(){alert('Don\'t click random button on the internet. Or you will be hacked!')};hi()">
@@ -350,7 +351,7 @@ to make a collapsible block like the following.</p>
 </section>
 <section class="main-section header-3" id="strike_through">
 <header>Strike Through</header>
-<pre><code class="language-txt">~~deleted words~~
+<pre><code class="txt">~~deleted words~~
 </code></pre>
 <p>Result:</p>
 <p><del>deleted words</del></p>
@@ -366,7 +367,7 @@ to make a collapsible block like the following.</p>
 <header>Markdown Footnotes</header>
 <p>Work in <a target='_blank'  href="https://ghost.org/">Ghost</a> ans some other
 <a target='_blank'  href="https://staticsitegenerators.net">static side generators</a></p>
-<pre><code class="language-txt">The quick brown fox[^1] jumped over the lazy dog[^2].
+<pre><code class="txt">The quick brown fox[^1] jumped over the lazy dog[^2].
 
 [^1]: Foxes are red
 [^2]: Dogs are usually not red
@@ -389,7 +390,7 @@ function fancyAlert(arg) {
 </code></pre>
 
 <p>Result:</p>
-<pre><code class="language-javascript">function fancyAlert(arg) {
+<pre><code class="javascript">function fancyAlert(arg) {
   if (arg) {
     $.facebox({ div: &quot;#foo&quot; });
   }
@@ -407,7 +408,7 @@ function fancyAlert(arg) {
 </code></pre>
 
 <p>Result:</p>
-<pre><code class="language-css">@media (max-width: 800px) {
+<pre><code class="css">@media (max-width: 800px) {
   #toc {
     max-width: 200px;
   }
@@ -416,7 +417,7 @@ function fancyAlert(arg) {
 </section>
 <section class="main-section header-3" id="task_lists">
 <header>Task Lists</header>
-<pre><code class="language-txt">- [x] Basic
+<pre><code class="txt">- [x] Basic
 - [x] Advanced
 - [x] Github Flavored Markdown
 - [ ] Gitlab Flavored Markdown
@@ -434,7 +435,7 @@ function fancyAlert(arg) {
 <p>You can create tables by assembling a list of words and dividing them with
 hyphens <code>-</code> (for the first row), and then separating each column with a pipe
 <code>|</code>:</p>
-<pre><code class="language-txt">| Editor | Initial release | Age at 2021 |
+<pre><code class="txt">| Editor | Initial release | Age at 2021 |
 | ------ | --------------- | ----------- |
 | ed     | 1973            | 48          |
 | Vi     | 1976            | 45          |
@@ -473,7 +474,7 @@ hyphens <code>-</code> (for the first row), and then separating each column with
 </tbody></table>
 <p>You can also align column by adding <code>:</code> to left or right in the header
 separator.</p>
-<pre><code class="language-txt">| Editor | Initial release | Age at 2021 |
+<pre><code class="txt">| Editor | Initial release | Age at 2021 |
 | ------ | --------------: | ----------: |
 | ed     | 1973            | 48          |
 | Vi     | 1976            | 45          |
@@ -524,7 +525,7 @@ for an example.</p>
 <header>Issue/PR references</header>
 <p>Any number that refers to an Issue or Pull Request will be automatically
 converted into a link.</p>
-<pre><code class="language-txt">golang/go#1
+<pre><code class="txt">golang/go#1
 </code></pre>
 <p>Result (see it on Github instead):</p>
 <p>golang/go#1</p>
@@ -543,7 +544,8 @@ or PR comments.</p>
 </section>
 <section class="main-section header-2" id="gitlab_flavored_markdown">
 <header>Gitlab Flavored Markdown</header>
-<p>Gitlab support most, if not all, extensions that Github has and more.</p>
+<p>Gitlab support most, if not all, extensions that Github has and more (that means
+this section won&#39;t render properly on Github).</p>
 <p>See <a target='_blank'  href="https://guides.github.com/features/mastering-markdown/">Gitlab docs</a> for
 more detail</p>
 <p>Here, we will only cover some cool extensions from them (honestly, I add this
@@ -568,17 +570,67 @@ lim_{x\rightarrow 5}\frac{1}{x{-}5}= ?
 </code></pre>
 
 <p>If</p>
-<pre><code class="language-math">lim_{x\rightarrow 8}\frac{1}{x{-}8}=\infty
+<pre><code class="math">lim_{x\rightarrow 8}\frac{1}{x{-}8}=\infty
 </code></pre>
 <p>then</p>
-<pre><code class="language-math">lim_{x\rightarrow 5}\frac{1}{x{-}5}= ?
+<pre><code class="math">lim_{x\rightarrow 5}\frac{1}{x{-}5}= ?
 </code></pre>
 </section>
 <section class="main-section header-3" id="plantuml">
 <header>PlantUML</header>
+<p><a target='_blank'  href="https://plantuml.com/">PlantUML</a> is a cool tool to generate diagram from plain
+text. On Gitlab, following snippet</p>
+<pre><code class="txt">
+```plantuml
+A -> B: Hello
+```
+</code></pre>
+
+<p>Will become this sequence diagram</p>
+<pre><code class="plantuml">A -&gt; B: Hello
+</code></pre>
 </section>
 <section class="main-section header-3" id="mermaid">
 <header>Mermaid</header>
+<p><a target='_blank'  href="https://mermaid-js.github.io/">Mermaid</a> is another tool to turn plain text into
+diagram. Compare to PlantUML, it has an advantage that it&#39;s completely client
+side, no need a server.</p>
+<p>Below plain text</p>
+<pre><code class="txt">
+```mermaid
+graph LR
+    A[Start reading] --> B{Understand Markdown?};
+    B -->|Yes| C[Cool];
+    C --> D{Star my repo please};
+    D --> E[Nope];
+    D --> F[Sure];
+    E --> G((T_T));
+    F --> H((^v^))
+    B --> |No| I[Read it again -_-]
+    I --> A
+```
+</code></pre>
+
+<p>On Gitlab, will become</p>
+<pre><code class="mermaid">graph LR
+    A[Start reading] --&gt; B{Understand Markdown?};
+    B --&gt;|Yes| C[Cool];
+    C --&gt; D{Star my repo please};
+    D --&gt; E[Nope];
+    D --&gt; F[Sure];
+    E --&gt; G((T_T));
+    F --&gt; H((^v^))
+    B --&gt; |No| I[Read it again -_-]
+    I --&gt; A
+</code></pre>
+</section>
+<section class="main-section header-2" id="final_note">
+<header>Final note</header>
+<p>We finally come to the end. I hope that you enjoy reading this, learn a few
+things about Markdown and its extensions.</p>
+<p>This page probably contains full of bugs with bad JS code (both the FE and the
+<a target='_blank'  href="./https://github.com/letientai299/freecodecamp/blob/master/web/doc/render-doc.js">render-doc.js</a>),
+so if you found any, let me know, or, even better, send me a PR!</p>
 <!-- ref -->
 
 
@@ -586,14 +638,34 @@ lim_{x\rightarrow 5}\frac{1}{x{-}5}= ?
       </article>
     </main>
     <script>
-      hljs.highlightAll();
       window.onload = function() {
-        let es = document.getElementsByClassName("language-math")
+        let es = document.getElementsByClassName("math");
         for (let e of es) {
-          katex.render(e.innerHTML, e);
+          window.katex.render(e.innerHTML, e);
         }
-      }
+
+        es = document.getElementsByClassName("plantuml");
+        for (let e of es) {
+          let src =
+            "https://www.plantuml.com/plantuml/svg/" +
+            window.plantumlEncoder.encode(e.textContent);
+          let img = document.createElement("img")
+          img.setAttribute("src", src)
+          e.replaceWith(img)
+        }
+
+        mermaid.initialize({startOnLoad:true});
+
+        // this must go after other plugins, otherwise it will mess them up.
+        hljs.configure({
+          // can't highlight html or it will mess up mermaid
+          languages: ["css", "javascript", "txt"]
+        })
+        hljs.highlightAll();
+      };
     </script>
+    <script src="./js/plantuml-encoder.min.js"></script>
+
     <script
       src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"
       async
@@ -614,5 +686,10 @@ lim_{x\rightarrow 5}\frac{1}{x{-}5}= ?
       integrity="sha384-FaFLTlohFghEIZkw6VGwmf9ISTubWAVYW8tG8+w2LAIftJEULZABrF9PPFv+tVkH"
       crossorigin="anonymous"
     ></script>
+
+    <script
+      defer async
+      src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js">
+    </script>
   </body>
 </html>
