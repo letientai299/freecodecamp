@@ -34,14 +34,34 @@
       </article>
     </main>
     <script>
-      hljs.highlightAll();
       window.onload = function() {
-        let es = document.getElementsByClassName("language-math")
+        let es = document.getElementsByClassName("math");
         for (let e of es) {
-          katex.render(e.innerHTML, e);
+          window.katex.render(e.innerHTML, e);
         }
-      }
+
+        es = document.getElementsByClassName("plantuml");
+        for (let e of es) {
+          let src =
+            "https://www.plantuml.com/plantuml/svg/" +
+            window.plantumlEncoder.encode(e.textContent);
+          let img = document.createElement("img")
+          img.setAttribute("src", src)
+          e.replaceWith(img)
+        }
+
+        mermaid.initialize({startOnLoad:true});
+
+        // this must go after other plugins, otherwise it will mess them up.
+        hljs.configure({
+          // can't highlight html or it will mess up mermaid
+          languages: ["css", "javascript", "txt"]
+        })
+        hljs.highlightAll();
+      };
     </script>
+    <script src="./js/plantuml-encoder.min.js"></script>
+
     <script
       src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"
       async
@@ -62,5 +82,10 @@
       integrity="sha384-FaFLTlohFghEIZkw6VGwmf9ISTubWAVYW8tG8+w2LAIftJEULZABrF9PPFv+tVkH"
       crossorigin="anonymous"
     ></script>
+
+    <script
+      defer async
+      src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js">
+    </script>
   </body>
 </html>

@@ -523,7 +523,8 @@ Github supports emoji! Check out the
 
 ## Gitlab Flavored Markdown
 
-Gitlab support most, if not all, extensions that Github has and more.
+Gitlab support most, if not all, extensions that Github has and more (that means
+this section won't render properly on Github).
 
 See [Gitlab docs](https://guides.github.com/features/mastering-markdown/) for
 more detail
@@ -564,7 +565,67 @@ lim_{x\rightarrow 5}\frac{1}{x{-}5}= ?
 
 ### PlantUML
 
+[PlantUML](https://plantuml.com/) is a cool tool to generate diagram from plain
+text. On Gitlab, following snippet
+
+<pre><code class="txt">
+```plantuml
+A -> B: Hello
+```
+</code></pre>
+
+Will become this sequence diagram
+
+```plantuml
+A -> B: Hello
+```
+
 ### Mermaid
+
+[Mermaid](https://mermaid-js.github.io/) is another tool to turn plain text into
+diagram. Compare to PlantUML, it has an advantage that it's completely client
+side, no need a server.
+
+Below plain text
+
+<pre><code class="txt">
+```mermaid
+graph LR
+    A[Start reading] --> B{Understand Markdown?};
+    B -->|Yes| C[Cool];
+    C --> D{Star my repo please};
+    D --> E[Nope];
+    D --> F[Sure];
+    E --> G((T_T));
+    F --> H((^v^))
+    B --> |No| I[Read it again -_-]
+    I --> A
+```
+</code></pre>
+
+On Gitlab, will become
+
+```mermaid
+graph LR
+    A[Start reading] --> B{Understand Markdown?};
+    B -->|Yes| C[Cool];
+    C --> D{Star my repo please};
+    D --> E[Nope];
+    D --> F[Sure];
+    E --> G((T_T));
+    F --> H((^v^))
+    B --> |No| I[Read it again -_-]
+    I --> A
+```
+
+## Final note
+
+We finally come to the end. I hope that you enjoy reading this, learn a few
+things about Markdown and its extensions.
+
+This page probably contains full of bugs with bad JS code (both the FE and the
+[render-doc.js](./https://github.com/letientai299/freecodecamp/blob/master/web/doc/render-doc.js)),
+so if you found any, let me know, or, even better, send me a PR!
 
 <!-- ref -->
 
