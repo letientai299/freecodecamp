@@ -5,7 +5,8 @@ body {
 
 #main-doc {
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: auto 1fr;
+  grid-column-gap: 10px;
   height: 100vh;
   width: 100vw;
 }
@@ -14,6 +15,8 @@ body {
 
 #toc {
   overflow-y: scroll;
+  resize: horizontal;
+  border-right: 2px double gray;
 }
 
 #navbar {
@@ -22,13 +25,13 @@ body {
 }
 
 .nav-level-1 {
-  font-size: 2em;
+  font-size: 1.7em;
   font-weight: bold;
   padding-top: 50px;
 }
 
 .nav-level-2 {
-  font-size: 1.5em;
+  font-size: 1.4em;
 }
 
 .nav-level-3 {
@@ -78,4 +81,23 @@ body {
 
 .header-5 > header {
   font-size: 1.3em;
+}
+
+@media (max-width: 800px) {
+  #toc {
+    max-width: 200px;
+  }
+}
+
+@media (max-width: 500px) {
+  #toc {
+    max-width: 100%;
+    resize: vertical;
+    max-height: 200px;
+    border-bottom: 2px double gray;
+  }
+
+  #main-doc {
+    grid-template-columns: auto;
+  }
 }
