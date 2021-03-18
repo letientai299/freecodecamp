@@ -7,10 +7,14 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
-    <title>WEBDOC/ |  FreeCodeCamp solutions</title>
+    <title>Markdown Guide | FreeCodeCamp solutions</title>
 
     <link rel="stylesheet" href="./style.css" />
-    <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/dreampulse/computer-modern-web-font/master/fonts.css">
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.rawgit.com/dreampulse/computer-modern-web-font/master/fonts.css"
+    />
 
     <link
       rel="stylesheet"
@@ -23,44 +27,103 @@
       <article id="toc">
         <nav id="navbar">
 <header class="nav-level-1">Markdown Guide</header>
-<a class="nav-link nav-level-2" href="#Basic">Basic</a>
-<a class="nav-link nav-level-3" href="#Headings">Headings</a>
-<a class="nav-link nav-level-3" href="#Emphasis">Emphasis</a>
-<a class="nav-link nav-level-3" href="#Lists">Lists</a>
-<a class="nav-link nav-level-4" href="#Unordered">Unordered</a>
-<a class="nav-link nav-level-4" href="#Ordered">Ordered</a>
-<a class="nav-link nav-level-3" href="#Images">Images</a>
-<a class="nav-link nav-level-3" href="#Links">Links</a>
-<a class="nav-link nav-level-3" href="#Blockquotes">Blockquotes</a>
-<a class="nav-link nav-level-3" href="#Horizontal_Rules">Horizontal Rules</a>
-<a class="nav-link nav-level-3" href="#Code_Snippets">Code Snippets</a>
-<a class="nav-link nav-level-3" href="#Reference_Lists_And_Titles">Reference Lists And Titles</a>
-<a class="nav-link nav-level-3" href="#Escaping">Escaping</a>
-<a class="nav-link nav-level-3" href="#Embedding_HTML">Embedding HTML</a>
-<a class="nav-link nav-level-2" href="#Advanced_Markdown">Advanced Markdown</a>
-<a class="nav-link nav-level-3" href="#Strike_throughs">Strike throughs</a>
-<a class="nav-link nav-level-3" href="#Highlights">Highlights</a>
-<a class="nav-link nav-level-3" href="#Automatic_Links">Automatic Links</a>
-<a class="nav-link nav-level-3" href="#Markdown_Footnotes">Markdown Footnotes</a>
-<a class="nav-link nav-level-2" href="#GitHub_Flavored_Markdown">GitHub Flavored Markdown</a>
-<a class="nav-link nav-level-3" href="#Syntax_Highlighting">Syntax Highlighting</a>
-<a class="nav-link nav-level-3" href="#Task_Lists">Task Lists</a>
-<a class="nav-link nav-level-3" href="#Tables">Tables</a>
-<a class="nav-link nav-level-3" href="#SHA_references">SHA references</a>
-<a class="nav-link nav-level-3" href="#Issue_references_within_a_repository">Issue references within a repository</a>
-<a class="nav-link nav-level-3" href="#Username_mentions">Username mentions</a>
-<a class="nav-link nav-level-3" href="#Emoji">Emoji</a>
-<a class="nav-link nav-level-2" href="#Gitlab_Flavored_Markdown">Gitlab Flavored Markdown</a>
-<a class="nav-link nav-level-2" href="#References">References</a>
+<a class="nav-link nav-level-2" href="#about_this_site">About this site</a>
+<a class="nav-link nav-level-2" href="#a_bit_about_markdown">A bit about Markdown</a>
+<a class="nav-link nav-level-2" href="#where_can_we_use_markdown?">Where can we use Markdown?</a>
+<a class="nav-link nav-level-2" href="#basic_syntax">Basic syntax</a>
+<a class="nav-link nav-level-3" href="#headings">Headings</a>
+<a class="nav-link nav-level-3" href="#emphasis">Emphasis</a>
+<a class="nav-link nav-level-3" href="#paragraphs">Paragraphs</a>
+<a class="nav-link nav-level-3" href="#lists">Lists</a>
+<a class="nav-link nav-level-4" href="#unordered">Unordered</a>
+<a class="nav-link nav-level-4" href="#ordered">Ordered</a>
+<a class="nav-link nav-level-3" href="#images">Images</a>
+<a class="nav-link nav-level-3" href="#links">Links</a>
+<a class="nav-link nav-level-3" href="#block_quotes">Block quotes</a>
+<a class="nav-link nav-level-3" href="#horizontal_rules">Horizontal Rules</a>
+<a class="nav-link nav-level-3" href="#inline_code">Inline code</a>
+<a class="nav-link nav-level-3" href="#code_snippets">Code Snippets</a>
+<a class="nav-link nav-level-3" href="#reference_lists_and_titles">Reference Lists And Titles</a>
+<a class="nav-link nav-level-3" href="#escaping">Escaping</a>
+<a class="nav-link nav-level-3" href="#embedding_html">Embedding HTML</a>
+<a class="nav-link nav-level-2" href="#advanced_markdown">Advanced Markdown</a>
+<a class="nav-link nav-level-3" href="#strike_through">Strike Through</a>
+<a class="nav-link nav-level-3" href="#automatic_links">Automatic Links</a>
+<a class="nav-link nav-level-3" href="#markdown_footnotes">Markdown Footnotes</a>
+<a class="nav-link nav-level-2" href="#github_flavored_markdown">Github Flavored Markdown</a>
+<a class="nav-link nav-level-3" href="#code_fence">Code fence</a>
+<a class="nav-link nav-level-3" href="#task_lists">Task Lists</a>
+<a class="nav-link nav-level-3" href="#tables">Tables</a>
+<a class="nav-link nav-level-3" href="#commit_references">Commit references</a>
+<a class="nav-link nav-level-3" href="#issue_references_within_a_repository">Issue references within a repository</a>
+<a class="nav-link nav-level-3" href="#username_mentions">Username mentions</a>
+<a class="nav-link nav-level-3" href="#emoji">Emoji</a>
+<a class="nav-link nav-level-2" href="#gitlab_flavored_markdown">Gitlab Flavored Markdown</a>
+<a class="nav-link nav-level-2" href="#references">References</a>
 </nav>
       </article>
       <article id="container" class="markdown-body">
         <div id="content">
-          <section class="main-section header-2" id="Basic">
-<header>Basic</header>
+          <section class="main-section header-2" id="about_this_site">
+<header>About this site</header>
+<p>If you came across this by accident and wonder what freeCodeCamp has anything to
+do with this page, then, it&#39;s because this page is the result to pass the <a target='_blank'  href="https://www.freecodecamp.org/learn/responsive-web-design/responsive-web-design-projects/build-a-technical-documentation-page">Build
+a Technical Documentation Page</a> on freeCodeCamp.</p>
+<p>The <a target='_blank'  href="https://en.wikipedia.org/wiki/Hamburger_button">hamburger button</a> on top
+left corner is to run freeCodeCamp tests. If you want to try it, make sure to
+select &quot;Technical Documentation Page&quot; in the drop down.</p>
+<p>The main content on this page is actually just
+<a target='_blank'  href="https://github.com/letientai299/freecodecamp/blob/master/web/doc/readme.md">a Markdown file</a>,
+rendered using <a target='_blank'  href="https://github.com/markedjs/marked">marked.js</a> with a
+<a target='_blank'  href="https://github.com/letientai299/freecodecamp/blob/master/web/doc/render-doc.js">custom scripts</a>.
+Original content is copied and modified from
+<a target='_blank'  href="https://gist.github.com/cuonggt/9b7d08a597b167299f0d">this gist</a> by
+<a target='_blank'  href="https://github.com/cuonggt">cuonggt</a>.</p>
+<p>Hope you enjoy this page. See also my
+<a target='_blank'  href="https://letientai.io/freecodecamp/">other freeCodeCamp solutions</a>.</p>
+<p>BTW, the total time for this page is TODO.</p>
 </section>
-<section class="main-section header-3" id="Headings">
+<section class="main-section header-2" id="a_bit_about_markdown">
+<header>A bit about Markdown</header>
+<p>The
+<a target='_blank'  href="https://daringfireball.net/projects/markdown/">canonical guide and also first converter for Markdown</a>
+is by John Gruber, since 2004. It is short, very easy to read and understand.
+But, there&#39;s one problem, his format is ambiguous, thus, each implementation
+might choose to handle the ambiguities differently, lead to many issues. To
+solve that, there&#39;s a community effort specification called
+<a target='_blank'  href="https://commonmark.org/">CommonMark</a> aims to propose a standard, unambiguous
+syntax specification for Markdown, along with a suite of comprehensive tests.
+It&#39;s now considered the standard of Markdown.</p>
+<p>That said, the formal spec by CommonMark might be too long or too technical for
+you. If you just want to use it for email, social network, chat application, the
+basic features should be enough.</p>
+</section>
+<section class="main-section header-2" id="where_can_we_use_markdown?">
+<header>Where can we use Markdown?</header>
+<ul>
+<li><p>Most chat applications like Discord, Whatapp, Messenger, Slack, Mattermost
+support some subset of Markdown syntax. The most common ones are <strong>bold</strong>,
+<em>italic</em>, <del>strike-through</del>. You might want to experiment with these
+applications to find what they can handle.</p>
+</li>
+<li><p>Although Gmail doesn&#39;t directly support Markdown, there&#39;s
+<a target='_blank'  href="https://markdown-here.com/">Markdown Here</a>, a cool browser extension that
+convert your Markdown text to email with just a single click.</p>
+</li>
+<li><p>Developer-oriented sites like Github, Gitlab, Bicbutket should support
+Markdown to some extends. In fact, Github and Gitlab provides many additional
+syntax to help developers write great documentation.</p>
+</li>
+</ul>
+<p>I hope by now you are more interested in learning Markdown. So, let&#39;s move on
+the Basic syntax.</p>
+</section>
+<section class="main-section header-2" id="basic_syntax">
+<header>Basic syntax</header>
+</section>
+<section class="main-section header-3" id="headings">
 <header>Headings</header>
+<p><a target='_blank'  href="https://spec.commonmark.org/0.29/#atx-headings">ATX-styles</a></p>
 <pre><code class="language-txt"># This is an &lt;h1&gt; tag
 ## This is an &lt;h2&gt; tag
 ### This is an &lt;h3&gt; tag
@@ -68,8 +131,25 @@
 ##### This is an &lt;h5&gt; tag
 ###### This is an &lt;h6&gt; tag
 </code></pre>
+<p><a target='_blank'  href="https://spec.commonmark.org/0.29/#setext-heading">Setext-styles</a></p>
+<pre><code class="language-txt">This is an &lt;h1&gt; tag
+===================
+
+This is an &lt;h2&gt; tag
+-------------------
+</code></pre>
+<p>The &quot;Basic syntax&quot; you just pass through is an example of <code>&lt;h2&gt;</code>, while the
+&quot;Headings&quot; is a <code>&lt;h3&gt;</code>.</p>
+<p>Note:</p>
+<ul>
+<li>We can&#39;t show the rendered result for above snippets because it will not look
+good in the middle of the page.</li>
+<li>The Setext style looks nicer in plain text, but it only supports 2 level of
+headers. So, for more consistent within your document, <strong>stick with ATX
+style.</strong></li>
+</ul>
 </section>
-<section class="main-section header-3" id="Emphasis">
+<section class="main-section header-3" id="emphasis">
 <header>Emphasis</header>
 <pre><code class="language-txt">*This text will be italic*
 _This will also be italic_
@@ -86,154 +166,218 @@ _You **can** combine them_
 <p><strong>This will also be bold</strong></p>
 <p><em>You <strong>can</strong> combine them</em></p>
 </section>
-<section class="main-section header-3" id="Lists">
+<section class="main-section header-3" id="paragraphs">
+<header>Paragraphs</header>
+<p>Example of a paragraph:</p>
+<pre><code class="language-txt">This sentence starts a paragraph.
+This sentence in the same paragraph,
+even though it is splitted in several lines.
+</code></pre>
+<p>Result:</p>
+<p>This sentence starts a paragraph. This sentence in the same paragraph, even
+though it is splitted in several lines.</p>
+<p>To split the text into 2 paragraphs, we need more than 1 line break.</p>
+<pre><code class="language-txt">This sentence starts a paragraph.
+
+The blank line between this and previous sentence
+cause this line on a new paragraph.
+</code></pre>
+<p>Result:</p>
+<p>This sentence starts a paragraph.</p>
+<p>The blank line between this and previous sentence cause this line on a new
+paragraph.</p>
+</section>
+<section class="main-section header-3" id="lists">
 <header>Lists</header>
 </section>
-<section class="main-section header-4" id="Unordered">
+<section class="main-section header-4" id="unordered">
 <header>Unordered</header>
-<pre><code class="language-txt">- Milk
-- Bread
-  - Wholegrain
-- Butter
+<pre><code class="language-txt">- Editor
+  - Vim
+    - Neovim
+  - VSCode
+  - Atom
+- Tmux
 </code></pre>
 <p>Result:</p>
 <ul>
-<li>  Milk</li>
-<li>Bread<ul>
-<li>  Wholegrain</li>
+<li>Editor<ul>
+<li>Vim<ul>
+<li>Neovim</li>
 </ul>
 </li>
-<li>  Butter</li>
+<li>VSCode</li>
+<li>Atom</li>
+</ul>
+</li>
+<li>Tmux</li>
 </ul>
 </section>
-<section class="main-section header-4" id="Ordered">
+<section class="main-section header-4" id="ordered">
 <header>Ordered</header>
-<pre><code class="language-txt">1. Tidy the kitchen
-2. Prepare ingredients
-3. Cook delicious things
+<p>The follow snippet</p>
+<pre><code class="language-txt">1. Learn HTML first
+2. Then CSS
+3. Then JS
+4. Before any shiny JS frameworks
 </code></pre>
-<p>Result:</p>
+<p>and this snippet (if you&#39;re lazy to increase the number)</p>
+<pre><code class="language-txt">1. Learn HTML first
+1. Then CSS
+1. Then JS
+1. Before any shiny JS frameworks
+</code></pre>
+<p>Will be rendered to the same result:</p>
 <ol>
-<li>Tidy the kitchen</li>
-<li>Prepare ingredients</li>
-<li>Cook delicious things</li>
+<li>Learn HTML first</li>
+<li>Then CSS</li>
+<li>Then JS</li>
+<li>Before any shiny JS frameworks</li>
 </ol>
 </section>
-<section class="main-section header-3" id="Images">
+<section class="main-section header-3" id="images">
 <header>Images</header>
-<pre><code class="language-txt">![Alt Text](url)
+<p>Syntax:</p>
+<pre><code class="language-md">![Alternative text, for screen-reader](url)
+</code></pre>
+<p>Example using an image on this server</p>
+<pre><code class="language-md">![Cute cat](./unhappy-cat.jpg)
 </code></pre>
 <p>Result:</p>
-<p><img src="http://i.imgur.com/v8IVDka.jpg" alt="m&#39;lady"></p>
+<p><img src="./unhappy-cat.jpg" alt="Cute cat"></p>
 </section>
-<section class="main-section header-3" id="Links">
+<section class="main-section header-3" id="links">
 <header>Links</header>
-<pre><code class="language-txt">[link](http://example.com)
+<p>Syntax:</p>
+<pre><code class="language-md">[Link text](url).
+</code></pre>
+<p>Example:</p>
+<pre><code class="language-md">[freeCodeCamp solutions](https://letientai.io/freecodecamp/).
 </code></pre>
 <p>Result:</p>
-<p><a target='_blank'  href="http://example.com">link</a></p>
+<p><a target='_blank'  href="https://letientai.io/freecodecamp/">freeCodeCamp solutions</a>.</p>
 </section>
-<section class="main-section header-3" id="Blockquotes">
-<header>Blockquotes</header>
-<pre><code class="language-txt">As Kanye West said:
+<section class="main-section header-3" id="block_quotes">
+<header>Block quotes</header>
+<pre><code class="language-txt">Ritchie once said:
 
-&gt; We&#39;re living the future so
-&gt; the present is our past.
+&gt; UNIX is very simple, it just needs a genius to understand its simplicity
 </code></pre>
 <p>Result:</p>
-<p>As Kanye West said:</p>
+<p>Ritchie once said:</p>
 <blockquote>
-<p>We&#39;re living the future so the present is our past.</p>
+<p>UNIX is very simple, it just needs a genius to understand its simplicity</p>
 </blockquote>
 </section>
-<section class="main-section header-3" id="Horizontal_Rules">
+<section class="main-section header-3" id="horizontal_rules">
 <header>Horizontal Rules</header>
 <pre><code>---
 </code></pre>
 <p>Result:</p>
 <hr>
 </section>
-<section class="main-section header-3" id="Code_Snippets">
+<section class="main-section header-3" id="inline_code">
+<header>Inline code</header>
+<pre><code class="language-txt">Wrap some words with single quotation mark `like this` make an inline code
+snippet.
+</code></pre>
+<p>Wrap some words with single quotation mark <code>like this</code> make an inline code
+snippet.</p>
+</section>
+<section class="main-section header-3" id="code_snippets">
 <header>Code Snippets</header>
-<pre><code>    Indenting by 4 spaces will turn an entire paragraph into a code-block.
+<pre><code class="language-txt">    Indenting by 4 spaces will turn an entire paragraph into a code-block.
 </code></pre>
 <p>Result:</p>
-<pre><code>.my-link {
+<pre><code class="language-txt">.my-link {
     text-decoration: underline;
 }
 </code></pre>
+<p>In practice, you should use <a target='_blank'  href="#code_fence">Code fence</a> to get syntax-highlighting
+support from popular site and tools.</p>
 </section>
-<section class="main-section header-3" id="Reference_Lists_And_Titles">
+<section class="main-section header-3" id="reference_lists_and_titles">
 <header>Reference Lists And Titles</header>
-<pre><code>**The quick brown [fox][1], jumped over the lazy [dog][2].**
+<pre><code class="language-md">The quick brown [fox][1], jumped over the lazy [dog][2].
 
 [1]: https://en.wikipedia.org/wiki/Fox &quot;Wikipedia: Fox&quot;
 [2]: https://en.wikipedia.org/wiki/Dog &quot;Wikipedia: Dog&quot;
 </code></pre>
 <p>Result:</p>
-<p><strong>The quick brown <a target='_blank'  href="https://en.wikipedia.org/wiki/Fox" title="Wikipedia: Fox">fox</a>, jumped over the lazy <a target='_blank'  href="https://en.wikipedia.org/wiki/Dog" title="Wikipedia: Dog">dog</a>.</strong></p>
+<p>The quick brown <a target='_blank'  href="https://en.wikipedia.org/wiki/Fox" title="Wikipedia: Fox">fox</a>, jumped over the lazy <a target='_blank'  href="https://en.wikipedia.org/wiki/Dog" title="Wikipedia: Dog">dog</a>.</p>
 </section>
-<section class="main-section header-3" id="Escaping">
+<section class="main-section header-3" id="escaping">
 <header>Escaping</header>
 <pre><code>\*literally\*
 </code></pre>
 <p>Result:</p>
 <p>*literally*</p>
 </section>
-<section class="main-section header-3" id="Embedding_HTML">
+<section class="main-section header-3" id="embedding_html">
 <header>Embedding HTML</header>
-<pre><code>&lt;button class=&quot;button-save large&quot;&gt;Big Fat Button&lt;/button&gt;
+<pre><code class="language-html">&lt;button&gt;Click me&lt;/button&gt;
 </code></pre>
 <p>Result:</p>
-<p><button class="button-save large">Big Fat Button</button></p>
+<button onclick="function hi(){alert('Don\'t click random button on the internet. Or you will be hacked!')};hi()">
+Click me
+</button>
+
+<p>A cool trick with HTML embedding is to use
+<a target='_blank'  href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details"><code>&lt;detail&gt;</code> and <code>&lt;summary&gt;</code></a>
+to make a collapsible block like the following.</p>
+<details>
+  <summary>Long list of JS frameworks, sigh</summary>
+  <ul>
+    <li>Angular</li>
+    <li>React</li>
+    <li>Vue</li>
+    <li>Stelve</li>
+    <li>Mithril</li>
+    <li>Aurelia</li>
+    <li>Preact</li>
+    <li>Next</li>
+    <li>Nuxt</li>
+    <li>wtfjs</li>
+  </ul>
+</details>
+
 </section>
-<section class="main-section header-2" id="Advanced_Markdown">
+<section class="main-section header-2" id="advanced_markdown">
 <header>Advanced Markdown</header>
-<p>Note: Some syntax which is not standard to native Markdown. They&#39;re extensions
-of the language.</p>
+<p>Some of these syntaxes are not standard in CommonMark, but are widely supported.</p>
 </section>
-<section class="main-section header-3" id="Strike_throughs">
-<header>Strike throughs</header>
-<pre><code>~~deleted words~~
+<section class="main-section header-3" id="strike_through">
+<header>Strike Through</header>
+<pre><code class="language-txt">~~deleted words~~
 </code></pre>
 <p>Result:</p>
 <p><del>deleted words</del></p>
 </section>
-<section class="main-section header-3" id="Highlights">
-<header>Highlights</header>
-<p>Work in <a target='_blank'  href="https://ghost.org/">Ghost</a>:</p>
-<pre><code>==oooh fancy==
-</code></pre>
-<p>Result:</p>
-<p>==oooh fancy==</p>
-</section>
-<section class="main-section header-3" id="Automatic_Links">
+<section class="main-section header-3" id="automatic_links">
 <header>Automatic Links</header>
-<pre><code>https://ghost.org
+<pre><code>https://letientai.io/freecodecamp/
 </code></pre>
 <p>Result:</p>
-<p><a target='_blank'  href="https://ghost.org">https://ghost.org</a></p>
+<p><a target='_blank'  href="https://letientai.io/freecodecamp/">https://letientai.io/freecodecamp/</a></p>
 </section>
-<section class="main-section header-3" id="Markdown_Footnotes">
+<section class="main-section header-3" id="markdown_footnotes">
 <header>Markdown Footnotes</header>
-<p>Work in <a target='_blank'  href="https://ghost.org/">Ghost</a>:</p>
-<pre><code>The quick brown fox[^1] jumped over the lazy dog[^2].
+<p>Work in <a target='_blank'  href="https://ghost.org/">Ghost</a> ans some other
+<a target='_blank'  href="https://staticsitegenerators.net">static side generators</a></p>
+<pre><code class="language-txt">The quick brown fox[^1] jumped over the lazy dog[^2].
 
 [^1]: Foxes are red
 [^2]: Dogs are usually not red
 </code></pre>
-<p>Result:</p>
-<p>The quick brown fox[^1] jumped over the lazy dog[^2].</p>
-<p>[^1]: Foxes are red
-[^2]: Dogs are usually not red</p>
+<p>Sadly, it doesn&#39;t work on this page.</p>
 </section>
-<section class="main-section header-2" id="GitHub_Flavored_Markdown">
-<header>GitHub Flavored Markdown</header>
+<section class="main-section header-2" id="github_flavored_markdown">
+<header>Github Flavored Markdown</header>
 </section>
-<section class="main-section header-3" id="Syntax_Highlighting">
-<header>Syntax Highlighting</header>
+<section class="main-section header-3" id="code_fence">
+<header>Code fence</header>
 <pre><code class="txt">
-````javascript
+``javascript
 function fancyAlert(arg) {
   if(arg) {
     $.facebox({div:'#foo'})
@@ -244,61 +388,135 @@ function fancyAlert(arg) {
 
 <p>Result:</p>
 <pre><code class="language-javascript">function fancyAlert(arg) {
-    if (arg) {
-        $.facebox({ div: &quot;#foo&quot; });
-    }
+  if (arg) {
+    $.facebox({ div: &quot;#foo&quot; });
+  }
+}
+</code></pre>
+<p>Another example using CSS</p>
+<pre><code class="txt">
+```css
+@media (max-width: 800px) {
+  #toc {
+    max-width: 200px;
+  }
+}
+```
+</code></pre>
+
+<p>Result:</p>
+<pre><code class="language-css">@media (max-width: 800px) {
+  #toc {
+    max-width: 200px;
+  }
 }
 </code></pre>
 </section>
-<section class="main-section header-3" id="Task_Lists">
+<section class="main-section header-3" id="task_lists">
 <header>Task Lists</header>
-<pre><code>- [x] @mentions, #refs, [links](), **formatting**, and &lt;del&gt;tags&lt;/del&gt; supported
-- [x] list syntax required (any unordered or ordered list supported)
-- [x] this is a complete item
-- [ ] this is an incomplete item
+<pre><code class="language-txt">- [x] Basic
+- [x] Github Flavored Markdown
+- [ ] Gitlab Flavored Markdown
 </code></pre>
 <p>Result:</p>
 <ul>
-<li><input checked="" disabled="" type="checkbox"> @mentions, #refs, <a target='_blank'  href="">links</a>, <strong>formatting</strong>, and <del>tags</del><pre><code>  supported
-</code></pre>
-</li>
-<li>  [x] list syntax required (any unordered or ordered list supported)</li>
-<li>  [x] this is a complete item</li>
-<li>  [ ] this is an incomplete item</li>
+<li><input checked="" disabled="" type="checkbox"> Basic</li>
+<li><input checked="" disabled="" type="checkbox"> Github Flavored Markdown</li>
+<li><input disabled="" type="checkbox"> Gitlab Flavored Markdown</li>
 </ul>
 </section>
-<section class="main-section header-3" id="Tables">
+<section class="main-section header-3" id="tables">
 <header>Tables</header>
 <p>You can create tables by assembling a list of words and dividing them with
 hyphens <code>-</code> (for the first row), and then separating each column with a pipe
 <code>|</code>:</p>
+<pre><code class="language-txt">| Editor | Initial release | Age at 2021 |
+| ------ | --------------- | ----------- |
+| ed     | 1973            | 48          |
+| Vi     | 1976            | 45          |
+| Vim    | 1988            | 33          |
+| Neovim | 2014            | 7           |
+</code></pre>
+<p>Result</p>
 <table>
 <thead>
 <tr>
-<th>First Header</th>
-<th>Second Header</th>
+<th>Editor</th>
+<th>Initial release</th>
+<th>Age at 2021</th>
 </tr>
 </thead>
 <tbody><tr>
-<td>Content from cell 1</td>
-<td>Content from cell 2</td>
+<td>ed</td>
+<td>1973</td>
+<td>48</td>
 </tr>
 <tr>
-<td>Content in the first column</td>
-<td>Content in the second column</td>
+<td>Vi</td>
+<td>1976</td>
+<td>45</td>
+</tr>
+<tr>
+<td>Vim</td>
+<td>1988</td>
+<td>33</td>
+</tr>
+<tr>
+<td>Neovim</td>
+<td>2014</td>
+<td>7</td>
+</tr>
+</tbody></table>
+<p>You can also align column by adding <code>:</code> to left or right in the header
+separator.</p>
+<pre><code class="language-txt">| Editor | Initial release | Age at 2021 |
+| ------ | --------------: | ----------: |
+| ed     | 1973            | 48          |
+| Vi     | 1976            | 45          |
+| Vim    | 1988            | 33          |
+| Neovim | 2014            | 7           |
+</code></pre>
+<p>Result</p>
+<table>
+<thead>
+<tr>
+<th>Editor</th>
+<th align="right">Initial release</th>
+<th align="right">Age at 2021</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>ed</td>
+<td align="right">1973</td>
+<td align="right">48</td>
+</tr>
+<tr>
+<td>Vi</td>
+<td align="right">1976</td>
+<td align="right">45</td>
+</tr>
+<tr>
+<td>Vim</td>
+<td align="right">1988</td>
+<td align="right">33</td>
+</tr>
+<tr>
+<td>Neovim</td>
+<td align="right">2014</td>
+<td align="right">7</td>
 </tr>
 </tbody></table>
 </section>
-<section class="main-section header-3" id="SHA_references">
-<header>SHA references</header>
+<section class="main-section header-3" id="commit_references">
+<header>Commit references</header>
 <p>Any reference to a commit’s SHA-1 hash will be automatically converted into a
 link to that commit on GitHub.</p>
-<pre><code class="language-txt">16c999e8c71134401a78d4d46435517b2271d6ac
-mojombo@16c999e8c71134401a78d4d46435517b2271d6ac
-mojombo/github-flavored-markdown@16c999e8c71134401a78d4d46435517b2271d6ac
-</code></pre>
+<p>For example, if you view
+<a target='_blank'  href="https://github.com/letientai299/freecodecamp/blob/master/web/doc/readme.md">the markdown source of this page on Github</a>,
+then the following SHA hash c2ed6645645a9f9d786b9c5f8002534441814058 will be
+rendered nicely like this</p>
 </section>
-<section class="main-section header-3" id="Issue_references_within_a_repository">
+<section class="main-section header-3" id="issue_references_within_a_repository">
 <header>Issue references within a repository</header>
 <p>Any number that refers to an Issue or Pull Request will be automatically
 converted into a link.</p>
@@ -307,27 +525,29 @@ mojombo#1
 mojombo/github-flavored-markdown#1
 </code></pre>
 </section>
-<section class="main-section header-3" id="Username_mentions">
+<section class="main-section header-3" id="username_mentions">
 <header>Username mentions</header>
 <p>Typing an <code>@</code> symbol, followed by a username, will notify that person to come
 and view the comment. This is called an “@mention”, because you’re mentioning
 the individual. You can also @mention teams within an organization.</p>
 </section>
-<section class="main-section header-3" id="Emoji">
+<section class="main-section header-3" id="emoji">
 <header>Emoji</header>
 <p>GitHub supports emoji! Check out the
 <a target='_blank'  href="http://www.emoji-cheat-sheet.com/">Emoji Cheat Sheet</a>.</p>
 </section>
-<section class="main-section header-2" id="Gitlab_Flavored_Markdown">
+<section class="main-section header-2" id="gitlab_flavored_markdown">
 <header>Gitlab Flavored Markdown</header>
 <p><a target='_blank'  href="https://docs.gitlab.com/ee/user/markdown.html">https://docs.gitlab.com/ee/user/markdown.html</a></p>
 </section>
-<section class="main-section header-2" id="References">
+<section class="main-section header-2" id="references">
 <header>References</header>
 <ul>
-<li>  <a target='_blank'  href="http://blog.ghost.org/markdown/">http://blog.ghost.org/markdown/</a></li>
-<li>  <a target='_blank'  href="https://guides.github.com/features/mastering-markdown/">https://guides.github.com/features/mastering-markdown/</a></li>
+<li><a target='_blank'  href="http://blog.ghost.org/markdown/">http://blog.ghost.org/markdown/</a></li>
+<li><a target='_blank'  href="https://guides.github.com/features/mastering-markdown/">https://guides.github.com/features/mastering-markdown/</a></li>
 </ul>
+<!-- ref -->
+
 
         </div>
       </article>

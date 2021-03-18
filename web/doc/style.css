@@ -1,6 +1,9 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic);
+
 body {
   font-family: "Computer Modern Sans", sans-serif;
   overflow: hidden;
+  font-size: 1.2em;
 }
 
 #main-doc {
@@ -25,28 +28,28 @@ body {
 }
 
 .nav-level-1 {
-  font-size: 1.7em;
+  font-size: 1.5em;
   font-weight: bold;
   padding-top: 50px;
 }
 
 .nav-level-2 {
-  font-size: 1.4em;
+  font-size: 1.2em;
 }
 
 .nav-level-3 {
-  font-size: 1.3em;
+  font-size: 1.1em;
   padding-left: 20px;
 }
 
 
 .nav-level-4 {
-  font-size: 1.2em;
+  font-size: 1.0em;
   padding-left: 40px;
 }
 
 .nav-level-5 {
-  font-size: 1.1em;
+  font-size: 0.9em;
   padding-left: 60px;
 }
 
@@ -64,19 +67,19 @@ body {
 }
 
 .header-1 > header {
-  font-size: 2.5em;
+  font-size: 2.3em;
 }
 
 .header-2 > header {
-  font-size: 2.2em;
+  font-size: 2.0em;
 }
 
 .header-3 > header {
-  font-size: 1.9em;
+  font-size: 1.7em;
 }
 
 .header-4 > header {
-  font-size: 1.6em;
+  font-size: 1.4em;
 }
 
 .header-5 > header {
@@ -100,4 +103,63 @@ body {
   #main-doc {
     grid-template-columns: auto;
   }
+}
+
+blockquote {
+  margin: 50px auto;
+  font-family: Open Sans, sans-serif;
+  font-style: italic;
+  color: #555555;
+  padding: 1em 20px 1em 75px;
+  border-left: 8px solid #78C0A8;
+  line-height: 1.5;
+  position: relative;
+  background: #EDEDED;
+}
+
+blockquote::before {
+  font-family: Arial, sans-serif;
+  content: "\201C";
+  color: #78C0A8;
+  font-size: 4em;
+  position: absolute;
+  left: 10px;
+  top: -10px;
+}
+
+blockquote::after {
+  content: '';
+}
+
+button {
+  font-size: 1em;
+  margin: 10px;
+}
+
+
+code {
+  padding: 2px;
+  background-color: #f0f0f0;
+  color: #444;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+/* Zebra striping */
+tr:nth-of-type(odd) {
+  background: #eee;
+}
+
+th {
+  background: #3498db;
+  color: white;
+  font-weight: bold;
+}
+
+td, th {
+  padding-left: 10px;
+  padding-right: 10px;
+  border: 1px solid #ccc;
 }

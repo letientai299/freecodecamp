@@ -2,13 +2,11 @@ const marked = require("marked");
 const fs = require("fs");
 
 const TEMPLATE_FILE = "web/doc/tpl.html";
-const tpl = fs.readFileSync(TEMPLATE_FILE)
-  .toString();
+const tpl = fs.readFileSync(TEMPLATE_FILE).toString();
 
 const render = function(mdFile) {
   const out = mdFile.replace(/readme.md/i, "index.html");
-  const md = fs.readFileSync(mdFile)
-    .toString();
+  const md = fs.readFileSync(mdFile).toString();
 
   let renderer = new marked.Renderer();
   renderer.link = linkRenderer;
@@ -16,12 +14,11 @@ const render = function(mdFile) {
   let toc = [];
   renderer.heading = headingRenderer(toc);
   marked.setOptions({
-    renderer: renderer
+    renderer: renderer,
+    gfm: true,
   });
 
-
-  const rendered = marked(md)
-    .toString();
+  const rendered = marked(md).toString();
 
   let subtitle = mdFile
     .replace(/readme.md/i, "")
@@ -47,13 +44,12 @@ const linkRenderer = function(href, title, text) {
   return link.replace("<a", "<a target='_blank' ");
 };
 
-
 // custom heading renderer to collect all headers in the document,
 // so that we can generate the TOC (table of content) later.
 const headingRenderer = function(toc) {
   let hasOtherHeaderBefore = false;
   return function(text, level, raw) {
-    let anchor = raw.replace(/\s+/g, "_");
+    let anchor = raw.replace(/\s+/g, "_").toLowerCase();
     toc.push({
       anchor: anchor,
       level: level,
@@ -93,4 +89,3 @@ const renderToc = function(toc) {
 };
 
 render("./web/doc/readme.md");
-
