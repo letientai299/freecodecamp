@@ -1,3 +1,5 @@
 .idea/
 node_modules
 /index.html
+qa/index.html
+web/index.html
