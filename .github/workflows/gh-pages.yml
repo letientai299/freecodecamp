@@ -22,7 +22,6 @@ jobs:
           git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY
 
           git checkout gh-pages --force
-          find . -type d | grep -v '.git' | grep -vE '^\.$'
           find . -type d | grep -v '.git' | grep -vE '^\.$' | xargs rm -rf
 
           git checkout master .
@@ -32,8 +31,7 @@ jobs:
           echo
           echo "Remove every thing non-web"
           find . -type d | grep 'node_modules' | xargs rm -rf
-          find . -type f | grep -vE '\.(git|json|html|css|js|png|webp)'
-          find . -type f | grep -vE '\.(git|json|html|css|js|png|webp)' | xargs rm
+          find . -type f | grep -v .git | grep -vE '\.(json|html|css|js|png|webp)$' | xargs rm
 
           git add .
 
