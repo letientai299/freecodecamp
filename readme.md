@@ -63,7 +63,7 @@ Note:
 - [Course link][fcc_qa]
 - Cert: TODO
 
-This course requires more thought, so see [its note here](./qa).
+This course requires more thought, so see [its note here](./qa/).
 
 | Task                                             | Site                               |
 | ------------------------------------------------ | ---------------------------------- |
