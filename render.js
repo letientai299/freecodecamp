@@ -3,22 +3,19 @@ const fs = require("fs");
 const glob = require("glob");
 
 const TEMPLATE_FILE = "./index.tpl.html";
-const tpl = fs.readFileSync(TEMPLATE_FILE)
-  .toString();
+const tpl = fs.readFileSync(TEMPLATE_FILE).toString();
 
 glob("**/*.md", {}, function(err, files) {
   if (err) {
     console.log(err);
     return;
   }
-  files.filter(f => !f.includes("node_modules"))
-    .forEach(render);
+  files.filter(f => !f.includes("node_modules")).forEach(render);
 });
 
 const render = function(mdFile) {
   const out = mdFile.replace(/readme.md/i, "index.html");
-  const md = fs.readFileSync(mdFile)
-    .toString();
+  const md = fs.readFileSync(mdFile).toString();
 
   let renderer = new marked.Renderer();
   renderer.link = linkRender;
@@ -26,10 +23,20 @@ const render = function(mdFile) {
     renderer: renderer
   });
 
-  const rendered = marked(md)
-    .toString();
+  const rendered = marked(md).toString();
 
-  let html = tpl.replace("{{readme}}", rendered);
+  let subtitle = mdFile
+    .replace(/readme.md/i, "")
+    .replace(/\.\//, "")
+    .toUpperCase();
+
+  if (subtitle.includes("/")) {
+    subtitle = `${subtitle.replace("/", "")} | `;
+  }
+
+  let html = tpl
+    .replace("{{readme}}", rendered)
+    .replace("{{subtitle}}", subtitle);
   fs.writeFileSync(out, html);
 };
 
