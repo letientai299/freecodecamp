@@ -31,7 +31,7 @@ jobs:
           echo
           echo "Remove every thing non-web"
           find . -type d | grep 'node_modules' | xargs rm -rf
-          find . -type f | grep -vE '^.git$' | grep -vE '\.(json|html|css|js|png|webp)$' | xargs rm
+          find . -type f | grep -vE '.git/' | grep -vE '\.(json|html|css|js|png|webp)$' | xargs rm
 
           git add .
 

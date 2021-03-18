@@ -1,6 +1,6 @@
 # freeCodeCamp project solutions
 
-![GH Pages](https://github.com/letientai299/freecodecamp/actions/workflows/gh-pages.yml/badge.svg)
+[![GH Pages](https://github.com/letientai299/freecodecamp/actions/workflows/gh-pages.yml/badge.svg)](https://github.com/letientai299/freecodecamp/actions/workflows/gh-pages.yml)
 [![GitHub stars](https://img.shields.io/github/stars/letientai299/freecodecamp?style=social&label=Star&maxAge=2592000)](https://GitHub.com/letientai299/freecodecamp/stargazers/)
 
 This repo contains my final projects solutions for web-related cources I've done
