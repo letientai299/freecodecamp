@@ -10,7 +10,10 @@ glob("**/*.md", {}, function(err, files) {
     console.log(err);
     return;
   }
-  files.filter(f => !f.includes("node_modules")).forEach(render);
+  files
+    .filter(f => !f.includes("node_modules"))
+    .filter(f => !f.includes("web/doc"))
+    .forEach(render);
 });
 
 const render = function(mdFile) {
