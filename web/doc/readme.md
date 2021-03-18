@@ -11,12 +11,12 @@ left corner is to run freeCodeCamp tests. If you want to try it, make sure to
 select "Technical Documentation Page" in the drop down.
 
 The main content on this page is actually just
-[a Markdown file](https://github.com/letientai299/freecodecamp/blob/master/web/doc/readme.md),
-rendered using [marked.js](https://github.com/markedjs/marked) with a
-[custom scripts](https://github.com/letientai299/freecodecamp/blob/master/web/doc/render-doc.js).
+[a Markdown file](https://Github.com/letientai299/freecodecamp/blob/master/web/doc/readme.md),
+rendered using [marked.js](https://Github.com/markedjs/marked) with a
+[custom scripts](https://Github.com/letientai299/freecodecamp/blob/master/web/doc/render-doc.js).
 Original content is copied and modified from
-[this gist](https://gist.github.com/cuonggt/9b7d08a597b167299f0d) by
-[cuonggt](https://github.com/cuonggt).
+[this gist](https://gist.Github.com/cuonggt/9b7d08a597b167299f0d) by
+[cuonggt](https://Github.com/cuonggt).
 
 Hope you enjoy this page. See also my
 [other freeCodeCamp solutions](https://letientai.io/freecodecamp/).
@@ -428,6 +428,7 @@ Result:
 
 ```txt
 - [x] Basic
+- [x] Advanced
 - [x] Github Flavored Markdown
 - [ ] Gitlab Flavored Markdown
 ```
@@ -435,6 +436,7 @@ Result:
 Result:
 
 - [x] Basic
+- [x] Advanced
 - [x] Github Flavored Markdown
 - [ ] Gitlab Flavored Markdown
 
@@ -486,43 +488,83 @@ Result
 ### Commit references
 
 Any reference to a commit’s SHA-1 hash will be automatically converted into a
-link to that commit on GitHub.
+link to that commit on Github. This only work somewhere in Github, such as PR or
+commit message, but not on those readme docs, though.
 
-For example, if you view
-[the markdown source of this page on Github](https://github.com/letientai299/freecodecamp/blob/master/web/doc/readme.md),
-then the following SHA hash 215227d10d48035949c697e21e9c410ca8d7df3b will be
-rendered nicely like this
+See
+[here](https://Github.com/letientai299/freecodecamp/commit/69334ecd4e1bf90ba8305bb55df3704cfc00ddf4#r48420898)
+for an example.
 
-### Issue references within a repository
+### Issue/PR references
 
 Any number that refers to an Issue or Pull Request will be automatically
 converted into a link.
 
 ```txt
-#1
-mojombo#1
-mojombo/github-flavored-markdown#1
+golang/go#1
 ```
+
+Result (see it on Github instead):
+
+golang/go#1
+
+You can skip the group and repository name if you are refer to a PR/issue within
+your repository.
 
 ### Username mentions
 
-Typing an `@` symbol, followed by a username, will notify that person to come
-and view the comment. This is called an “@mention”, because you’re mentioning
-the individual. You can also @mention teams within an organization.
+This is simlar to twitter, user `@<username>` syntax to mention someone in issue
+or PR comments.
 
 ### Emoji
 
-GitHub supports emoji! Check out the
+Github supports emoji! Check out the
 [Emoji Cheat Sheet](http://www.emoji-cheat-sheet.com/).
 
 ## Gitlab Flavored Markdown
 
-https://docs.gitlab.com/ee/user/markdown.html
+Gitlab support most, if not all, extensions that Github has and more.
 
-## References
+See [Gitlab docs](https://guides.github.com/features/mastering-markdown/) for
+more detail
 
-- http://blog.ghost.org/markdown/
-- https://guides.github.com/features/mastering-markdown/
+Here, we will only cover some cool extensions from them (honestly, I add this
+sections to just to see if I could render this page nicely like Gitlab).
+
+### Math
+
+It’s possible to have math written with LaTeX syntax rendered using
+[KaTeX](https://github.com/KaTeX/KaTeX).
+
+<pre><code class="txt">
+If
+
+```math
+lim_{x\rightarrow 8}\frac{1}{x{-}8}=\infty
+```
+
+then
+
+```math
+lim_{x\rightarrow 5}\frac{1}{x{-}5}= ?
+```
+</code></pre>
+
+If
+
+```math
+lim_{x\rightarrow 8}\frac{1}{x{-}8}=\infty
+```
+
+then
+
+```math
+lim_{x\rightarrow 5}\frac{1}{x{-}5}= ?
+```
+
+### PlantUML
+
+### Mermaid
 
 <!-- ref -->
 
