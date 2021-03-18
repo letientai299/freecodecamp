@@ -16,7 +16,7 @@ const render = function(mdFile) {
   marked.setOptions({
     renderer: renderer,
     gfm: true,
-    langPrefix: "",
+    langPrefix: ""
   });
 
   const rendered = marked(md).toString();

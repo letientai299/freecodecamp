@@ -21,7 +21,9 @@ Original content is copied and modified from
 Hope you enjoy this page. See also my
 [other freeCodeCamp solutions](https://letientai.io/freecodecamp/).
 
-BTW, the total time for this page is TODO.
+BTW, the total time for this page is 8h, in which first 2h for setting up the
+[render-doc.js][renderjs] script, the rest for content and integrate other js
+libraries.
 
 ## A bit about Markdown
 
@@ -116,6 +118,9 @@ _This will also be italic_
 **This will also be bold**
 
 _You **can** combine them_
+
+For a bit of advice, you should stick with `**` for bold and `_` for italic, so
+to keep your document look consistent in plain text.
 
 ### Paragraphs
 
@@ -236,14 +241,10 @@ Result:
 ### Block quotes
 
 ```txt
-Ritchie once said:
-
 > UNIX is very simple, it just needs a genius to understand its simplicity
 ```
 
 Result:
-
-Ritchie once said:
 
 > UNIX is very simple, it just needs a genius to understand its simplicity
 
@@ -485,6 +486,9 @@ Result
 | Vim    |            1988 |          33 |
 | Neovim |            2014 |           7 |
 
+If you're wonder how did I align the table column in plain text, take a look at
+[prettier](https://prettier.io/)
+
 ### Commit references
 
 Any reference to a commit’s SHA-1 hash will be automatically converted into a
@@ -526,8 +530,7 @@ Github supports emoji! Check out the
 Gitlab support most, if not all, extensions that Github has and more (that means
 this section won't render properly on Github).
 
-See [Gitlab docs](https://guides.github.com/features/mastering-markdown/) for
-more detail
+See [Gitlab docs](https://docs.gitlab.com/ee/user/markdown.html) for more detail
 
 Here, we will only cover some cool extensions from them (honestly, I add this
 sections to just to see if I could render this page nicely like Gitlab).
@@ -624,10 +627,12 @@ We finally come to the end. I hope that you enjoy reading this, learn a few
 things about Markdown and its extensions.
 
 This page probably contains full of bugs with bad JS code (both the FE and the
-[render-doc.js](./https://github.com/letientai299/freecodecamp/blob/master/web/doc/render-doc.js)),
-so if you found any, let me know, or, even better, send me a PR!
+[render-doc.js][renderjs] so if you found any, let me know, or, even better,
+send me a PR!
 
 <!-- ref -->
 
 [fcc_web_doc]:
   https://www.freecodecamp.org/learn/responsive-web-design/responsive-web-design-projects/build-a-technical-documentation-page
+[renderjs]:
+  https://github.com/letientai299/freecodecamp/blob/master/web/doc/render-doc.js
