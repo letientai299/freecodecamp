@@ -29,7 +29,7 @@ strong support for functinal programming.
 - [Course link][fcc_web]
 - Cert: TODO
 
-See [its note here](./qa).
+See [its note here](./web).
 
 | Task                                                    | Site                           |
 | ------------------------------------------------------- | ------------------------------ |
