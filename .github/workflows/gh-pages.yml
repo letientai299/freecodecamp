@@ -22,10 +22,10 @@ jobs:
           git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY
 
           git checkout gh-pages --force
-          find . -type d | grep -vE '(\.git|\.\.|\.)' | xargs rm -rf
+          find . -type d | grep -v '.git' | grep -v . | xargs rm -rf
 
-          npm install
           git checkout master .
+          npm install
           make index
 
           find . -type f | grep -vE '\.(git|json|html|css|js|png|webp)' | xargs rm
