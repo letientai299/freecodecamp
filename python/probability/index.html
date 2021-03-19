@@ -1,0 +1,163 @@
+<!--
+  vim: ft=html:
+  GENERATED CODE: DO NOT EDIT
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>PYTHONPROBABILITY/ |  FreeCodeCamp solutions</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/4.0.0/github-markdown.min.css"
+    />
+
+    <style>
+      .markdown-body {
+        box-sizing: border-box;
+        min-width: 200px;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 45px;
+        border: solid 1px lightgray;
+        border-radius: 5px;
+        box-shadow: 1px 1px 3px;
+      }
+
+      @media (max-width: 767px) {
+        .markdown-body {
+          padding: 15px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <article class="markdown-body">
+      <h3 id="assignment">Assignment</h3>
+<p>Suppose there is a hat containing 5 blue balls, 4 red balls, and 2 green balls.
+What is the probability that a random draw of 4 balls will contain at least 1
+red ball and 2 green balls? While it would be possible to calculate the
+probability using advanced mathematics, an easier way is to write a program to
+perform a large number of experiments to estimate an approximate probability.</p>
+<p>For this project, you will write a program to determine the approximate
+probability of drawing certain balls randomly from a hat.</p>
+<p>First, create a <code>Hat</code> class in <code>prob_calculator.py</code>. The class should take a
+variable number of arguments that specify the number of balls of each color that
+are in the hat. For example, a class object could be created in any of these
+ways:</p>
+<pre><code>hat1 = Hat(yellow=3, blue=2, green=6)
+hat2 = Hat(red=5, orange=4)
+hat3 = Hat(red=5, orange=4, black=1, blue=0, pink=2, striped=9)
+</code></pre>
+<p>A hat will always be created with at least one ball. The arguments passed into
+the hat object upon creation should be converted to a <code>contents</code> instance
+variable. <code>contents</code> should be a list of strings containing one item for each
+ball in the hat. Each item in the list should be a color name representing a
+single ball of that color. For example, if your hat is <code>{&quot;red&quot;: 2, &quot;blue&quot;: 1}</code>,
+<code>contents</code> should be <code>[&quot;red&quot;, &quot;red&quot;, &quot;blue&quot;]</code>.</p>
+<p>The <code>Hat</code> class should have a <code>draw</code> method that accepts an argument indicating
+the number of balls to draw from the hat. This method should remove balls at
+random from <code>contents</code> and return those balls as a list of strings. The balls
+should not go back into the hat during the draw, similar to an urn experiment
+without replacement. If the number of balls to draw exceeds the available
+quantity, return all the balls.</p>
+<p>Next, create an <code>experiment</code> function in <code>prob_calculator.py</code> (not inside the
+<code>Hat</code> class). This function should accept the following arguments:</p>
+<ul>
+<li><code>hat</code>: A hat object containing balls that should be copied inside the
+function.</li>
+<li><code>expected_balls</code>: An object indicating the exact group of balls to attempt to
+draw from the hat for the experiment. For example, to determine the
+probability of drawing 2 blue balls and 1 red ball from the hat, set
+<code>expected_balls</code> to <code>{&quot;blue&quot;:2, &quot;red&quot;:1}</code>.</li>
+<li><code>num_balls_drawn</code>: The number of balls to draw out of the hat in each
+experiment.</li>
+<li><code>num_experiments</code>: The number of experiments to perform. (The more experiments
+performed, the more accurate the approximate probability will be.)</li>
+</ul>
+<p>The <code>experiment</code> function should return a probability.</p>
+<p>For example, let&#39;s say that you want to determine the probability of getting at
+least 2 red balls and 1 green ball when you draw 5 balls from a hat containing 6
+black, 4 red, and 3 green. To do this, we perform <code>N</code> experiments, count how
+many times <code>M</code> we get at least 2 red balls and 1 green ball, and estimate the
+probability as <code>M/N</code>. Each experiment consists of starting with a hat containing
+the specified balls, drawing a number of balls, and checking if we got the balls
+we were attempting to draw.</p>
+<p>Here is how you would call the <code>experiment</code> function based on the example above
+with 2000 experiments:</p>
+<pre><code>hat = Hat(black=6, red=4, green=3)
+probability = experiment(hat=hat,
+                  expected_balls={&quot;red&quot;:2,&quot;green&quot;:1},
+                  num_balls_drawn=5,
+                  num_experiments=2000)
+</code></pre>
+<p>Since this is based on random draws, the probability will be slightly different
+each time the code is run.</p>
+<p><em>Hint: Consider using the modules that are already imported at the top of
+<code>prob_calculator.py</code>.</em></p>
+<h3 id="development">Development</h3>
+<p>Write your code in <code>prob_calculator.py</code>. For development, you can use <code>main.py</code>
+to test your code. Click the &quot;run&quot; button and <code>main.py</code> will run.</p>
+<h3 id="testing">Testing</h3>
+<p>The unit tests for this project are in <code>test_module.py</code>. We imported the tests
+from <code>test_module.py</code> to <code>main.py</code> for your convenience. The tests will run
+automatically whenever you hit the &quot;run&quot; button.</p>
+<h3 id="submitting">Submitting</h3>
+<p>Copy your project&#39;s URL and submit it to freeCodeCamp.</p>
+
+    </article>
+
+    <a
+      target="_blank"
+      href="https://github.com/letientai299/freecodecamp"
+      class="github-corner"
+      aria-label="View source on GitHub"
+      ><svg
+        width="80"
+        height="80"
+        viewBox="0 0 250 250"
+        style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;"
+        aria-hidden="true"
+      >
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path
+          d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+          fill="currentColor"
+          style="transform-origin: 130px 106px;"
+          class="octo-arm"
+        ></path>
+        <path
+          d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+          fill="currentColor"
+          class="octo-body"
+        ></path></svg></a
+    ><style>
+      .github-corner:hover .octo-arm {
+        animation: octocat-wave 560ms ease-in-out;
+      }
+      @keyframes octocat-wave {
+        0%,
+        100% {
+          transform: rotate(0);
+        }
+        20%,
+        60% {
+          transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+          transform: rotate(10deg);
+        }
+      }
+      @media (max-width: 500px) {
+        .github-corner:hover .octo-arm {
+          animation: none;
+        }
+        .github-corner .octo-arm {
+          animation: octocat-wave 560ms ease-in-out;
+        }
+      }
+    </style>
+  </body>
+</html>
