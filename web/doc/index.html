@@ -664,15 +664,16 @@ send me a PR!</p>
           languages: ["css", "javascript", "txt"]
         })
         hljs.highlightAll();
+
+        // only include FCC test scripts if needed
+        if (window.location.toString().includes("?test=true")) {
+          let js = document.createElement("script")
+          js.src = "https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"
+          document.body.appendChild(js);
+        };
       };
     </script>
     <script src="./js/plantuml-encoder.min.js"></script>
-
-    <script
-      src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"
-      async
-      defer
-    ></script>
 
     <link
       rel="stylesheet"
