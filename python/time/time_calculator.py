@@ -37,6 +37,9 @@ def add_time(start, duration, day=""):
         h %= 12
         indicator = "PM"
 
+    if h == 12:
+        indicator = "PM"
+
     if h == 0:
         h = 12
         indicator = "AM"
