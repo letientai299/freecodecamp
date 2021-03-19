@@ -75,7 +75,7 @@ This course requires more thought, so see [its note here](./qa).
 
 ## Scientific Computing with Python
 
-- [Course link][fcc_python]
+- [Course link][fcc_py]
 - [Cert](https://www.freecodecamp.org/certification/letientai299/scientific-computing-with-python-v7)
 - Time:
   - Course: 20m, pretty quick since I'm experienced and there's only 56 multi
