@@ -4,7 +4,7 @@
 [![GitHub stars](https://img.shields.io/github/stars/letientai299/freecodecamp?style=social&label=Star&maxAge=2592000)](https://GitHub.com/letientai299/freecodecamp/stargazers/)
 
 This repo contains my final projects solutions for web-related cources I've done
-on [freeCodeCamp][fcc].
+on [freeCodeCamp][fcc] in 2021.
 
 [Visit here to see actual web pages.](https://letientai.io/freecodecamp/)
 
@@ -73,14 +73,28 @@ This course requires more thought, so see [its note here](./qa).
 | [Sudoku Solver][fcc_qa_sudoku]                   | [./qa/sudoku](./qa/sudoku)         |
 | [American British Translator][fcc_qa_translator] | [./qa/translator](./qa/translator) |
 
+## Scientific Computing with Python
+
+- [Course link][fcc_python]
+- [Cert](https://www.freecodecamp.org/certification/letientai299/scientific-computing-with-python-v7)
+- Time:
+  - Course: 20m, pretty quick since I'm experienced and there's only 56 multi
+    choice questions.
+  - Problems: 4h, need time to learn Python OOP
+
+| Task                                         | Code (on Github)                                                                                                     |
+| -------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| [Arithemetic Formater][fcc_py_fmt]           | [arithmetic_arranger.py](https://github.com/letientai299/freecodecamp/blob/master/python/fmt/arithmetic_arranger.py) |
+| [Time Calculator][fcc_py_time]               | [time_calculator.py](https://github.com/letientai299/freecodecamp/blob/master/python/time/time_calculator.py)        |
+| [Budget App][fcc_py_budget]                  | [budget.py](https://github.com/letientai299/freecodecamp/blob/master/python/budget/budget.py)                        |
+| [Polygon Area Calculator][fcc_py_area]       | [shape_calculator.py](https://github.com/letientai299/freecodecamp/blob/master/python/area/shape_calculator.py)      |
+| [Probability Calculator][fcc_py_probability] | [prob_calculator.py](https://github.com/letientai299/freecodecamp/blob/master/python/probability/prob_calculator.py) |
+
 <!-- ref -->
 
 [fcc]: https://www.freecodecamp.org/
 [fcc_algo]:
   https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/
-
-<!-- ==================== -->
-
 [fcc_web]: https://www.freecodecamp.org/learn/responsive-web-design/
 [fcc_web_tribute]:
   https://www.freecodecamp.org/learn/responsive-web-design/responsive-web-design-projects/build-a-tribute-page
@@ -92,9 +106,6 @@ This course requires more thought, so see [its note here](./qa).
   https://www.freecodecamp.org/learn/responsive-web-design/responsive-web-design-projects/build-a-technical-documentation-page
 [fcc_web_portfolio]:
   https://www.freecodecamp.org/learn/responsive-web-design/responsive-web-design-projects/build-a-personal-portfolio-webpage
-
-<!-- ==================== -->
-
 [fcc_d3]: https://www.freecodecamp.org/learn/data-visualization/
 [fcc_d3_bar]:
   https://www.freecodecamp.org/learn/data-visualization/data-visualization-projects/visualize-data-with-a-bar-chart
@@ -106,9 +117,6 @@ This course requires more thought, so see [its note here](./qa).
   https://www.freecodecamp.org/learn/data-visualization/data-visualization-projects/visualize-data-with-a-choropleth-map
 [fcc_d3_treemap]:
   https://www.freecodecamp.org/learn/data-visualization/data-visualization-projects/visualize-data-with-a-treemap-diagram
-
-<!-- ==================== -->
-
 [fcc_qa]: https://www.freecodecamp.org/learn/quality-assurance
 [fcc_qa_converter]:
   https://www.freecodecamp.org/learn/quality-assurance/quality-assurance-projects/metric-imperial-converter
@@ -120,3 +128,14 @@ This course requires more thought, so see [its note here](./qa).
   https://www.freecodecamp.org/learn/quality-assurance/quality-assurance-projects/sudoku-solver
 [fcc_qa_translator]:
   https://www.freecodecamp.org/learn/quality-assurance/quality-assurance-projects/american-british-translator
+[fcc_py]: https://www.freecodecamp.org/learn/scientific-computing-with-python/
+[fcc_py_fmt]:
+  https://www.freecodecamp.org/learn/scientific-computing-with-python/scientific-computing-with-python-projects/arithmetic-formatter
+[fcc_py_time]:
+  https://www.freecodecamp.org/learn/scientific-computing-with-python/scientific-computing-with-python-projects/time-calculator
+[fcc_py_budget]:
+  https://www.freecodecamp.org/learn/scientific-computing-with-python/scientific-computing-with-python-projects/budget-app
+[fcc_py_area]:
+  https://www.freecodecamp.org/learn/scientific-computing-with-python/scientific-computing-with-python-projects/polygon-area-calculator
+[fcc_py_probability]:
+  https://www.freecodecamp.org/learn/scientific-computing-with-python/scientific-computing-with-python-projects/probability-calculator
