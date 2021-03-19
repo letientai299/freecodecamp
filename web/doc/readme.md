@@ -6,9 +6,9 @@ If you came across this by accident and wonder what freeCodeCamp has anything to
 do with this page, then, it's because this page is the result to pass the [Build
 a Technical Documentation Page][fcc_web_doc] on freeCodeCamp.
 
-The [hamburger button](https://en.wikipedia.org/wiki/Hamburger_button) on top
-left corner is to run freeCodeCamp tests. If you want to try it, make sure to
-select "Technical Documentation Page" in the drop down.
+To run the FCC tests on this page, try reopen it with following link
+
+https://letientai.io/freecodecamp/web/doc/?test=true
 
 The main content on this page is actually just
 [a Markdown file](https://Github.com/letientai299/freecodecamp/blob/master/web/doc/readme.md),
