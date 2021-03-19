@@ -42,6 +42,13 @@ const render = function(mdFile) {
 // - open link in new tab
 const linkRenderer = function(href, title, text) {
   let link = marked.Renderer.prototype.link.call(this, href, title, text);
+
+  // if it's a link to internal anchor,
+  // then don't open in new tab
+  if(href[0] === '#') {
+    return link;
+  }
+
   return link.replace("<a", "<a target='_blank' ");
 };
 
