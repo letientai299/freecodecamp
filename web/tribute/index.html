@@ -318,10 +318,14 @@
         </ul>
       </section>
     </main>
-    <script
-      src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"
-      async
-      defer
-    ></script>
+    <script>
+      // only include FCC test scripts if needed
+      if (window.location.toString().includes("?test=true")) {
+        let js = document.createElement("script");
+        js.src =
+          "https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js";
+        document.body.appendChild(js);
+      }
+    </script>
   </body>
 </html>
