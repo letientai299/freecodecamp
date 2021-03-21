@@ -10,120 +10,121 @@
     <header class="header">
       <p class="brand">Tai Le</p>
       <nav id="navbar">
-        <a class="nav-link" href="#welcome-section">Welcome</a>
+        <a class="nav-link" href="#about">About</a>
         <a class="nav-link" href="#projects">Projects</a>
         <a class="nav-link" href="#life-work">Life and Work</a>
       </nav>
     </header>
 
     <main>
+      <!-- I don't want to make the welcome message occupy whole viewport -->
+      <!-- and force you to scoll to see other content). -->
       <section id="welcome-section">
         <h1>Work around FCC nonsense requirements</h1>
       </section>
-      <section id="about">
-        <a href="#welcome-section">
-          <h1>Hi, my name is Tai</h1>
-        </a>
 
-        <p>I'm</p>
+      <section id="about">
+        <h1>Hi, my name is Tai</h1>
+
+        <p>Who I'm I? Well, I'm all of these:</p>
         <ul>
           <li>
-            a curious learner who can't stop his mind thinking about how stuff
+            A curious learner who can't stop his mind thinking about how stuff
             works, what makes them possible and to what limit could we push
-            them,
+            them.
           </li>
           <li>
-            a perfectionism who care even the tiny details that others usually
-            ignore,
+            A perfectionism who care even the tiny details that others usually
+            ignore.
           </li>
-          <li>a man who keep his words,</li>
+          <li>A man who keep his words.</li>
           <li>
-            a Software Engineer with an entrepreneurial mindset and poetry's
-            heart,
+            A Software Engineer with an entrepreneurial mindset and poetry's
+            heart.
           </li>
-          <li>a teacher, a chef, a gamer, a gambler, ...,</li>
-          <li>and finally, a husband and a father.</li>
+          <li>A teacher, a chef, a gamer, a gambler, ...</li>
+          <li>Finally, a husband and a father.</li>
         </ul>
+
         <p>
-          Find me on
+          As of 2021, I know a bit of Frontend development and read some books
+          on UI/UX, but most of my work is Backend, so I decided to learn FE
+          again on freeCodeCamp. This site is one of the results.
+        </p>
+
+        <p>
+          You can see my other projects on
           <a
             id="profile-link"
             href="https://github.com/letientai299"
             target="_blank"
             >Github
           </a>
+          (not much now, but I think I'll build more interesting stuff once I
+          finish freeCodeCamp), or follow me on
+          <a href="https://twitter.com/letientai299" target="_blank"
+            >Twitter
+          </a>
         </p>
       </section>
+
       <section id="projects">
-        <a href="#projects">
-          <h2>Projects</h2>
-        </a>
+        <h2>Projects</h2>
 
-        <article class="project-tile">
-          <a href="../landing" target="_blank">
-            <h3 class="project-name">Vim landing page</h3>
-          </a>
-          <p class="project-desc">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, ad,
-            sapiente. Corporis dolor in ipsam nam quidem soluta voluptas? Animi
-            atque, rerum. Aliquid deserunt dicta dignissimos impedit nam quia!
-            Voluptatum.
+        <article>
+          <p>
+            These are just some projects I built during study on freeCodeCamp.
+            My other works are mostly backend related, so can't share here.
+          </p>
+
+          <p>
+            If you're interested, see
+            <a href="../../" target="_blank">
+              my other freeCodeCamp solutions
+            </a>
+          </p>
+          <p>
+            Check out
+            <a href="https://github.com/letientai299/cv" target="_blank">
+              my resume
+            </a>
+            for professional experience.
           </p>
         </article>
 
-        <article class="project-tile">
-          <a href="../doc" target="_blank">
-            <h3 class="project-name">Markdown Guide</h3>
-          </a>
-          <p class="project-desc">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, ad,
-            sapiente. Corporis dolor in ipsam nam quidem soluta voluptas? Animi
-            atque, rerum. Aliquid deserunt dicta dignissimos impedit nam quia!
-            Voluptatum.
-          </p>
-        </article>
+        <div class="project-cards">
+          <article class="project-tile">
+            <a href="../tribute" target="_blank">
+              <h3 class="project-name">Tribute to Dennis Ritchie</h3>
+              <iframe src="../tribute" loading="lazy"></iframe>
+            </a>
+          </article>
 
-        <article class="project-tile">
-          <a href="../tribute" target="_blank">
-            <h3 class="project-name">Tribute to Dennis Ritchie</h3>
-          </a>
-          <p class="project-desc">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, ad,
-            sapiente. Corporis dolor in ipsam nam quidem soluta voluptas? Animi
-            atque, rerum. Aliquid deserunt dicta dignissimos impedit nam quia!
-            Voluptatum.
-          </p>
-        </article>
+          <article class="project-tile">
+            <a href="../landing" target="_blank">
+              <h3 class="project-name">Vim landing page</h3>
+              <iframe src="../landing" loading="lazy"></iframe>
+            </a>
+          </article>
 
-        <article class="project-tile">
-          <a href="../tribute" target="_blank">
-            <h3 class="project-name">Tribute to Dennis Ritchie</h3>
-          </a>
-          <p class="project-desc">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, ad,
-            sapiente. Corporis dolor in ipsam nam quidem soluta voluptas? Animi
-            atque, rerum. Aliquid deserunt dicta dignissimos impedit nam quia!
-            Voluptatum.
-          </p>
-        </article>
+          <article class="project-tile">
+            <a href="../doc" target="_blank">
+              <h3 class="project-name">Markdown Guide</h3>
+              <iframe src="../doc" loading="lazy"></iframe>
+            </a>
+          </article>
 
-        <article class="project-tile">
-          <a href="../../d3/bar" target="_blank">
-            <h3 class="project-name">D3 Example Bar Chart</h3>
-          </a>
-          <p class="project-desc">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, ad,
-            sapiente. Corporis dolor in ipsam nam quidem soluta voluptas? Animi
-            atque, rerum. Aliquid deserunt dicta dignissimos impedit nam quia!
-            Voluptatum.
-          </p>
-        </article>
+          <article class="project-tile">
+            <a href="../../d3/bar" target="_blank">
+              <h3 class="project-name">D3 Example Bar Chart</h3>
+              <iframe src="../../d3/bar" loading="lazy"></iframe>
+            </a>
+          </article>
+        </div>
       </section>
 
       <section id="life-work">
-        <a href="#life-work">
-          <h2>Work and life</h2>
-        </a>
+        <h2>Work and life</h2>
         <ul>
           <li>
             2015: Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -152,13 +153,6 @@
         </ul>
       </section>
     </main>
-
-    <footer>
-      This site is built for on of freeCodeCamp final project. Since this site
-      is me talking about myself, I built it to my liking and workaround some
-      strange requirement from FCC (e.g I don't want to make the welcome message
-      occupy whole viewport and force you to scoll to see other content).
-    </footer>
     <script>
       window.onload = function () {
         // only include FCC test scripts if needed

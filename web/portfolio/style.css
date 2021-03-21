@@ -6,10 +6,11 @@
   --bg-hover: #ddd;
   --text: black;
   --text-hover: #444;
+  --iframe-scale: 0.5;
+  --main-max-width: 900px;
 }
 
 * {
-  line-height: 1.2em;
   font-family: "Open Sans", sans-serif;
 }
 
@@ -31,6 +32,7 @@ body {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  z-index: 2;
 }
 
 .header,
@@ -41,7 +43,7 @@ body {
 
 .header > .brand {
   font-weight: bold;
-  font-size: 2em;
+  font-size: 1.5em;
 }
 
 .header > #navbar {
@@ -61,16 +63,12 @@ body {
 }
 
 main {
-  max-width: 900px;
+  max-width: var(--main-max-width);
   margin-left: auto;
   margin-right: auto;
   margin-top: var(--header-height);
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-
-section {
-  padding: 10px;
+  display: flex;
+  flex-direction: column;
 }
 
 #welcome-section {
@@ -86,6 +84,14 @@ section {
   z-index: -1;
 }
 
+#about {
+}
+
+/*anchor link*/
+a[href^="#"] {
+  color: var(--text);
+}
+
 /*External link*/
 a[href*="//"]
 {
@@ -94,13 +100,53 @@ a[href*="//"]
   padding-right: 13px;
 }
 
+.project-cards {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+}
+
 section > a {
   text-decoration: none;
 }
 
 #life-work {
-  border: 1px solid red;
-  grid-column: 1/3;
+}
+
+.project-tile {
+  height: 400px;
+  overflow: hidden;
+  padding: 0;
+  box-shadow: 1px 1px 3px;
+  border-radius: 5px;
+}
+
+.project-tile:hover {
+  box-shadow: 3px 3px 9px;
+}
+
+.project-tile h3 {
+  padding-left: 10px;
+}
+
+iframe {
+  border: none;
+  zoom: var(--iframe-scale);
+  transform: scale(var(--iframe-scale));
+  -webkit-transform: scale(var(--iframe-scale));
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  overflow: hidden;
+  width: var(--main-max-width);
+  height: 2000px;
+}
+
+@media (max-width: 560px) {
+  .project-cards {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 @media (max-width: 480px) {
@@ -113,11 +159,6 @@ section > a {
   #navbar {
     padding: 0;
     margin: 0;
-  }
-
-  main {
-    display: flex;
-    flex-direction: column;
   }
 }
 
