@@ -27,7 +27,7 @@ strong support for functinal programming.
 ## Responsive Web Design
 
 - [Course link][fcc_web]
-- Cert: TODO
+- [Cert](https://www.freecodecamp.org/certification/letientai299/responsive-web-design)
 
 | Task                                                    | Site                               |
 | ------------------------------------------------------- | ---------------------------------- |
