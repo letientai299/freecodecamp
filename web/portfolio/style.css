@@ -9,6 +9,7 @@
   --main-max-width: 700px;
   --time-border-half: 3px;
   --time-border: 6px;
+  --gap: 10px;
 }
 
 * {
@@ -20,8 +21,8 @@
 body {
   margin: auto;
   background-color: var(--bg);
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: var(--gap);
+  padding-right: var(--gap);
 }
 
 .header {
@@ -59,7 +60,7 @@ body {
 
 .header > #navbar > a {
   text-decoration: none;
-  margin-left: 10px;
+  margin-left: var(--gap);
   color: var(--bg-hover);
 }
 
@@ -108,15 +109,12 @@ a[href*="//"]
 .project-cards {
   display: grid;
   grid-template-columns: 50% 50%;
-  grid-column-gap: 10px;
-  grid-row-gap: 10px;
+  grid-column-gap: var(--gap);
+  grid-row-gap: var(--gap);
 }
 
 section > a {
   text-decoration: none;
-}
-
-#life-work {
 }
 
 .project-tile {
@@ -136,7 +134,7 @@ section > a {
 }
 
 .project-tile h3 {
-  padding-left: 10px;
+  padding-left: var(--gap);
 }
 
 .timeline {
@@ -222,7 +220,50 @@ section > a {
   .work p,
   .life p {
     text-align: left;
-    margin: 10px 0;
+    margin: var(--gap) 0;
+  }
+}
+
+/*HD+ devices*/
+@media (min-width: 1600px) {
+  main {
+    display: grid;
+    max-width: 1200px;
+    grid-template-columns: 3fr 2fr;
+    grid-column-gap: calc(2 * var(--gap));
+  }
+
+  #work-life {
+    grid-row: span 2;
+  }
+
+  .project-cards {
+    /*display: flex;*/
+    /*flex-direction: column;*/
+  }
+
+  .project-tile img {
+    /*object-fit: cover;*/
+    /*object-position: 0 0;*/
+    /*height: 160px;*/
+  }
+}
+
+/*FHD devices*/
+@media (min-width: 1900px) {
+  main {
+    display: grid;
+    max-width: 1800px;
+    grid-template-columns: 1fr 2fr 2fr;
+    grid-column-gap: var(--gap);
+  }
+
+  .project-cards {
+    display: grid;
+  }
+
+  .project-tile img {
+    height: inherit;
   }
 }
 
