@@ -3,14 +3,18 @@
 :root {
   --header-height: 40px;
   --bg: white;
-  --bg-hover: #ddd;
+  --bg-hover: #ccc;
   --text: black;
-  --text-hover: #444;
-  --main-max-width: 900px;
+  --text-hover: #555;
+  --main-max-width: 700px;
+  --time-border-half: 3px;
+  --time-border: 6px;
 }
 
 * {
   font-family: "Open Sans", sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
 }
 
 body {
@@ -133,6 +137,42 @@ section > a {
 
 .project-tile h3 {
   padding-left: 10px;
+}
+
+.work-life-wrap {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  grid-column-gap: 5px;
+}
+
+.work {
+  text-align: right;
+}
+
+.time-now {
+  background: linear-gradient(var(--bg) 50%, var(--text) 100%) no-repeat
+    center/var(--time-border) 100%;
+}
+
+.time-start {
+  background: linear-gradient(var(--text), var(--bg) 50%) no-repeat
+    center/var(--time-border) 100%;
+}
+
+.time-wrap {
+  background: linear-gradient(var(--text), var(--text)) no-repeat
+    center/var(--time-border) 100%;
+}
+
+.time {
+  text-align: center;
+  border-radius: 20px;
+  border: var(--time-border) solid var(--text);
+  padding: 4px;
+}
+
+.life {
+  text-align: left;
 }
 
 @media (max-width: 560px) {
