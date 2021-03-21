@@ -140,18 +140,36 @@ section > a {
 }
 
 .work-life-wrap {
-  display: grid;
+  display: inline-grid;
   grid-template-columns: 1fr auto 1fr;
   grid-column-gap: 5px;
 }
 
-.work {
+.work,
+.life {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.work p {
   text-align: right;
+  width: 100%;
+}
+
+.life p {
+  text-align: left;
+  width: 100%;
 }
 
 .time-now {
   background: linear-gradient(var(--bg) 50%, var(--text) 100%) no-repeat
     center/var(--time-border) 100%;
+}
+
+.time-start p {
+  background-color: var(--text);
+  color: var(--bg-hover);
 }
 
 .time-start {
@@ -165,6 +183,7 @@ section > a {
 }
 
 .time {
+  font-weight: bold;
   text-align: center;
   border-radius: 20px;
   border: var(--time-border) solid var(--text);
