@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Portfolio | freeCodeCamp solutions</title>
+    <link rel="stylesheet" href="./style.css" type="text/css" media="all" />
+  </head>
+  <body>
+    <header class="header">
+      <p class="brand">Tai Le</p>
+      <nav id="navbar">
+        <a class="nav-link" href="#welcome-section">Welcome</a>
+        <a class="nav-link" href="#projects">Projects</a>
+        <a class="nav-link" href="#life-work">Life and Work</a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="welcome-section">
+        <h1>Work around FCC nonsense requirements</h1>
+      </section>
+      <section id="about">
+        <a href="#welcome-section">
+          <h1>Hi, my name is Tai</h1>
+        </a>
+
+        <p>I'm</p>
+        <ul>
+          <li>
+            a curious learner who can't stop his mind thinking about how stuff
+            works, what makes them possible and to what limit could we push
+            them,
+          </li>
+          <li>
+            a perfectionism who care even the tiny details that others usually
+            ignore,
+          </li>
+          <li>a man who keep his words,</li>
+          <li>
+            a Software Engineer with an entrepreneurial mindset and poetry's
+            heart,
+          </li>
+          <li>a teacher, a chef, a gamer, a gambler, ...,</li>
+          <li>and finally, a husband and a father.</li>
+        </ul>
+        <p>
+          Find me on
+          <a
+            id="profile-link"
+            href="https://github.com/letientai299"
+            target="_blank"
+            >Github
+          </a>
+        </p>
+      </section>
+      <section id="projects">
+        <a href="#projects">
+          <h2>Projects</h2>
+        </a>
+
+        <article class="project-tile">
+          <a href="../landing" target="_blank">
+            <h3 class="project-name">Vim landing page</h3>
+          </a>
+          <p class="project-desc">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, ad,
+            sapiente. Corporis dolor in ipsam nam quidem soluta voluptas? Animi
+            atque, rerum. Aliquid deserunt dicta dignissimos impedit nam quia!
+            Voluptatum.
+          </p>
+        </article>
+
+        <article class="project-tile">
+          <a href="../doc" target="_blank">
+            <h3 class="project-name">Markdown Guide</h3>
+          </a>
+          <p class="project-desc">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, ad,
+            sapiente. Corporis dolor in ipsam nam quidem soluta voluptas? Animi
+            atque, rerum. Aliquid deserunt dicta dignissimos impedit nam quia!
+            Voluptatum.
+          </p>
+        </article>
+
+        <article class="project-tile">
+          <a href="../tribute" target="_blank">
+            <h3 class="project-name">Tribute to Dennis Ritchie</h3>
+          </a>
+          <p class="project-desc">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, ad,
+            sapiente. Corporis dolor in ipsam nam quidem soluta voluptas? Animi
+            atque, rerum. Aliquid deserunt dicta dignissimos impedit nam quia!
+            Voluptatum.
+          </p>
+        </article>
+
+        <article class="project-tile">
+          <a href="../tribute" target="_blank">
+            <h3 class="project-name">Tribute to Dennis Ritchie</h3>
+          </a>
+          <p class="project-desc">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, ad,
+            sapiente. Corporis dolor in ipsam nam quidem soluta voluptas? Animi
+            atque, rerum. Aliquid deserunt dicta dignissimos impedit nam quia!
+            Voluptatum.
+          </p>
+        </article>
+
+        <article class="project-tile">
+          <a href="../../d3/bar" target="_blank">
+            <h3 class="project-name">D3 Example Bar Chart</h3>
+          </a>
+          <p class="project-desc">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, ad,
+            sapiente. Corporis dolor in ipsam nam quidem soluta voluptas? Animi
+            atque, rerum. Aliquid deserunt dicta dignissimos impedit nam quia!
+            Voluptatum.
+          </p>
+        </article>
+      </section>
+
+      <section id="life-work">
+        <a href="#life-work">
+          <h2>Work and life</h2>
+        </a>
+        <ul>
+          <li>
+            2015: Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          </li>
+          <li>
+            2016: Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          </li>
+          <li>
+            2017: Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          </li>
+          <li>
+            2018: Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          </li>
+          <li>
+            2019: Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          </li>
+          <li>
+            2020: Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          </li>
+          <li>
+            2021: Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          </li>
+          <li>
+            2022: Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      This site is built for on of freeCodeCamp final project. Since this site
+      is me talking about myself, I built it to my liking and workaround some
+      strange requirement from FCC (e.g I don't want to make the welcome message
+      occupy whole viewport and force you to scoll to see other content).
+    </footer>
+    <script>
+      window.onload = function () {
+        // only include FCC test scripts if needed
+        let url = window.location.toString();
+        if (url.includes("?test=true") || url.includes("localhost")) {
+          let js = document.createElement("script");
+          js.src =
+            "https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js";
+          document.body.appendChild(js);
+        }
+      };
+    </script>
+  </body>
+</html>
