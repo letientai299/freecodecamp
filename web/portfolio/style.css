@@ -90,7 +90,11 @@ main {
   z-index: -1;
 }
 
-#about {
+.hidden {
+  visibility: collapse;
+  display: block;
+  width: 0;
+  height: 0;
 }
 
 /*anchor link*/
