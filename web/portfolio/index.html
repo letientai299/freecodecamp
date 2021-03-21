@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width" />
     <title>Portfolio | freeCodeCamp solutions</title>
     <link rel="stylesheet" href="./style.css" type="text/css" media="all" />
+    <meta
+      name="description"
+      content="@letientai299 sample portfolio page, build for a freeCodeCamp project"
+    />
   </head>
   <body>
     <header class="header">
@@ -94,28 +98,44 @@
           <article class="project-tile">
             <a href="../tribute" target="_blank">
               <h3 class="project-name">Tribute to Dennis Ritchie</h3>
-              <img src="./img/tribute.webp" />
+              <img
+                loading="lazy"
+                src="./img/tribute.webp"
+                alt="Review of Dennis Ritchie tribute page"
+              />
             </a>
           </article>
 
           <article class="project-tile">
             <a href="../landing" target="_blank">
               <h3 class="project-name">Vim landing page</h3>
-              <img src="./img/landing.webp" />
+              <img
+                loading="lazy"
+                src="./img/landing.webp"
+                alt="Review of Vim landing page"
+              />
             </a>
           </article>
 
           <article class="project-tile">
             <a href="../doc" target="_blank">
               <h3 class="project-name">Markdown Guide</h3>
-              <img src="./img/doc.webp" />
+              <img
+                loading="lazy"
+                src="./img/doc.webp"
+                alt="Review of Markdown Guide page"
+              />
             </a>
           </article>
 
           <article class="project-tile">
             <a href="../../d3/bar" target="_blank">
               <h3 class="project-name">D3 Example Bar Chart</h3>
-              <img src="./img/d3-bar.webp" />
+              <img
+                loading="lazy"
+                src="./img/d3-bar.webp"
+                alt="Review of D3 Bar Chart example page"
+              />
             </a>
           </article>
         </div>
@@ -217,7 +237,8 @@
       window.onload = function () {
         // only include FCC test scripts if needed
         let url = window.location.toString();
-        if (url.includes("?test=true") || url.includes("localhost")) {
+        if (url.includes("?test=true")) {
+          // if (url.includes("?test=true") || url.includes("localhost")) {
           let js = document.createElement("script");
           js.src =
             "https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js";
