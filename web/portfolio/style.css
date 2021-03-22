@@ -141,6 +141,22 @@ section > a {
   padding-left: var(--gap);
 }
 
+#work-life {
+  position: relative;
+}
+
+#message {
+  position: absolute;
+  font-family: cursive;
+  font-weight: bold;
+  top: 60px;
+  z-index: 2;
+  text-align: center;
+  background-color: var(--bg);
+  visibility: collapse;
+  transform: translateX(-50%);
+}
+
 #timeline {
   display: inline-grid;
   grid-template-columns: 1fr auto 1fr;
@@ -162,7 +178,7 @@ section > a {
 .life p {
   text-align: left;
   width: 100%;
-  font-family: Serif;
+  font-family: serif;
 }
 
 .time-now {
@@ -239,17 +255,6 @@ section > a {
 
   #work-life {
     grid-row: span 2;
-  }
-
-  .project-cards {
-    /*display: flex;*/
-    /*flex-direction: column;*/
-  }
-
-  .project-tile img {
-    /*object-fit: cover;*/
-    /*object-position: 0 0;*/
-    /*height: 160px;*/
   }
 }
 
