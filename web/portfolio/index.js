@@ -1,8 +1,21 @@
 (function () {
+  const minWidthToIgnore = 560;
   let isHandlerDragging = false;
   let timeline = document.getElementById("timeline");
   let msgContainer = document.getElementById("message");
   let columnSizes;
+
+  window.addEventListener("resize", function (e) {
+    if (isHandlerDragging) {
+      return;
+    }
+
+    if (window.innerWidth <= minWidthToIgnore) {
+      timeline.style.gridTemplateColumns = "auto 1fr";
+    } else {
+      timeline.style.gridTemplateColumns = "1fr auto 1fr";
+    }
+  });
 
   let timeElements = [...timeline.getElementsByClassName("time-wrap")];
   timeElements.push(...timeline.getElementsByClassName("time-now"));
@@ -44,6 +57,9 @@
   });
 
   function pickAndShowMessage(cfg) {
+    if (window.innerWidth <= minWidthToIgnore) {
+      return;
+    }
     let total = cfg.time + cfg.work + cfg.life + cfg.gap * 2;
     let rate = (100 * (cfg.time / 2 + cfg.gap + cfg.work)) / total;
     let left = cfg.work + cfg.gap + cfg.time / 2;
@@ -70,7 +86,6 @@
   function calculateWorkLifeSize() {
     let style = window.getComputedStyle(timeline);
     let gap = parseFloat(style.columnGap);
-    console.log(gap);
     columnSizes = style.gridTemplateColumns;
     let [work, time, life] = columnSizes.split(" ").map((s) => parseFloat(s));
     return { work: work, time: time, life: life, gap: gap };
