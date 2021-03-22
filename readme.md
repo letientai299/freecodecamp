@@ -51,13 +51,13 @@ able to build such sites.
 - [Course link][fcc_web]
 - Cert: TODO
 
-| Task                                                          | Site                 |
-| ------------------------------------------------------------- | -------------------- |
-| [Visualize Data with a Bar Char][fcc_d3_bar]                  | [./d3/bar](./d3/bar) |
-| [Visualize Data with a Scatterplot Graph][fcc_d3_scatterplot] | [./](./)             |
-| [Visualize Data with a Heat Map][fcc_d3_heat]                 | [./](./)             |
-| [Visualize Data with a Choropleth Map][fcc_d3_choropleth]     | [./](./)             |
-| [Visualize Data with a Treemap Diagram][fcc_d3_treemap]       | [./](./)             |
+| Task                                                          | Site                                 |
+| ------------------------------------------------------------- | ------------------------------------ |
+| [Visualize Data with a Bar Char][fcc_d3_bar]                  | [./d3/bar](./d3/bar)                 |
+| [Visualize Data with a Scatterplot Graph][fcc_d3_scatterplot] | [./d3/scatterplot](./d3/scatterplot) |
+| [Visualize Data with a Heat Map][fcc_d3_heat]                 | [./d3/heat](./d3/head)               |
+| [Visualize Data with a Choropleth Map][fcc_d3_choropleth]     | [./d3/choropleth](./d3/choropleth)   |
+| [Visualize Data with a Treemap Diagram][fcc_d3_treemap]       | [./d3/treemap](./d3/treemap)         |
 
 Note:
 
