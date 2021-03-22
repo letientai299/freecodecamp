@@ -28,6 +28,15 @@ strong support for functinal programming.
 
 - [Course link][fcc_web]
 - [Cert](https://www.freecodecamp.org/certification/letientai299/responsive-web-design)
+- Total time: 35h
+
+The course is very helpful, I learned many things: Flex Box, Grid, media
+query...
+
+Except the Documentation page (Markdown Guide), other 4 projects is hand-written
+HTML, CSS and JS. It feels a bit weird to do that in 2021, when there are too
+many JS frameworks available. But on the other hand, it feels cool to finally
+able to build such sites.
 
 | Task                                                    | Site                               |
 | ------------------------------------------------------- | ---------------------------------- |
@@ -36,10 +45,6 @@ strong support for functinal programming.
 | [Build a Product Landing Page][fcc_web_landing]         | [./web/landing](./web/landing)     |
 | [Build a Technical Documentation Page][fcc_web_doc]     | [./web/doc](./web/doc)             |
 | [Build a Personal Portfolio Webpage][fcc_web_portfolio] | [./web/portfolio](./web/portfolio) |
-
-Note
-
-> TODO
 
 ## Data Visualization
 
