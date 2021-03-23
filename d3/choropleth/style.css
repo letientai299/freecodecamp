@@ -4,7 +4,6 @@
 body {
   background-color: var(--bg);
 }
-
 #main-wrap {
   width: 99vw;
   height: 99vh;
@@ -19,6 +18,7 @@ body {
 
 #main {
   display: block;
+  width: 90%;
   margin: auto;
   background-color: #eee;
   padding: 30px;
