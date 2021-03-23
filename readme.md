@@ -6,7 +6,9 @@
 This repo contains my final projects solutions for web-related cources I've done
 on [freeCodeCamp][fcc] in 2021.
 
-[Visit here to see actual web pages.](https://letientai.io/freecodecamp/)
+- [Visit here to see actual web pages.](https://letientai.io/freecodecamp/)
+- [See my timeline on freecodecamp here](https://www.freecodecamp.org/letientai299):
+  start in 2021/03/11, finish in TBD
 
 > TODO:
 >
