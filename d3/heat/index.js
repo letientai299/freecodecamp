@@ -213,9 +213,8 @@ function draw(data) {
     .range([padding, h - padding - xAxisHeight]);
 
   let tooltip = d3.select("#tooltip");
-  let tooltipFocused = false;
 
-  // render the dots
+  // render the data
   svg
     .selectAll("rect")
     .data(data)
@@ -234,25 +233,10 @@ function draw(data) {
       d3.select(d.target).attr("class", "cell bordered");
       displayTooltip(tooltip, v, d);
     })
-    .on("click", function (d, v) {
-      displayTooltip(tooltip, v, d);
-      tooltipFocused = true;
-      d.preventDefault();
-    })
     .on("mouseout", function (d) {
       d3.select(d.target).attr("class", "cell");
-      if (!tooltipFocused) {
-        hideTooltip(tooltip);
-      }
-    });
-
-  document.addEventListener("click", function (d) {
-    let tag = d.target.tagName;
-    if (tag !== "circle") {
-      tooltipFocused = false;
       hideTooltip(tooltip);
-    }
-  });
+    });
 
   // render the x-axis
   svg
