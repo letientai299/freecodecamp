@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>D3 Choropleth map | freeCodeCamp solutions</title>
+  </head>
+  <body>
+    <div id="main-wrap">
+      <main id="main">
+        <div class="text-center">
+          <h1 id="title">United States Educational Attainment</h1>
+          <h2 id="description">
+            Percentage of adults age 25 and older with a bachelor's degree or
+            higher (2010-2014)
+          </h2>
+        </div>
+        <hr />
+        <article id="chart">
+          <div id="tooltip"></div>
+        </article>
+
+        <hr />
+        <article id="info">
+          <p><strong>Total time wasted here: </strong> 2h</p>
+
+          <p><strong>Lesson learned</strong></p>
+          <ul>
+            <li>
+              The data is quite big, such that letting the
+              <code>details</code> tag open make the map appears very slow.
+            </li>
+          </ul>
+        </article>
+
+        <hr />
+
+        <details>
+          <summary>
+            <strong>Raw JSON data: <code>counties.json</code></strong>
+          </summary>
+          <pre id="raw_counties" class="scrollable"></pre>
+        </details>
+
+        <hr />
+
+        <details>
+          <summary>
+            <strong>Raw JSON data: <code>for_user_education.json</code></strong>
+          </summary>
+          <pre id="raw_edu" class="scrollable"></pre>
+        </details>
+      </main>
+    </div>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="https://unpkg.com/topojson@3"></script>
+    <link rel="stylesheet" rel="preload" as="style" href="./style.css" />
+    <script src="./index.js" async defer></script>
+    <script>
+      // only include FCC test scripts if needed
+      let url = window.location.toString();
+      if (url.includes("?test=true") || url.includes("localhost")) {
+        let js = document.createElement("script");
+        js.src =
+          "https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js";
+        document.body.appendChild(js);
+      }
+    </script>
+  </body>
+</html>
