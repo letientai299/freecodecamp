@@ -46,7 +46,7 @@ function resizeChart() {
   const mainW = parseFloat(mainWpx);
   let w = parseFloat(wpx);
 
-  const size = 0.95;
+  const size = 0.9;
   if (w < size * mainW || w > mainW) {
     w = size * mainW;
   }
