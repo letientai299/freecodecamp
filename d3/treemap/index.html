@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>D3 Tree map | freeCodeCamp solutions</title>
+  </head>
+  <body>
+    <div id="main-wrap">
+      <main id="main">
+        <div class="text-center">
+          <h1 id="title">Kickstarter Pledges</h1>
+          <h2 id="description">Top funding Kickstarter projects by category</h2>
+          <p>
+            <em>
+              This look better on big screen, and I'm not really sure about the
+              description of this chart</em
+            >
+          </p>
+        </div>
+
+        <article id="chart">
+          <div id="tooltip"></div>
+        </article>
+
+        <article id="info">
+          <p><strong>Total time wasted here: </strong> 2.5h</p>
+
+          <p><strong>Lesson learned</strong></p>
+          <ul>
+            <li><code>d3</code> is really awesome!</li>
+
+            <li>
+              <code>pageX</code> and <code>pageY</code> are the correct value to
+              use with <code>mousemove</code> event for display tooltip (in my
+              setup)
+            </li>
+            <li>People love Tabletop Games. It's 2nd place on this chart.</li>
+          </ul>
+
+          <p><strong>Tried, but not yet success </strong></p>
+          <ul>
+            <li>Make the legend responsive</li>
+            <li>Wrap the tile text and make it look nicer on small screen</li>
+            <li>Scale the tile text base on tile size</li>
+          </ul>
+        </article>
+
+        <details>
+          <summary>
+            <strong
+              >Raw JSON data: <code>kickstarter-funding-data.json</code></strong
+            >
+          </summary>
+          <pre id="raw_funding" class="scrollable"></pre>
+        </details>
+      </main>
+    </div>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="https://unpkg.com/topojson@3"></script>
+    <link rel="stylesheet" rel="preload" as="style" href="./style.css" />
+    <script src="./index.js" async defer></script>
+    <script>
+      // only include FCC test scripts if needed
+      let url = window.location.toString();
+      if (url.includes("?test=true") || url.includes("localhost")) {
+        let js = document.createElement("script");
+        js.src =
+          "https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js";
+        document.body.appendChild(js);
+      }
+    </script>
+  </body>
+</html>
