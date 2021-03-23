@@ -1,0 +1,89 @@
+:root {
+  --bg: #444;
+}
+
+body {
+  background-color: var(--bg);
+}
+
+#main-wrap {
+  width: 99vw;
+  height: 99vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-center {
+  text-align: center;
+}
+
+#main {
+  display: block;
+  width: 90%;
+  margin: auto;
+  background-color: #eee;
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 40px;
+}
+
+.scrollable {
+  max-width: 100%;
+  max-height: 400px;
+  overflow-y: scroll;
+  overflow-x: auto;
+}
+
+#chart {
+  margin: auto;
+}
+
+#tooltip {
+  position: absolute;
+}
+
+.tooltip-detail * {
+  margin: 0;
+}
+
+.tooltip-detail {
+  background-color: var(--bg);
+  color: #eee;
+  padding: 10px;
+  border-radius: 5px;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-row-gap: 2px;
+  grid-column-gap: 10px;
+  font-size: 1em;
+  max-width: 300px;
+  opacity: 0.9;
+  box-shadow: 2px 2px 5px black;
+}
+
+.tooltip-detail .name {
+  grid-column: 1/3;
+  border-bottom: 2px solid white;
+  font-weight: bold;
+  font-size: 1.3em;
+}
+
+/*External link*/
+a[href*="//"]
+{
+  background: url(http://upload.wikimedia.org/wikipedia/commons/6/64/Icon_External_Link.png)
+    center right no-repeat;
+  padding-right: 13px;
+}
+
+#info {
+  line-height: 1.5em;
+}
+
+code {
+  background-color: lightgrey;
+  border: 1px solid gray;
+  border-radius: 5px;
+  padding: 2px 6px;
+}
