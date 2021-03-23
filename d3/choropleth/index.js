@@ -149,7 +149,7 @@ function renderTooltip(v) {
   <p class="key">Area Name</p><p class="value">${v.state}</p>  
   <p class="key">Bachelors Or Higher</p>
   <p class="value">
-    ${v.education.toFixed(3)}%
+    ${v.education.toFixed(1)}%
   </p>  
 </div>`;
   return html.trim();
