@@ -49,7 +49,17 @@ able to build such sites.
 ## Data Visualization
 
 - [Course link][fcc_web]
-- Cert: TODO
+- [Cert](https://www.freecodecamp.org/certification/letientai299/data-visualization)
+- Total time: 18h
+
+`d3` is awesome! I don't know how many times I have that thought when working on
+this cert. There's a lot of things in and behind it. No wonder why there's so
+many books on `d3`. I will definitely use it for my other (real) data
+visualization projects.
+
+Beside many things I've tried with these projects, I feel like my code for
+iterate through data and rendering the chart is not efficient. I need to learn
+more about JS performance. The code could also be structured better.
 
 | Task                                                          | Site                                 |
 | ------------------------------------------------------------- | ------------------------------------ |
@@ -58,10 +68,6 @@ able to build such sites.
 | [Visualize Data with a Heat Map][fcc_d3_heat]                 | [./d3/heat](./d3/heat)               |
 | [Visualize Data with a Choropleth Map][fcc_d3_choropleth]     | [./d3/choropleth](./d3/choropleth)   |
 | [Visualize Data with a Treemap Diagram][fcc_d3_treemap]       | [./d3/treemap](./d3/treemap)         |
-
-Note:
-
-> TODO
 
 ## Quality assurange
 
