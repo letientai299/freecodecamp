@@ -26,7 +26,7 @@ jobs:
 
           git checkout master .
           npm install
-          make index
+          make all
 
           echo
           echo "Remove every thing non-web"

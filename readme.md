@@ -9,13 +9,32 @@ on [freeCodeCamp][fcc] in 2021.
 - [Visit here to see actual web pages.](https://letientai.io/freecodecamp/)
 - [See my timeline on freecodecamp here](https://www.freecodecamp.org/letientai299):
   start in 2021/03/11, finish in TBD
+- If you want to play around with this repo locally, see
+  [local setup guide](#local-setup)
+
+## Table of contents
+
+<!-- toc -->
+
+- [Course](#course)
+  - [JavaScript Algorithms and Data Structures](#javascript-algorithms-and-data-structures)
+  - [Responsive Web Design](#responsive-web-design)
+  - [Data Visualization](#data-visualization)
+  - [Quality assurange](#quality-assurange)
+  - [Scientific Computing with Python](#scientific-computing-with-python)
+  - [Data Analysis with Python](#data-analysis-with-python)
+- [Local setup](#local-setup)
+
+<!-- tocstop -->
 
 > TODO:
 >
 > - get all the certs
 > - make header clickable and generate anchor links
 
-## JavaScript Algorithms and Data Structures
+## Course
+
+### JavaScript Algorithms and Data Structures
 
 - [Cource link][fcc_algo]
 - [Cert](https://www.freecodecamp.org/certification/letientai299/javascript-algorithms-and-data-structures)
@@ -26,7 +45,7 @@ This is easy if since I already have
 need to get a bit more familiar with data structure in JS. Thankfully, JS has
 strong support for functinal programming.
 
-## Responsive Web Design
+### Responsive Web Design
 
 - [Course link][fcc_web]
 - [Cert](https://www.freecodecamp.org/certification/letientai299/responsive-web-design)
@@ -48,7 +67,7 @@ able to build such sites.
 | [Build a Technical Documentation Page][fcc_web_doc]     | [./web/doc](./web/doc)             |
 | [Build a Personal Portfolio Webpage][fcc_web_portfolio] | [./web/portfolio](./web/portfolio) |
 
-## Data Visualization
+### Data Visualization
 
 - [Course link][fcc_web]
 - [Cert](https://www.freecodecamp.org/certification/letientai299/data-visualization)
@@ -71,7 +90,7 @@ more about JS performance. The code could also be structured better.
 | [Visualize Data with a Choropleth Map][fcc_d3_choropleth]     | [./d3/choropleth](./d3/choropleth)   |
 | [Visualize Data with a Treemap Diagram][fcc_d3_treemap]       | [./d3/treemap](./d3/treemap)         |
 
-## Quality assurange
+### Quality assurange
 
 - [Course link][fcc_qa]
 - Cert: TODO
@@ -86,7 +105,7 @@ This course requires more thought, so see [its note here](./qa).
 | [Sudoku Solver][fcc_qa_sudoku]                   | [./qa/sudoku](./qa/sudoku)         |
 | [American British Translator][fcc_qa_translator] | [./qa/translator](./qa/translator) |
 
-## Scientific Computing with Python
+### Scientific Computing with Python
 
 - [Course link][fcc_py]
 - [Cert](https://www.freecodecamp.org/certification/letientai299/scientific-computing-with-python-v7)
@@ -102,6 +121,14 @@ This course requires more thought, so see [its note here](./qa).
 | [Budget App][fcc_py_budget]                  | [budget.py](https://github.com/letientai299/freecodecamp/blob/master/python/budget/budget.py)                        |
 | [Polygon Area Calculator][fcc_py_area]       | [shape_calculator.py](https://github.com/letientai299/freecodecamp/blob/master/python/area/shape_calculator.py)      |
 | [Probability Calculator][fcc_py_probability] | [prob_calculator.py](https://github.com/letientai299/freecodecamp/blob/master/python/probability/prob_calculator.py) |
+
+### Data Analysis with Python
+
+- [Course link](https://www.freecodecamp.org/learn/data-analysis-with-python/)
+
+## Local setup
+
+> TODO
 
 <!-- ref -->
 
