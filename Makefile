@@ -14,5 +14,5 @@ web/doc: ## Render the web/doc/index.html
 serve: ## Watch file and start live server
 	@./node_modules/.bin/concurrently --kill-others \
 		"./node_modules/.bin/nodemon -w *.md -w './tpl.html' -x 'make all #'" \
-		"./node_modules/.bin/live-server --host=localhost --ignore='**/.git/**'"
+		"./node_modules/.bin/live-server --host=localhost"
 
