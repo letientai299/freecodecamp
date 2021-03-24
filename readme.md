@@ -126,6 +126,8 @@ This course requires more thought, so see [its note here](./qa).
 
 - [Course link](https://www.freecodecamp.org/learn/data-analysis-with-python/)
 
+`test.py` will become [this](./pyda/playground/test.ipynb)
+
 ## Local setup
 
 > TODO

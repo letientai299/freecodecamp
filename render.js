@@ -49,5 +49,10 @@ const linkRender = function(href, title, text) {
   if (href.includes("http")) {
     return link.replace("<a", "<a target='_blank' ");
   }
+
+  if (href.includes(".ipynb")) {
+    return link.replace(".ipynb", ".html");
+  }
+
   return link;
 };
