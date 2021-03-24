@@ -1,8 +1,9 @@
 const marked = require("marked");
 const fs = require("fs");
 const glob = require("glob");
+const { log } = require("util");
 
-const TEMPLATE_FILE = "./index.tpl.html";
+const TEMPLATE_FILE = "./tpl.html";
 const tpl = fs.readFileSync(TEMPLATE_FILE).toString();
 
 glob("**/*.md", {}, function(err, files) {
@@ -45,5 +46,8 @@ const render = function(mdFile) {
 
 const linkRender = function(href, title, text) {
   let link = marked.Renderer.prototype.link.call(this, href, title, text);
-  return link.replace("<a", "<a target='_blank' ");
+  if (href.includes("http")) {
+    return link.replace("<a", "<a target='_blank' ");
+  }
+  return link;
 };

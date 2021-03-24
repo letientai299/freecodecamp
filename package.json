@@ -1,14 +1,17 @@
 {
   "name": "freecodecamp",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "homepage": "https://letientai.io/freecodecamp",
   "description": "Solutions for final freeCodeCamp projects",
   "author": "letientai299",
   "license": "MIT",
   "devDependencies": {
+    "concurrently": "6.0.0",
     "d3": "6.6.0",
     "gh-pages": "3.1.0",
     "glob": "7.1.6",
-    "marked": "2.0.1"
+    "live-server": "1.2.1",
+    "marked": "2.0.1",
+    "nodemon": "2.0.7"
   }
 }
