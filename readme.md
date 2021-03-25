@@ -132,7 +132,7 @@ This course requires more thought, so see [its note here](./qa).
 | [Demographic Data Analyzer][fcc_pyda_demographic]            | [./pyda/demographic](./pyda/demographic)    |
 | [Medical Data Visualizer][fcc_pyda_plot]                     | [./pyda/plot](./pyda/plot)                  |
 | [Page View Time Series Visualizer][fcc_pyda_time]            | [./pyda/time](./pyda/time)                  |
-| [Sea Level Predictor][fcc_pyda_sea]                          | []()                                        |
+| [Sea Level Predictor][fcc_pyda_sea]                          | [./pyda/sea](./pyda/sea)                    |
 
 ## Local setup
 
