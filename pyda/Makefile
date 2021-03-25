@@ -11,6 +11,7 @@ setup: ## Install required tools
 		nbconvert==5.6.1 \
 		jupyter jupyter_contrib_nbextensions \
 		jupytext \
+		matplotlib \
 		numpy pandas
 
 convert: ## Convert *.py in temp to *.ipynb then to *.html

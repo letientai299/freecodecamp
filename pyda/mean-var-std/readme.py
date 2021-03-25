@@ -78,7 +78,7 @@
 #
 # Copy your project's URL and submit it to freeCodeCamp.
 
-# ## Solution 2
+# ## Solution
 
 import matplotlib.pyplot as plt
 import pandas as pd
@@ -98,5 +98,3 @@ df = pd.DataFrame(
 df = df.cumsum()
 plt.figure()
 df.plot()
-
-# Did we have images? Yep

@@ -64,7 +64,7 @@ The tests will run automatically whenever you hit the "run" button.
 
 Copy your project's URL and submit it to freeCodeCamp.
 
-## Solution 2
+## Solution
 
 
 ```python
@@ -118,5 +118,3 @@ df.plot()
 
 ![png](readme_files/readme_5_2.png)
 
-
-Did we have images? Yep
