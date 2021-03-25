@@ -9,8 +9,25 @@ cp -a $FILE ./temp/$FILE
 TFILE="./temp/$FILE"
 
 echo "==> Converting $TFILE"
-jupytext --to ipynb --sync $TFILE
+jupytext --to ipynb $TFILE
 jupyter nbconvert --execute --to html "${TFILE%.py}.ipynb"
+
+echo "==> Inject css in to ${TFILE%.py}.html"
+
+# need to escape new new line with a slash, otherwise, sed will complain
+CSS=$(cat<<'EOF'
+<head>\
+  <style type="text/css">\
+    body{\
+      max-width: 800px;\
+      margin:auto;\
+      border-left: 1px solid darkgreen;\
+    }\
+  </style>
+EOF
+)
+
+sed -i.bak "s|<head>|$CSS|" "${TFILE%.py}.html"
 
 echo "==> Copy back result of converting $FILE"
 DIR="$(dirname $FILE)"
