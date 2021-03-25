@@ -1,0 +1,9 @@
+{
+  "ext": "py",
+  "verbose": true,
+  "ignore": ["temp"],
+  "verbose": false,
+  "events": {
+    "restart": "./convert.sh $FILENAME"
+  }
+}

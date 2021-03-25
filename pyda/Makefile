@@ -3,12 +3,15 @@ help: ## Prints help for targets with comments
 
 serve:
 	@../node_modules/.bin/concurrently --kill-others \
-		"../node_modules/.bin/nodemon -e py -i temp -x 'make convert'" \
-		"../node_modules/.bin/live-server --host=localhost"
+		"../node_modules/.bin/nodemon --config nodemon.json -x 'echo Start nodemon'" \
+		"./live-server.sh"
 
 setup: ## Install required tools
-	pip3 install --user jupyter jupyterlab
-	pip3 install --user jupytext
+	pip3 install -q --user -I \
+		nbconvert==5.6.1 \
+		jupyter jupyter_contrib_nbextensions \
+		jupytext \
+		numpy pandas
 
 convert: ## Convert *.py in temp to *.ipynb then to *.html
 	@mkdir -p temp
@@ -18,3 +21,6 @@ convert: ## Convert *.py in temp to *.ipynb then to *.html
 	@find . -type f -name '*.py' |\
 		grep -vE '(temp|./.ipynb)' |\
 		xargs -I{} ./convert.sh {}
+
+clean: ## Remove temp files
+	@rm -rf ./temp
