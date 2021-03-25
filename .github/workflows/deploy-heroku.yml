@@ -1,0 +1,21 @@
+name: "Deploy Heroku"
+
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - 'heroku/**'
+      - 'microservices/**'
+      - 'qa/**'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: akhileshns/heroku-deploy@v3.12.12
+        with:
+          heroku_api_key: ${{secrets.HEROKU_KEY}}
+          heroku_app_name: "fcc-box"
+          heroku_email: "letientai299@gmail.com"

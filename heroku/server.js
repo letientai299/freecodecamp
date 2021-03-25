@@ -7,7 +7,7 @@ if (port === undefined || port === "") {
 }
 
 app.get("/", (req, res) => {
-  res.send("Hello World!");
+  res.send("Hello from Github Actions!");
 });
 
 app.listen(port, () => {
