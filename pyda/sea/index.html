@@ -13104,161 +13104,46 @@ $( document ).ready(function(){
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Demographic-Data-Analyzer">Demographic Data Analyzer<a class="anchor-link" href="#Demographic-Data-Analyzer">&#182;</a></h1>
+<h1 id="Sea-Level-Predictor">Sea Level Predictor<a class="anchor-link" href="#Sea-Level-Predictor">&#182;</a></h1>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Problem-description">Problem description<a class="anchor-link" href="#Problem-description">&#182;</a></h2><p>Content of this section is copied and reformatted from <a href="https://repl.it/github/freeCodeCamp/boilerplate-demographic-data-analyzer">this
+<h2 id="Problem-description">Problem description<a class="anchor-link" href="#Problem-description">&#182;</a></h2><p>Content of this section is copied and reformatted from <a href="https://repl.it/github/freeCodeCamp/boilerplate-sea-level-predictor">this
 repl.it</a>,
 provided by FCC
-<a href="https://www.freecodecamp.org/learn/data-analysis-with-python/data-analysis-with-python-projects/demographic-data-analyzer">here</a>.</p>
-<h3 id="Assignment">Assignment<a class="anchor-link" href="#Assignment">&#182;</a></h3><p>In this challenge you must analyze demographic data using Pandas. You are given
-a dataset of demographic data that was extracted from the 1994 Census database.
-Here is a sample of what the data looks like:</p>
-<table>
-<thead><tr>
-<th style="text-align:right"></th>
-<th style="text-align:right">age</th>
-<th style="text-align:left">workclass</th>
-<th style="text-align:right">fnlwgt</th>
-<th style="text-align:left">education</th>
-<th style="text-align:right">education-num</th>
-<th style="text-align:left">marital-status</th>
-<th style="text-align:left">occupation</th>
-<th style="text-align:left">relationship</th>
-<th style="text-align:left">race</th>
-<th style="text-align:left">sex</th>
-<th style="text-align:right">capital-gain</th>
-<th style="text-align:right">capital-loss</th>
-<th style="text-align:right">hours-per-week</th>
-<th style="text-align:left">native-country</th>
-<th style="text-align:left">salary</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:right">0</td>
-<td style="text-align:right">39</td>
-<td style="text-align:left">State-gov</td>
-<td style="text-align:right">77516</td>
-<td style="text-align:left">Bachelors</td>
-<td style="text-align:right">13</td>
-<td style="text-align:left">Never-married</td>
-<td style="text-align:left">Adm-clerical</td>
-<td style="text-align:left">Not-in-family</td>
-<td style="text-align:left">White</td>
-<td style="text-align:left">Male</td>
-<td style="text-align:right">2174</td>
-<td style="text-align:right">0</td>
-<td style="text-align:right">40</td>
-<td style="text-align:left">United-States</td>
-<td style="text-align:left">&lt;=50K</td>
-</tr>
-<tr>
-<td style="text-align:right">1</td>
-<td style="text-align:right">50</td>
-<td style="text-align:left">Self-emp-not-inc</td>
-<td style="text-align:right">83311</td>
-<td style="text-align:left">Bachelors</td>
-<td style="text-align:right">13</td>
-<td style="text-align:left">Married-civ-spouse</td>
-<td style="text-align:left">Exec-managerial</td>
-<td style="text-align:left">Husband</td>
-<td style="text-align:left">White</td>
-<td style="text-align:left">Male</td>
-<td style="text-align:right">0</td>
-<td style="text-align:right">0</td>
-<td style="text-align:right">13</td>
-<td style="text-align:left">United-States</td>
-<td style="text-align:left">&lt;=50K</td>
-</tr>
-<tr>
-<td style="text-align:right">2</td>
-<td style="text-align:right">38</td>
-<td style="text-align:left">Private</td>
-<td style="text-align:right">215646</td>
-<td style="text-align:left">HS-grad</td>
-<td style="text-align:right">9</td>
-<td style="text-align:left">Divorced</td>
-<td style="text-align:left">Handlers-cleaners</td>
-<td style="text-align:left">Not-in-family</td>
-<td style="text-align:left">White</td>
-<td style="text-align:left">Male</td>
-<td style="text-align:right">0</td>
-<td style="text-align:right">0</td>
-<td style="text-align:right">40</td>
-<td style="text-align:left">United-States</td>
-<td style="text-align:left">&lt;=50K</td>
-</tr>
-<tr>
-<td style="text-align:right">3</td>
-<td style="text-align:right">53</td>
-<td style="text-align:left">Private</td>
-<td style="text-align:right">234721</td>
-<td style="text-align:left">11th</td>
-<td style="text-align:right">7</td>
-<td style="text-align:left">Married-civ-spouse</td>
-<td style="text-align:left">Handlers-cleaners</td>
-<td style="text-align:left">Husband</td>
-<td style="text-align:left">Black</td>
-<td style="text-align:left">Male</td>
-<td style="text-align:right">0</td>
-<td style="text-align:right">0</td>
-<td style="text-align:right">40</td>
-<td style="text-align:left">United-States</td>
-<td style="text-align:left">&lt;=50K</td>
-</tr>
-<tr>
-<td style="text-align:right">4</td>
-<td style="text-align:right">28</td>
-<td style="text-align:left">Private</td>
-<td style="text-align:right">338409</td>
-<td style="text-align:left">Bachelors</td>
-<td style="text-align:right">13</td>
-<td style="text-align:left">Married-civ-spouse</td>
-<td style="text-align:left">Prof-specialty</td>
-<td style="text-align:left">Wife</td>
-<td style="text-align:left">Black</td>
-<td style="text-align:left">Female</td>
-<td style="text-align:right">0</td>
-<td style="text-align:right">0</td>
-<td style="text-align:right">40</td>
-<td style="text-align:left">Cuba</td>
-<td style="text-align:left">&lt;=50K</td>
-</tr>
-</tbody>
-</table>
-<p>You must use Pandas to answer the following questions:</p>
+<a href="https://www.freecodecamp.org/learn/data-analysis-with-python/data-analysis-with-python-projects/sea-level-predictor">here</a>.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Assignment">Assignment<a class="anchor-link" href="#Assignment">&#182;</a></h3><p>You will analyze a dataset of the global average sea level change since 1880.
+You will use the data to predict the sea level change through year 2050.</p>
+<p>Use the data to complete the following tasks:</p>
 <ul>
-<li>How many people of each race are represented in this dataset? This should be a
-Pandas series with race names as the index labels. (<code>race</code> column)</li>
-<li>What is the average age of men?</li>
-<li>What is the percentage of people who have a Bachelor's degree?</li>
-<li>What percentage of people with advanced education (<code>Bachelors</code>, <code>Masters</code>, or
-<code>Doctorate</code>) make more than 50K?</li>
-<li>What percentage of people without advanced education make more than 50K?</li>
-<li>What is the minimum number of hours a person works per week?</li>
-<li>What percentage of the people who work the minimum number of hours per week
-have a salary of more than 50K?</li>
-<li>What country has the highest percentage of people that earn &gt;50K and what is
-that percentage?</li>
-<li>Identify the most popular occupation for those who earn &gt;50K in India.</li>
+<li>Use Pandas to import the data from <code>epa-sea-level.csv</code>.</li>
+<li>Use matplotlib to create a scatter plot using the "Year" column as the x-axis
+and the "CSIRO Adjusted Sea Level" column as the y-axix.</li>
+<li>Use the <code>linregress</code> function from <code>scipi.stats</code> to get the slope and
+y-intercept of the line of best fit. Plot the line of best fit over the top
+of the scatter plot. Make the line go through the year 2050 to predict the
+sea level rise in 2050.</li>
+<li>Plot a new line of best fit just using the data from year 2000 through the
+most recent year in the dataset. Make the line also go through the year 2050
+to predict the sea level rise in 2050 if the rate of rise continues as it has
+since the year 2000.</li>
+<li>The x label should be "Year", the y label should be "Sea Level (inches)", and
+the title should be "Rise in Sea Level".</li>
 </ul>
-<p>Use the starter code in the file <code>demographic_data_anaylizer</code>. Update the code
-so all variables set to "None" are set to the appropriate calculation or code.
-Round all decimals to the nearest tenth.</p>
 <p>Unit tests are written for you under <code>test_module.py</code>.</p>
-<h3 id="Development">Development<a class="anchor-link" href="#Development">&#182;</a></h3><p>For development, you can use <code>main.py</code> to test your functions. Click the "run"
-button and <code>main.py</code> will run.</p>
-<h3 id="Testing">Testing<a class="anchor-link" href="#Testing">&#182;</a></h3><p>We imported the tests from <code>test_module.py</code> to <code>main.py</code> for your convenience.
-The tests will run automatically whenever you hit the "run" button.</p>
-<h3 id="Submitting">Submitting<a class="anchor-link" href="#Submitting">&#182;</a></h3><p>Copy your project's URL and submit it to freeCodeCamp.</p>
-<h3 id="Dataset-Source">Dataset Source<a class="anchor-link" href="#Dataset-Source">&#182;</a></h3><p>Dua, D. and Graff, C. (2019). <a href="http://archive.ics.uci.edu/ml">UCI Machine Learning
-Repository</a>. Irvine, CA: University of California, School of
-Information and Computer Science.</p>
+<h3 id="Data-Source">Data Source<a class="anchor-link" href="#Data-Source">&#182;</a></h3><p>Global Average Absolute Sea Level Change, 1880-2014 from the US Environmental
+Protection Agency using data from CSIRO, 2015; NOAA, 2015.</p>
+<p><a href="https://datahub.io/core/sea-level-rise">https://datahub.io/core/sea-level-rise</a></p>
 
 </div>
 </div>
@@ -13266,17 +13151,14 @@ Information and Computer Science.</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Note">Note<a class="anchor-link" href="#Note">&#182;</a></h2><p>OK, this is a hard one, because I haven't really learn pandas. Need to google
-a lot.</p>
-<p>Total time: 2h</p>
+<h2 id="Note">Note<a class="anchor-link" href="#Note">&#182;</a></h2><ul>
+<li>The project is educational, but, once again, the test can be very
+frustrated. Thanks to <a href="https://forum.freecodecamp.org/t/sea-level-predictor-errors/437517/13">this thread</a>,
+I could find the trick to pass the test.</li>
+</ul>
+<p>Total time: 1.5h</p>
+<p>Fuck floating point equal comparison!</p>
 
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Solution">Solution<a class="anchor-link" href="#Solution">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -13285,7 +13167,11 @@ a lot.</p>
 <div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># ## Solution</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">linregress</span>
+<span class="kn">import</span> <span class="nn">unittest</span>
 </pre></div>
 
     </div>
@@ -13298,169 +13184,54 @@ a lot.</p>
 <div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">calculate_demographic_data</span><span class="p">(</span><span class="n">print_data</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">draw_plot</span><span class="p">():</span>
     <span class="c1"># Read data from file</span>
-    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;./adult.data.csv&quot;</span><span class="p">)</span>
-
-    <span class="c1"># How many of each race are represented in this dataset? This should be a</span>
-    <span class="c1"># Pandas series with race names as the index labels.</span>
-    <span class="n">race_count</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;race&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
-
-    <span class="c1"># What is the average age of men?</span>
-    <span class="n">average_age_men</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;sex&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;Male&quot;</span><span class="p">,</span> <span class="s2">&quot;age&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span> <span class="mi">1</span><span class="p">)</span>
-
-    <span class="c1"># What is the percentage of people who have a Bachelor&#39;s degree?</span>
-    <span class="n">percentage_bachelors</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span>
-        <span class="mi">100</span> <span class="o">*</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;education&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;Bachelors&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">size</span> <span class="o">/</span> <span class="n">df</span><span class="o">.</span><span class="n">size</span><span class="p">,</span>
-        <span class="mi">1</span><span class="p">,</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;./epa-sea-level.csv&quot;</span><span class="p">,</span> <span class="n">float_precision</span><span class="o">=</span><span class="s2">&quot;legacy&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span>
+        <span class="n">columns</span><span class="o">=</span><span class="p">{</span>
+            <span class="s2">&quot;Year&quot;</span><span class="p">:</span> <span class="s2">&quot;year&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;CSIRO Adjusted Sea Level&quot;</span><span class="p">:</span> <span class="s2">&quot;sea&quot;</span><span class="p">,</span>
+        <span class="p">}</span>
     <span class="p">)</span>
 
-    <span class="c1"># What percentage of people with advanced education (`Bachelors`, `Masters`,</span>
-    <span class="c1"># or `Doctorate`) make more than 50K?</span>
-    <span class="c1"># What percentage of people without advanced education make more than 50K?</span>
+    <span class="c1"># Create scatter plot</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span> <span class="mi">9</span><span class="p">))</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;year&quot;</span><span class="p">],</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;sea&quot;</span><span class="p">])</span>
 
-    <span class="c1"># with and without `Bachelors`, `Masters`, or `Doctorate`</span>
-    <span class="n">higher_education</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span>
-        <span class="n">df</span><span class="p">[</span><span class="s2">&quot;education&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">([</span><span class="s2">&quot;Bachelors&quot;</span><span class="p">,</span> <span class="s2">&quot;Masters&quot;</span><span class="p">,</span> <span class="s2">&quot;Doctorate&quot;</span><span class="p">])</span>
-    <span class="p">]</span>
-    <span class="n">lower_education</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span>
-        <span class="o">~</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;education&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">([</span><span class="s2">&quot;Bachelors&quot;</span><span class="p">,</span> <span class="s2">&quot;Masters&quot;</span><span class="p">,</span> <span class="s2">&quot;Doctorate&quot;</span><span class="p">])</span>
-    <span class="p">]</span>
+    <span class="c1"># Create first line of best fit, with existing data</span>
+    <span class="n">regress</span> <span class="o">=</span> <span class="n">linregress</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;year&quot;</span><span class="p">],</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;sea&quot;</span><span class="p">])</span>
 
-    <span class="c1"># percentage with salary &gt;50K</span>
-    <span class="n">higher_education_rich</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span>
-        <span class="mi">100</span>
-        <span class="o">*</span> <span class="n">higher_education</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">higher_education</span><span class="p">[</span><span class="s2">&quot;salary&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;&gt;50K&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">size</span>
-        <span class="o">/</span> <span class="n">higher_education</span><span class="o">.</span><span class="n">size</span><span class="p">,</span>
-        <span class="mi">1</span><span class="p">,</span>
+    <span class="c1"># increase data size for future prediction</span>
+    <span class="n">last_year</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;year&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">append</span><span class="p">([{</span><span class="s2">&quot;year&quot;</span><span class="p">:</span> <span class="n">y</span><span class="p">}</span> <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">last_year</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2050</span><span class="p">)])</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
+        <span class="n">df</span><span class="p">[</span><span class="s2">&quot;year&quot;</span><span class="p">],</span>
+        <span class="n">regress</span><span class="o">.</span><span class="n">intercept</span> <span class="o">+</span> <span class="n">regress</span><span class="o">.</span><span class="n">slope</span> <span class="o">*</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;year&quot;</span><span class="p">],</span>
+        <span class="n">c</span><span class="o">=</span><span class="s2">&quot;r&quot;</span><span class="p">,</span>
+        <span class="n">label</span><span class="o">=</span><span class="s2">&quot;fit all&quot;</span><span class="p">,</span>
     <span class="p">)</span>
 
-    <span class="n">lower_education_rich</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span>
-        <span class="mi">100</span>
-        <span class="o">*</span> <span class="n">lower_education</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">lower_education</span><span class="p">[</span><span class="s2">&quot;salary&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;&gt;50K&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">size</span>
-        <span class="o">/</span> <span class="n">lower_education</span><span class="o">.</span><span class="n">size</span><span class="p">,</span>
-        <span class="mi">1</span><span class="p">,</span>
+    <span class="c1"># Create second line of best fit</span>
+    <span class="n">df_recent</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;year&quot;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">2000</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;year&quot;</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">last_year</span><span class="p">)]</span>
+    <span class="n">bestfit</span> <span class="o">=</span> <span class="n">linregress</span><span class="p">(</span><span class="n">df_recent</span><span class="p">[</span><span class="s2">&quot;year&quot;</span><span class="p">],</span> <span class="n">df_recent</span><span class="p">[</span><span class="s2">&quot;sea&quot;</span><span class="p">])</span>
+    <span class="n">df_recent</span> <span class="o">=</span> <span class="n">df_recent</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
+        <span class="p">[{</span><span class="s2">&quot;year&quot;</span><span class="p">:</span> <span class="n">y</span><span class="p">}</span> <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">last_year</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2050</span><span class="p">)]</span>
+    <span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
+        <span class="n">df_recent</span><span class="p">[</span><span class="s2">&quot;year&quot;</span><span class="p">],</span>
+        <span class="n">bestfit</span><span class="o">.</span><span class="n">intercept</span> <span class="o">+</span> <span class="n">bestfit</span><span class="o">.</span><span class="n">slope</span> <span class="o">*</span> <span class="n">df_recent</span><span class="p">[</span><span class="s2">&quot;year&quot;</span><span class="p">],</span>
+        <span class="n">c</span><span class="o">=</span><span class="s2">&quot;b&quot;</span><span class="p">,</span>
+        <span class="n">label</span><span class="o">=</span><span class="s2">&quot;fit recent&quot;</span><span class="p">,</span>
     <span class="p">)</span>
 
-    <span class="c1"># What is the minimum number of hours a person works per week</span>
-    <span class="c1"># (hours-per-week feature)?</span>
-    <span class="n">min_work_hours</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;hours-per-week&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>
+    <span class="c1"># Add labels and title</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Year&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Sea Level (inches)&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Rise in Sea Level&quot;</span><span class="p">)</span>
 
-    <span class="c1"># What percentage of the people who work the minimum number of hours per</span>
-    <span class="c1"># week have a salary of &gt;50K?</span>
-    <span class="n">num_min_workers</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;hours-per-week&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="n">min_work_hours</span><span class="p">]</span>
-    <span class="n">rich_percentage</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span>
-        <span class="mi">100</span>
-        <span class="o">*</span> <span class="n">num_min_workers</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">num_min_workers</span><span class="p">[</span><span class="s2">&quot;salary&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;&gt;50K&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">size</span>
-        <span class="o">/</span> <span class="n">num_min_workers</span><span class="o">.</span><span class="n">size</span><span class="p">,</span>
-        <span class="mi">1</span><span class="p">,</span>
-    <span class="p">)</span>
-
-    <span class="c1"># What country has the highest percentage of people that earn &gt;50K?</span>
-    <span class="n">highest_country</span> <span class="o">=</span> <span class="p">(</span>
-        <span class="n">df</span><span class="p">[[</span><span class="s2">&quot;salary&quot;</span><span class="p">,</span> <span class="s2">&quot;native-country&quot;</span><span class="p">]]</span>
-        <span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;native-country&quot;</span><span class="p">)</span>
-        <span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">g</span><span class="p">:</span> <span class="n">g</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">g</span><span class="p">[</span><span class="s2">&quot;salary&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;&gt;50K&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">size</span> <span class="o">/</span> <span class="n">g</span><span class="o">.</span><span class="n">size</span> <span class="o">*</span> <span class="mi">100</span><span class="p">)</span>
-    <span class="p">)</span>
-
-    <span class="n">highest_earning_country</span> <span class="o">=</span> <span class="n">highest_country</span><span class="o">.</span><span class="n">idxmax</span><span class="p">()</span>
-    <span class="n">highest_earning_country_percentage</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">highest_country</span><span class="o">.</span><span class="n">max</span><span class="p">(),</span> <span class="mi">1</span><span class="p">)</span>
-
-    <span class="c1"># Identify the most popular occupation for those who earn &gt;50K in India.</span>
-    <span class="n">top_IN_occupation</span> <span class="o">=</span> <span class="p">(</span>
-        <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;native-country&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;India&quot;</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;salary&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;&gt;50K&quot;</span><span class="p">)][</span>
-            <span class="s2">&quot;occupation&quot;</span>
-        <span class="p">]</span>
-        <span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
-        <span class="o">.</span><span class="n">idxmax</span><span class="p">()</span>
-    <span class="p">)</span>
-
-    <span class="c1"># DO NOT MODIFY BELOW THIS LINE</span>
-
-    <span class="k">if</span> <span class="n">print_data</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Number of each race:</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">race_count</span><span class="p">)</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Average age of men:&quot;</span><span class="p">,</span> <span class="n">average_age_men</span><span class="p">)</span>
-        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Percentage with Bachelors degrees: </span><span class="si">{</span><span class="n">percentage_bachelors</span><span class="si">}</span><span class="s2">%&quot;</span><span class="p">)</span>
-        <span class="nb">print</span><span class="p">(</span>
-            <span class="sa">f</span><span class="s2">&quot;Percentage with higher education that earn &gt;50K: </span><span class="si">{</span><span class="n">higher_education_rich</span><span class="si">}</span><span class="s2">%&quot;</span>
-        <span class="p">)</span>
-        <span class="nb">print</span><span class="p">(</span>
-            <span class="sa">f</span><span class="s2">&quot;Percentage without higher education that earn &gt;50K: </span><span class="si">{</span><span class="n">lower_education_rich</span><span class="si">}</span><span class="s2">%&quot;</span>
-        <span class="p">)</span>
-        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Min work time: </span><span class="si">{</span><span class="n">min_work_hours</span><span class="si">}</span><span class="s2"> hours/week&quot;</span><span class="p">)</span>
-        <span class="nb">print</span><span class="p">(</span>
-            <span class="sa">f</span><span class="s2">&quot;Percentage of rich among those who work fewest hours: </span><span class="si">{</span><span class="n">rich_percentage</span><span class="si">}</span><span class="s2">%&quot;</span>
-        <span class="p">)</span>
-        <span class="nb">print</span><span class="p">(</span>
-            <span class="s2">&quot;Country with highest percentage of rich:&quot;</span><span class="p">,</span> <span class="n">highest_earning_country</span>
-        <span class="p">)</span>
-        <span class="nb">print</span><span class="p">(</span>
-            <span class="sa">f</span><span class="s2">&quot;Highest percentage of rich people in country: </span><span class="si">{</span><span class="n">highest_earning_country_percentage</span><span class="si">}</span><span class="s2">%&quot;</span>
-        <span class="p">)</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Top occupations in India:&quot;</span><span class="p">,</span> <span class="n">top_IN_occupation</span><span class="p">)</span>
-
-    <span class="k">return</span> <span class="p">{</span>
-        <span class="s2">&quot;race_count&quot;</span><span class="p">:</span> <span class="n">race_count</span><span class="p">,</span>
-        <span class="s2">&quot;average_age_men&quot;</span><span class="p">:</span> <span class="n">average_age_men</span><span class="p">,</span>
-        <span class="s2">&quot;percentage_bachelors&quot;</span><span class="p">:</span> <span class="n">percentage_bachelors</span><span class="p">,</span>
-        <span class="s2">&quot;higher_education_rich&quot;</span><span class="p">:</span> <span class="n">higher_education_rich</span><span class="p">,</span>
-        <span class="s2">&quot;lower_education_rich&quot;</span><span class="p">:</span> <span class="n">lower_education_rich</span><span class="p">,</span>
-        <span class="s2">&quot;min_work_hours&quot;</span><span class="p">:</span> <span class="n">min_work_hours</span><span class="p">,</span>
-        <span class="s2">&quot;rich_percentage&quot;</span><span class="p">:</span> <span class="n">rich_percentage</span><span class="p">,</span>
-        <span class="s2">&quot;highest_earning_country&quot;</span><span class="p">:</span> <span class="n">highest_earning_country</span><span class="p">,</span>
-        <span class="s2">&quot;highest_earning_country_percentage&quot;</span><span class="p">:</span> <span class="n">highest_earning_country_percentage</span><span class="p">,</span>
-        <span class="s2">&quot;top_IN_occupation&quot;</span><span class="p">:</span> <span class="n">top_IN_occupation</span><span class="p">,</span>
-    <span class="p">}</span>
+    <span class="k">return</span> <span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span>
 </pre></div>
 
     </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">calculate_demographic_data</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[3]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>{&#39;race_count&#39;: White                 27816
- Black                  3124
- Asian-Pac-Islander     1039
- Amer-Indian-Eskimo      311
- Other                   271
- Name: race, dtype: int64,
- &#39;average_age_men&#39;: 39.4,
- &#39;percentage_bachelors&#39;: 16.4,
- &#39;higher_education_rich&#39;: 46.5,
- &#39;lower_education_rich&#39;: 17.4,
- &#39;min_work_hours&#39;: 1,
- &#39;rich_percentage&#39;: 10.0,
- &#39;highest_earning_country&#39;: &#39;Iran&#39;,
- &#39;highest_earning_country_percentage&#39;: 41.9,
- &#39;top_IN_occupation&#39;: &#39;Prof-specialty&#39;}</pre>
-</div>
-
-</div>
-
 </div>
 </div>
 
@@ -13474,114 +13245,432 @@ a lot.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">unittest</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">DemographicAnalyzerTestCase</span><span class="p">(</span><span class="n">unittest</span><span class="o">.</span><span class="n">TestCase</span><span class="p">):</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">LinePlotTestCase</span><span class="p">(</span><span class="n">unittest</span><span class="o">.</span><span class="n">TestCase</span><span class="p">):</span>
     <span class="k">def</span> <span class="nf">setUp</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">calculate_demographic_data</span><span class="p">(</span><span class="n">print_data</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ax</span> <span class="o">=</span> <span class="n">draw_plot</span><span class="p">()</span>
 
-    <span class="k">def</span> <span class="nf">test_race_count</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="n">actual</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;race_count&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
-        <span class="n">expected</span> <span class="o">=</span> <span class="p">[</span><span class="mi">27816</span><span class="p">,</span> <span class="mi">3124</span><span class="p">,</span> <span class="mi">1039</span><span class="p">,</span> <span class="mi">311</span><span class="p">,</span> <span class="mi">271</span><span class="p">]</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">assertAlmostEqual</span><span class="p">(</span>
-            <span class="n">actual</span><span class="p">,</span>
-            <span class="n">expected</span><span class="p">,</span>
-            <span class="n">msg</span><span class="o">=</span><span class="s2">&quot;Expected race count values to be [27816, 3124, 1039, 311, 271]&quot;</span><span class="p">,</span>
-        <span class="p">)</span>
-
-    <span class="k">def</span> <span class="nf">test_average_age_men</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="n">actual</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;average_age_men&quot;</span><span class="p">]</span>
-        <span class="n">expected</span> <span class="o">=</span> <span class="mf">39.4</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">assertAlmostEqual</span><span class="p">(</span>
-            <span class="n">actual</span><span class="p">,</span>
-            <span class="n">expected</span><span class="p">,</span>
-            <span class="n">msg</span><span class="o">=</span><span class="s2">&quot;Expected different value for average age of men.&quot;</span><span class="p">,</span>
-        <span class="p">)</span>
-
-    <span class="k">def</span> <span class="nf">test_percentage_bachelors</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="n">actual</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;percentage_bachelors&quot;</span><span class="p">]</span>
-        <span class="n">expected</span> <span class="o">=</span> <span class="mf">16.4</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">assertAlmostEqual</span><span class="p">(</span>
-            <span class="n">actual</span><span class="p">,</span>
-            <span class="n">expected</span><span class="p">,</span>
-            <span class="n">msg</span><span class="o">=</span><span class="s2">&quot;Expected different value for percentage with Bachelors degrees.&quot;</span><span class="p">,</span>
-        <span class="p">)</span>
-
-    <span class="k">def</span> <span class="nf">test_higher_education_rich</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="n">actual</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;higher_education_rich&quot;</span><span class="p">]</span>
-        <span class="n">expected</span> <span class="o">=</span> <span class="mf">46.5</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">assertAlmostEqual</span><span class="p">(</span>
-            <span class="n">actual</span><span class="p">,</span>
-            <span class="n">expected</span><span class="p">,</span>
-            <span class="n">msg</span><span class="o">=</span><span class="s2">&quot;Expected different value for percentage with higher education that earn &gt;50K.&quot;</span><span class="p">,</span>
-        <span class="p">)</span>
-
-    <span class="k">def</span> <span class="nf">test_lower_education_rich</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="n">actual</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;lower_education_rich&quot;</span><span class="p">]</span>
-        <span class="n">expected</span> <span class="o">=</span> <span class="mf">17.4</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">assertAlmostEqual</span><span class="p">(</span>
-            <span class="n">actual</span><span class="p">,</span>
-            <span class="n">expected</span><span class="p">,</span>
-            <span class="n">msg</span><span class="o">=</span><span class="s2">&quot;Expected different value for percentage without higher education that earn &gt;50K.&quot;</span><span class="p">,</span>
-        <span class="p">)</span>
-
-    <span class="k">def</span> <span class="nf">test_min_work_hours</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="n">actual</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;min_work_hours&quot;</span><span class="p">]</span>
-        <span class="n">expected</span> <span class="o">=</span> <span class="mi">1</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">assertAlmostEqual</span><span class="p">(</span>
-            <span class="n">actual</span><span class="p">,</span>
-            <span class="n">expected</span><span class="p">,</span>
-            <span class="n">msg</span><span class="o">=</span><span class="s2">&quot;Expected different value for minimum work hours.&quot;</span><span class="p">,</span>
-        <span class="p">)</span>
-
-    <span class="k">def</span> <span class="nf">test_rich_percentage</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="n">actual</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;rich_percentage&quot;</span><span class="p">]</span>
-        <span class="n">expected</span> <span class="o">=</span> <span class="mi">10</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">assertAlmostEqual</span><span class="p">(</span>
-            <span class="n">actual</span><span class="p">,</span>
-            <span class="n">expected</span><span class="p">,</span>
-            <span class="n">msg</span><span class="o">=</span><span class="s2">&quot;Expected different value for percentage of rich among those who work fewest hours.&quot;</span><span class="p">,</span>
-        <span class="p">)</span>
-
-    <span class="k">def</span> <span class="nf">test_highest_earning_country</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="n">actual</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;highest_earning_country&quot;</span><span class="p">]</span>
-        <span class="n">expected</span> <span class="o">=</span> <span class="s2">&quot;Iran&quot;</span>
+    <span class="k">def</span> <span class="nf">test_plot_title</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">actual</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">ax</span><span class="o">.</span><span class="n">get_title</span><span class="p">()</span>
+        <span class="n">expected</span> <span class="o">=</span> <span class="s2">&quot;Rise in Sea Level&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span>
             <span class="n">actual</span><span class="p">,</span>
             <span class="n">expected</span><span class="p">,</span>
-            <span class="s2">&quot;Expected different value for highest earning country.&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;Expected line plot title to be &#39;Rise in Sea Level&#39;&quot;</span><span class="p">,</span>
         <span class="p">)</span>
 
-    <span class="k">def</span> <span class="nf">test_highest_earning_country_percentage</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="n">actual</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;highest_earning_country_percentage&quot;</span><span class="p">]</span>
-        <span class="n">expected</span> <span class="o">=</span> <span class="mf">41.9</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">assertAlmostEqual</span><span class="p">(</span>
-            <span class="n">actual</span><span class="p">,</span>
-            <span class="n">expected</span><span class="p">,</span>
-            <span class="n">msg</span><span class="o">=</span><span class="s2">&quot;Expected different value for heighest earning country percentage.&quot;</span><span class="p">,</span>
+    <span class="k">def</span> <span class="nf">test_plot_labels</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">actual</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">ax</span><span class="o">.</span><span class="n">get_xlabel</span><span class="p">()</span>
+        <span class="n">expected</span> <span class="o">=</span> <span class="s2">&quot;Year&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span>
+            <span class="n">actual</span><span class="p">,</span> <span class="n">expected</span><span class="p">,</span> <span class="s2">&quot;Expected line plot xlabel to be &#39;Year&#39;&quot;</span>
         <span class="p">)</span>
-
-    <span class="k">def</span> <span class="nf">test_top_IN_occupation</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="n">actual</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;top_IN_occupation&quot;</span><span class="p">]</span>
-        <span class="n">expected</span> <span class="o">=</span> <span class="s2">&quot;Prof-specialty&quot;</span>
+        <span class="n">actual</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">ax</span><span class="o">.</span><span class="n">get_ylabel</span><span class="p">()</span>
+        <span class="n">expected</span> <span class="o">=</span> <span class="s2">&quot;Sea Level (inches)&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span>
             <span class="n">actual</span><span class="p">,</span>
             <span class="n">expected</span><span class="p">,</span>
-            <span class="s2">&quot;Expected different value for top occupations in India.&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;Expected line plot ylabel to be &#39;Sea Level (inches)&#39;&quot;</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="n">actual</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">ax</span><span class="o">.</span><span class="n">get_xticks</span><span class="p">()</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+        <span class="n">expected</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="mf">1850.0</span><span class="p">,</span>
+            <span class="mf">1875.0</span><span class="p">,</span>
+            <span class="mf">1900.0</span><span class="p">,</span>
+            <span class="mf">1925.0</span><span class="p">,</span>
+            <span class="mf">1950.0</span><span class="p">,</span>
+            <span class="mf">1975.0</span><span class="p">,</span>
+            <span class="mf">2000.0</span><span class="p">,</span>
+            <span class="mf">2025.0</span><span class="p">,</span>
+            <span class="mf">2050.0</span><span class="p">,</span>
+            <span class="mf">2075.0</span><span class="p">,</span>
+        <span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span>
+            <span class="n">actual</span><span class="p">,</span>
+            <span class="n">expected</span><span class="p">,</span>
+            <span class="s2">&quot;Expected x tick labels to be &#39;1850.0, 1875.0, 1900.0, 1925.0, 1950.0, 1975.0, 2000.0, 2025.0, 2050.0, 2075.0&#39;&quot;</span><span class="p">,</span>
+        <span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">test_plot_data_points</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">actual</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">ax</span><span class="o">.</span><span class="n">get_children</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">get_offsets</span><span class="p">()</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+        <span class="n">expected</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="p">[</span><span class="mf">1880.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">1881.0</span><span class="p">,</span> <span class="mf">0.22047244100000002</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">1882.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.440944881</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">1883.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.232283464</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">1884.0</span><span class="p">,</span> <span class="mf">0.590551181</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">1885.0</span><span class="p">,</span> <span class="mf">0.531496062</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">1886.0</span><span class="p">,</span> <span class="mf">0.43700787399999996</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">1887.0</span><span class="p">,</span> <span class="mf">0.216535433</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">1888.0</span><span class="p">,</span> <span class="mf">0.299212598</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">1889.0</span><span class="p">,</span> <span class="mf">0.362204724</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">1890.0</span><span class="p">,</span> <span class="mf">0.440944881</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">1891.0</span><span class="p">,</span> <span class="mf">0.374015748</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">1892.0</span><span class="p">,</span> <span class="mf">0.499999999</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">1893.0</span><span class="p">,</span> <span class="mf">0.6850393690000001</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">1894.0</span><span class="p">,</span> <span class="mf">0.303149606</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">1895.0</span><span class="p">,</span> <span class="mf">0.767716535</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">1896.0</span><span class="p">,</span> <span class="mf">0.46850393700000004</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">1897.0</span><span class="p">,</span> <span class="mf">0.6732283459999999</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">1898.0</span><span class="p">,</span> <span class="mf">1.043307086</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">1899.0</span><span class="p">,</span> <span class="mf">1.338582676</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">1900.0</span><span class="p">,</span> <span class="mf">1.125984251</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">1901.0</span><span class="p">,</span> <span class="mf">1.1102362190000001</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">1902.0</span><span class="p">,</span> <span class="mf">1.291338581</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">1903.0</span><span class="p">,</span> <span class="mf">1.6062992109999998</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">1904.0</span><span class="p">,</span> <span class="mf">1.2007874</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">1905.0</span><span class="p">,</span> <span class="mf">0.9842519679999999</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">1906.0</span><span class="p">,</span> <span class="mf">1.251968503</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">1907.0</span><span class="p">,</span> <span class="mf">1.196850392</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">1908.0</span><span class="p">,</span> <span class="mf">1.098425196</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">1909.0</span><span class="p">,</span> <span class="mf">1.27559055</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">1910.0</span><span class="p">,</span> <span class="mf">1.2716535420000001</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">1911.0</span><span class="p">,</span> <span class="mf">1.598425195</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">1912.0</span><span class="p">,</span> <span class="mf">1.476377951</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">1913.0</span><span class="p">,</span> <span class="mf">1.5472440930000002</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">1914.0</span><span class="p">,</span> <span class="mf">1.795275589</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">1915.0</span><span class="p">,</span> <span class="mf">2.10629921</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">1916.0</span><span class="p">,</span> <span class="mf">2.031496061</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">1917.0</span><span class="p">,</span> <span class="mf">1.854330707</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">1918.0</span><span class="p">,</span> <span class="mf">1.791338581</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">1919.0</span><span class="p">,</span> <span class="mf">1.854330707</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">1920.0</span><span class="p">,</span> <span class="mf">1.905511809</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">1921.0</span><span class="p">,</span> <span class="mf">1.988188974</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">1922.0</span><span class="p">,</span> <span class="mf">1.952755904</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">1923.0</span><span class="p">,</span> <span class="mf">1.999999998</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">1924.0</span><span class="p">,</span> <span class="mf">1.7125984230000002</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">1925.0</span><span class="p">,</span> <span class="mf">1.791338581</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">1926.0</span><span class="p">,</span> <span class="mf">2.0472440919999997</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">1927.0</span><span class="p">,</span> <span class="mf">2.003937006</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">1928.0</span><span class="p">,</span> <span class="mf">1.850393699</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">1929.0</span><span class="p">,</span> <span class="mf">1.905511809</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">1930.0</span><span class="p">,</span> <span class="mf">2.062992124</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">1931.0</span><span class="p">,</span> <span class="mf">2.0472440919999997</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">1932.0</span><span class="p">,</span> <span class="mf">2.271653541</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">1933.0</span><span class="p">,</span> <span class="mf">2.440944879</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">1934.0</span><span class="p">,</span> <span class="mf">2.228346454</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">1935.0</span><span class="p">,</span> <span class="mf">2.448818895</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">1936.0</span><span class="p">,</span> <span class="mf">2.295275588</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">1937.0</span><span class="p">,</span> <span class="mf">2.519685037</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">1938.0</span><span class="p">,</span> <span class="mf">2.6220472409999998</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">1939.0</span><span class="p">,</span> <span class="mf">2.826771651</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">1940.0</span><span class="p">,</span> <span class="mf">2.618110234</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">1941.0</span><span class="p">,</span> <span class="mf">3.098425194</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">1942.0</span><span class="p">,</span> <span class="mf">3.098425194</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">1943.0</span><span class="p">,</span> <span class="mf">3.098425194</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">1944.0</span><span class="p">,</span> <span class="mf">2.84645669</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">1945.0</span><span class="p">,</span> <span class="mf">2.95669291</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">1946.0</span><span class="p">,</span> <span class="mf">3.2519685010000003</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">1947.0</span><span class="p">,</span> <span class="mf">3.374015745</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">1948.0</span><span class="p">,</span> <span class="mf">3.562992122</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">1949.0</span><span class="p">,</span> <span class="mf">3.51181102</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">1950.0</span><span class="p">,</span> <span class="mf">3.598425193</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">1951.0</span><span class="p">,</span> <span class="mf">3.9724409410000003</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">1952.0</span><span class="p">,</span> <span class="mf">3.8700787360000004</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">1953.0</span><span class="p">,</span> <span class="mf">4.043307082</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">1954.0</span><span class="p">,</span> <span class="mf">3.929133854</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">1955.0</span><span class="p">,</span> <span class="mf">3.964566925</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">1956.0</span><span class="p">,</span> <span class="mf">3.763779524</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">1957.0</span><span class="p">,</span> <span class="mf">4.291338578</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">1958.0</span><span class="p">,</span> <span class="mf">4.346456688</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">1959.0</span><span class="p">,</span> <span class="mf">4.358267712</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">1960.0</span><span class="p">,</span> <span class="mf">4.503937003</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">1961.0</span><span class="p">,</span> <span class="mf">4.748031491</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">1962.0</span><span class="p">,</span> <span class="mf">4.543307082</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">1963.0</span><span class="p">,</span> <span class="mf">4.480314956</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">1964.0</span><span class="p">,</span> <span class="mf">4.1692913339999995</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">1965.0</span><span class="p">,</span> <span class="mf">4.6102362160000006</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">1966.0</span><span class="p">,</span> <span class="mf">4.397637791</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">1967.0</span><span class="p">,</span> <span class="mf">4.452755901000001</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">1968.0</span><span class="p">,</span> <span class="mf">4.484251963999999</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">1969.0</span><span class="p">,</span> <span class="mf">4.751968499</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">1970.0</span><span class="p">,</span> <span class="mf">4.67716535</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">1971.0</span><span class="p">,</span> <span class="mf">4.881889759</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">1972.0</span><span class="p">,</span> <span class="mf">5.240157475</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">1973.0</span><span class="p">,</span> <span class="mf">5.003937003</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">1974.0</span><span class="p">,</span> <span class="mf">5.472440939</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">1975.0</span><span class="p">,</span> <span class="mf">5.409448812999999</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">1976.0</span><span class="p">,</span> <span class="mf">5.370078735</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">1977.0</span><span class="p">,</span> <span class="mf">5.303149601</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">1978.0</span><span class="p">,</span> <span class="mf">5.555118105</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">1979.0</span><span class="p">,</span> <span class="mf">5.362204719</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">1980.0</span><span class="p">,</span> <span class="mf">5.5984251910000005</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">1981.0</span><span class="p">,</span> <span class="mf">6.0866141670000005</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">1982.0</span><span class="p">,</span> <span class="mf">5.858267711</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">1983.0</span><span class="p">,</span> <span class="mf">6.188976372000001</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">1984.0</span><span class="p">,</span> <span class="mf">6.153543301</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">1985.0</span><span class="p">,</span> <span class="mf">5.74803149</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">1986.0</span><span class="p">,</span> <span class="mf">5.771653537000001</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">1987.0</span><span class="p">,</span> <span class="mf">5.795275585</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">1988.0</span><span class="p">,</span> <span class="mf">5.980314955</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">1989.0</span><span class="p">,</span> <span class="mf">6.157480308999999</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">1990.0</span><span class="p">,</span> <span class="mf">6.2322834579999995</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">1991.0</span><span class="p">,</span> <span class="mf">6.334645663</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">1992.0</span><span class="p">,</span> <span class="mf">6.35826771</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">1993.0</span><span class="p">,</span> <span class="mf">6.291338576</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">1994.0</span><span class="p">,</span> <span class="mf">6.499999992999999</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">1995.0</span><span class="p">,</span> <span class="mf">6.618110229</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">1996.0</span><span class="p">,</span> <span class="mf">6.787401568</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">1997.0</span><span class="p">,</span> <span class="mf">7.066929127000001</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">1998.0</span><span class="p">,</span> <span class="mf">6.665354324</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">1999.0</span><span class="p">,</span> <span class="mf">7.011811016</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">2000.0</span><span class="p">,</span> <span class="mf">7.062992119</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">2001.0</span><span class="p">,</span> <span class="mf">7.287401567000001</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">2002.0</span><span class="p">,</span> <span class="mf">7.3818897560000005</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">2003.0</span><span class="p">,</span> <span class="mf">7.7598425120000005</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">2004.0</span><span class="p">,</span> <span class="mf">7.740157472000001</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">2005.0</span><span class="p">,</span> <span class="mf">7.74409448</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">2006.0</span><span class="p">,</span> <span class="mf">7.9173228270000005</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">2007.0</span><span class="p">,</span> <span class="mf">7.996062984</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">2008.0</span><span class="p">,</span> <span class="mf">8.350393692</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">2009.0</span><span class="p">,</span> <span class="mf">8.586614164</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">2010.0</span><span class="p">,</span> <span class="mf">8.901574794</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">2011.0</span><span class="p">,</span> <span class="mf">8.96456692</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">2012.0</span><span class="p">,</span> <span class="mf">9.326771643999999</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">2013.0</span><span class="p">,</span> <span class="mf">8.980314951</span><span class="p">],</span>
+        <span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span>
+            <span class="n">actual</span><span class="p">,</span> <span class="n">expected</span><span class="p">,</span> <span class="s2">&quot;Expected different data points in scatter plot.&quot;</span>
+        <span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">test_plot_lines</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">actual</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">ax</span><span class="o">.</span><span class="n">get_lines</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">get_ydata</span><span class="p">()</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+        <span class="n">expected</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="o">-</span><span class="mf">0.5421240249263661</span><span class="p">,</span>
+            <span class="o">-</span><span class="mf">0.4790794409142336</span><span class="p">,</span>
+            <span class="o">-</span><span class="mf">0.41603485690208686</span><span class="p">,</span>
+            <span class="o">-</span><span class="mf">0.3529902728899543</span><span class="p">,</span>
+            <span class="o">-</span><span class="mf">0.2899456888778218</span><span class="p">,</span>
+            <span class="o">-</span><span class="mf">0.22690110486568926</span><span class="p">,</span>
+            <span class="o">-</span><span class="mf">0.16385652085355673</span><span class="p">,</span>
+            <span class="o">-</span><span class="mf">0.1008119368414242</span><span class="p">,</span>
+            <span class="o">-</span><span class="mf">0.037767352829277456</span><span class="p">,</span>
+            <span class="mf">0.025277231182855076</span><span class="p">,</span>
+            <span class="mf">0.08832181519498761</span><span class="p">,</span>
+            <span class="mf">0.15136639920712014</span><span class="p">,</span>
+            <span class="mf">0.21441098321925267</span><span class="p">,</span>
+            <span class="mf">0.2774555672313852</span><span class="p">,</span>
+            <span class="mf">0.34050015124351773</span><span class="p">,</span>
+            <span class="mf">0.4035447352556645</span><span class="p">,</span>
+            <span class="mf">0.466589319267797</span><span class="p">,</span>
+            <span class="mf">0.5296339032799295</span><span class="p">,</span>
+            <span class="mf">0.5926784872920621</span><span class="p">,</span>
+            <span class="mf">0.6557230713041946</span><span class="p">,</span>
+            <span class="mf">0.7187676553163271</span><span class="p">,</span>
+            <span class="mf">0.7818122393284739</span><span class="p">,</span>
+            <span class="mf">0.8448568233406064</span><span class="p">,</span>
+            <span class="mf">0.9079014073527389</span><span class="p">,</span>
+            <span class="mf">0.9709459913648715</span><span class="p">,</span>
+            <span class="mf">1.033990575377004</span><span class="p">,</span>
+            <span class="mf">1.0970351593891365</span><span class="p">,</span>
+            <span class="mf">1.1600797434012833</span><span class="p">,</span>
+            <span class="mf">1.2231243274134158</span><span class="p">,</span>
+            <span class="mf">1.2861689114255483</span><span class="p">,</span>
+            <span class="mf">1.3492134954376809</span><span class="p">,</span>
+            <span class="mf">1.4122580794498134</span><span class="p">,</span>
+            <span class="mf">1.475302663461946</span><span class="p">,</span>
+            <span class="mf">1.5383472474740927</span><span class="p">,</span>
+            <span class="mf">1.6013918314862252</span><span class="p">,</span>
+            <span class="mf">1.6644364154983577</span><span class="p">,</span>
+            <span class="mf">1.7274809995104903</span><span class="p">,</span>
+            <span class="mf">1.7905255835226228</span><span class="p">,</span>
+            <span class="mf">1.8535701675347553</span><span class="p">,</span>
+            <span class="mf">1.9166147515468879</span><span class="p">,</span>
+            <span class="mf">1.9796593355590346</span><span class="p">,</span>
+            <span class="mf">2.042703919571167</span><span class="p">,</span>
+            <span class="mf">2.1057485035832997</span><span class="p">,</span>
+            <span class="mf">2.168793087595432</span><span class="p">,</span>
+            <span class="mf">2.2318376716075647</span><span class="p">,</span>
+            <span class="mf">2.2948822556196973</span><span class="p">,</span>
+            <span class="mf">2.357926839631844</span><span class="p">,</span>
+            <span class="mf">2.4209714236439766</span><span class="p">,</span>
+            <span class="mf">2.484016007656109</span><span class="p">,</span>
+            <span class="mf">2.5470605916682416</span><span class="p">,</span>
+            <span class="mf">2.610105175680374</span><span class="p">,</span>
+            <span class="mf">2.6731497596925067</span><span class="p">,</span>
+            <span class="mf">2.7361943437046534</span><span class="p">,</span>
+            <span class="mf">2.799238927716786</span><span class="p">,</span>
+            <span class="mf">2.8622835117289185</span><span class="p">,</span>
+            <span class="mf">2.925328095741051</span><span class="p">,</span>
+            <span class="mf">2.9883726797531835</span><span class="p">,</span>
+            <span class="mf">3.051417263765316</span><span class="p">,</span>
+            <span class="mf">3.1144618477774486</span><span class="p">,</span>
+            <span class="mf">3.1775064317895954</span><span class="p">,</span>
+            <span class="mf">3.240551015801728</span><span class="p">,</span>
+            <span class="mf">3.3035955998138604</span><span class="p">,</span>
+            <span class="mf">3.366640183825993</span><span class="p">,</span>
+            <span class="mf">3.4296847678381255</span><span class="p">,</span>
+            <span class="mf">3.492729351850258</span><span class="p">,</span>
+            <span class="mf">3.5557739358624048</span><span class="p">,</span>
+            <span class="mf">3.6188185198745373</span><span class="p">,</span>
+            <span class="mf">3.68186310388667</span><span class="p">,</span>
+            <span class="mf">3.7449076878988024</span><span class="p">,</span>
+            <span class="mf">3.807952271910935</span><span class="p">,</span>
+            <span class="mf">3.8709968559230674</span><span class="p">,</span>
+            <span class="mf">3.934041439935214</span><span class="p">,</span>
+            <span class="mf">3.9970860239473467</span><span class="p">,</span>
+            <span class="mf">4.060130607959479</span><span class="p">,</span>
+            <span class="mf">4.123175191971612</span><span class="p">,</span>
+            <span class="mf">4.186219775983744</span><span class="p">,</span>
+            <span class="mf">4.249264359995877</span><span class="p">,</span>
+            <span class="mf">4.312308944008024</span><span class="p">,</span>
+            <span class="mf">4.375353528020156</span><span class="p">,</span>
+            <span class="mf">4.438398112032289</span><span class="p">,</span>
+            <span class="mf">4.501442696044421</span><span class="p">,</span>
+            <span class="mf">4.564487280056554</span><span class="p">,</span>
+            <span class="mf">4.627531864068686</span><span class="p">,</span>
+            <span class="mf">4.690576448080819</span><span class="p">,</span>
+            <span class="mf">4.7536210320929655</span><span class="p">,</span>
+            <span class="mf">4.816665616105098</span><span class="p">,</span>
+            <span class="mf">4.879710200117231</span><span class="p">,</span>
+            <span class="mf">4.942754784129363</span><span class="p">,</span>
+            <span class="mf">5.005799368141496</span><span class="p">,</span>
+            <span class="mf">5.068843952153628</span><span class="p">,</span>
+            <span class="mf">5.131888536165775</span><span class="p">,</span>
+            <span class="mf">5.194933120177907</span><span class="p">,</span>
+            <span class="mf">5.25797770419004</span><span class="p">,</span>
+            <span class="mf">5.3210222882021725</span><span class="p">,</span>
+            <span class="mf">5.384066872214305</span><span class="p">,</span>
+            <span class="mf">5.4471114562264376</span><span class="p">,</span>
+            <span class="mf">5.510156040238584</span><span class="p">,</span>
+            <span class="mf">5.573200624250717</span><span class="p">,</span>
+            <span class="mf">5.636245208262849</span><span class="p">,</span>
+            <span class="mf">5.699289792274982</span><span class="p">,</span>
+            <span class="mf">5.762334376287114</span><span class="p">,</span>
+            <span class="mf">5.825378960299247</span><span class="p">,</span>
+            <span class="mf">5.8884235443113795</span><span class="p">,</span>
+            <span class="mf">5.951468128323526</span><span class="p">,</span>
+            <span class="mf">6.014512712335659</span><span class="p">,</span>
+            <span class="mf">6.077557296347791</span><span class="p">,</span>
+            <span class="mf">6.140601880359924</span><span class="p">,</span>
+            <span class="mf">6.203646464372056</span><span class="p">,</span>
+            <span class="mf">6.266691048384189</span><span class="p">,</span>
+            <span class="mf">6.329735632396336</span><span class="p">,</span>
+            <span class="mf">6.392780216408468</span><span class="p">,</span>
+            <span class="mf">6.455824800420601</span><span class="p">,</span>
+            <span class="mf">6.518869384432733</span><span class="p">,</span>
+            <span class="mf">6.581913968444866</span><span class="p">,</span>
+            <span class="mf">6.644958552456998</span><span class="p">,</span>
+            <span class="mf">6.708003136469145</span><span class="p">,</span>
+            <span class="mf">6.771047720481278</span><span class="p">,</span>
+            <span class="mf">6.83409230449341</span><span class="p">,</span>
+            <span class="mf">6.897136888505543</span><span class="p">,</span>
+            <span class="mf">6.960181472517675</span><span class="p">,</span>
+            <span class="mf">7.023226056529808</span><span class="p">,</span>
+            <span class="mf">7.086270640541954</span><span class="p">,</span>
+            <span class="mf">7.149315224554087</span><span class="p">,</span>
+            <span class="mf">7.2123598085662195</span><span class="p">,</span>
+            <span class="mf">7.275404392578352</span><span class="p">,</span>
+            <span class="mf">7.338448976590485</span><span class="p">,</span>
+            <span class="mf">7.401493560602617</span><span class="p">,</span>
+            <span class="mf">7.46453814461475</span><span class="p">,</span>
+            <span class="mf">7.527582728626896</span><span class="p">,</span>
+            <span class="mf">7.590627312639029</span><span class="p">,</span>
+            <span class="mf">7.653671896651161</span><span class="p">,</span>
+            <span class="mf">7.716716480663294</span><span class="p">,</span>
+            <span class="mf">7.7797610646754265</span><span class="p">,</span>
+            <span class="mf">7.842805648687559</span><span class="p">,</span>
+            <span class="mf">7.905850232699706</span><span class="p">,</span>
+            <span class="mf">7.968894816711838</span><span class="p">,</span>
+            <span class="mf">8.03193940072397</span><span class="p">,</span>
+            <span class="mf">8.094983984736103</span><span class="p">,</span>
+            <span class="mf">8.158028568748236</span><span class="p">,</span>
+            <span class="mf">8.221073152760368</span><span class="p">,</span>
+            <span class="mf">8.284117736772515</span><span class="p">,</span>
+            <span class="mf">8.347162320784648</span><span class="p">,</span>
+            <span class="mf">8.41020690479678</span><span class="p">,</span>
+            <span class="mf">8.473251488808913</span><span class="p">,</span>
+            <span class="mf">8.536296072821045</span><span class="p">,</span>
+            <span class="mf">8.599340656833178</span><span class="p">,</span>
+            <span class="mf">8.66238524084531</span><span class="p">,</span>
+            <span class="mf">8.725429824857457</span><span class="p">,</span>
+            <span class="mf">8.78847440886959</span><span class="p">,</span>
+            <span class="mf">8.851518992881722</span><span class="p">,</span>
+            <span class="mf">8.914563576893855</span><span class="p">,</span>
+            <span class="mf">8.977608160905987</span><span class="p">,</span>
+            <span class="mf">9.040652744918134</span><span class="p">,</span>
+            <span class="mf">9.103697328930252</span><span class="p">,</span>
+            <span class="mf">9.166741912942399</span><span class="p">,</span>
+            <span class="mf">9.229786496954517</span><span class="p">,</span>
+            <span class="mf">9.292831080966664</span><span class="p">,</span>
+            <span class="mf">9.35587566497881</span><span class="p">,</span>
+            <span class="mf">9.41892024899093</span><span class="p">,</span>
+            <span class="mf">9.481964833003076</span><span class="p">,</span>
+            <span class="mf">9.545009417015194</span><span class="p">,</span>
+            <span class="mf">9.608054001027341</span><span class="p">,</span>
+            <span class="mf">9.671098585039488</span><span class="p">,</span>
+            <span class="mf">9.734143169051606</span><span class="p">,</span>
+            <span class="mf">9.797187753063753</span><span class="p">,</span>
+            <span class="mf">9.860232337075871</span><span class="p">,</span>
+            <span class="mf">9.923276921088018</span><span class="p">,</span>
+            <span class="mf">9.986321505100136</span><span class="p">,</span>
+            <span class="mf">10.049366089112283</span><span class="p">,</span>
+            <span class="mf">10.11241067312443</span><span class="p">,</span>
+        <span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span>
+            <span class="n">actual</span><span class="p">,</span>
+            <span class="n">expected</span><span class="p">,</span>
+            <span class="s2">&quot;Expected different line for first line of best fit.&quot;</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="n">actual</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">ax</span><span class="o">.</span><span class="n">get_lines</span><span class="p">()[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">get_ydata</span><span class="p">()</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+        <span class="n">expected</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="mf">7.06107985777146</span><span class="p">,</span>
+            <span class="mf">7.227507131103323</span><span class="p">,</span>
+            <span class="mf">7.393934404435242</span><span class="p">,</span>
+            <span class="mf">7.560361677767105</span><span class="p">,</span>
+            <span class="mf">7.726788951098968</span><span class="p">,</span>
+            <span class="mf">7.89321622443083</span><span class="p">,</span>
+            <span class="mf">8.059643497762693</span><span class="p">,</span>
+            <span class="mf">8.226070771094555</span><span class="p">,</span>
+            <span class="mf">8.392498044426418</span><span class="p">,</span>
+            <span class="mf">8.55892531775828</span><span class="p">,</span>
+            <span class="mf">8.725352591090143</span><span class="p">,</span>
+            <span class="mf">8.891779864422006</span><span class="p">,</span>
+            <span class="mf">9.058207137753925</span><span class="p">,</span>
+            <span class="mf">9.224634411085788</span><span class="p">,</span>
+            <span class="mf">9.39106168441765</span><span class="p">,</span>
+            <span class="mf">9.557488957749513</span><span class="p">,</span>
+            <span class="mf">9.723916231081375</span><span class="p">,</span>
+            <span class="mf">9.890343504413238</span><span class="p">,</span>
+            <span class="mf">10.0567707777451</span><span class="p">,</span>
+            <span class="mf">10.223198051076963</span><span class="p">,</span>
+            <span class="mf">10.389625324408826</span><span class="p">,</span>
+            <span class="mf">10.556052597740688</span><span class="p">,</span>
+            <span class="mf">10.72247987107255</span><span class="p">,</span>
+            <span class="mf">10.88890714440447</span><span class="p">,</span>
+            <span class="mf">11.055334417736333</span><span class="p">,</span>
+            <span class="mf">11.221761691068195</span><span class="p">,</span>
+            <span class="mf">11.388188964400058</span><span class="p">,</span>
+            <span class="mf">11.55461623773192</span><span class="p">,</span>
+            <span class="mf">11.721043511063783</span><span class="p">,</span>
+            <span class="mf">11.887470784395646</span><span class="p">,</span>
+            <span class="mf">12.053898057727508</span><span class="p">,</span>
+            <span class="mf">12.220325331059371</span><span class="p">,</span>
+            <span class="mf">12.386752604391233</span><span class="p">,</span>
+            <span class="mf">12.553179877723153</span><span class="p">,</span>
+            <span class="mf">12.719607151055015</span><span class="p">,</span>
+            <span class="mf">12.886034424386878</span><span class="p">,</span>
+            <span class="mf">13.05246169771874</span><span class="p">,</span>
+            <span class="mf">13.218888971050603</span><span class="p">,</span>
+            <span class="mf">13.385316244382466</span><span class="p">,</span>
+            <span class="mf">13.551743517714328</span><span class="p">,</span>
+            <span class="mf">13.718170791046191</span><span class="p">,</span>
+            <span class="mf">13.884598064378054</span><span class="p">,</span>
+            <span class="mf">14.051025337709916</span><span class="p">,</span>
+            <span class="mf">14.217452611041836</span><span class="p">,</span>
+            <span class="mf">14.383879884373698</span><span class="p">,</span>
+            <span class="mf">14.55030715770556</span><span class="p">,</span>
+            <span class="mf">14.716734431037423</span><span class="p">,</span>
+            <span class="mf">14.883161704369286</span><span class="p">,</span>
+            <span class="mf">15.049588977701148</span><span class="p">,</span>
+            <span class="mf">15.216016251033011</span><span class="p">,</span>
+        <span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span>
+            <span class="n">actual</span><span class="p">,</span>
+            <span class="n">expected</span><span class="p">,</span>
+            <span class="s2">&quot;Expected different line for second line of best fit.&quot;</span><span class="p">,</span>
         <span class="p">)</span>
 </pre></div>
 
@@ -13592,7 +13681,7 @@ a lot.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
@@ -13613,13 +13702,27 @@ a lot.</p>
 
 
 <div class="output_subarea output_stream output_stderr output_text">
-<pre>..........
+<pre>....
 ----------------------------------------------------------------------
-Ran 10 tests in 1.021s
+Ran 4 tests in 0.090s
 
 OK
 </pre>
 </div>
+</div>
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+
+<div class="output_png output_subarea ">
+<img src="readme_files/readme_8_1.png"
+>
+</div>
+
 </div>
 
 </div>
