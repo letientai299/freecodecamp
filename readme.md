@@ -126,6 +126,23 @@ This course requires more thought, so see [its note here](./qa).
 
 - [Course link](https://www.freecodecamp.org/learn/data-analysis-with-python/)
 - [Cert](https://www.freecodecamp.org/certification/letientai299/data-analysis-with-python-v7)
+- Total time: 13h
+  - 8.5h for final projects.
+  - 4.5h for the course, but I spent probably only 30m on the course content
+    (skipped videos, guest the answers), and use the rest to write scripts for
+    converting Python scripts to Jupyter Notebook, HTML and markdown, then live
+    serving the HTML as I editing the Python script. What's a waste of time,
+    yes. But in the end, we have some nice pages to view.
+
+There's a lot of things to I've yet to learn. Don't count on my data analysis
+skill with Pandas, Numpy, ... I think I'm just good at reading documents and
+guessing.
+
+Off topic, I used to try Jupyter when it first came out, and used to think about
+seriously learn Data Analysis. However, I couldn't edit code on the web
+interface (because of Vim, but I'm not complain), so I drop that thought. I
+can't understand why web editing become so popular now. Perhaps many people are
+OK inefficient workflows.
 
 | Task                                                         | Site                                        |
 | ------------------------------------------------------------ | ------------------------------------------- |
