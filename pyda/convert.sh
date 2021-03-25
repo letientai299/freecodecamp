@@ -25,22 +25,7 @@ jupyter nbconvert --execute --to html_toc "${TFILE%.py}.ipynb"
 jupyter nbconvert --execute --to markdown "${TFILE%.py}.ipynb"
 
 echo "==> Inject css in to ${TFILE%.py}.html"
-
-# need to escape new new line with a slash, otherwise, sed will complain
-CSS=$(
-  cat <<'EOF'
-<head>\
-  <style type="text/css">\
-    body{\
-      max-width: 800px;\
-      margin:auto;\
-      border-left: 1px solid darkgreen;\
-    }\
-  </style>
-EOF
-)
-
-#sed -i.bak "s|<head>|$CSS|" "${TFILE%.py}.html"
+sed -i.bak "s|custom.css|../custom.css|" "${TFILE%.py}.html"
 
 echo "==> Copy back result of converting $FILE"
 cp "${TFILE%.py}.ipynb" "$DIR"
