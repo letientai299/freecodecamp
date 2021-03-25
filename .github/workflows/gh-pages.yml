@@ -44,5 +44,5 @@ jobs:
           git add .
 
           git commit -m "Generate index.html from ${GITHUB_SHA}" --allow-empty
-          git push
+          git push --force
 
