@@ -126,13 +126,13 @@ This course requires more thought, so see [its note here](./qa).
 
 - [Course link](https://www.freecodecamp.org/learn/data-analysis-with-python/)
 
-| Task                                            | Site                                                           |
-| ----------------------------------------------- | -------------------------------------------------------------- |
-| [Mean-Variance-Standard Deviation Calculator]() | [./pyda/mean-var-std/readme.md](./pyda/mean-var-std/readme.md) |
-| [Demographic Data Analyzer]()                   | []()                                                           |
-| [Medical Data Visualizer]()                     | []()                                                           |
-| [Page View Time Series Visualizer]()            | []()                                                           |
-| [Sea Level Predictor]()                         | []()                                                           |
+| Task                                            | Site                                        |
+| ----------------------------------------------- | ------------------------------------------- |
+| [Mean-Variance-Standard Deviation Calculator]() | [./pyda/mean-var-std/](./pyda/mean-var-std) |
+| [Demographic Data Analyzer]()                   | []()                                        |
+| [Medical Data Visualizer]()                     | []()                                        |
+| [Page View Time Series Visualizer]()            | []()                                        |
+| [Sea Level Predictor]()                         | []()                                        |
 
 ## Local setup
 

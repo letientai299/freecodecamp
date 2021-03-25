@@ -1,24 +1,4 @@
-<!--
-
----
-jupyter:
-  jupytext:
-    hide_notebook_metadata: true
-    text_representation:
-      extension: .md
-      format_name: markdown
-      format_version: '1.3'
-      jupytext_version: 1.11.0
-  kernelspec:
-    display_name: Python 3
-    language: python
-    name: python3
----
-
--->
-
 # Mean-Variance-Standard Deviation Calculator
-
 
 ## Problem description
 
@@ -84,14 +64,15 @@ The tests will run automatically whenever you hit the "run" button.
 
 Copy your project's URL and submit it to freeCodeCamp.
 
-
 ## Solution 2
+
 
 ```python
 import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
 ```
+
 
 ```python
 plt.close("all")
@@ -103,6 +84,17 @@ ts.plot()
 ```
 
 
+
+
+    <AxesSubplot:>
+
+
+
+
+![png](readme_files/readme_4_1.png)
+
+
+
 ```python
 df = pd.DataFrame(
     np.random.randn(1000, 4), index=ts.index, columns=list("ABCD")
@@ -111,3 +103,20 @@ df = df.cumsum()
 plt.figure()
 df.plot()
 ```
+
+
+
+
+    <AxesSubplot:>
+
+
+
+
+    <Figure size 432x288 with 0 Axes>
+
+
+
+![png](readme_files/readme_5_2.png)
+
+
+Did we have images? Yep

@@ -98,3 +98,5 @@ df = pd.DataFrame(
 df = df.cumsum()
 plt.figure()
 df.plot()
+
+# Did we have images? Yep

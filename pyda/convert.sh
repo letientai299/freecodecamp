@@ -16,8 +16,9 @@ TFILE="./temp/$FILE"
 
 echo "==> Converting $TFILE"
 jupytext --opt hide_notebook_metadata=true --to ipynb $TFILE
-jupytext --opt hide_notebook_metadata=true --to md $TFILE
+# jupytext --opt hide_notebook_metadata=true --to md $TFILE
 jupyter nbconvert --execute --to html_toc "${TFILE%.py}.ipynb"
+jupyter nbconvert --execute --to markdown "${TFILE%.py}.ipynb"
 
 echo "==> Inject css in to ${TFILE%.py}.html"
 
