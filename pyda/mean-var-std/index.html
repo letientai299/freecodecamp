@@ -13114,7 +13114,7 @@ $( document ).ready(function(){
 <h2 id="Problem-description">Problem description<a class="anchor-link" href="#Problem-description">&#182;</a></h2><p>Content of this section is copied and reformatted from <a href="https://repl.it/github/freeCodeCamp/boilerplate-mean-variance-standard-deviation-calculator">this
 repl.it</a>,
 so that you can understand what the code does (and I get to render a nice
-contentful page)</p>
+contentful page).</p>
 <h3 id="Assigment">Assigment<a class="anchor-link" href="#Assigment">&#182;</a></h3><p>Create a function named <code>calculate()</code> in <code>mean_var_std.py</code> that uses Numpy to
 output the mean, variance, standard deviation, max, min, and sum of the rows,
 columns, and elements in a 3 x 3 matrix.</p>
@@ -13156,21 +13156,13 @@ The tests will run automatically whenever you hit the "run" button.</p>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Solution">Solution<a class="anchor-link" href="#Solution">&#182;</a></h2>
-</div>
-</div>
-</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># ## Solution</span>
+<span class="kn">from</span> <span class="nn">pprint</span> <span class="kn">import</span> <span class="n">pprint</span>
 </pre></div>
 
     </div>
@@ -13183,49 +13175,10 @@ The tests will run automatically whenever you hit the "run" button.</p>
 <div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">close</span><span class="p">(</span><span class="s2">&quot;all&quot;</span><span class="p">)</span>
-<span class="n">ts</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span>
-    <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">1000</span><span class="p">),</span> <span class="n">index</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">date_range</span><span class="p">(</span><span class="s2">&quot;1/1/2000&quot;</span><span class="p">,</span> <span class="n">periods</span><span class="o">=</span><span class="mi">1000</span><span class="p">)</span>
-<span class="p">)</span>
-<span class="n">ts</span> <span class="o">=</span> <span class="n">ts</span><span class="o">.</span><span class="n">cumsum</span><span class="p">()</span>
-<span class="n">ts</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[2]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>&lt;AxesSubplot:&gt;</pre>
-</div>
-
-</div>
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-
-
-<div class="output_png output_subarea ">
-<img src="readme_files/readme_4_1.png"
->
-</div>
-
-</div>
-
 </div>
 </div>
 
@@ -13235,12 +13188,57 @@ The tests will run automatically whenever you hit the "run" button.</p>
 <div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
-    <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">1000</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="n">index</span><span class="o">=</span><span class="n">ts</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="s2">&quot;ABCD&quot;</span><span class="p">)</span>
-<span class="p">)</span>
-<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">cumsum</span><span class="p">()</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
-<span class="n">df</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">calculate</span><span class="p">(</span><span class="n">arr</span><span class="p">):</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">9</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;List must contain nine numbers.&quot;</span><span class="p">)</span>
+
+    <span class="n">m</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+    <span class="n">r</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;mean&#39;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="n">m</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">tolist</span><span class="p">(),</span>
+            <span class="n">m</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">tolist</span><span class="p">(),</span>
+            <span class="n">m</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+        <span class="p">],</span>
+        <span class="s1">&#39;variance&#39;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="n">m</span><span class="o">.</span><span class="n">var</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">tolist</span><span class="p">(),</span>
+            <span class="n">m</span><span class="o">.</span><span class="n">var</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">tolist</span><span class="p">(),</span>
+            <span class="n">m</span><span class="o">.</span><span class="n">var</span><span class="p">()</span>
+        <span class="p">],</span>
+        <span class="s1">&#39;standard deviation&#39;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="n">m</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">tolist</span><span class="p">(),</span>
+            <span class="n">m</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">tolist</span><span class="p">(),</span>
+            <span class="n">m</span><span class="o">.</span><span class="n">std</span><span class="p">()</span>
+        <span class="p">],</span>
+        <span class="s1">&#39;max&#39;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="n">m</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">tolist</span><span class="p">(),</span>
+            <span class="n">m</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">tolist</span><span class="p">(),</span>
+            <span class="n">m</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+        <span class="p">],</span>
+        <span class="s1">&#39;min&#39;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="n">m</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">tolist</span><span class="p">(),</span>
+            <span class="n">m</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">tolist</span><span class="p">(),</span>
+            <span class="n">m</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>
+        <span class="p">],</span>
+        <span class="s1">&#39;sum&#39;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="n">m</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">tolist</span><span class="p">(),</span>
+            <span class="n">m</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">tolist</span><span class="p">(),</span>
+            <span class="n">m</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+        <span class="p">],</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="n">r</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">pprint</span><span class="p">(</span><span class="n">calculate</span><span class="p">([</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">)]))</span>
 </pre></div>
 
     </div>
@@ -13253,47 +13251,183 @@ The tests will run automatically whenever you hit the "run" button.</p>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[3]:</div>
+    <div class="prompt"></div>
 
 
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>&lt;AxesSubplot:&gt;</pre>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>{&#39;max&#39;: [[6, 7, 8], [2, 5, 8], 8],
+ &#39;mean&#39;: [[3.0, 4.0, 5.0], [1.0, 4.0, 7.0], 4.0],
+ &#39;min&#39;: [[0, 1, 2], [0, 3, 6], 0],
+ &#39;standard deviation&#39;: [[2.449489742783178,
+                         2.449489742783178,
+                         2.449489742783178],
+                        [0.816496580927726,
+                         0.816496580927726,
+                         0.816496580927726],
+                        2.581988897471611],
+ &#39;sum&#39;: [[9, 12, 15], [3, 12, 21], 36],
+ &#39;variance&#39;: [[6.0, 6.0, 6.0],
+              [0.6666666666666666, 0.6666666666666666, 0.6666666666666666],
+              6.666666666666667]}
+</pre>
+</div>
 </div>
 
 </div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Test">Test<a class="anchor-link" href="#Test">&#182;</a></h2><p>The test code is provided by FCC, in the repl.it link. I modified it a bit to
+make it runnable in notebook.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">unittest</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">UnitTests</span><span class="p">(</span><span class="n">unittest</span><span class="o">.</span><span class="n">TestCase</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">test_calculate</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">actual</span> <span class="o">=</span> <span class="n">calculate</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">])</span>
+        <span class="n">expected</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s2">&quot;mean&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="p">[</span><span class="mf">3.6666666666666665</span><span class="p">,</span> <span class="mf">5.0</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">],</span>
+                <span class="p">[</span><span class="mf">3.3333333333333335</span><span class="p">,</span> <span class="mf">4.0</span><span class="p">,</span> <span class="mf">4.333333333333333</span><span class="p">],</span>
+                <span class="mf">3.888888888888889</span><span class="p">,</span>
+            <span class="p">],</span>
+            <span class="s2">&quot;variance&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="p">[</span><span class="mf">9.555555555555557</span><span class="p">,</span> <span class="mf">0.6666666666666666</span><span class="p">,</span> <span class="mf">8.666666666666666</span><span class="p">],</span>
+                <span class="p">[</span><span class="mf">3.555555555555556</span><span class="p">,</span> <span class="mf">10.666666666666666</span><span class="p">,</span> <span class="mf">6.222222222222221</span><span class="p">],</span>
+                <span class="mf">6.987654320987654</span><span class="p">,</span>
+            <span class="p">],</span>
+            <span class="s2">&quot;standard deviation&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="p">[</span><span class="mf">3.091206165165235</span><span class="p">,</span> <span class="mf">0.816496580927726</span><span class="p">,</span> <span class="mf">2.943920288775949</span><span class="p">],</span>
+                <span class="p">[</span><span class="mf">1.8856180831641267</span><span class="p">,</span> <span class="mf">3.265986323710904</span><span class="p">,</span> <span class="mf">2.494438257849294</span><span class="p">],</span>
+                <span class="mf">2.6434171674156266</span><span class="p">,</span>
+            <span class="p">],</span>
+            <span class="s2">&quot;max&quot;</span><span class="p">:</span> <span class="p">[[</span><span class="mi">8</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">],</span> <span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">7</span><span class="p">],</span> <span class="mi">8</span><span class="p">],</span>
+            <span class="s2">&quot;min&quot;</span><span class="p">:</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="mi">0</span><span class="p">],</span>
+            <span class="s2">&quot;sum&quot;</span><span class="p">:</span> <span class="p">[[</span><span class="mi">11</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">9</span><span class="p">],</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">13</span><span class="p">],</span> <span class="mi">35</span><span class="p">],</span>
+        <span class="p">}</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertAlmostEqual</span><span class="p">(</span>
+            <span class="n">actual</span><span class="p">,</span>
+            <span class="n">expected</span><span class="p">,</span>
+            <span class="s2">&quot;Expected different output when calling &#39;calculate()&#39; with &#39;[2,6,2,8,4,0,1,5,7]&#39;&quot;</span><span class="p">,</span>
+        <span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">test_calculate2</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">actual</span> <span class="o">=</span> <span class="n">calculate</span><span class="p">([</span><span class="mi">9</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
+        <span class="n">expected</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s2">&quot;mean&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="p">[</span><span class="mf">4.666666666666667</span><span class="p">,</span> <span class="mf">4.333333333333333</span><span class="p">,</span> <span class="mf">2.6666666666666665</span><span class="p">],</span>
+                <span class="p">[</span><span class="mf">5.0</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">,</span> <span class="mf">3.6666666666666665</span><span class="p">],</span>
+                <span class="mf">3.888888888888889</span><span class="p">,</span>
+            <span class="p">],</span>
+            <span class="s2">&quot;variance&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="p">[</span><span class="mf">9.555555555555555</span><span class="p">,</span> <span class="mf">11.555555555555557</span><span class="p">,</span> <span class="mf">4.222222222222222</span><span class="p">],</span>
+                <span class="p">[</span><span class="mf">10.666666666666666</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">14.888888888888891</span><span class="p">],</span>
+                <span class="mf">9.209876543209875</span><span class="p">,</span>
+            <span class="p">],</span>
+            <span class="s2">&quot;standard deviation&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="p">[</span><span class="mf">3.0912061651652345</span><span class="p">,</span> <span class="mf">3.39934634239519</span><span class="p">,</span> <span class="mf">2.0548046676563256</span><span class="p">],</span>
+                <span class="p">[</span><span class="mf">3.265986323710904</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">3.8586123009300755</span><span class="p">],</span>
+                <span class="mf">3.0347778408328137</span><span class="p">,</span>
+            <span class="p">],</span>
+            <span class="s2">&quot;max&quot;</span><span class="p">:</span> <span class="p">[[</span><span class="mi">9</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="p">[</span><span class="mi">9</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">9</span><span class="p">],</span> <span class="mi">9</span><span class="p">],</span>
+            <span class="s2">&quot;min&quot;</span><span class="p">:</span> <span class="p">[[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="mi">0</span><span class="p">],</span>
+            <span class="s2">&quot;sum&quot;</span><span class="p">:</span> <span class="p">[[</span><span class="mi">14</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">8</span><span class="p">],</span> <span class="p">[</span><span class="mi">15</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">11</span><span class="p">],</span> <span class="mi">35</span><span class="p">],</span>
+        <span class="p">}</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertAlmostEqual</span><span class="p">(</span>
+            <span class="n">actual</span><span class="p">,</span>
+            <span class="n">expected</span><span class="p">,</span>
+            <span class="s2">&quot;Expected different output when calling &#39;calculate()&#39; with &#39;[9,1,5,3,3,3,2,9,0]&#39;&quot;</span><span class="p">,</span>
+        <span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">test_calculate_with_few_digits</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertRaisesRegex</span><span class="p">(</span>
+            <span class="ne">ValueError</span><span class="p">,</span>
+            <span class="s2">&quot;List must contain nine numbers.&quot;</span><span class="p">,</span>
+            <span class="n">calculate</span><span class="p">,</span>
+            <span class="p">[</span>
+                <span class="mi">2</span><span class="p">,</span>
+                <span class="mi">6</span><span class="p">,</span>
+                <span class="mi">2</span><span class="p">,</span>
+                <span class="mi">8</span><span class="p">,</span>
+                <span class="mi">4</span><span class="p">,</span>
+                <span class="mi">0</span><span class="p">,</span>
+                <span class="mi">1</span><span class="p">,</span>
+            <span class="p">],</span>
+        <span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">unittest</span><span class="o">.</span><span class="n">main</span><span class="p">(</span><span class="n">argv</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;first-arg-is-ignored&#39;</span><span class="p">],</span> <span class="n">exit</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
 
 <div class="output_area">
 
     <div class="prompt"></div>
 
 
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>...
+----------------------------------------------------------------------
+Ran 3 tests in 0.004s
 
-
-<div class="output_text output_subarea ">
-<pre>&lt;Figure size 432x288 with 0 Axes&gt;</pre>
+OK
+</pre>
 </div>
-
-</div>
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-
-
-<div class="output_png output_subarea ">
-<img src="readme_files/readme_5_2.png"
->
-</div>
-
 </div>
 
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Note">Note<a class="anchor-link" href="#Note">&#182;</a></h2><p>This is just about basic numpy operator, requires a bit of discovering.</p>
+<p>Time for this problem: 35m (5m for the code, 30 to make the test work in
+notebook format)</p>
+
+</div>
+</div>
 </div>
     </div>
   </div>
