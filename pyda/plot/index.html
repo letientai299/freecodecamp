@@ -13104,161 +13104,140 @@ $( document ).ready(function(){
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Demographic-Data-Analyzer">Demographic Data Analyzer<a class="anchor-link" href="#Demographic-Data-Analyzer">&#182;</a></h1>
+<h1 id="Medical-Data-Visualizer">Medical Data Visualizer<a class="anchor-link" href="#Medical-Data-Visualizer">&#182;</a></h1>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Problem-description">Problem description<a class="anchor-link" href="#Problem-description">&#182;</a></h2><p>Content of this section is copied and reformatted from <a href="https://repl.it/github/freeCodeCamp/boilerplate-demographic-data-analyzer">this
+<h2 id="Problem-description">Problem description<a class="anchor-link" href="#Problem-description">&#182;</a></h2><p>Content of this section is copied and reformatted from <a href="https://repl.it/github/freeCodeCamp/boilerplate-medical-data-visualizer">this
 repl.it</a>,
 provided by FCC
-<a href="https://www.freecodecamp.org/learn/data-analysis-with-python/data-analysis-with-python-projects/demographic-data-analyzer">here</a>.</p>
-<h3 id="Assignment">Assignment<a class="anchor-link" href="#Assignment">&#182;</a></h3><p>In this challenge you must analyze demographic data using Pandas. You are given
-a dataset of demographic data that was extracted from the 1994 Census database.
-Here is a sample of what the data looks like:</p>
+<a href="https://www.freecodecamp.org/learn/data-analysis-with-python/data-analysis-with-python-projects/medical-data-visualizer">here</a>.</p>
+<h3 id="Assignment">Assignment<a class="anchor-link" href="#Assignment">&#182;</a></h3><p>In this project, you will visualize and make calculations from medical
+examination data using matplotlib, seaborn, and pandas. The dataset values were
+collected during medical examinations.</p>
+<h4 id="Data-description">Data description<a class="anchor-link" href="#Data-description">&#182;</a></h4><p>The rows in the dataset represent patients and the columns represent information
+like body measurements, results from various blood tests, and lifestyle choices.
+You will use the dataset to explore the relationship between cardiac disease,
+body measurements, blood markers, and lifestyle choices.</p>
+<p>File name: medical_examination.csv</p>
 <table>
 <thead><tr>
-<th style="text-align:right"></th>
-<th style="text-align:right">age</th>
-<th style="text-align:left">workclass</th>
-<th style="text-align:right">fnlwgt</th>
-<th style="text-align:left">education</th>
-<th style="text-align:right">education-num</th>
-<th style="text-align:left">marital-status</th>
-<th style="text-align:left">occupation</th>
-<th style="text-align:left">relationship</th>
-<th style="text-align:left">race</th>
-<th style="text-align:left">sex</th>
-<th style="text-align:right">capital-gain</th>
-<th style="text-align:right">capital-loss</th>
-<th style="text-align:right">hours-per-week</th>
-<th style="text-align:left">native-country</th>
-<th style="text-align:left">salary</th>
+<th style="text-align:center">Feature</th>
+<th style="text-align:center">Variable Type</th>
+<th style="text-align:center">Variable</th>
+<th style="text-align:center">Value Type</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:right">0</td>
-<td style="text-align:right">39</td>
-<td style="text-align:left">State-gov</td>
-<td style="text-align:right">77516</td>
-<td style="text-align:left">Bachelors</td>
-<td style="text-align:right">13</td>
-<td style="text-align:left">Never-married</td>
-<td style="text-align:left">Adm-clerical</td>
-<td style="text-align:left">Not-in-family</td>
-<td style="text-align:left">White</td>
-<td style="text-align:left">Male</td>
-<td style="text-align:right">2174</td>
-<td style="text-align:right">0</td>
-<td style="text-align:right">40</td>
-<td style="text-align:left">United-States</td>
-<td style="text-align:left">&lt;=50K</td>
+<td style="text-align:center">Age</td>
+<td style="text-align:center">Objective Feature</td>
+<td style="text-align:center">age</td>
+<td style="text-align:center">int (days)</td>
 </tr>
 <tr>
-<td style="text-align:right">1</td>
-<td style="text-align:right">50</td>
-<td style="text-align:left">Self-emp-not-inc</td>
-<td style="text-align:right">83311</td>
-<td style="text-align:left">Bachelors</td>
-<td style="text-align:right">13</td>
-<td style="text-align:left">Married-civ-spouse</td>
-<td style="text-align:left">Exec-managerial</td>
-<td style="text-align:left">Husband</td>
-<td style="text-align:left">White</td>
-<td style="text-align:left">Male</td>
-<td style="text-align:right">0</td>
-<td style="text-align:right">0</td>
-<td style="text-align:right">13</td>
-<td style="text-align:left">United-States</td>
-<td style="text-align:left">&lt;=50K</td>
+<td style="text-align:center">Height</td>
+<td style="text-align:center">Objective Feature</td>
+<td style="text-align:center">height</td>
+<td style="text-align:center">int (cm)</td>
 </tr>
 <tr>
-<td style="text-align:right">2</td>
-<td style="text-align:right">38</td>
-<td style="text-align:left">Private</td>
-<td style="text-align:right">215646</td>
-<td style="text-align:left">HS-grad</td>
-<td style="text-align:right">9</td>
-<td style="text-align:left">Divorced</td>
-<td style="text-align:left">Handlers-cleaners</td>
-<td style="text-align:left">Not-in-family</td>
-<td style="text-align:left">White</td>
-<td style="text-align:left">Male</td>
-<td style="text-align:right">0</td>
-<td style="text-align:right">0</td>
-<td style="text-align:right">40</td>
-<td style="text-align:left">United-States</td>
-<td style="text-align:left">&lt;=50K</td>
+<td style="text-align:center">Weight</td>
+<td style="text-align:center">Objective Feature</td>
+<td style="text-align:center">weight</td>
+<td style="text-align:center">float (kg)</td>
 </tr>
 <tr>
-<td style="text-align:right">3</td>
-<td style="text-align:right">53</td>
-<td style="text-align:left">Private</td>
-<td style="text-align:right">234721</td>
-<td style="text-align:left">11th</td>
-<td style="text-align:right">7</td>
-<td style="text-align:left">Married-civ-spouse</td>
-<td style="text-align:left">Handlers-cleaners</td>
-<td style="text-align:left">Husband</td>
-<td style="text-align:left">Black</td>
-<td style="text-align:left">Male</td>
-<td style="text-align:right">0</td>
-<td style="text-align:right">0</td>
-<td style="text-align:right">40</td>
-<td style="text-align:left">United-States</td>
-<td style="text-align:left">&lt;=50K</td>
+<td style="text-align:center">Gender</td>
+<td style="text-align:center">Objective Feature</td>
+<td style="text-align:center">gender</td>
+<td style="text-align:center">categorical code</td>
 </tr>
 <tr>
-<td style="text-align:right">4</td>
-<td style="text-align:right">28</td>
-<td style="text-align:left">Private</td>
-<td style="text-align:right">338409</td>
-<td style="text-align:left">Bachelors</td>
-<td style="text-align:right">13</td>
-<td style="text-align:left">Married-civ-spouse</td>
-<td style="text-align:left">Prof-specialty</td>
-<td style="text-align:left">Wife</td>
-<td style="text-align:left">Black</td>
-<td style="text-align:left">Female</td>
-<td style="text-align:right">0</td>
-<td style="text-align:right">0</td>
-<td style="text-align:right">40</td>
-<td style="text-align:left">Cuba</td>
-<td style="text-align:left">&lt;=50K</td>
+<td style="text-align:center">Systolic blood pressure</td>
+<td style="text-align:center">Examination Feature</td>
+<td style="text-align:center">ap_hi</td>
+<td style="text-align:center">int</td>
+</tr>
+<tr>
+<td style="text-align:center">Diastolic blood pressure</td>
+<td style="text-align:center">Examination Feature</td>
+<td style="text-align:center">ap_lo</td>
+<td style="text-align:center">int</td>
+</tr>
+<tr>
+<td style="text-align:center">Cholesterol</td>
+<td style="text-align:center">Examination Feature</td>
+<td style="text-align:center">cholesterol</td>
+<td style="text-align:center">1: normal, 2: above normal, 3: well above normal</td>
+</tr>
+<tr>
+<td style="text-align:center">Glucose</td>
+<td style="text-align:center">Examination Feature</td>
+<td style="text-align:center">gluc</td>
+<td style="text-align:center">1: normal, 2: above normal, 3: well above normal</td>
+</tr>
+<tr>
+<td style="text-align:center">Smoking</td>
+<td style="text-align:center">Subjective Feature</td>
+<td style="text-align:center">smoke</td>
+<td style="text-align:center">binary</td>
+</tr>
+<tr>
+<td style="text-align:center">Alcohol intake</td>
+<td style="text-align:center">Subjective Feature</td>
+<td style="text-align:center">alco</td>
+<td style="text-align:center">binary</td>
+</tr>
+<tr>
+<td style="text-align:center">Physical activity</td>
+<td style="text-align:center">Subjective Feature</td>
+<td style="text-align:center">active</td>
+<td style="text-align:center">binary</td>
+</tr>
+<tr>
+<td style="text-align:center">Presence or absence of cardiovascular disease</td>
+<td style="text-align:center">Target Variable</td>
+<td style="text-align:center">cardio</td>
+<td style="text-align:center">binary</td>
 </tr>
 </tbody>
 </table>
-<p>You must use Pandas to answer the following questions:</p>
+<h4 id="Tasks">Tasks<a class="anchor-link" href="#Tasks">&#182;</a></h4><p>Create a chart similar to <code>examples/Figure_1.png</code>, where we show the counts of
+good and bad outcomes for the <code>cholesterol</code>, <code>gluc</code>, <code>alco</code>, <code>active</code>, and
+<code>smoke</code> variables for patients with cardio=1 and cardio=0 in different panels.</p>
+<p>Use the data to complete the following tasks in <code>medical_data_visualizer.py</code>:</p>
 <ul>
-<li>How many people of each race are represented in this dataset? This should be a
-Pandas series with race names as the index labels. (<code>race</code> column)</li>
-<li>What is the average age of men?</li>
-<li>What is the percentage of people who have a Bachelor's degree?</li>
-<li>What percentage of people with advanced education (<code>Bachelors</code>, <code>Masters</code>, or
-<code>Doctorate</code>) make more than 50K?</li>
-<li>What percentage of people without advanced education make more than 50K?</li>
-<li>What is the minimum number of hours a person works per week?</li>
-<li>What percentage of the people who work the minimum number of hours per week
-have a salary of more than 50K?</li>
-<li>What country has the highest percentage of people that earn &gt;50K and what is
-that percentage?</li>
-<li>Identify the most popular occupation for those who earn &gt;50K in India.</li>
+<li>Add an <code>overweight</code> column to the data. To determine if a person is
+overweight, first calculate their BMI by dividing their weight in kilograms by
+the square of their height in meters. If that value is &gt; 25 then the person is
+overweight. Use the value 0 for NOT overweight and the value 1 for overweight.</li>
+<li>Normalize the data by making 0 always good and 1 always bad. If the value of
+<code>cholesterol</code> or <code>gluc</code> is 1, make the value 0. If the value is more than 1,
+make the value 1.</li>
+<li>Convert the data into long format and create a chart that shows the value
+counts of the categorical features using seaborn's <code>catplot()</code>. The dataset
+should be split by 'Cardio' so there is one chart for each <code>cardio</code> value. The
+chart should look like <code>examples/Figure_1.png</code>.</li>
+<li>Clean the data. Filter out the following patient segments that represent
+incorrect data:<ul>
+<li>diastolic pressure is higher than systolic (Keep the correct data with
+<code>(df['ap_lo'] &lt;= df['ap_hi'])</code>)</li>
+<li>height is less than the 2.5th percentile (Keep the correct data with
+<code>(df['height'] &gt;= df['height'].quantile(0.025))</code>)</li>
+<li>height is more than the 97.5th percentile</li>
+<li>weight is less than the 2.5th percentile</li>
+<li>weight is more than the 97.5th percentile</li>
 </ul>
-<p>Use the starter code in the file <code>demographic_data_anaylizer</code>. Update the code
-so all variables set to "None" are set to the appropriate calculation or code.
-Round all decimals to the nearest tenth.</p>
-<p>Unit tests are written for you under <code>test_module.py</code>.</p>
-<h3 id="Development">Development<a class="anchor-link" href="#Development">&#182;</a></h3><p>For development, you can use <code>main.py</code> to test your functions. Click the "run"
-button and <code>main.py</code> will run.</p>
-<h3 id="Testing">Testing<a class="anchor-link" href="#Testing">&#182;</a></h3><p>We imported the tests from <code>test_module.py</code> to <code>main.py</code> for your convenience.
-The tests will run automatically whenever you hit the "run" button.</p>
-<h3 id="Submitting">Submitting<a class="anchor-link" href="#Submitting">&#182;</a></h3><p>Copy your project's URL and submit it to freeCodeCamp.</p>
-<h3 id="Dataset-Source">Dataset Source<a class="anchor-link" href="#Dataset-Source">&#182;</a></h3><p>Dua, D. and Graff, C. (2019). <a href="http://archive.ics.uci.edu/ml">UCI Machine Learning
-Repository</a>. Irvine, CA: University of California, School of
-Information and Computer Science.</p>
+</li>
+<li>Create a correlation matrix using the dataset. Plot the correlation matrix
+using seaborn's <code>heatmap()</code>. Mask the upper triangle. The chart should look
+like <code>examples/Figure_2.png</code>.</li>
+</ul>
+<p>Any time a variable is set to <code>None</code>, make sure to set it to the correct code.</p>
 
 </div>
 </div>
@@ -13266,9 +13245,11 @@ Information and Computer Science.</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Note">Note<a class="anchor-link" href="#Note">&#182;</a></h2><p>OK, this is a hard one, because I haven't really learn pandas. Need to google
-a lot.</p>
+<h2 id="Note">Note<a class="anchor-link" href="#Note">&#182;</a></h2><p>This is cool. But I guess I prefer to visualize data with d3, it feels more
+easier to me. We can also get some interactive charts instead of static
+images.</p>
 <p>Total time: 2h</p>
+<p>Damn, why can't I be faster, it's only about Google and reading document</p>
 
 </div>
 </div>
@@ -13286,181 +13267,189 @@ a lot.</p>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="kn">import</span> <span class="nn">matplotlib</span> <span class="k">as</span> <span class="nn">mpl</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 </pre></div>
 
     </div>
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Import-data">Import data<a class="anchor-link" href="#Import-data">&#182;</a></h3>
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">calculate_demographic_data</span><span class="p">(</span><span class="n">print_data</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
-    <span class="c1"># Read data from file</span>
-    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;./adult.data.csv&quot;</span><span class="p">)</span>
-
-    <span class="c1"># How many of each race are represented in this dataset? This should be a</span>
-    <span class="c1"># Pandas series with race names as the index labels.</span>
-    <span class="n">race_count</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;race&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
-
-    <span class="c1"># What is the average age of men?</span>
-    <span class="n">average_age_men</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;sex&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;Male&quot;</span><span class="p">,</span> <span class="s2">&quot;age&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span> <span class="mi">1</span><span class="p">)</span>
-
-    <span class="c1"># What is the percentage of people who have a Bachelor&#39;s degree?</span>
-    <span class="n">percentage_bachelors</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span>
-        <span class="mi">100</span> <span class="o">*</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;education&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;Bachelors&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">size</span> <span class="o">/</span> <span class="n">df</span><span class="o">.</span><span class="n">size</span><span class="p">,</span>
-        <span class="mi">1</span><span class="p">,</span>
-    <span class="p">)</span>
-
-    <span class="c1"># What percentage of people with advanced education (`Bachelors`, `Masters`,</span>
-    <span class="c1"># or `Doctorate`) make more than 50K?</span>
-    <span class="c1"># What percentage of people without advanced education make more than 50K?</span>
-
-    <span class="c1"># with and without `Bachelors`, `Masters`, or `Doctorate`</span>
-    <span class="n">higher_education</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span>
-        <span class="n">df</span><span class="p">[</span><span class="s2">&quot;education&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">([</span><span class="s2">&quot;Bachelors&quot;</span><span class="p">,</span> <span class="s2">&quot;Masters&quot;</span><span class="p">,</span> <span class="s2">&quot;Doctorate&quot;</span><span class="p">])</span>
-    <span class="p">]</span>
-    <span class="n">lower_education</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span>
-        <span class="o">~</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;education&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">([</span><span class="s2">&quot;Bachelors&quot;</span><span class="p">,</span> <span class="s2">&quot;Masters&quot;</span><span class="p">,</span> <span class="s2">&quot;Doctorate&quot;</span><span class="p">])</span>
-    <span class="p">]</span>
-
-    <span class="c1"># percentage with salary &gt;50K</span>
-    <span class="n">higher_education_rich</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span>
-        <span class="mi">100</span>
-        <span class="o">*</span> <span class="n">higher_education</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">higher_education</span><span class="p">[</span><span class="s2">&quot;salary&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;&gt;50K&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">size</span>
-        <span class="o">/</span> <span class="n">higher_education</span><span class="o">.</span><span class="n">size</span><span class="p">,</span>
-        <span class="mi">1</span><span class="p">,</span>
-    <span class="p">)</span>
-
-    <span class="n">lower_education_rich</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span>
-        <span class="mi">100</span>
-        <span class="o">*</span> <span class="n">lower_education</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">lower_education</span><span class="p">[</span><span class="s2">&quot;salary&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;&gt;50K&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">size</span>
-        <span class="o">/</span> <span class="n">lower_education</span><span class="o">.</span><span class="n">size</span><span class="p">,</span>
-        <span class="mi">1</span><span class="p">,</span>
-    <span class="p">)</span>
-
-    <span class="c1"># What is the minimum number of hours a person works per week</span>
-    <span class="c1"># (hours-per-week feature)?</span>
-    <span class="n">min_work_hours</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;hours-per-week&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>
-
-    <span class="c1"># What percentage of the people who work the minimum number of hours per</span>
-    <span class="c1"># week have a salary of &gt;50K?</span>
-    <span class="n">num_min_workers</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;hours-per-week&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="n">min_work_hours</span><span class="p">]</span>
-    <span class="n">rich_percentage</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span>
-        <span class="mi">100</span>
-        <span class="o">*</span> <span class="n">num_min_workers</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">num_min_workers</span><span class="p">[</span><span class="s2">&quot;salary&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;&gt;50K&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">size</span>
-        <span class="o">/</span> <span class="n">num_min_workers</span><span class="o">.</span><span class="n">size</span><span class="p">,</span>
-        <span class="mi">1</span><span class="p">,</span>
-    <span class="p">)</span>
-
-    <span class="c1"># What country has the highest percentage of people that earn &gt;50K?</span>
-    <span class="n">highest_country</span> <span class="o">=</span> <span class="p">(</span>
-        <span class="n">df</span><span class="p">[[</span><span class="s2">&quot;salary&quot;</span><span class="p">,</span> <span class="s2">&quot;native-country&quot;</span><span class="p">]]</span>
-        <span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;native-country&quot;</span><span class="p">)</span>
-        <span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">g</span><span class="p">:</span> <span class="n">g</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">g</span><span class="p">[</span><span class="s2">&quot;salary&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;&gt;50K&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">size</span> <span class="o">/</span> <span class="n">g</span><span class="o">.</span><span class="n">size</span> <span class="o">*</span> <span class="mi">100</span><span class="p">)</span>
-    <span class="p">)</span>
-
-    <span class="n">highest_earning_country</span> <span class="o">=</span> <span class="n">highest_country</span><span class="o">.</span><span class="n">idxmax</span><span class="p">()</span>
-    <span class="n">highest_earning_country_percentage</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">highest_country</span><span class="o">.</span><span class="n">max</span><span class="p">(),</span> <span class="mi">1</span><span class="p">)</span>
-
-    <span class="c1"># Identify the most popular occupation for those who earn &gt;50K in India.</span>
-    <span class="n">top_IN_occupation</span> <span class="o">=</span> <span class="p">(</span>
-        <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;native-country&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;India&quot;</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;salary&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;&gt;50K&quot;</span><span class="p">)][</span>
-            <span class="s2">&quot;occupation&quot;</span>
-        <span class="p">]</span>
-        <span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
-        <span class="o">.</span><span class="n">idxmax</span><span class="p">()</span>
-    <span class="p">)</span>
-
-    <span class="c1"># DO NOT MODIFY BELOW THIS LINE</span>
-
-    <span class="k">if</span> <span class="n">print_data</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Number of each race:</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">race_count</span><span class="p">)</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Average age of men:&quot;</span><span class="p">,</span> <span class="n">average_age_men</span><span class="p">)</span>
-        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Percentage with Bachelors degrees: </span><span class="si">{</span><span class="n">percentage_bachelors</span><span class="si">}</span><span class="s2">%&quot;</span><span class="p">)</span>
-        <span class="nb">print</span><span class="p">(</span>
-            <span class="sa">f</span><span class="s2">&quot;Percentage with higher education that earn &gt;50K: </span><span class="si">{</span><span class="n">higher_education_rich</span><span class="si">}</span><span class="s2">%&quot;</span>
-        <span class="p">)</span>
-        <span class="nb">print</span><span class="p">(</span>
-            <span class="sa">f</span><span class="s2">&quot;Percentage without higher education that earn &gt;50K: </span><span class="si">{</span><span class="n">lower_education_rich</span><span class="si">}</span><span class="s2">%&quot;</span>
-        <span class="p">)</span>
-        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Min work time: </span><span class="si">{</span><span class="n">min_work_hours</span><span class="si">}</span><span class="s2"> hours/week&quot;</span><span class="p">)</span>
-        <span class="nb">print</span><span class="p">(</span>
-            <span class="sa">f</span><span class="s2">&quot;Percentage of rich among those who work fewest hours: </span><span class="si">{</span><span class="n">rich_percentage</span><span class="si">}</span><span class="s2">%&quot;</span>
-        <span class="p">)</span>
-        <span class="nb">print</span><span class="p">(</span>
-            <span class="s2">&quot;Country with highest percentage of rich:&quot;</span><span class="p">,</span> <span class="n">highest_earning_country</span>
-        <span class="p">)</span>
-        <span class="nb">print</span><span class="p">(</span>
-            <span class="sa">f</span><span class="s2">&quot;Highest percentage of rich people in country: </span><span class="si">{</span><span class="n">highest_earning_country_percentage</span><span class="si">}</span><span class="s2">%&quot;</span>
-        <span class="p">)</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Top occupations in India:&quot;</span><span class="p">,</span> <span class="n">top_IN_occupation</span><span class="p">)</span>
-
-    <span class="k">return</span> <span class="p">{</span>
-        <span class="s2">&quot;race_count&quot;</span><span class="p">:</span> <span class="n">race_count</span><span class="p">,</span>
-        <span class="s2">&quot;average_age_men&quot;</span><span class="p">:</span> <span class="n">average_age_men</span><span class="p">,</span>
-        <span class="s2">&quot;percentage_bachelors&quot;</span><span class="p">:</span> <span class="n">percentage_bachelors</span><span class="p">,</span>
-        <span class="s2">&quot;higher_education_rich&quot;</span><span class="p">:</span> <span class="n">higher_education_rich</span><span class="p">,</span>
-        <span class="s2">&quot;lower_education_rich&quot;</span><span class="p">:</span> <span class="n">lower_education_rich</span><span class="p">,</span>
-        <span class="s2">&quot;min_work_hours&quot;</span><span class="p">:</span> <span class="n">min_work_hours</span><span class="p">,</span>
-        <span class="s2">&quot;rich_percentage&quot;</span><span class="p">:</span> <span class="n">rich_percentage</span><span class="p">,</span>
-        <span class="s2">&quot;highest_earning_country&quot;</span><span class="p">:</span> <span class="n">highest_earning_country</span><span class="p">,</span>
-        <span class="s2">&quot;highest_earning_country_percentage&quot;</span><span class="p">:</span> <span class="n">highest_earning_country_percentage</span><span class="p">,</span>
-        <span class="s2">&quot;top_IN_occupation&quot;</span><span class="p">:</span> <span class="n">top_IN_occupation</span><span class="p">,</span>
-    <span class="p">}</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;./medical_examination.csv&quot;</span><span class="p">)</span>
 </pre></div>
 
     </div>
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Add-'overweight'-column">Add 'overweight' column<a class="anchor-link" href="#Add-'overweight'-column">&#182;</a></h3>
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">calculate_demographic_data</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;overweight&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span>
+    <span class="n">df</span><span class="p">[</span><span class="s2">&quot;weight&quot;</span><span class="p">]</span> <span class="o">/</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;height&quot;</span><span class="p">]</span> <span class="o">*</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;height&quot;</span><span class="p">])</span> <span class="o">*</span> <span class="mi">10000</span> <span class="o">&gt;</span> <span class="mi">25</span><span class="p">,</span>
+    <span class="mi">1</span><span class="p">,</span>
+    <span class="mi">0</span><span class="p">,</span>
+<span class="p">)</span>
 </pre></div>
 
     </div>
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Normalize data by making 0 always good and 1 always bad. If the value of
+'cholesterol' or 'gluc' is 1, make the value 0. If the value is more than 1,
+make the value 1.</p>
 
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;cholesterol&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;cholesterol&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">df</span><span class="p">[</span><span class="s2">&quot;gluc&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;gluc&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+</pre></div>
 
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[3]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>{&#39;race_count&#39;: White                 27816
- Black                  3124
- Asian-Pac-Islander     1039
- Amer-Indian-Eskimo      311
- Other                   271
- Name: race, dtype: int64,
- &#39;average_age_men&#39;: 39.4,
- &#39;percentage_bachelors&#39;: 16.4,
- &#39;higher_education_rich&#39;: 46.5,
- &#39;lower_education_rich&#39;: 17.4,
- &#39;min_work_hours&#39;: 1,
- &#39;rich_percentage&#39;: 10.0,
- &#39;highest_earning_country&#39;: &#39;Iran&#39;,
- &#39;highest_earning_country_percentage&#39;: 41.9,
- &#39;top_IN_occupation&#39;: &#39;Prof-specialty&#39;}</pre>
+    </div>
+</div>
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Draw-Categorical-Plot">Draw Categorical Plot<a class="anchor-link" href="#Draw-Categorical-Plot">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">draw_cat_plot</span><span class="p">():</span>
+    <span class="c1"># Create DataFrame for cat plot using `pd.melt` using just the values from</span>
+    <span class="c1"># &#39;cholesterol&#39;, &#39;gluc&#39;, &#39;smoke&#39;, &#39;alco&#39;, &#39;active&#39;, and &#39;overweight&#39;.</span>
+    <span class="nb">vars</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span>
+        <span class="p">[</span><span class="s2">&quot;cholesterol&quot;</span><span class="p">,</span> <span class="s2">&quot;gluc&quot;</span><span class="p">,</span> <span class="s2">&quot;smoke&quot;</span><span class="p">,</span> <span class="s2">&quot;alco&quot;</span><span class="p">,</span> <span class="s2">&quot;active&quot;</span><span class="p">,</span> <span class="s2">&quot;overweight&quot;</span><span class="p">]</span>
+    <span class="p">)</span>
 
+    <span class="n">df_cat</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">melt</span><span class="p">(</span>
+        <span class="n">df</span><span class="p">,</span>
+        <span class="n">id_vars</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;cardio&quot;</span><span class="p">],</span>
+        <span class="n">value_vars</span><span class="o">=</span><span class="nb">vars</span><span class="p">,</span>
+    <span class="p">)</span>
+
+    <span class="c1"># Group and reformat the data to split it by &#39;cardio&#39;. Show the counts of</span>
+    <span class="c1"># each feature. You will have to rename one of the columns for the catplot</span>
+    <span class="c1"># to work correctly.</span>
+    <span class="n">df_cat</span> <span class="o">=</span> <span class="n">df_cat</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;total&quot;</span><span class="p">)</span>
+
+    <span class="c1"># Draw the catplot with &#39;sns.catplot()&#39;</span>
+    <span class="n">fig</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">catplot</span><span class="p">(</span>
+        <span class="n">data</span><span class="o">=</span><span class="n">df_cat</span><span class="p">,</span>
+        <span class="n">x</span><span class="o">=</span><span class="s2">&quot;variable&quot;</span><span class="p">,</span>
+        <span class="n">y</span><span class="o">=</span><span class="s2">&quot;total&quot;</span><span class="p">,</span>
+        <span class="n">hue</span><span class="o">=</span><span class="s2">&quot;value&quot;</span><span class="p">,</span>
+        <span class="n">col</span><span class="o">=</span><span class="s2">&quot;cardio&quot;</span><span class="p">,</span>
+        <span class="n">kind</span><span class="o">=</span><span class="s2">&quot;bar&quot;</span><span class="p">,</span>
+        <span class="n">order</span><span class="o">=</span><span class="nb">vars</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="n">fig</span><span class="o">.</span><span class="n">set_ylabels</span><span class="p">(</span><span class="s2">&quot;total&quot;</span><span class="p">)</span>
+    <span class="n">fig</span><span class="o">.</span><span class="n">set_xlabels</span><span class="p">(</span><span class="s2">&quot;variable&quot;</span><span class="p">)</span>
+    <span class="n">fig</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">fig</span>
+
+    <span class="c1"># Do not modify the next two lines</span>
+    <span class="c1"># fig.savefig(&quot;catplot.png&quot;) # Don&#39;t save to file</span>
+    <span class="k">return</span> <span class="n">fig</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Draw-Heat-Map">Draw Heat Map<a class="anchor-link" href="#Draw-Heat-Map">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">draw_heat_map</span><span class="p">():</span>
+    <span class="c1"># Clean the data</span>
+    <span class="n">df_heat</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span>
+        <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;ap_lo&quot;</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;ap_hi&quot;</span><span class="p">])</span>
+        <span class="o">&amp;</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;height&quot;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;height&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="mf">0.025</span><span class="p">))</span>
+        <span class="o">&amp;</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;height&quot;</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;height&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="mf">0.975</span><span class="p">))</span>
+        <span class="o">&amp;</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;weight&quot;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;weight&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="mf">0.025</span><span class="p">))</span>
+        <span class="o">&amp;</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;weight&quot;</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;weight&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="mf">0.975</span><span class="p">))</span>
+    <span class="p">]</span>
+
+    <span class="c1"># Calculate the correlation matrix</span>
+    <span class="n">corr</span> <span class="o">=</span> <span class="n">df_heat</span><span class="o">.</span><span class="n">corr</span><span class="p">()</span>
+
+    <span class="c1"># Generate a mask for the upper triangle</span>
+    <span class="n">mask</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">corr</span><span class="p">)</span>
+    <span class="n">mask</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">triu_indices_from</span><span class="p">(</span><span class="n">mask</span><span class="p">)]</span> <span class="o">=</span> <span class="kc">True</span>
+
+    <span class="c1"># Set up the matplotlib figure</span>
+    <span class="c1"># with sns.axes_style(&quot;white&quot;):</span>
+    <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">9</span><span class="p">))</span>
+
+    <span class="c1"># Draw the heatmap with &#39;sns.heatmap()&#39;</span>
+    <span class="n">ax</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span>
+        <span class="n">corr</span><span class="p">,</span>
+        <span class="n">mask</span><span class="o">=</span><span class="n">mask</span><span class="p">,</span>
+        <span class="n">vmax</span><span class="o">=</span><span class="mf">0.4</span><span class="p">,</span>
+        <span class="n">square</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">fmt</span><span class="o">=</span><span class="s2">&quot;.1f&quot;</span><span class="p">,</span>
+        <span class="n">annot</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="p">)</span>
+
+    <span class="c1"># Do not modify the next two lines</span>
+    <span class="c1"># fig.savefig(&quot;heatmap.png&quot;)</span>
+    <span class="c1"># Don&#39;t save to file</span>
+    <span class="k">return</span> <span class="n">fig</span>
+</pre></div>
+
+    </div>
 </div>
 </div>
 
@@ -13474,7 +13463,7 @@ a lot.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">unittest</span>
@@ -13487,101 +13476,53 @@ a lot.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">DemographicAnalyzerTestCase</span><span class="p">(</span><span class="n">unittest</span><span class="o">.</span><span class="n">TestCase</span><span class="p">):</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">CatPlotTestCase</span><span class="p">(</span><span class="n">unittest</span><span class="o">.</span><span class="n">TestCase</span><span class="p">):</span>
     <span class="k">def</span> <span class="nf">setUp</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">calculate_demographic_data</span><span class="p">(</span><span class="n">print_data</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">fig</span> <span class="o">=</span> <span class="n">draw_cat_plot</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ax</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fig</span><span class="o">.</span><span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 
-    <span class="k">def</span> <span class="nf">test_race_count</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="n">actual</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;race_count&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
-        <span class="n">expected</span> <span class="o">=</span> <span class="p">[</span><span class="mi">27816</span><span class="p">,</span> <span class="mi">3124</span><span class="p">,</span> <span class="mi">1039</span><span class="p">,</span> <span class="mi">311</span><span class="p">,</span> <span class="mi">271</span><span class="p">]</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">assertAlmostEqual</span><span class="p">(</span>
-            <span class="n">actual</span><span class="p">,</span>
-            <span class="n">expected</span><span class="p">,</span>
-            <span class="n">msg</span><span class="o">=</span><span class="s2">&quot;Expected race count values to be [27816, 3124, 1039, 311, 271]&quot;</span><span class="p">,</span>
+    <span class="k">def</span> <span class="nf">test_line_plot_labels</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">actual</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">ax</span><span class="o">.</span><span class="n">get_xlabel</span><span class="p">()</span>
+        <span class="n">expected</span> <span class="o">=</span> <span class="s2">&quot;variable&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span>
+            <span class="n">actual</span><span class="p">,</span> <span class="n">expected</span><span class="p">,</span> <span class="s2">&quot;Expected line plot xlabel to be &#39;variable&#39;&quot;</span>
         <span class="p">)</span>
-
-    <span class="k">def</span> <span class="nf">test_average_age_men</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="n">actual</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;average_age_men&quot;</span><span class="p">]</span>
-        <span class="n">expected</span> <span class="o">=</span> <span class="mf">39.4</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">assertAlmostEqual</span><span class="p">(</span>
-            <span class="n">actual</span><span class="p">,</span>
-            <span class="n">expected</span><span class="p">,</span>
-            <span class="n">msg</span><span class="o">=</span><span class="s2">&quot;Expected different value for average age of men.&quot;</span><span class="p">,</span>
+        <span class="n">actual</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">ax</span><span class="o">.</span><span class="n">get_ylabel</span><span class="p">()</span>
+        <span class="n">expected</span> <span class="o">=</span> <span class="s2">&quot;total&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span>
+            <span class="n">actual</span><span class="p">,</span> <span class="n">expected</span><span class="p">,</span> <span class="s2">&quot;Expected line plot ylabel to be &#39;total&#39;&quot;</span>
         <span class="p">)</span>
-
-    <span class="k">def</span> <span class="nf">test_percentage_bachelors</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="n">actual</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;percentage_bachelors&quot;</span><span class="p">]</span>
-        <span class="n">expected</span> <span class="o">=</span> <span class="mf">16.4</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">assertAlmostEqual</span><span class="p">(</span>
-            <span class="n">actual</span><span class="p">,</span>
-            <span class="n">expected</span><span class="p">,</span>
-            <span class="n">msg</span><span class="o">=</span><span class="s2">&quot;Expected different value for percentage with Bachelors degrees.&quot;</span><span class="p">,</span>
-        <span class="p">)</span>
-
-    <span class="k">def</span> <span class="nf">test_higher_education_rich</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="n">actual</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;higher_education_rich&quot;</span><span class="p">]</span>
-        <span class="n">expected</span> <span class="o">=</span> <span class="mf">46.5</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">assertAlmostEqual</span><span class="p">(</span>
-            <span class="n">actual</span><span class="p">,</span>
-            <span class="n">expected</span><span class="p">,</span>
-            <span class="n">msg</span><span class="o">=</span><span class="s2">&quot;Expected different value for percentage with higher education that earn &gt;50K.&quot;</span><span class="p">,</span>
-        <span class="p">)</span>
-
-    <span class="k">def</span> <span class="nf">test_lower_education_rich</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="n">actual</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;lower_education_rich&quot;</span><span class="p">]</span>
-        <span class="n">expected</span> <span class="o">=</span> <span class="mf">17.4</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">assertAlmostEqual</span><span class="p">(</span>
-            <span class="n">actual</span><span class="p">,</span>
-            <span class="n">expected</span><span class="p">,</span>
-            <span class="n">msg</span><span class="o">=</span><span class="s2">&quot;Expected different value for percentage without higher education that earn &gt;50K.&quot;</span><span class="p">,</span>
-        <span class="p">)</span>
-
-    <span class="k">def</span> <span class="nf">test_min_work_hours</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="n">actual</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;min_work_hours&quot;</span><span class="p">]</span>
-        <span class="n">expected</span> <span class="o">=</span> <span class="mi">1</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">assertAlmostEqual</span><span class="p">(</span>
-            <span class="n">actual</span><span class="p">,</span>
-            <span class="n">expected</span><span class="p">,</span>
-            <span class="n">msg</span><span class="o">=</span><span class="s2">&quot;Expected different value for minimum work hours.&quot;</span><span class="p">,</span>
-        <span class="p">)</span>
-
-    <span class="k">def</span> <span class="nf">test_rich_percentage</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="n">actual</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;rich_percentage&quot;</span><span class="p">]</span>
-        <span class="n">expected</span> <span class="o">=</span> <span class="mi">10</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">assertAlmostEqual</span><span class="p">(</span>
-            <span class="n">actual</span><span class="p">,</span>
-            <span class="n">expected</span><span class="p">,</span>
-            <span class="n">msg</span><span class="o">=</span><span class="s2">&quot;Expected different value for percentage of rich among those who work fewest hours.&quot;</span><span class="p">,</span>
-        <span class="p">)</span>
-
-    <span class="k">def</span> <span class="nf">test_highest_earning_country</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="n">actual</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;highest_earning_country&quot;</span><span class="p">]</span>
-        <span class="n">expected</span> <span class="o">=</span> <span class="s2">&quot;Iran&quot;</span>
+        <span class="n">actual</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">label</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">ax</span><span class="o">.</span><span class="n">get_xaxis</span><span class="p">()</span><span class="o">.</span><span class="n">get_majorticklabels</span><span class="p">():</span>
+            <span class="n">actual</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">label</span><span class="o">.</span><span class="n">get_text</span><span class="p">())</span>
+        <span class="n">expected</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="s2">&quot;active&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;alco&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;cholesterol&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;gluc&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;overweight&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;smoke&quot;</span><span class="p">,</span>
+        <span class="p">]</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span>
             <span class="n">actual</span><span class="p">,</span>
             <span class="n">expected</span><span class="p">,</span>
-            <span class="s2">&quot;Expected different value for highest earning country.&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;Expected bar plot secondary x labels to be &#39;active&#39;, &#39;alco&#39;, &#39;cholesterol&#39;, &#39;gluc&#39;, &#39;overweight&#39;, &#39;smoke&#39;&quot;</span><span class="p">,</span>
         <span class="p">)</span>
 
-    <span class="k">def</span> <span class="nf">test_highest_earning_country_percentage</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="n">actual</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;highest_earning_country_percentage&quot;</span><span class="p">]</span>
-        <span class="n">expected</span> <span class="o">=</span> <span class="mf">41.9</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">assertAlmostEqual</span><span class="p">(</span>
-            <span class="n">actual</span><span class="p">,</span>
-            <span class="n">expected</span><span class="p">,</span>
-            <span class="n">msg</span><span class="o">=</span><span class="s2">&quot;Expected different value for heighest earning country percentage.&quot;</span><span class="p">,</span>
+    <span class="k">def</span> <span class="nf">test_bar_plot_number_of_bars</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">actual</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span>
+            <span class="p">[</span>
+                <span class="n">rect</span>
+                <span class="k">for</span> <span class="n">rect</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">ax</span><span class="o">.</span><span class="n">get_children</span><span class="p">()</span>
+                <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">rect</span><span class="p">,</span> <span class="n">mpl</span><span class="o">.</span><span class="n">patches</span><span class="o">.</span><span class="n">Rectangle</span><span class="p">)</span>
+            <span class="p">]</span>
         <span class="p">)</span>
-
-    <span class="k">def</span> <span class="nf">test_top_IN_occupation</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="n">actual</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;top_IN_occupation&quot;</span><span class="p">]</span>
-        <span class="n">expected</span> <span class="o">=</span> <span class="s2">&quot;Prof-specialty&quot;</span>
+        <span class="n">expected</span> <span class="o">=</span> <span class="mi">13</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span>
-            <span class="n">actual</span><span class="p">,</span>
-            <span class="n">expected</span><span class="p">,</span>
-            <span class="s2">&quot;Expected different value for top occupations in India.&quot;</span><span class="p">,</span>
+            <span class="n">actual</span><span class="p">,</span> <span class="n">expected</span><span class="p">,</span> <span class="s2">&quot;Expected a different number of bars chart.&quot;</span>
         <span class="p">)</span>
 </pre></div>
 
@@ -13592,7 +13533,153 @@ a lot.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">HeatMapTestCase</span><span class="p">(</span><span class="n">unittest</span><span class="o">.</span><span class="n">TestCase</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">setUp</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">fig</span> <span class="o">=</span> <span class="n">draw_heat_map</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ax</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fig</span><span class="o">.</span><span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+    <span class="k">def</span> <span class="nf">test_heat_map_labels</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">actual</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">label</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">ax</span><span class="o">.</span><span class="n">get_xticklabels</span><span class="p">():</span>
+            <span class="n">actual</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">label</span><span class="o">.</span><span class="n">get_text</span><span class="p">())</span>
+        <span class="n">expected</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="s2">&quot;id&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;age&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;gender&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;height&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;weight&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;ap_hi&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;ap_lo&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;cholesterol&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;gluc&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;smoke&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;alco&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;active&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;cardio&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;overweight&quot;</span><span class="p">,</span>
+        <span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span>
+            <span class="n">actual</span><span class="p">,</span>
+            <span class="n">expected</span><span class="p">,</span>
+            <span class="s2">&quot;Expected bar plot legend labels to be months of the year.&quot;</span><span class="p">,</span>
+        <span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">test_heat_map_values</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">actual</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="n">text</span><span class="o">.</span><span class="n">get_text</span><span class="p">()</span>
+            <span class="k">for</span> <span class="n">text</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">ax</span><span class="o">.</span><span class="n">get_default_bbox_extra_artists</span><span class="p">()</span>
+            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="n">mpl</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">Text</span><span class="p">)</span>
+        <span class="p">]</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">actual</span><span class="p">)</span>
+        <span class="n">expected</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="s2">&quot;0.0&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;0.0&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;-0.0&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;0.0&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;-0.1&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;0.5&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;0.0&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;0.1&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;0.1&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;0.3&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;0.0&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;0.0&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;0.0&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;0.0&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;0.0&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;0.0&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;0.2&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;0.1&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;0.0&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;0.2&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;0.1&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;0.0&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;0.1&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;-0.0&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;-0.1&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;0.1&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;0.0&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;0.2&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;0.0&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;0.1&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;-0.0&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;-0.0&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;0.1&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;0.0&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;0.1&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;0.4&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;-0.0&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;-0.0&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;0.3&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;0.2&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;0.1&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;-0.0&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;0.0&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;0.0&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;-0.0&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;-0.0&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;-0.0&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;0.2&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;0.1&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;0.1&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;0.0&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;0.0&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;0.0&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;0.0&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;0.3&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;0.0&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;-0.0&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;0.0&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;-0.0&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;-0.0&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;-0.0&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;0.0&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;0.0&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;-0.0&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;0.0&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;0.0&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;0.0&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;0.2&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;0.0&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;-0.0&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;0.2&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;0.1&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;0.3&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;0.2&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;0.1&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;-0.0&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;-0.0&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;-0.0&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;-0.0&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;0.1&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;-0.1&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;-0.1&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;0.7&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;0.0&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;0.2&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;0.1&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;0.1&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;-0.0&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;0.0&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;-0.0&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;0.1&quot;</span><span class="p">,</span>
+        <span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span>
+            <span class="n">actual</span><span class="p">,</span> <span class="n">expected</span><span class="p">,</span> <span class="s2">&quot;Expected differnt values in heat map.&quot;</span>
+        <span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
@@ -13613,13 +13700,90 @@ a lot.</p>
 
 
 <div class="output_subarea output_stream output_stderr output_text">
-<pre>..........
+<pre>....</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[&#39;0.0&#39;, &#39;0.0&#39;, &#39;-0.0&#39;, &#39;0.0&#39;, &#39;-0.1&#39;, &#39;0.5&#39;, &#39;0.0&#39;, &#39;0.1&#39;, &#39;0.1&#39;, &#39;0.3&#39;, &#39;0.0&#39;, &#39;0.0&#39;, &#39;0.0&#39;, &#39;0.0&#39;, &#39;0.0&#39;, &#39;0.0&#39;, &#39;0.2&#39;, &#39;0.1&#39;, &#39;0.0&#39;, &#39;0.2&#39;, &#39;0.1&#39;, &#39;0.0&#39;, &#39;0.1&#39;, &#39;-0.0&#39;, &#39;-0.1&#39;, &#39;0.1&#39;, &#39;0.0&#39;, &#39;0.2&#39;, &#39;0.0&#39;, &#39;0.1&#39;, &#39;-0.0&#39;, &#39;-0.0&#39;, &#39;0.1&#39;, &#39;0.0&#39;, &#39;0.1&#39;, &#39;0.4&#39;, &#39;-0.0&#39;, &#39;-0.0&#39;, &#39;0.3&#39;, &#39;0.2&#39;, &#39;0.1&#39;, &#39;-0.0&#39;, &#39;0.0&#39;, &#39;0.0&#39;, &#39;-0.0&#39;, &#39;-0.0&#39;, &#39;-0.0&#39;, &#39;0.2&#39;, &#39;0.1&#39;, &#39;0.1&#39;, &#39;0.0&#39;, &#39;0.0&#39;, &#39;0.0&#39;, &#39;0.0&#39;, &#39;0.3&#39;, &#39;0.0&#39;, &#39;-0.0&#39;, &#39;0.0&#39;, &#39;-0.0&#39;, &#39;-0.0&#39;, &#39;-0.0&#39;, &#39;0.0&#39;, &#39;0.0&#39;, &#39;-0.0&#39;, &#39;0.0&#39;, &#39;0.0&#39;, &#39;0.0&#39;, &#39;0.2&#39;, &#39;0.0&#39;, &#39;-0.0&#39;, &#39;0.2&#39;, &#39;0.1&#39;, &#39;0.3&#39;, &#39;0.2&#39;, &#39;0.1&#39;, &#39;-0.0&#39;, &#39;-0.0&#39;, &#39;-0.0&#39;, &#39;-0.0&#39;, &#39;0.1&#39;, &#39;-0.1&#39;, &#39;-0.1&#39;, &#39;0.7&#39;, &#39;0.0&#39;, &#39;0.2&#39;, &#39;0.1&#39;, &#39;0.1&#39;, &#39;-0.0&#39;, &#39;0.0&#39;, &#39;-0.0&#39;, &#39;0.1&#39;]
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>
 ----------------------------------------------------------------------
-Ran 10 tests in 1.047s
+Ran 4 tests in 1.429s
 
 OK
 </pre>
 </div>
+</div>
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+
+<div class="output_png output_subarea ">
+<img src="readme_files/readme_19_3.png"
+>
+</div>
+
+</div>
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+
+<div class="output_png output_subarea ">
+<img src="readme_files/readme_19_4.png"
+>
+</div>
+
+</div>
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+
+<div class="output_png output_subarea ">
+<img src="readme_files/readme_19_5.png"
+>
+</div>
+
+</div>
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+
+<div class="output_png output_subarea ">
+<img src="readme_files/readme_19_6.png"
+>
+</div>
+
 </div>
 
 </div>
