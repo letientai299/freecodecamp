@@ -12,7 +12,7 @@
 #     name: python3
 # ---
 
-# # Medical Data Visualizer
+# # Page View Time Series Visualizer
 
 # ## Problem description
 #

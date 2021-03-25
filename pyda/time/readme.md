@@ -1,4 +1,4 @@
-# Medical Data Visualizer
+# Page View Time Series Visualizer
 
 ## Problem description
 
@@ -488,7 +488,7 @@ if __name__ == "__main__":
 
     ...........
     ----------------------------------------------------------------------
-    Ran 11 tests in 1.958s
+    Ran 11 tests in 1.764s
     
     OK
 
