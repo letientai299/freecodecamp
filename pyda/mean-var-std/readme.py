@@ -78,7 +78,16 @@
 #
 # Copy your project's URL and submit it to freeCodeCamp.
 
+# ## Note
+#
+# This is just about basic numpy operator, requires a bit of discovering.
+#
+# Time for this problem: 35m (5m for the code, 30 to make the test work in
+# notebook format)
+
 # ## Solution
+
+
 from pprint import pprint
 
 import numpy as np
@@ -90,36 +99,12 @@ def calculate(arr):
 
     m = np.array(arr).reshape([3, 3])
     r = {
-        'mean': [
-            m.mean(0).tolist(),
-            m.mean(1).tolist(),
-            m.mean()
-        ],
-        'variance': [
-            m.var(0).tolist(),
-            m.var(1).tolist(),
-            m.var()
-        ],
-        'standard deviation': [
-            m.std(0).tolist(),
-            m.std(1).tolist(),
-            m.std()
-        ],
-        'max': [
-            m.max(0).tolist(),
-            m.max(1).tolist(),
-            m.max()
-        ],
-        'min': [
-            m.min(0).tolist(),
-            m.min(1).tolist(),
-            m.min()
-        ],
-        'sum': [
-            m.sum(0).tolist(),
-            m.sum(1).tolist(),
-            m.sum()
-        ],
+        "mean": [m.mean(0).tolist(), m.mean(1).tolist(), m.mean()],
+        "variance": [m.var(0).tolist(), m.var(1).tolist(), m.var()],
+        "standard deviation": [m.std(0).tolist(), m.std(1).tolist(), m.std()],
+        "max": [m.max(0).tolist(), m.max(1).tolist(), m.max()],
+        "min": [m.min(0).tolist(), m.min(1).tolist(), m.min()],
+        "sum": [m.sum(0).tolist(), m.sum(1).tolist(), m.sum()],
     }
     return r
 
@@ -209,12 +194,5 @@ class UnitTests(unittest.TestCase):
         )
 
 
-if __name__ == '__main__':
-    unittest.main(argv=['first-arg-is-ignored'], exit=False)
-
-# ## Note
-#
-# This is just about basic numpy operator, requires a bit of discovering.
-#
-# Time for this problem: 35m (5m for the code, 30 to make the test work in
-# notebook format)
+if __name__ == "__main__":
+    unittest.main(argv=["first-arg-is-ignored"], exit=False)
