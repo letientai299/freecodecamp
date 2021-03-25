@@ -152,6 +152,21 @@ OK inefficient workflows.
 | [Page View Time Series Visualizer][fcc_pyda_time]            | [./pyda/time](./pyda/time)                  |
 | [Sea Level Predictor][fcc_pyda_sea]                          | [./pyda/sea](./pyda/sea)                    |
 
+### Machine Learning with Python
+
+- [Course link](https://www.freecodecamp.org/learn/machine-learning-with-python/)
+- Cert: TODO
+- Time:
+  - 10m guess on multi choice questions
+
+| Task                                                                  | Site |
+| --------------------------------------------------------------------- | ---- |
+| [Rock Paper Scissors][fcc_ai_rps]                                     | []() |
+| [Cat and Dog Image Classifier][fcc_ai_cv]                             | []() |
+| [Book Recommendation Engine using K][fcc_ai_recommendation]           | []() |
+| [Linear Regression Health Costs Calculator][fcc_ai_linear_regression] | []() |
+| [Neural Network SMS Text Classifier][fcc_ai_nn]                       | []() |
+
 ## Local setup
 
 > TODO
@@ -215,3 +230,13 @@ OK inefficient workflows.
   https://www.freecodecamp.org/learn/data-analysis-with-python/data-analysis-with-python-projects/page-view-time-series-visualizer
 [fcc_pyda_sea]:
   https://www.freecodecamp.org/learn/data-analysis-with-python/data-analysis-with-python-projects/sea-level-predictor
+[fcc_ai_rps]:
+  https://www.freecodecamp.org/learn/machine-learning-with-python/machine-learning-with-python-projects/rock-paper-scissors
+[fcc_ai_cv]:
+  https://www.freecodecamp.org/learn/machine-learning-with-python/machine-learning-with-python-projects/cat-and-dog-image-classifier
+[fcc_ai_recommendation]:
+  https://www.freecodecamp.org/learn/machine-learning-with-python/machine-learning-with-python-projects/book-recommendation-engine-using-knn
+[fcc_ai_linear_regression]:
+  https://www.freecodecamp.org/learn/machine-learning-with-python/machine-learning-with-python-projects/linear-regression-health-costs-calculator
+[fcc_ai_nn]:
+  https://www.freecodecamp.org/learn/machine-learning-with-python/machine-learning-with-python-projects/neural-network-sms-text-classifier

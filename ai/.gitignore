@@ -1,0 +1,8 @@
+temp/
+.ipynb_checkpoints/
+
+# This is for working with the exercise in the course, do not track.
+playground/
+
+# They are auto generated
+*.html
