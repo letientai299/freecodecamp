@@ -18,6 +18,9 @@
   "dependencies": {
     "express": "4.17.1"
   },
+  "engines": {
+    "node": "15.x"
+  },
   "scripts": {
     "start": "node ./heroku/server.js"
   }
