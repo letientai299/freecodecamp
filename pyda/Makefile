@@ -3,7 +3,7 @@ help: ## Prints help for targets with comments
 
 serve:
 	@../node_modules/.bin/concurrently --kill-others \
-		"../node_modules/.bin/nodemon --config nodemon.json -x 'echo Start nodemon'" \
+		"../node_modules/.bin/nodemon --config nodemon.json -x 'echo'" \
 		"./live-server.sh"
 
 setup: ## Install required tools
@@ -11,6 +11,7 @@ setup: ## Install required tools
 		nbconvert==5.6.1 \
 		jupyter jupyter_contrib_nbextensions \
 		jupytext \
+		seaborn \
 		matplotlib \
 		numpy pandas
 

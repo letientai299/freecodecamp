@@ -9,6 +9,7 @@ fi
 FILE=$(realpath --relative-to="./" "$FILE")
 DIR="$(dirname $FILE)"
 
+rm -rf "temp/$DIR"
 mkdir -p "temp/$DIR"
 
 echo "==> Copy $FILE to ./temp"
@@ -45,4 +46,5 @@ echo "==> Copy back result of converting $FILE"
 cp "${TFILE%.py}.ipynb" "$DIR"
 cp "${TFILE%.py}.html" "$DIR"/index.html
 cp "${TFILE%.py}.md" "$DIR"
-cp -a "${TFILE%.py}_files" "$DIR" || exit 0
+rm -rf "${FILE%.py}_files" || true
+cp -a "${TFILE%.py}_files" "$DIR" || true
