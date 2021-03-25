@@ -1,5 +1,15 @@
 # Medical Data Visualizer
 
+## Note
+
+This is cool. But I guess I prefer to visualize data with d3, it feels more
+easier to me. We can also get some interactive charts instead of static
+images.
+
+Total time: 2h
+
+Damn, why can't I be faster, it's only about Google and reading document
+
 ## Problem description
 
 Content of this section is copied and reformatted from [this
@@ -70,16 +80,6 @@ Use the data to complete the following tasks in `medical_data_visualizer.py`:
   like `examples/Figure_2.png`.
 
 Any time a variable is set to `None`, make sure to set it to the correct code.
-
-## Note
-
-This is cool. But I guess I prefer to visualize data with d3, it feels more
-easier to me. We can also get some interactive charts instead of static
-images.
-
-Total time: 2h
-
-Damn, why can't I be faster, it's only about Google and reading document
 
 ## Solution
 
@@ -403,17 +403,15 @@ if __name__ == "__main__":
 ```
 
     ....
-    ----------------------------------------------------------------------
-    Ran 4 tests in 1.222s
-    
-    OK
-
 
     ['0.0', '0.0', '-0.0', '0.0', '-0.1', '0.5', '0.0', '0.1', '0.1', '0.3', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.2', '0.1', '0.0', '0.2', '0.1', '0.0', '0.1', '-0.0', '-0.1', '0.1', '0.0', '0.2', '0.0', '0.1', '-0.0', '-0.0', '0.1', '0.0', '0.1', '0.4', '-0.0', '-0.0', '0.3', '0.2', '0.1', '-0.0', '0.0', '0.0', '-0.0', '-0.0', '-0.0', '0.2', '0.1', '0.1', '0.0', '0.0', '0.0', '0.0', '0.3', '0.0', '-0.0', '0.0', '-0.0', '-0.0', '-0.0', '0.0', '0.0', '-0.0', '0.0', '0.0', '0.0', '0.2', '0.0', '-0.0', '0.2', '0.1', '0.3', '0.2', '0.1', '-0.0', '-0.0', '-0.0', '-0.0', '0.1', '-0.1', '-0.1', '0.7', '0.0', '0.2', '0.1', '0.1', '-0.0', '0.0', '-0.0', '0.1']
 
 
-
-![png](readme_files/readme_19_2.png)
+    
+    ----------------------------------------------------------------------
+    Ran 4 tests in 1.518s
+    
+    OK
 
 
 
@@ -426,4 +424,8 @@ if __name__ == "__main__":
 
 
 ![png](readme_files/readme_19_5.png)
+
+
+
+![png](readme_files/readme_19_6.png)
 

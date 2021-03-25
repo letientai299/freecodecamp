@@ -1,5 +1,12 @@
 # Demographic Data Analyzer
 
+## Note
+
+OK, this is a hard one, because I haven't really learn pandas. Need to google
+a lot.
+
+Total time: 2h
+
 ## Problem description
 
 Content of this section is copied and reformatted from [this
@@ -62,13 +69,6 @@ Copy your project's URL and submit it to freeCodeCamp.
 Dua, D. and Graff, C. (2019). [UCI Machine Learning
 Repository](http://archive.ics.uci.edu/ml). Irvine, CA: University of California, School of
 Information and Computer Science.
-
-## Note
-
-OK, this is a hard one, because I haven't really learn pandas. Need to google
-a lot.
-
-Total time: 2h
 
 ## Solution
 
@@ -332,7 +332,7 @@ if __name__ == "__main__":
 
     ..........
     ----------------------------------------------------------------------
-    Ran 10 tests in 1.285s
+    Ran 10 tests in 1.307s
     
     OK
 

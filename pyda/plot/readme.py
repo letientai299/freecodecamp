@@ -14,6 +14,16 @@
 
 # # Medical Data Visualizer
 
+# ## Note
+#
+# This is cool. But I guess I prefer to visualize data with d3, it feels more
+# easier to me. We can also get some interactive charts instead of static
+# images.
+#
+# Total time: 2h
+#
+# Damn, why can't I be faster, it's only about Google and reading document
+
 # ## Problem description
 #
 # Content of this section is copied and reformatted from [this
@@ -85,16 +95,6 @@
 #
 # Any time a variable is set to `None`, make sure to set it to the correct code.
 
-
-# ## Note
-#
-# This is cool. But I guess I prefer to visualize data with d3, it feels more
-# easier to me. We can also get some interactive charts instead of static
-# images.
-#
-# Total time: 2h
-#
-# Damn, why can't I be faster, it's only about Google and reading document
 
 # ## Solution
 

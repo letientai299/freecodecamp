@@ -1,5 +1,15 @@
 # Sea Level Predictor
 
+## Note
+
+- The project is educational, but, once again, the test can be very
+frustrated. Thanks to [this thread](https://forum.freecodecamp.org/t/sea-level-predictor-errors/437517/13),
+I could find the trick to pass the test.
+
+Total time: 1.5h
+
+Fuck floating point equal comparison!
+
 ## Problem description
 
 Content of this section is copied and reformatted from [this
@@ -36,16 +46,6 @@ Global Average Absolute Sea Level Change, 1880-2014 from the US Environmental
 Protection Agency using data from CSIRO, 2015; NOAA, 2015.
 
 https://datahub.io/core/sea-level-rise
-
-## Note
-
-- The project is educational, but, once again, the test can be very
-frustrated. Thanks to [this thread](https://forum.freecodecamp.org/t/sea-level-predictor-errors/437517/13),
-I could find the trick to pass the test.
-
-Total time: 1.5h
-
-Fuck floating point equal comparison!
 
 
 ```python
@@ -543,7 +543,7 @@ if __name__ == "__main__":
 
     ....
     ----------------------------------------------------------------------
-    Ran 4 tests in 0.078s
+    Ran 4 tests in 0.111s
     
     OK
 

@@ -1,5 +1,14 @@
 # Page View Time Series Visualizer
 
+## Note
+
+- The test cases can be very frustrating.
+- The example image for box_plot is misleading, perhaps FCC have some bugs in
+their code, or perhaps my code has bug. I'm not sure. If you know why they're
+different, let me know.
+
+Total time: 2.5h
+
 ## Problem description
 
 Content of this section is copied and reformatted from [this
@@ -37,15 +46,6 @@ Use the data to complete the following tasks:
   the title of the second chart should be "Month-wise Box Plot (Seasonality)".
   Make sure the month labels on bottom start at "Jan" and the x and x axis are
   labeled correctly.
-
-## Note
-
-- The test cases can be very frustrating.
-- The example image for box_plot is misleading, perhaps FCC have some bugs in
-their code, or perhaps my code has bug. I'm not sure. If you know why they're
-different, let me know.
-
-Total time: 2.5h
 
 ## Solution
 
@@ -488,7 +488,7 @@ if __name__ == "__main__":
 
     ...........
     ----------------------------------------------------------------------
-    Ran 11 tests in 1.764s
+    Ran 11 tests in 2.225s
     
     OK
 

@@ -14,6 +14,14 @@
 
 # # Mean-Variance-Standard Deviation Calculator
 
+# ## Note
+#
+# This is just about basic numpy operator, requires a bit of discovering.
+#
+# Time for this problem: 35m (5m for the code, 30 to make the test work in
+# notebook format)
+
+
 # ## Problem description
 #
 # Content of this section is copied and reformatted from [this
@@ -77,13 +85,6 @@
 # ### Submitting
 #
 # Copy your project's URL and submit it to freeCodeCamp.
-
-# ## Note
-#
-# This is just about basic numpy operator, requires a bit of discovering.
-#
-# Time for this problem: 35m (5m for the code, 30 to make the test work in
-# notebook format)
 
 # ## Solution
 
