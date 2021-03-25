@@ -40,6 +40,6 @@ EOF
 echo "==> Copy back result of converting $FILE"
 DIR="$(dirname $FILE)"
 cp "${TFILE%.py}.ipynb" "$DIR"
-cp "${TFILE%.py}.html" "$DIR"
+cp "${TFILE%.py}.html" "$DIR"/index.html
 cp "${TFILE%.py}.md" "$DIR"
 cp -a "${TFILE%.py}_files" "$DIR" || exit 0

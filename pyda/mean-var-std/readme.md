@@ -85,4 +85,29 @@ The tests will run automatically whenever you hit the "run" button.
 Copy your project's URL and submit it to freeCodeCamp.
 
 
-## Solution
+## Solution 2
+
+```python
+import matplotlib.pyplot as plt
+import pandas as pd
+import numpy as np
+```
+
+```python
+plt.close("all")
+ts = pd.Series(
+    np.random.randn(1000), index=pd.date_range("1/1/2000", periods=1000)
+)
+ts = ts.cumsum()
+ts.plot()
+```
+
+
+```python
+df = pd.DataFrame(
+    np.random.randn(1000, 4), index=ts.index, columns=list("ABCD")
+)
+df = df.cumsum()
+plt.figure()
+df.plot()
+```
