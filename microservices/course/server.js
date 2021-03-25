@@ -5,15 +5,16 @@
 
 "use strict";
 
-var fs = require("fs");
-var express = require("express");
-var app = express();
+const fs = require("fs");
+const express = require("express");
+const app = express();
+const PATH_PREFIX = "/microservices/course";
 
 if (!process.env.DISABLE_XORIGIN) {
-  app.use(function(req, res, next) {
-    var allowedOrigins = [
+  app.use(function (req, res, next) {
+    let allowedOrigins = [
       "https://narrow-plane.gomix.me",
-      "https://www.freecodecamp.com"
+      "https://www.freecodecamp.com",
     ];
     var origin = req.headers.origin || "*";
     if (!process.env.XORIG_RESTRICT || allowedOrigins.indexOf(origin) > -1) {
@@ -28,28 +29,28 @@ if (!process.env.DISABLE_XORIGIN) {
   });
 }
 
-app.use("/public", express.static(process.cwd() + "/public"));
+app.use("/public", express.static(process.cwd() + PATH_PREFIX + "/public"));
 
-app.route("/_api/package.json").get(function(req, res, next) {
+app.route("/_api/package.json").get(function (req, res, next) {
   console.log("requested");
-  fs.readFile(__dirname + "/package.json", function(err, data) {
+  fs.readFile(__dirname + "/package.json", function (err, data) {
     if (err) return next(err);
     res.type("txt").send(data.toString());
   });
 });
 
-app.route("/").get(function(req, res) {
-  res.sendFile(process.cwd() + "/views/index.html");
+app.route("/").get(function (req, res) {
+  res.sendFile(process.cwd() + PATH_PREFIX + "/views/index.html");
 });
 
 // Respond not found to all the wrong routes
-app.use(function(req, res, next) {
+app.use(function (req, res, next) {
   res.status(404);
   res.type("txt").send("Not found");
 });
 
 // Error Middleware
-app.use(function(err, req, res, next) {
+app.use(function (err, req, res, next) {
   if (err) {
     res
       .status(err.status || 500)
@@ -58,8 +59,4 @@ app.use(function(err, req, res, next) {
   }
 });
 
-let port = !process.env.PORT ? "8000" : process.env.PORT;
-
-app.listen(port, function() {
-  console.log(`Node.js listening on ${port}...`);
-});
+module.exports = app;
