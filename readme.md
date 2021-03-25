@@ -126,13 +126,13 @@ This course requires more thought, so see [its note here](./qa).
 
 - [Course link](https://www.freecodecamp.org/learn/data-analysis-with-python/)
 
-| Task                                            | Site                                        |
-| ----------------------------------------------- | ------------------------------------------- |
-| [Mean-Variance-Standard Deviation Calculator]() | [./pyda/mean-var-std/](./pyda/mean-var-std) |
-| [Demographic Data Analyzer]()                   | [./pyda/demographic](./pyda/demographic)    |
-| [Medical Data Visualizer]()                     | []()                                        |
-| [Page View Time Series Visualizer]()            | []()                                        |
-| [Sea Level Predictor]()                         | []()                                        |
+| Task                                                         | Site                                        |
+| ------------------------------------------------------------ | ------------------------------------------- |
+| [Mean-Variance-Standard Deviation Calculator][fcc_pyda_mean] | [./pyda/mean-var-std/](./pyda/mean-var-std) |
+| [Demographic Data Analyzer][fcc_pyda_demographic]            | [./pyda/demographic](./pyda/demographic)    |
+| [Medical Data Visualizer][fcc_pyda_plot]                     | [./pyda/plot](./pyda/plot)                  |
+| [Page View Time Series Visualizer][fcc_pyda_time]            | []()                                        |
+| [Sea Level Predictor][fcc_pyda_sea]                          | []()                                        |
 
 ## Local setup
 
@@ -187,3 +187,13 @@ This course requires more thought, so see [its note here](./qa).
   https://www.freecodecamp.org/learn/scientific-computing-with-python/scientific-computing-with-python-projects/polygon-area-calculator
 [fcc_py_probability]:
   https://www.freecodecamp.org/learn/scientific-computing-with-python/scientific-computing-with-python-projects/probability-calculator
+[fcc_pyda_mean]:
+  https://www.freecodecamp.org/learn/data-analysis-with-python/data-analysis-with-python-projects/mean-variance-standard-deviation-calculator
+[fcc_pyda_demographic]:
+  https://www.freecodecamp.org/learn/data-analysis-with-python/data-analysis-with-python-projects/demographic-data-analyzer
+[fcc_pyda_plot]:
+  https://www.freecodecamp.org/learn/data-analysis-with-python/data-analysis-with-python-projects/medical-data-visualizer
+[fcc_pyda_time]:
+  https://www.freecodecamp.org/learn/data-analysis-with-python/data-analysis-with-python-projects/page-view-time-series-visualizer
+[fcc_pyda_sea]:
+  https://www.freecodecamp.org/learn/data-analysis-with-python/data-analysis-with-python-projects/sea-level-predictor
