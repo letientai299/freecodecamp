@@ -131,7 +131,7 @@ This course requires more thought, so see [its note here](./qa).
 | [Mean-Variance-Standard Deviation Calculator][fcc_pyda_mean] | [./pyda/mean-var-std/](./pyda/mean-var-std) |
 | [Demographic Data Analyzer][fcc_pyda_demographic]            | [./pyda/demographic](./pyda/demographic)    |
 | [Medical Data Visualizer][fcc_pyda_plot]                     | [./pyda/plot](./pyda/plot)                  |
-| [Page View Time Series Visualizer][fcc_pyda_time]            | []()                                        |
+| [Page View Time Series Visualizer][fcc_pyda_time]            | [./pyda/time](./pyda/time)                  |
 | [Sea Level Predictor][fcc_pyda_sea]                          | []()                                        |
 
 ## Local setup
