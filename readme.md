@@ -129,7 +129,7 @@ This course requires more thought, so see [its note here](./qa).
 | Task                                            | Site                                        |
 | ----------------------------------------------- | ------------------------------------------- |
 | [Mean-Variance-Standard Deviation Calculator]() | [./pyda/mean-var-std/](./pyda/mean-var-std) |
-| [Demographic Data Analyzer]()                   | []()                                        |
+| [Demographic Data Analyzer]()                   | [./pyda/demographic](./pyda/demographic)    |
 | [Medical Data Visualizer]()                     | []()                                        |
 | [Page View Time Series Visualizer]()            | []()                                        |
 | [Sea Level Predictor]()                         | []()                                        |
