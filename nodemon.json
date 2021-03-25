@@ -1,0 +1,6 @@
+{
+  "ext": "md",
+  "verbose": true,
+  "ignore": [".git", ".idea", "pyda", "node_modules"],
+  "verbose": false
+}

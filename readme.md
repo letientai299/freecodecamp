@@ -1,4 +1,4 @@
-# freeCodeCamp project solutions
+# freeCodeCamp solutions
 
 [![GH Pages](https://github.com/letientai299/freecodecamp/actions/workflows/gh-pages.yml/badge.svg)](https://github.com/letientai299/freecodecamp/actions/workflows/gh-pages.yml)
 [![GitHub stars](https://img.shields.io/github/stars/letientai299/freecodecamp?style=social&label=Star&maxAge=2592000)](https://GitHub.com/letientai299/freecodecamp/stargazers/)
@@ -125,6 +125,7 @@ This course requires more thought, so see [its note here](./qa).
 ### Data Analysis with Python
 
 - [Course link](https://www.freecodecamp.org/learn/data-analysis-with-python/)
+- [Cert](https://www.freecodecamp.org/certification/letientai299/data-analysis-with-python-v7)
 
 | Task                                                         | Site                                        |
 | ------------------------------------------------------------ | ------------------------------------------- |
