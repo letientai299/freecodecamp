@@ -14,6 +14,7 @@ glob("**/*.md", {}, function(err, files) {
   files
     .filter(f => !f.includes("node_modules"))
     .filter(f => !f.includes("web/doc"))
+    .filter(f => !f.includes("pyda"))
     .forEach(render);
 });
 
