@@ -1,8 +1,34 @@
+const isProd = process.env.NODE_ENV === "production";
+
 const express = require("express");
 const path = require("path");
 const app = express();
+const { v4: uuid } = require("uuid");
 
-const isProd = process.env.NODE_ENV !== undefined;
+const winston = require("winston");
+const colorize = winston.format.colorize().colorize;
+
+const rootLogger = winston.createLogger({
+  level: "debug",
+  format: winston.format.combine(
+    winston.format.timestamp(),
+    winston.format.metadata(),
+    winston.format.printf((info) => {
+      const { level, message, metadata } = info;
+      const { timestamp, requestId } = metadata;
+      const color = (s) => colorize(`${level}`, s);
+
+      if (!!requestId) {
+        return (
+          `${timestamp} ` + color(`${requestId} ${level}:`) + ` ${message}`
+        );
+      }
+
+      return color(`server - ${timestamp} ${level}:`) + ` ${message}`;
+    })
+  ),
+  transports: [new winston.transports.Console()],
+});
 
 if (!isProd) {
   // see the guide for setting up live reload both front and back ends here.
@@ -34,6 +60,17 @@ if (port === undefined || port === "") {
   port = 3000;
 }
 
+app.use((req, res, next) => {
+  // generate unique request ID
+  const reqId = uuid();
+  const log = rootLogger.child({ requestId: reqId });
+
+  // inject logger into request context to use it in later controller
+  req.ctx = { log: log };
+  log.debug(req.originalUrl);
+  next();
+});
+
 app.use("/ms", require("../microservices"));
 app.use("/qa", require("../qa"));
 
@@ -42,5 +79,5 @@ app.get("/", (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`);
+  rootLogger.info(`Listening at http://localhost:${port}`);
 });

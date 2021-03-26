@@ -9,15 +9,16 @@ if (!process.env.DISABLE_XORIGIN) {
       "https://narrow-plane.gomix.me",
       "https://www.freecodecamp.com",
     ];
+
     let origin = req.headers.origin || "*";
     if (!process.env.XORIG_RESTRICT || allowedOrigins.indexOf(origin) > -1) {
-      console.log(origin);
       res.setHeader("Access-Control-Allow-Origin", origin);
       res.header(
         "Access-Control-Allow-Headers",
         "Origin, X-Requested-With, Content-Type, Accept"
       );
     }
+
     next();
   });
 }
@@ -25,7 +26,6 @@ if (!process.env.DISABLE_XORIGIN) {
 router.use(express.static(__dirname + "/public"));
 
 router.route("/_api/package.json").get(function (req, res, next) {
-  console.log("requested");
   fs.readFile(__dirname + "/package.json", function (err, data) {
     if (err) return next(err);
     res.type("txt").send(data.toString());
