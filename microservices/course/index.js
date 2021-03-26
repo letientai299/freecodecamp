@@ -1,12 +1,10 @@
-"use strict";
-
 const fs = require("fs");
 const express = require("express");
-const index = express.Router();
+const router = express.Router();
 const PATH_PREFIX = "/microservices/course";
 
 if (!process.env.DISABLE_XORIGIN) {
-  index.use(function (req, res, next) {
+  router.use(function (req, res, next) {
     let allowedOrigins = [
       "https://narrow-plane.gomix.me",
       "https://www.freecodecamp.com",
@@ -24,9 +22,9 @@ if (!process.env.DISABLE_XORIGIN) {
   });
 }
 
-index.use("/public", express.static(process.cwd() + PATH_PREFIX + "/public"));
+router.use("/public", express.static(process.cwd() + PATH_PREFIX + "/public"));
 
-index.route("/_api/package.json").get(function (req, res, next) {
+router.route("/_api/package.json").get(function (req, res, next) {
   console.log("requested");
   fs.readFile(__dirname + "/package.json", function (err, data) {
     if (err) return next(err);
@@ -34,18 +32,18 @@ index.route("/_api/package.json").get(function (req, res, next) {
   });
 });
 
-index.route("/").get(function (req, res) {
+router.route("/").get(function (req, res) {
   res.sendFile(process.cwd() + PATH_PREFIX + "/views/index.html");
 });
 
 // Respond not found to all the wrong routes
-index.use(function (req, res, next) {
+router.use(function (req, res, next) {
   res.status(404);
   res.type("txt").send("Not found");
 });
 
 // Error Middleware
-index.use(function (err, req, res, next) {
+router.use(function (err, req, res, next) {
   if (err) {
     res
       .status(err.status || 500)
@@ -54,4 +52,4 @@ index.use(function (err, req, res, next) {
   }
 });
 
-module.exports = index;
+module.exports = router;

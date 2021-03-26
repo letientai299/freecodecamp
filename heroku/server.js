@@ -1,4 +1,4 @@
-const microservices = require("../microservices/course/server");
+const microservices = require("../microservices");
 const express = require("express");
 const app = express();
 let port = process.env.PORT;
