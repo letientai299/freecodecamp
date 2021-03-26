@@ -1,7 +1,7 @@
 const fs = require("fs");
 const express = require("express");
 const router = express.Router();
-const PATH_PREFIX = "/microservices/course";
+const path = require("path");
 
 if (!process.env.DISABLE_XORIGIN) {
   router.use(function (req, res, next) {
@@ -22,7 +22,7 @@ if (!process.env.DISABLE_XORIGIN) {
   });
 }
 
-router.use("/public", express.static(process.cwd() + PATH_PREFIX + "/public"));
+router.use(express.static(__dirname + "/public"));
 
 router.route("/_api/package.json").get(function (req, res, next) {
   console.log("requested");
@@ -33,7 +33,7 @@ router.route("/_api/package.json").get(function (req, res, next) {
 });
 
 router.route("/").get(function (req, res) {
-  res.sendFile(process.cwd() + PATH_PREFIX + "/views/index.html");
+  res.sendFile(path.join(__dirname, "/views/index.html"));
 });
 
 // Respond not found to all the wrong routes
