@@ -1,9 +1,9 @@
 const isProd = process.env.NODE_ENV === "production";
 
-const express = require("express");
 const path = require("path");
-const app = express();
 const { v4: uuid } = require("uuid");
+const express = require("express");
+const router = express.Router();
 
 const winston = require("winston");
 const colorize = winston.format.colorize().colorize;
@@ -51,7 +51,7 @@ if (!isProd) {
   });
 
   // inject client script to receive reload notification from live reload server.
-  app.use(connectLivereload());
+  router.use(connectLivereload());
 }
 
 let port = process.env.PORT;
@@ -60,7 +60,41 @@ if (port === undefined || port === "") {
   port = 3000;
 }
 
-app.use((req, res, next) => {
+/**
+ * Enforce trailing class, so that routers in other directories work with local
+ * files as expected.
+ */
+router.use((req, res, next) => {
+  let url = req.url;
+  let queryStart = url.indexOf("?");
+  if ((queryStart > 0 && url[queryStart - 1] === "/") || url.endsWith("/")) {
+    next();
+    return;
+  }
+
+  // special handling for GET requests to static assets
+  if (
+    queryStart < 0 &&
+    req.method === "GET" &&
+    url.match(/\.(css|html|js|jpe?g|png|webp|ico)$/)
+  ) {
+    next();
+    return;
+  }
+
+  if (queryStart < 0) {
+    res.redirect(301, url + "/");
+    return;
+  }
+
+  url = url.substring(0, queryStart) + "/" + url.substring(queryStart);
+  res.redirect(301, url);
+});
+
+/**
+ * Generate request ID, log and inject the logger to other routers
+ */
+router.use((req, res, next) => {
   // generate unique request ID
   const reqId = uuid();
   const log = rootLogger.child({ requestId: reqId });
@@ -71,13 +105,15 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use("/ms", require("../microservices"));
-app.use("/qa", require("../qa"));
+router.use("/ms", require("../microservices"));
+router.use("/qa", require("../qa"));
+router.get("/", (req, res) => res.send("Hello!"));
+router.get("/favicon.ico", (req, res) =>
+  res.sendFile(path.join(__dirname, "./favicon.ico"))
+);
 
-app.get("/", (req, res) => {
-  res.send("Hello from Github Actions!");
-});
-
+const app = express();
+app.use(router);
 app.listen(port, () => {
   rootLogger.info(`Listening at http://localhost:${port}`);
 });
