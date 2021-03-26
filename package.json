@@ -16,9 +16,15 @@
     "nodemon": "2.0.7"
   },
   "dependencies": {
+    "body-parser": "^1.15.2",
+    "chai": "^3.5.0",
+    "chai-http": "4.3.0",
     "connect-livereload": "0.6.1",
+    "cors": "^2.8.1",
     "express": "4.17.1",
-    "livereload": "0.9.3"
+    "livereload": "0.9.3",
+    "mocha": "8.3.2",
+    "zombie": "6.1.4"
   },
   "engines": {
     "node": "15.x"

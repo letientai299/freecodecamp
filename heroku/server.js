@@ -1,4 +1,3 @@
-const microservices = require("../microservices");
 const express = require("express");
 const path = require("path");
 
@@ -11,6 +10,8 @@ const livereload = require("livereload");
 const liveReloadServer = livereload.createServer();
 let msPath = path.join(__dirname, "../microservices");
 liveReloadServer.watch(msPath);
+let qaPath = path.join(__dirname, "../qa");
+liveReloadServer.watch(qaPath);
 
 // sent reload refresh to client  on local files chance.
 liveReloadServer.server.once("connection", () => {
@@ -30,11 +31,12 @@ if (port === undefined || port === "") {
   port = 3000;
 }
 
-app.get("/", (req, res) => {
-  res.send("1 Hello from Github Actions!\n");
-});
+app.use("/ms", require("../microservices"));
+app.use("/qa", require("../qa"));
 
-app.use("/ms", microservices);
+app.get("/", (req, res) => {
+  res.send("Hello from Github Actions!");
+});
 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);
