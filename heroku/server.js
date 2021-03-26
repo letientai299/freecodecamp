@@ -52,6 +52,9 @@ if (!isProd) {
 
   // inject client script to receive reload notification from live reload server.
   router.use(connectLivereload());
+} else {
+  // enable performance monitoring
+  require("newrelic");
 }
 
 let port = process.env.PORT;
