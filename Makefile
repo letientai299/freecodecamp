@@ -19,3 +19,6 @@ serve: # Watch file change, render and serve them
 		"./node_modules/.bin/nodemon --config nodemon.json -x 'node render.js'" \
 		"./live-server.sh"
 
+.PHONY: live
+live: ## Start live servers for Express app
+	./node_modules/.bin/nodemon --config nodemon.json -w '*.js' heroku/server.js
