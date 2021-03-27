@@ -1,35 +1,35 @@
 /****** Main Styling ******/
 
 body {
-	font-family: 'Roboto', sans-serif;
-	font-size: 16px;
-	color: #222;
-	background-color: #ECF0F1;
-	text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  color: #222;
+  background-color: #ecf0f1;
+  text-align: center;
 }
 
 .container {
-	padding: 0;
-	margin-top: 40px;
+  padding: 0;
+  margin-top: 40px;
 }
 
 .footer {
-	margin-top: 60px;
+  margin-top: 60px;
 }
 
 ol {
-	list-style-position: inside;
+  list-style-position: inside;
 }
 ul {
-	list-style-type: none;
+  list-style-type: none;
 }
 
 a {
-	color: #2574A9;
+  color: #2574a9;
 }
 /****** Logo Div Styling ******/
 
 img {
-	margin: 20px auto 0 auto;
-	display: block;
+  margin: 20px auto 0 auto;
+  display: block;
 }

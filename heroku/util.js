@@ -2,7 +2,6 @@ const pino = require("pino");
 const pinoHttp = require("pino-http");
 const { BufferedStream } = require("./buffer");
 const nanoid = require("nanoid").nanoid;
-const LOG_BUFFER_SIZE = 1024 * 1024 * 4;
 
 function genId() {
   return nanoid();
@@ -87,7 +86,7 @@ function createProdLogger() {
     end_stream: true,
   });
 
-  const bufferedOut = new BufferedStream(out, LOG_BUFFER_SIZE);
+  const bufferedOut = new BufferedStream(out);
 
   const log = pino({ level: "debug", sync: false }, bufferedOut);
   // const log = pino({ level: "debug" }, out);
