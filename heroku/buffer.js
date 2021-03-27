@@ -35,13 +35,6 @@ class BufferedStream extends Stream {
 }
 
 function flushOnExit(log) {
-  process.on("uncaughtException", (err) => {
-    console.log("uncaughtException: ", err);
-    log.write(`uncaughtException=${err}\n`);
-    log.flush();
-    process.exit(1);
-  });
-
   const cleanExits = ["SIGINT", "exit", "SIGUSR1", "SIGUSR2", "SIGTERM"];
 
   cleanExits.forEach((e) =>

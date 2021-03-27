@@ -7,13 +7,13 @@ const {
 const isProd = process.env.NODE_ENV === "production";
 
 const path = require("path");
+const compression = require("compression");
 const express = require("express");
 const router = express.Router();
 
 let logConfig;
 if (!isProd) {
-  // logConfig = createDevLogger();
-  logConfig = createProdLogger();
+  logConfig = createDevLogger();
   setupLiveReload(router);
 } else {
   // enable performance monitoring
@@ -59,6 +59,13 @@ router.use((req, res, next) => {
 });
 
 router.use(logConfig.middleware);
+
+// send the request ID to front end for troubleshooting if needed.
+router.use((req, res, next) => {
+  res.setHeader("X-Request-ID", `${req.id}`);
+  next();
+});
+
 router.use("/ms", require("../microservices"));
 router.use("/qa", require("../qa"));
 
@@ -66,7 +73,7 @@ let counter = 0;
 
 router.get("/", (req, res) => {
   counter++;
-  res.send(`Hello! ${counter}`);
+  res.end(`Hello! ${counter}`);
   // req.log.info(`counter: ${counter}`);
 });
 
@@ -75,7 +82,10 @@ router.get("/favicon.ico", (req, res) =>
 );
 
 const app = express();
+
+app.use(compression());
 app.use(router);
+
 app.listen(port, () => {
   console.log(`Listening at http://localhost:${port}`);
   logConfig.log.info(`Listening at http://localhost:${port}`);

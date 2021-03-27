@@ -1,8 +1,12 @@
 const pino = require("pino");
 const pinoHttp = require("pino-http");
 const { BufferedStream } = require("./buffer");
-const { v4: uuid } = require("uuid");
+const nanoid = require("nanoid").nanoid;
 const LOG_BUFFER_SIZE = 1024 * 1024 * 4;
+
+function genId() {
+  return nanoid();
+}
 
 function setupLiveReload(router) {
   const path = require("path");
@@ -57,7 +61,7 @@ function createDevLogger() {
 
   const middleware = pinoHttp({
     logger: log,
-    genReqId: uuid,
+    genReqId: genId,
     useLevel: "debug",
     customSuccessMessage: (res) => {
       return `${res.statusCode} ${res.statusMessage}`;
@@ -85,12 +89,12 @@ function createProdLogger() {
 
   const bufferedOut = new BufferedStream(out, LOG_BUFFER_SIZE);
 
-  const log = pino({ level: "debug" }, bufferedOut);
+  const log = pino({ level: "debug", sync: false }, bufferedOut);
   // const log = pino({ level: "debug" }, out);
 
   const middleware = pinoHttp({
     logger: log,
-    genReqId: uuid,
+    genReqId: genId,
     useLevel: "debug",
   });
 
