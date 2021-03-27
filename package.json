@@ -33,7 +33,8 @@
     "zombie": "6.1.4"
   },
   "engines": {
-    "node": "15.x"
+    "node": "15.x",
+    "npm": "7.x"
   },
   "scripts": {
     "start": "node ./heroku/server.js"
