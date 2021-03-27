@@ -1,14 +1,14 @@
 const { Stream } = require("stream");
-
+const bufferSize = 1024 * 1024; // 1MB
 const enc = "ascii";
 
 class BufferedStream extends Stream {
-  constructor(out, byteSize) {
+  constructor(out) {
     super();
     this.out = out;
-    this.cap = byteSize;
+    this.cap = bufferSize;
     this.current = 0;
-    this.buffer = Buffer.alloc(byteSize);
+    this.buffer = Buffer.alloc(bufferSize);
     flushOnExit(this);
   }
 

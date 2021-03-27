@@ -1,20 +1,19 @@
+require("dotenv").config();
+
+const cluster = require("cluster");
+const http = require("http");
 const {
+  setupLiveReload,
   createDevLogger,
   createProdLogger,
-  setupLiveReload,
 } = require("./util");
 
+const numCPUs = require("os").cpus().length;
+
 const isProd = process.env.NODE_ENV === "production";
-
-const path = require("path");
-const compression = require("compression");
-const express = require("express");
-const router = express.Router();
-
 let logConfig;
 if (!isProd) {
   logConfig = createDevLogger();
-  setupLiveReload(router);
 } else {
   // enable performance monitoring
   require("newrelic");
@@ -22,71 +21,38 @@ if (!isProd) {
 }
 
 let port = process.env.PORT;
-
 if (port === undefined || port === "") {
   port = 3000;
 }
 
-/**
- * Enforce trailing class, so that routers in other directories work with local
- * files as expected.
- */
-router.use((req, res, next) => {
-  let url = req.url;
-  let queryStart = url.indexOf("?");
-  if ((queryStart > 0 && url[queryStart - 1] === "/") || url.endsWith("/")) {
-    next();
-    return;
+if (cluster.isMaster) {
+  console.log(`Master ${process.pid} is running`);
+
+  // Fork workers.
+  for (let i = 0; i < numCPUs; i++) {
+    cluster.fork();
   }
 
-  // special handling for GET requests to static assets
-  if (
-    queryStart < 0 &&
-    req.method === "GET" &&
-    url.match(/\.(css|html|js|jpe?g|png|webp|ico)$/)
-  ) {
-    next();
-    return;
+  cluster.on("exit", (worker, code, signal) => {
+    console.log(`worker ${worker.process.pid} died`);
+    cluster.fork();
+  });
+} else {
+  const express = require("express");
+  const app = express();
+
+  // the orders of these middlewares are important.
+
+  app.use(logConfig.middleware);
+  if (!isProd) {
+    setupLiveReload(app);
   }
 
-  if (queryStart < 0) {
-    res.redirect(301, url + "/");
-    return;
-  }
+  const { router } = require("./router");
+  app.use(router);
+  app.server = http.createServer(app);
+  app.disable("x-powered-by");
+  app.listen(port);
 
-  url = url.substring(0, queryStart) + "/" + url.substring(queryStart);
-  res.redirect(301, url);
-});
-
-router.use(logConfig.middleware);
-
-// send the request ID to front end for troubleshooting if needed.
-router.use((req, res, next) => {
-  res.setHeader("X-Request-ID", `${req.id}`);
-  next();
-});
-
-router.use("/ms", require("../microservices"));
-router.use("/qa", require("../qa"));
-
-let counter = 0;
-
-router.get("/", (req, res) => {
-  counter++;
-  res.end(`Hello! ${counter}`);
-  // req.log.info(`counter: ${counter}`);
-});
-
-router.get("/favicon.ico", (req, res) =>
-  res.sendFile(path.join(__dirname, "./favicon.ico"))
-);
-
-const app = express();
-
-app.use(compression());
-app.use(router);
-
-app.listen(port, () => {
-  console.log(`Listening at http://localhost:${port}`);
-  logConfig.log.info(`Listening at http://localhost:${port}`);
-});
+  console.log(`Worker ${process.pid} started on port ${port}`);
+}
