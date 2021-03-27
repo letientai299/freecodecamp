@@ -12,7 +12,7 @@ router.use((req, res, next) => {
   // special handling for GET requests to static assets
   if (
     req.method === "GET" &&
-    url.match(/\.(css|html|js|jpe?g|png|webp|ico)(\?.*)?$/)
+    url.match(/\.(css|html|js|jpe?g|png|webp|ico|json)(\?.*)?$/)
   ) {
     next();
     return;
