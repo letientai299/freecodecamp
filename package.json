@@ -5,6 +5,11 @@
   "description": "Solutions for final freeCodeCamp projects",
   "author": "letientai299",
   "license": "MIT",
+  "keywords": [
+    "freecodecamp",
+    "study",
+    "example"
+  ],
   "devDependencies": {
     "concurrently": "6.0.0",
     "d3": "6.6.0",

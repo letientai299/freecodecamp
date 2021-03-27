@@ -28,24 +28,24 @@ router.use(express.static(__dirname + "/public"));
 router.route("/_api/package.json").get(function (req, res, next) {
   fs.readFile(path.join(__dirname, "../../package.json"), function (err, data) {
     if (err) return next(err);
-    res.type("txt").send(data.toString());
+    return res.type("txt").send(data.toString());
   });
 });
 
 router.route("/").get(function (req, res) {
-  res.sendFile(path.join(__dirname, "/views/index.html"));
+  return res.sendFile(path.join(__dirname, "/views/index.html"));
 });
 
 // Respond not found to all the wrong routes
 router.use(function (req, res, next) {
   res.status(404);
-  res.type("txt").send("Not found");
+  return res.type("txt").send("Not found");
 });
 
 // Error Middleware
 router.use(function (err, req, res, next) {
   if (err) {
-    res
+    return res
       .status(err.status || 500)
       .type("txt")
       .send(err.message || "SERVER ERROR");
