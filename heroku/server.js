@@ -1,60 +1,24 @@
+const {
+  createDevLogger,
+  createProdLogger,
+  setupLiveReload,
+} = require("./util");
+
 const isProd = process.env.NODE_ENV === "production";
 
 const path = require("path");
-const { v4: uuid } = require("uuid");
 const express = require("express");
 const router = express.Router();
 
-const winston = require("winston");
-const colorize = winston.format.colorize().colorize;
-
-const rootLogger = winston.createLogger({
-  level: "debug",
-  format: winston.format.combine(
-    winston.format.timestamp(),
-    winston.format.metadata(),
-    winston.format.printf((info) => {
-      const { level, message, metadata } = info;
-      const { timestamp, requestId } = metadata;
-      const color = (s) => colorize(`${level}`, s);
-
-      if (!!requestId) {
-        return (
-          `${timestamp} ` + color(`${requestId} ${level}:`) + ` ${message}`
-        );
-      }
-
-      return color(`server - ${timestamp} ${level}:`) + ` ${message}`;
-    })
-  ),
-  transports: [new winston.transports.Console()],
-});
-
+let logConfig;
 if (!isProd) {
-  // see the guide for setting up live reload both front and back ends here.
-  // https://bytearcher.com/articles/refresh-changes-browser-express-livereload-nodemon/
-  const connectLivereload = require("connect-livereload");
-  const livereload = require("livereload");
-
-  // setup live reload server
-  const liveReloadServer = livereload.createServer();
-  let msPath = path.join(__dirname, "../microservices");
-  liveReloadServer.watch(msPath);
-  let qaPath = path.join(__dirname, "../qa");
-  liveReloadServer.watch(qaPath);
-
-  // sent reload refresh to client  on local files chance.
-  liveReloadServer.server.once("connection", () => {
-    setTimeout(() => {
-      liveReloadServer.refresh("/");
-    }, 100);
-  });
-
-  // inject client script to receive reload notification from live reload server.
-  router.use(connectLivereload());
+  // logConfig = createDevLogger();
+  logConfig = createProdLogger();
+  setupLiveReload(router);
 } else {
   // enable performance monitoring
   require("newrelic");
+  logConfig = createProdLogger();
 }
 
 let port = process.env.PORT;
@@ -94,23 +58,18 @@ router.use((req, res, next) => {
   res.redirect(301, url);
 });
 
-/**
- * Generate request ID, log and inject the logger to other routers
- */
-router.use((req, res, next) => {
-  // generate unique request ID
-  const reqId = uuid();
-  const log = rootLogger.child({ requestId: reqId });
-
-  // inject logger into request context to use it in later controller
-  req.ctx = { log: log };
-  log.debug(req.originalUrl);
-  next();
-});
-
+router.use(logConfig.middleware);
 router.use("/ms", require("../microservices"));
 router.use("/qa", require("../qa"));
-router.get("/", (req, res) => res.send("Hello!"));
+
+let counter = 0;
+
+router.get("/", (req, res) => {
+  counter++;
+  res.send(`Hello! ${counter}`);
+  // req.log.info(`counter: ${counter}`);
+});
+
 router.get("/favicon.ico", (req, res) =>
   res.sendFile(path.join(__dirname, "./favicon.ico"))
 );
@@ -118,5 +77,6 @@ router.get("/favicon.ico", (req, res) =>
 const app = express();
 app.use(router);
 app.listen(port, () => {
-  rootLogger.info(`Listening at http://localhost:${port}`);
+  console.log(`Listening at http://localhost:${port}`);
+  logConfig.log.info(`Listening at http://localhost:${port}`);
 });

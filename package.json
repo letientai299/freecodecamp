@@ -20,11 +20,13 @@
     "connect-livereload": "0.6.1",
     "cors": "^2.8.1",
     "express": "4.17.1",
+    "file-stream-rotator": "0.5.7",
     "livereload": "0.9.3",
     "mocha": "8.3.2",
     "newrelic": "7.2.0",
+    "pino": "6.11.2",
+    "pino-http": "5.5.0",
     "uuid": "3.4.0",
-    "winston": "3.3.3",
     "zombie": "6.1.4"
   },
   "engines": {
