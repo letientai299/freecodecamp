@@ -8,14 +8,14 @@ const bodyParser = require("body-parser");
 router.use(bodyParser.json());
 
 router.get("/", function (req, res) {
-  res.sendFile(__dirname + "/views/index.html");
+  return res.sendFile(__dirname + "/views/index.html");
 });
 
 router.use(express.static(__dirname + "/public"));
 
 router.get("/hello", function (req, res) {
   const name = req.query.name || "Guest";
-  res.type("txt").send("hello " + name);
+  return res.type("txt").send("hello " + name);
 });
 
 const travellers = function (req, res) {
@@ -70,10 +70,12 @@ router.get(
     if (error) return res.json({ status: "unavailable" });
     next();
   },
+
   function (req, res, next) {
     if (!runner.report) return next();
-    res.json(testFilter(runner.report, req.query.type, req.query.n));
+    return res.json(testFilter(runner.report, req.query.type, req.query.n));
   },
+
   function (req, res) {
     runner.on("done", function (report) {
       process.nextTick(() =>
