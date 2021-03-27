@@ -26,7 +26,7 @@ if (!process.env.DISABLE_XORIGIN) {
 router.use(express.static(__dirname + "/public"));
 
 router.route("/_api/package.json").get(function (req, res, next) {
-  fs.readFile(__dirname + "/package.json", function (err, data) {
+  fs.readFile(path.join(__dirname, "../../package.json"), function (err, data) {
     if (err) return next(err);
     res.type("txt").send(data.toString());
   });
