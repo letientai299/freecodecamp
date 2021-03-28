@@ -49,10 +49,11 @@ function createDevLogger() {
         }
 
         const req = data.req;
+        const res = data.res;
 
         return (
           `${ts}|${level}|${req.id}|${req.method} ${req.url}|` +
-          `${data.msg}${EOL}`
+          `${data.msg}|req_body=${req.body}|res_body=${res.body}${EOL}`
         );
       };
     },
