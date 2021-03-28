@@ -57,7 +57,7 @@ const travellers = function (req, res) {
         };
     }
   }
-  res.json(data);
+  return res.json(data);
 };
 
 router.route("/travellers").put(travellers);
@@ -67,7 +67,14 @@ router.get(
   "/_api/get-tests",
   cors(),
   function (req, res, next) {
-    if (error) return res.json({ status: "unavailable" });
+    if (!runner.report) {
+      runner.run();
+    }
+
+    if (error) {
+      return res.json({ status: "unavailable" });
+    }
+
     next();
   },
 

@@ -1,5 +1,5 @@
 function Utils() {
-  this.ready = function(fn) {
+  this.ready = function (fn) {
     if (typeof fn !== "function") {
       return;
     }
@@ -11,10 +11,10 @@ function Utils() {
     document.addEventListener("DOMContentLoaded", fn, false);
   };
 
-  this.ajax = function(options, cb) {
+  this.ajax = function (options, cb) {
     const xmlhttp = new XMLHttpRequest();
 
-    xmlhttp.onreadystatechange = function() {
+    xmlhttp.onreadystatechange = function () {
       if (xmlhttp.readyState === 4) {
         if (Math.floor(xmlhttp.status / 100) === 2) {
           var results = xmlhttp.responseText;
@@ -76,21 +76,21 @@ function Utils() {
 
 const utils = new Utils();
 
-utils.ready(function() {
+utils.ready(function () {
   const form = document.getElementById("f1");
   const input = document.getElementById("i1");
   const div = document.getElementById("tn");
-  form.addEventListener("submit", function(e) {
+  form.addEventListener("submit", function (e) {
     e.preventDefault();
     if (input.value) {
       const options = {
         method: "put",
-        url: "/travellers",
+        url: "./travellers",
         type: "json",
-        data: { surname: input.value }
+        data: { surname: input.value },
       };
       div.innerHTML = "<p>Loading...</p>";
-      utils.ajax(options, function(err, res) {
+      utils.ajax(options, function (err, res) {
         if (err) return console.log(err);
         div.innerHTML =
           '<p>first name: <span id="name">' +
