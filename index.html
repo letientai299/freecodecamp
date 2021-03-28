@@ -61,9 +61,11 @@ start in 2021/03/11, finish in TBD</li>
 <li><a href="#javascript-algorithms-and-data-structures">JavaScript Algorithms and Data Structures</a></li>
 <li><a href="#responsive-web-design">Responsive Web Design</a></li>
 <li><a href="#data-visualization">Data Visualization</a></li>
-<li><a href="#quality-assurange">Quality assurange</a></li>
 <li><a href="#scientific-computing-with-python">Scientific Computing with Python</a></li>
 <li><a href="#data-analysis-with-python">Data Analysis with Python</a></li>
+<li><a href="#apis-and-microservices">APIs and Microservices</a></li>
+<li><a href="#quality-assurange">Quality assurange</a></li>
+<li><a href="#machine-learning-with-python">Machine Learning with Python</a></li>
 </ul>
 </li>
 <li><a href="#local-setup">Local setup</a></li>
@@ -169,40 +171,6 @@ more about JS performance. The code could also be structured better.</p>
 <td><a href="./d3/treemap">./d3/treemap</a></td>
 </tr>
 </tbody></table>
-<h3 id="quality-assurange">Quality assurange</h3>
-<ul>
-<li><a target='_blank'  href="https://www.freecodecamp.org/learn/quality-assurance">Course link</a></li>
-<li>Cert: TODO</li>
-</ul>
-<p>This course requires more thought, so see <a href="./qa">its note here</a>.</p>
-<table>
-<thead>
-<tr>
-<th>Task</th>
-<th>Site</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><a target='_blank'  href="https://www.freecodecamp.org/learn/quality-assurance/quality-assurance-projects/metric-imperial-converter">Metric-Imperial Converter</a></td>
-<td><a href="./qa/converter">./qa/converter</a></td>
-</tr>
-<tr>
-<td><a target='_blank'  href="https://www.freecodecamp.org/learn/quality-assurance/quality-assurance-projects/issue-tracker">Issue Tracker</a></td>
-<td><a href="./qa/tracker">./qa/tracker</a></td>
-</tr>
-<tr>
-<td><a target='_blank'  href="https://www.freecodecamp.org/learn/quality-assurance/quality-assurance-projects/personal-library">Personal Library</a></td>
-<td><a href="./qa/lib">./qa/lib</a></td>
-</tr>
-<tr>
-<td><a target='_blank'  href="https://www.freecodecamp.org/learn/quality-assurance/quality-assurance-projects/sudoku-solver">Sudoku Solver</a></td>
-<td><a href="./qa/sudoku">./qa/sudoku</a></td>
-</tr>
-<tr>
-<td><a target='_blank'  href="https://www.freecodecamp.org/learn/quality-assurance/quality-assurance-projects/american-british-translator">American British Translator</a></td>
-<td><a href="./qa/translator">./qa/translator</a></td>
-</tr>
-</tbody></table>
 <h3 id="scientific-computing-with-python">Scientific Computing with Python</h3>
 <ul>
 <li><a target='_blank'  href="https://www.freecodecamp.org/learn/scientific-computing-with-python/">Course link</a></li>
@@ -290,6 +258,82 @@ OK inefficient workflows.</p>
 <tr>
 <td><a target='_blank'  href="https://www.freecodecamp.org/learn/data-analysis-with-python/data-analysis-with-python-projects/sea-level-predictor">Sea Level Predictor</a></td>
 <td><a href="./pyda/sea">./pyda/sea</a></td>
+</tr>
+</tbody></table>
+<h3 id="apis-and-microservices">APIs and Microservices</h3>
+<ul>
+<li><a target='_blank'  href="https://www.freecodecamp.org/learn/apis-and-microservices/#basic-node-and-express">Course link</a></li>
+<li>Cert: TODO</li>
+</ul>
+<p>This and other courses need a backend require more setup. So I build
+<a target='_blank'  href="https://fcc-box.herokuapp.com/">a small Express app to serve all of them on Heroku</a>.</p>
+<p>In order to do that, I had to modify some files that&#39;re suppose to not modified,
+remove the <code>app = express()</code> and expose <code>express.Router()</code>. See the main app
+code and some custom middlewares in
+<a target='_blank'  href="https://github.com/letientai299/freecodecamp/tree/master/heroku">heroku folder</a></p>
+<p>The setup works quite well for passing the courses quickly, but I&#39;m not happy
+with its performance. I&#39;ve tried <a href="./heroku">stress test</a> the dummy <code>GET /</code>,
+implement buffered logging and use <code>cluster</code> to run it with multi cores. If you
+know any good resources or see any of my mistakes, I&#39;m eager to learn.</p>
+<table>
+<thead>
+<tr>
+<th>Task</th>
+<th>Site</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a target='_blank'  href="https://www.freecodecamp.org/learn/apis-and-microservices/apis-and-microservices-projects/timestamp-microservice">Timestamp Microservice</a></td>
+<td><a href=""></a></td>
+</tr>
+<tr>
+<td><a target='_blank'  href="https://www.freecodecamp.org/learn/apis-and-microservices/apis-and-microservices-projects/request-header-parser-microservice">Request Header Parser Microservice</a></td>
+<td><a href=""></a></td>
+</tr>
+<tr>
+<td><a target='_blank'  href="https://www.freecodecamp.org/learn/apis-and-microservices/apis-and-microservices-projects/url-shortener-microservice">URL Shortener Microservice</a></td>
+<td><a href=""></a></td>
+</tr>
+<tr>
+<td><a target='_blank'  href="https://www.freecodecamp.org/learn/apis-and-microservices/apis-and-microservices-projects/exercise-tracker">Exercise Tracker</a></td>
+<td><a href=""></a></td>
+</tr>
+<tr>
+<td><a target='_blank'  href="https://www.freecodecamp.org/learn/apis-and-microservices/apis-and-microservices-projects/file-metadata-microservice">File Metadata Microservice</a></td>
+<td><a href=""></a></td>
+</tr>
+</tbody></table>
+<h3 id="quality-assurange">Quality assurange</h3>
+<ul>
+<li><a target='_blank'  href="https://www.freecodecamp.org/learn/quality-assurance">Course link</a></li>
+<li>Cert: TODO</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Task</th>
+<th>Site</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a target='_blank'  href="https://www.freecodecamp.org/learn/quality-assurance/quality-assurance-projects/metric-imperial-converter">Metric-Imperial Converter</a></td>
+<td><a href="./qa/converter">./qa/converter</a></td>
+</tr>
+<tr>
+<td><a target='_blank'  href="https://www.freecodecamp.org/learn/quality-assurance/quality-assurance-projects/issue-tracker">Issue Tracker</a></td>
+<td><a href="./qa/tracker">./qa/tracker</a></td>
+</tr>
+<tr>
+<td><a target='_blank'  href="https://www.freecodecamp.org/learn/quality-assurance/quality-assurance-projects/personal-library">Personal Library</a></td>
+<td><a href="./qa/lib">./qa/lib</a></td>
+</tr>
+<tr>
+<td><a target='_blank'  href="https://www.freecodecamp.org/learn/quality-assurance/quality-assurance-projects/sudoku-solver">Sudoku Solver</a></td>
+<td><a href="./qa/sudoku">./qa/sudoku</a></td>
+</tr>
+<tr>
+<td><a target='_blank'  href="https://www.freecodecamp.org/learn/quality-assurance/quality-assurance-projects/american-british-translator">American British Translator</a></td>
+<td><a href="./qa/translator">./qa/translator</a></td>
 </tr>
 </tbody></table>
 <h3 id="machine-learning-with-python">Machine Learning with Python</h3>
