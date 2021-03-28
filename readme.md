@@ -21,9 +21,11 @@ on [freeCodeCamp][fcc] in 2021.
   - [JavaScript Algorithms and Data Structures](#javascript-algorithms-and-data-structures)
   - [Responsive Web Design](#responsive-web-design)
   - [Data Visualization](#data-visualization)
-  - [Quality assurange](#quality-assurange)
   - [Scientific Computing with Python](#scientific-computing-with-python)
   - [Data Analysis with Python](#data-analysis-with-python)
+  - [APIs and Microservices](#apis-and-microservices)
+  - [Quality assurange](#quality-assurange)
+  - [Machine Learning with Python](#machine-learning-with-python)
 - [Local setup](#local-setup)
 
 <!-- tocstop -->
@@ -91,21 +93,6 @@ more about JS performance. The code could also be structured better.
 | [Visualize Data with a Choropleth Map][fcc_d3_choropleth]     | [./d3/choropleth](./d3/choropleth)   |
 | [Visualize Data with a Treemap Diagram][fcc_d3_treemap]       | [./d3/treemap](./d3/treemap)         |
 
-### Quality assurange
-
-- [Course link][fcc_qa]
-- Cert: TODO
-
-This course requires more thought, so see [its note here](./qa).
-
-| Task                                             | Site                               |
-| ------------------------------------------------ | ---------------------------------- |
-| [Metric-Imperial Converter][fcc_qa_converter]    | [./qa/converter](./qa/converter)   |
-| [Issue Tracker][fcc_qa_tracker]                  | [./qa/tracker](./qa/tracker)       |
-| [Personal Library][fcc_qa_lib]                   | [./qa/lib](./qa/lib)               |
-| [Sudoku Solver][fcc_qa_sudoku]                   | [./qa/sudoku](./qa/sudoku)         |
-| [American British Translator][fcc_qa_translator] | [./qa/translator](./qa/translator) |
-
 ### Scientific Computing with Python
 
 - [Course link][fcc_py]
@@ -152,6 +139,45 @@ OK inefficient workflows.
 | [Medical Data Visualizer][fcc_pyda_plot]                     | [./pyda/plot](./pyda/plot)                  |
 | [Page View Time Series Visualizer][fcc_pyda_time]            | [./pyda/time](./pyda/time)                  |
 | [Sea Level Predictor][fcc_pyda_sea]                          | [./pyda/sea](./pyda/sea)                    |
+
+### APIs and Microservices
+
+- [Course link](https://www.freecodecamp.org/learn/apis-and-microservices/#basic-node-and-express)
+- Cert: TODO
+
+This and other courses need a backend require more setup. So I build
+[a small Express app to serve all of them on Heroku](https://fcc-box.herokuapp.com/).
+
+In order to do that, I had to modify some files that're suppose to not modified,
+remove the `app = express()` and expose `express.Router()`. See the main app
+code and some custom middlewares in
+[heroku folder](https://github.com/letientai299/freecodecamp/tree/master/heroku)
+
+The setup works quite well for passing the courses quickly, but I'm not happy
+with its performance. I've tried [stress test](./heroku) the dummy `GET /`,
+implement buffered logging and use `cluster` to run it with multi cores. If you
+know any good resources or see any of my mistakes, I'm eager to learn.
+
+| Task                                                | Site |
+| --------------------------------------------------- | ---- |
+| [Timestamp Microservice][fcc_ms_time]               | []() |
+| [Request Header Parser Microservice][fcc_ms_header] | []() |
+| [URL Shortener Microservice][fcc_ms_short_url]      | []() |
+| [Exercise Tracker][fcc_ms_exercise]                 | []() |
+| [File Metadata Microservice][fcc_ms_file]           | []() |
+
+### Quality assurange
+
+- [Course link][fcc_qa]
+- Cert: TODO
+
+| Task                                             | Site                               |
+| ------------------------------------------------ | ---------------------------------- |
+| [Metric-Imperial Converter][fcc_qa_converter]    | [./qa/converter](./qa/converter)   |
+| [Issue Tracker][fcc_qa_tracker]                  | [./qa/tracker](./qa/tracker)       |
+| [Personal Library][fcc_qa_lib]                   | [./qa/lib](./qa/lib)               |
+| [Sudoku Solver][fcc_qa_sudoku]                   | [./qa/sudoku](./qa/sudoku)         |
+| [American British Translator][fcc_qa_translator] | [./qa/translator](./qa/translator) |
 
 ### Machine Learning with Python
 
@@ -241,3 +267,13 @@ OK inefficient workflows.
   https://www.freecodecamp.org/learn/machine-learning-with-python/machine-learning-with-python-projects/linear-regression-health-costs-calculator
 [fcc_ai_nn]:
   https://www.freecodecamp.org/learn/machine-learning-with-python/machine-learning-with-python-projects/neural-network-sms-text-classifier
+[fcc_ms_time]:
+  https://www.freecodecamp.org/learn/apis-and-microservices/apis-and-microservices-projects/timestamp-microservice
+[fcc_ms_header]:
+  https://www.freecodecamp.org/learn/apis-and-microservices/apis-and-microservices-projects/request-header-parser-microservice
+[fcc_ms_short_url]:
+  https://www.freecodecamp.org/learn/apis-and-microservices/apis-and-microservices-projects/url-shortener-microservice
+[fcc_ms_exercise]:
+  https://www.freecodecamp.org/learn/apis-and-microservices/apis-and-microservices-projects/exercise-tracker
+[fcc_ms_file]:
+  https://www.freecodecamp.org/learn/apis-and-microservices/apis-and-microservices-projects/file-metadata-microservice
