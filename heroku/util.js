@@ -53,7 +53,7 @@ function createDevLogger() {
 
         return (
           `${ts}|${level}|${req.id}|${req.method} ${req.url}|` +
-          `${data.msg}|req_body=${req.body}|res_body=${res.body}${EOL}`
+          `${data.msg}${EOL}`
         );
       };
     },

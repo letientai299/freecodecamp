@@ -23,6 +23,7 @@ if (!isProd) {
 let port = process.env.PORT;
 if (port === undefined || port === "") {
   port = 3000;
+  process.env.PORT = port;
 }
 
 if (cluster.isMaster) {

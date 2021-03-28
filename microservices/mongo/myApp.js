@@ -3,10 +3,12 @@ require("dotenv").config();
 const mongoURL = "mongodb://localhost:27017/mongo";
 const mg = require("mongoose");
 
-mg.connect(mongoURL, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-}).then((r) => console.log("Connected to mongo: ", mongoURL));
+if (process.env.NODE_ENV !== "production") {
+  mg.connect(mongoURL, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  }).then((r) => console.log("Connected to mongo: ", mongoURL));
+}
 
 let personSchema = new mg.Schema({
   name: { type: String, required: true },

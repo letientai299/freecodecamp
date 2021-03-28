@@ -8,30 +8,27 @@ const router = express.Router();
  * files as expected.
  */
 router.use((req, res, next) => {
+  if (req.method !== "GET") {
+    return next();
+  }
+
   let url = req.url;
   // special handling for GET requests to static assets
-  if (
-    req.method === "GET" &&
-    url.match(/\.(css|html|js|jpe?g|png|webp|ico|json)(\?.*)?$/)
-  ) {
-    next();
-    return;
+  if (url.match(/\.(css|html|js|jpe?g|png|webp|ico|json)(\?.*)?$/)) {
+    return next();
   }
 
   if (url.match(/\/(_api\/).*/)) {
-    next();
-    return;
+    return next();
   }
 
   let queryStart = url.indexOf("?");
   if ((queryStart > 0 && url[queryStart - 1] === "/") || url.endsWith("/")) {
-    next();
-    return;
+    return next();
   }
 
   if (queryStart < 0) {
-    res.redirect(301, url + "/");
-    return;
+    return res.redirect(301, url + "/");
   }
 
   url = url.substring(0, queryStart) + "/" + url.substring(queryStart);
