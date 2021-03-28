@@ -44,7 +44,7 @@ if (cluster.isMaster) {
   // the orders of these middlewares are important.
 
   app.use(logConfig.middleware);
-  if (!isProd) {
+  if (!isProd && process.env.NODE_ENV !== "debug") {
     setupLiveReload(app);
   }
 

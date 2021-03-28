@@ -17,7 +17,6 @@ const enableCORS = function (req, res, next) {
     const allowedOrigins = ["https://www.freecodecamp.org"];
     const origin = req.headers.origin;
     if (!process.env.XORIGIN_RESTRICT || allowedOrigins.indexOf(origin) > -1) {
-      console.log(req.method);
       res.set({
         "Access-Control-Allow-Origin": origin,
         "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
@@ -44,7 +43,9 @@ router.get("/file/*?", function (req, res, next) {
   if (req.params[0] === ".env") {
     return next({ status: 401, message: "ACCESS DENIED" });
   }
-  fs.readFile(path.join(__dirname, req.params[0]), function (err, data) {
+  const filePath = path.join(__dirname, "../../", req.params[0]);
+  req.log.info("filepath: " + filePath);
+  fs.readFile(filePath, function (err, data) {
     if (err) {
       return next(err);
     }
@@ -95,11 +96,11 @@ router.get("/create-and-save-person", function (req, res, next) {
 
     Person.findById(data._id, function (err, pers) {
       if (err) {
+        console.log("failed to find:", data, err);
         return next(err);
       }
       res.json(pers);
       pers.remove();
-      return;
     });
   });
 });

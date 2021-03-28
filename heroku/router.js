@@ -18,6 +18,11 @@ router.use((req, res, next) => {
     return;
   }
 
+  if (url.match(/\/(_api\/).*/)) {
+    next();
+    return;
+  }
+
   let queryStart = url.indexOf("?");
   if ((queryStart > 0 && url[queryStart - 1] === "/") || url.endsWith("/")) {
     next();
