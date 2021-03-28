@@ -7,6 +7,7 @@ const {
   createDevLogger,
   createProdLogger,
 } = require("./util");
+const helmet = require("helmet");
 
 const numCPUs = require("os").cpus().length;
 
@@ -41,6 +42,7 @@ if (cluster.isMaster) {
 } else {
   const express = require("express");
   const app = express();
+  app.use(helmet());
 
   // the orders of these middlewares are important.
 

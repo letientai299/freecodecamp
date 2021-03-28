@@ -3,7 +3,7 @@ require("dotenv").config();
 const mongoURL = "mongodb://localhost:27017/mongo";
 const mg = require("mongoose");
 
-if (process.env.NODE_ENV !== "production") {
+if (process.env.NODE_ENV === "learn-mongo") {
   mg.connect(mongoURL, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
