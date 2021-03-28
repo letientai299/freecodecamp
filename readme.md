@@ -25,7 +25,10 @@ on [freeCodeCamp][fcc] in 2021.
   - [Data Analysis with Python](#data-analysis-with-python)
   - [APIs and Microservices](#apis-and-microservices)
   - [Quality assurange](#quality-assurange)
+  - [Information Security](#information-security)
+  - [Coding Interview Prep](#coding-interview-prep)
   - [Machine Learning with Python](#machine-learning-with-python)
+  - [Front End Development Libraries](#front-end-development-libraries)
 - [Local setup](#local-setup)
 
 <!-- tocstop -->
@@ -179,12 +182,36 @@ know any good resources or see any of my mistakes, I'm eager to learn.
 | [Sudoku Solver][fcc_qa_sudoku]                   | [./qa/sudoku](./qa/sudoku)         |
 | [American British Translator][fcc_qa_translator] | [./qa/translator](./qa/translator) |
 
+### Information Security
+
+- [Course link][fcc_sec]
+- Cert: TODO
+- Time:
+  - 40m for both helmet and python part. For python part, I just guess, didn't
+    watch the videos.
+
+| Task                                              | Site |
+| ------------------------------------------------- | ---- |
+| [Stock Price Checker][fcc_sec_stonk]              | []() |
+| [Anonymous Message Board][fcc_sec_msg]            | []() |
+| [Port Scanner][fcc_sec_port]                      | []() |
+| [SHA-1 Password Cracker][fcc_sec_sha]             | []() |
+| [Secure Real Time Multiplayer Game][fcc_sec_game] | []() |
+
+### Coding Interview Prep
+
+- [Course link](https://www.freecodecamp.org/learn/coding-interview-prep/)
+
 ### Machine Learning with Python
 
 - [Course link](https://www.freecodecamp.org/learn/machine-learning-with-python/)
 - Cert: TODO
 - Time:
   - 10m guess on multi choice questions
+
+### Front End Development Libraries
+
+- [Course link](https://www.freecodecamp.org/learn/front-end-libraries/)
 
 | Task                                                                  | Site |
 | --------------------------------------------------------------------- | ---- |
@@ -277,3 +304,14 @@ know any good resources or see any of my mistakes, I'm eager to learn.
   https://www.freecodecamp.org/learn/apis-and-microservices/apis-and-microservices-projects/exercise-tracker
 [fcc_ms_file]:
   https://www.freecodecamp.org/learn/apis-and-microservices/apis-and-microservices-projects/file-metadata-microservice
+[fcc_sec]: https://www.freecodecamp.org/learn/information-security
+[fcc_sec_stonk]:
+  https://www.freecodecamp.org/learn/information-security/information-security-projects/stock-price-checker
+[fcc_sec_msg]:
+  https://www.freecodecamp.org/learn/information-security/information-security-projects/anonymous-message-board
+[fcc_sec_port]:
+  https://www.freecodecamp.org/learn/information-security/information-security-projects/port-scanner
+[fcc_sec_sha]:
+  https://www.freecodecamp.org/learn/information-security/information-security-projects/sha-1-password-cracker
+[fcc_sec_game]:
+  https://www.freecodecamp.org/learn/information-security/information-security-projects/secure-real-time-multiplayer-game
