@@ -202,6 +202,8 @@ know any good resources or see any of my mistakes, I'm eager to learn.
 
 - [Course link](https://www.freecodecamp.org/learn/coding-interview-prep/)
 
+This doesn't have a cert. Not sure if I would done it all or not.
+
 ### Machine Learning with Python
 
 - [Course link](https://www.freecodecamp.org/learn/machine-learning-with-python/)
@@ -209,17 +211,19 @@ know any good resources or see any of my mistakes, I'm eager to learn.
 - Time:
   - 10m guess on multi choice questions
 
+See [its note here](./ai)
+
+| Task                                                                  | Site               |
+| --------------------------------------------------------------------- | ------------------ |
+| [Rock Paper Scissors][fcc_ai_rps]                                     | []()               |
+| [Cat and Dog Image Classifier][fcc_ai_cv]                             | [./ai/cv](./ai/cv) |
+| [Book Recommendation Engine using K][fcc_ai_recommendation]           | []()               |
+| [Linear Regression Health Costs Calculator][fcc_ai_linear_regression] | []()               |
+| [Neural Network SMS Text Classifier][fcc_ai_nn]                       | []()               |
+
 ### Front End Development Libraries
 
 - [Course link](https://www.freecodecamp.org/learn/front-end-libraries/)
-
-| Task                                                                  | Site |
-| --------------------------------------------------------------------- | ---- |
-| [Rock Paper Scissors][fcc_ai_rps]                                     | []() |
-| [Cat and Dog Image Classifier][fcc_ai_cv]                             | []() |
-| [Book Recommendation Engine using K][fcc_ai_recommendation]           | []() |
-| [Linear Regression Health Costs Calculator][fcc_ai_linear_regression] | []() |
-| [Neural Network SMS Text Classifier][fcc_ai_nn]                       | []() |
 
 ## Local setup
 

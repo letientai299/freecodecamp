@@ -5,5 +5,7 @@ temp/
 playground/
 
 # They are auto generated
-*.html
-*.zip
+*zip*
+wget*
+cv/cats_and_dogs
+cv/__MACOSX
