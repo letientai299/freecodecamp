@@ -55,7 +55,7 @@ $ docker build -t tf .
 # run the image we just built, expose jupyter web port 8888
 # don&#39;t use detach mode, as we need to see the token to connect
 # from Pycharm.
-$ docker run --rm -v $PWD:/tf -p 8888:8888 tf
+$ docker run --rm -v $PWD:/tf/ai -p 8888:8888 tf
 </code></pre>
 <p>Now, we can copy the notebook from provided Colab links and work locally.</p>
 
