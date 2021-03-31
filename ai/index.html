@@ -46,7 +46,9 @@ to getting started. But I can&#39;t stand waiting for the cloud server to run, a
 for these final projects, the amount of data is not that big to put on the
 cloud. So I decided to do it locally, with tensorflow and jupyter run within
 docker.</p>
-<p>See the <a href="./Dockerfile"><code>Dockerfile</code></a> for more details.</p>
+<p>See the
+<a target='_blank'  href="https://github.com/letientai299/freecodecamp/blob/master/ai/Dockerfile"><code>Dockerfile</code></a>
+for more details.</p>
 <p>To start Jupyter server in docker with provided tensorflow and other python libs
 needed for this course.</p>
 <pre><code class="language-sh"># build the image and name it &quot;tf&quot;
@@ -55,14 +57,16 @@ $ docker build -t tf .
 # run the image we just built, expose jupyter web port 8888
 # don&#39;t use detach mode, as we need to see the token to connect
 # from Pycharm.
-$ docker run --rm -v $PWD:/tf/ai -p 8888:8888 tf
+$ docker run --rm -v $PWD:/tf/ai -p 8888:8888 --name tf tf
 </code></pre>
 <p>Now, we can copy the notebook from provided Colab links and work locally.</p>
 <p>Note that for some notebook in this folder, if you look at the Github version,
 it might not run successfullly due to wget might fail to download full zip file.
 For that case, see my rendered HTML versions on the
-<a href="letientai.io/freecodecamp/">main page</a> or import it and run it on Colab
+<a target='_blank'  href="https://letientai.io/freecodecamp">main page</a> or import it and run it on Colab
 instead.</p>
+<p>Finally, if you&#39;re going to work with jupyter within docker, then make sure to
+give docker more memory. I got &quot;kernel die&quot; repeatedly with 2GB mem on my Mac.</p>
 
     </article>
 
