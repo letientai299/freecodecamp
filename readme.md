@@ -213,13 +213,13 @@ This doesn't have a cert. Not sure if I would done it all or not.
 
 See [its note here](./ai)
 
-| Task                                                                  | Site               |
-| --------------------------------------------------------------------- | ------------------ |
-| [Rock Paper Scissors][fcc_ai_rps]                                     | []()               |
-| [Cat and Dog Image Classifier][fcc_ai_cv]                             | [./ai/cv](./ai/cv) |
-| [Book Recommendation Engine using K][fcc_ai_recommendation]           | []()               |
-| [Linear Regression Health Costs Calculator][fcc_ai_linear_regression] | []()               |
-| [Neural Network SMS Text Classifier][fcc_ai_nn]                       | []()               |
+| Task                                                                  | Site                                       |
+| --------------------------------------------------------------------- | ------------------------------------------ |
+| [Rock Paper Scissors][fcc_ai_rps]                                     | []()                                       |
+| [Cat and Dog Image Classifier][fcc_ai_cv]                             | [./ai/cv](./ai/cv)                         |
+| [Book Recommendation Engine using K][fcc_ai_recommendation]           | [./ai/recommendation](./ai/recommendation) |
+| [Linear Regression Health Costs Calculator][fcc_ai_linear_regression] | []()                                       |
+| [Neural Network SMS Text Classifier][fcc_ai_nn]                       | []()                                       |
 
 ### Front End Development Libraries
 

@@ -9,3 +9,4 @@ playground/
 wget*
 cv/cats_and_dogs
 cv/__MACOSX
+*.csv
