@@ -9,7 +9,8 @@ const {
 } = require("./util");
 const helmet = require("helmet");
 
-const numCPUs = require("os").cpus().length;
+// const numCPUs = require("os").cpus().length;
+const numCPUs = 1;
 
 const isProd = process.env.NODE_ENV === "production";
 let logConfig;
