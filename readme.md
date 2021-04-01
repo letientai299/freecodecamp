@@ -207,9 +207,10 @@ This doesn't have a cert. Not sure if I would done it all or not.
 ### Machine Learning with Python
 
 - [Course link](https://www.freecodecamp.org/learn/machine-learning-with-python/)
-- Cert: TODO
+- [Cert](https://www.freecodecamp.org/certification/letientai299/machine-learning-with-python-v7)
 - Time:
-  - 10m guess on multi choice questions
+  - 10m for guessing on multi choice questions
+  - 22h for final projects.
 
 See [its note here](./ai)
 

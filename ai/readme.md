@@ -1,5 +1,7 @@
 # AI local development setup
 
+## Local development
+
 It's good that for the final projects, FCC provide some template on Google Colab
 to getting started. But I can't stand waiting for the cloud server to run, and
 for these final projects, the amount of data is not that big to put on the
@@ -33,3 +35,13 @@ instead.
 
 Finally, if you're going to work with jupyter within docker, then make sure to
 give docker more memory. I got "kernel die" repeatedly with 2GB mem on my Mac.
+
+## Note
+
+The Rock, Paper and Scissors is incredibly hard. The heuristic algorithm of the
+`abbey` player is great. I think I'll need to study more about optimization
+algorithms first if I want to invest more time on Machine Learning.
+
+However, once again, I realize Machine Learning, or AI is not for me. I like
+fast, precise algorithms. I don't want to wait minutes or hours to train a model
+then tweak it over and over again for desired result.
