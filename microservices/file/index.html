@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>File Metadata Microservice</title>
+  </head>
+  <style>
+    body {
+      max-width: 800px;
+      font-size: 1.2em;
+      line-height: 1.4em;
+      margin: auto;
+    }
+
+    form {
+      font-size: 2em;
+    }
+  </style>
+  <body>
+    <main>
+      <p>
+        This is build for a FCC final project. See the FCC link for usage
+        details. See the
+        <a
+          href="https://www.freecodecamp.org/learn/apis-and-microservices/apis-and-microservices-projects/file-metadata-microservice"
+          target="_blank"
+          >project description</a
+        >
+        for more detail.
+      </p>
+
+      <p>For testing purpose, this only allow to upload file up to 100KB</p>
+      <p>
+        We don't store the file. Its data is processed in memory and discarded
+        immediately when response return.
+      </p>
+
+      <form
+        action="./api/fileanalyse"
+        method="post"
+        enctype="multipart/form-data"
+      >
+        <input type="file" name="upfile" id="upfile" />
+        <input type="submit" value="Upload" />
+      </form>
+
+      <p>Total time for this: <strong>30m</strong></p>
+    </main>
+  </body>
+</html>

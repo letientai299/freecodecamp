@@ -5,5 +5,6 @@ router.use("/mongo", require("./mongo"));
 router.use("/timestamp", require("./timestamp"));
 router.use("/who", require("./who"));
 router.use("/short", require("./short"));
+router.use("/file", require("./file"));
 
 module.exports = router;

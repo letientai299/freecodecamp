@@ -167,7 +167,7 @@ know any good resources or see any of my mistakes, I'm eager to learn.
 | [Request Header Parser Microservice][fcc_ms_header] | [./microservices/who](./microservices/who)             | [who](https://fcc-box.herokuapp.com/ms/who/)             |
 | [URL Shortener Microservice][fcc_ms_short_url]      | [./microservices/short](./microservices/short)         | [short](https://fcc-box.herokuapp.com/ms/short/)         |
 | [Exercise Tracker][fcc_ms_exercise]                 | []()                                                   |                                                          |
-| [File Metadata Microservice][fcc_ms_file]           | []()                                                   |                                                          |
+| [File Metadata Microservice][fcc_ms_file]           | [./microservices/file](./microservices/file)           | [file](https://fcc-box.herokuapp.com/ms/file/)           |
 
 ### Quality assurange
 

@@ -16,7 +16,8 @@ router.use((req, res, next) => {
   if (
     req.path.startsWith("/ms/timestamp/api/") ||
     req.path.startsWith("/ms/who/api/") ||
-    req.path.startsWith("/ms/short/api/")
+    req.path.startsWith("/ms/short/api/") ||
+    req.path.startsWith("/ms/file") // we need to show the HTML in this path
   ) {
     return next();
   }
