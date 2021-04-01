@@ -31,10 +31,8 @@ jobs:
 
           git checkout master .
           npm install
-          sudo apt-get install -y python-setuptools
           export PATH="$PATH:$HOME/.local/bin"
           make all
-          rm -rf pyda/temp
 
           echo
           echo "Remove every thing non-web"
