@@ -12,6 +12,11 @@ router.use((req, res, next) => {
     return next();
   }
 
+  // special handling for some course
+  if (req.path.startsWith("/ms/timestamp/api/")) {
+    return next();
+  }
+
   let url = req.url;
   // special handling for GET requests to static assets
   if (url.match(/\.(css|html|js|jpe?g|png|webp|ico|json)(\?.*)?$/)) {
