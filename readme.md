@@ -219,7 +219,7 @@ See [its note here](./ai)
 | [Cat and Dog Image Classifier][fcc_ai_cv]                      | [./ai/cv](./ai/cv)                               |
 | [Book Recommendation Engine using K][fcc_ai_recommendation]    | [./ai/recommendation](./ai/recommendation)       |
 | [Linear Regression Health Costs Calculator][fcc_ai_regression] | [./ai/linear_regression](./ai/linear_regression) |
-| [Neural Network SMS Text Classifier][fcc_ai_nn]                | []()                                             |
+| [Neural Network SMS Text Classifier][fcc_ai_nn]                | [./ai/nn](./ai/nn)                               |
 
 ### Front End Development Libraries
 
