@@ -161,13 +161,13 @@ with its performance. I've tried [stress test](./heroku) the dummy `GET /`,
 implement buffered logging and use `cluster` to run it with multi cores. If you
 know any good resources or see any of my mistakes, I'm eager to learn.
 
-| Task                                                | Site |
-| --------------------------------------------------- | ---- |
-| [Timestamp Microservice][fcc_ms_time]               | []() |
-| [Request Header Parser Microservice][fcc_ms_header] | []() |
-| [URL Shortener Microservice][fcc_ms_short_url]      | []() |
-| [Exercise Tracker][fcc_ms_exercise]                 | []() |
-| [File Metadata Microservice][fcc_ms_file]           | []() |
+| Task                                                | Note                                                   | Site                                                     |
+| --------------------------------------------------- | ------------------------------------------------------ | -------------------------------------------------------- |
+| [Timestamp Microservice][fcc_ms_time]               | [./microservices/timestamp](./microservices/timestamp) | [timestamp](https://fcc-box.herokuapp.com/ms/timestamp/) |
+| [Request Header Parser Microservice][fcc_ms_header] | []()                                                   |                                                          |
+| [URL Shortener Microservice][fcc_ms_short_url]      | []()                                                   |                                                          |
+| [Exercise Tracker][fcc_ms_exercise]                 | []()                                                   |                                                          |
+| [File Metadata Microservice][fcc_ms_file]           | []()                                                   |                                                          |
 
 ### Quality assurange
 
