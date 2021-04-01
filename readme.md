@@ -164,7 +164,7 @@ know any good resources or see any of my mistakes, I'm eager to learn.
 | Task                                                | Note                                                   | Site                                                     |
 | --------------------------------------------------- | ------------------------------------------------------ | -------------------------------------------------------- |
 | [Timestamp Microservice][fcc_ms_time]               | [./microservices/timestamp](./microservices/timestamp) | [timestamp](https://fcc-box.herokuapp.com/ms/timestamp/) |
-| [Request Header Parser Microservice][fcc_ms_header] | []()                                                   |                                                          |
+| [Request Header Parser Microservice][fcc_ms_header] | [./microservices/who](./microservices/who)             | [who](https://fcc-box.herokuapp.com/ms/who/)             |
 | [URL Shortener Microservice][fcc_ms_short_url]      | []()                                                   |                                                          |
 | [Exercise Tracker][fcc_ms_exercise]                 | []()                                                   |                                                          |
 | [File Metadata Microservice][fcc_ms_file]           | []()                                                   |                                                          |

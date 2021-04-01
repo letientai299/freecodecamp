@@ -13,7 +13,10 @@ router.use((req, res, next) => {
   }
 
   // special handling for some course
-  if (req.path.startsWith("/ms/timestamp/api/")) {
+  if (
+    req.path.startsWith("/ms/timestamp/api/") ||
+    req.path.startsWith("/ms/who/api/")
+  ) {
     return next();
   }
 
