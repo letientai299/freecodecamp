@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Exercise Tracker</title>
+    <link
+      rel="shortcut icon"
+      href="https://cdn.freecodecamp.org/universal/favicons/favicon-32x32.png"
+      type="image/x-icon"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        max-width: 800px;
+        font-family: sans-serif;
+        margin: auto;
+        color: #222;
+        background-color: #f5f5f5;
+      }
+
+      h1 {
+        font-weight: bold;
+      }
+
+      p {
+        max-width: 900px;
+      }
+
+      form {
+        margin-bottom: 25px;
+        padding: 15px;
+        background-color: #87d37c;
+        display: inline-block;
+        width: 100%;
+        max-width: 340px;
+        border-radius: 5px;
+      }
+
+      input {
+        display: block;
+        margin-bottom: 10px;
+        padding: 5px;
+        width: 100%;
+        border: 1px solid lightgrey;
+        border-radius: 3px;
+        font-size: 16px;
+      }
+
+      input[type="submit"] {
+        font-size: 16px;
+        border-radius: 3px;
+        background-color: #e4f1fe;
+        border: 1px solid grey;
+        box-shadow: 2px 2px #999;
+        cursor: pointer;
+      }
+
+      input[type="submit"]:hover {
+        background-color: #fffec4;
+      }
+
+      code {
+        font-family: monospace;
+        font-size: 1.2em;
+        background-color: #fffec4;
+        padding: 2px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Exercise tracker</h1>
+
+      <p>
+        This is build for a FCC final project. See the FCC link for usage
+        details. See the
+        <a
+          href="https://www.freecodecamp.org/learn/apis-and-microservices/apis-and-microservices-projects/exercise-tracker"
+          target="_blank"
+          >project description</a
+        >
+        for more detail.
+      </p>
+
+      <p>The UI doesn't good. Please don't mind it.</p>
+
+      <p>
+        Since this is just a sample project, data on this page is reset every
+        10m.
+      </p>
+
+      <form action="./api/exercise/new-user" method="post">
+        <h3>Create a New User</h3>
+        <p><code>POST /api/exercise/new-user</code></p>
+        <input id="uname" type="text" name="username" placeholder="username" />
+        <input type="submit" value="Submit" />
+      </form>
+      <form action="./api/exercise/add" method="post" id="form">
+        <h3>Add exercises</h3>
+        <p><code>POST /api/exercise/add</code></p>
+        <input id="uid" type="text" name="userId" placeholder="userId*" />
+        <input
+          id="desc"
+          type="text"
+          name="description"
+          placeholder="description*"
+        />
+        <input
+          id="dur"
+          type="text"
+          name="duration"
+          placeholder="duration* (mins.)"
+        />
+        <input
+          id="dat"
+          type="text"
+          name="date"
+          placeholder="date (yyyy-mm-dd)"
+        />
+        <input type="submit" value="Submit" />
+      </form>
+      <p>
+        <strong>GET users's exercise log: </strong
+        ><code
+          >GET /api/exercise/log?{userId}[&amp;from][&amp;to][&amp;limit]</code
+        >
+      </p>
+      <p><strong>{ }</strong> = required, <strong>[ ]</strong> = optional</p>
+      <p>
+        <strong>from, to</strong> = dates (yyyy-mm-dd); <strong>limit</strong> =
+        number
+      </p>
+    </div>
+  </body>
+</html>

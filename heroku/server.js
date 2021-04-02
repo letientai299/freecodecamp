@@ -43,7 +43,11 @@ if (cluster.isMaster) {
 } else {
   const express = require("express");
   const app = express();
-  app.use(helmet());
+  app.use(
+    helmet({
+      contentSecurityPolicy: false,
+    })
+  );
 
   // the orders of these middlewares are important.
 

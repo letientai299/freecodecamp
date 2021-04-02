@@ -17,6 +17,7 @@ router.use((req, res, next) => {
     req.path.startsWith("/ms/timestamp/api/") ||
     req.path.startsWith("/ms/who/api/") ||
     req.path.startsWith("/ms/short/api/") ||
+    req.path.startsWith("/ms/tracker/") ||
     req.path.startsWith("/ms/file") // we need to show the HTML in this path
   ) {
     return next();
@@ -54,11 +55,10 @@ router.use((req, res, next) => {
 router.use("/ms", require("../microservices"));
 router.use("/qa", require("../qa"));
 
-let counter = 0;
-
 router.get("/", (req, res) => {
-  counter++;
-  res.end(`Hello! ${counter}`);
+  res.end(
+    `Hello! Not much here. See this instead: https://letientai.io/freecodecamp/`
+  );
 });
 
 router.get("/favicon.ico", (req, res) =>
