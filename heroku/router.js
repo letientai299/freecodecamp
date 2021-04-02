@@ -3,6 +3,15 @@ const compression = require("compression");
 const express = require("express");
 const router = express.Router();
 
+const ignoredPaths = [
+  "/ms/timestamp/api/",
+  "/ms/who/api/",
+  "/ms/short/api/",
+  "/ms/tracker/", // need HTML
+  "/ms/file", // need HTML
+  "/qa/converter/api",
+];
+
 /**
  * Enforce trailing class, so that routers in other directories work with local
  * files as expected.
@@ -12,15 +21,11 @@ router.use((req, res, next) => {
     return next();
   }
 
-  // special handling for some course
-  if (
-    req.path.startsWith("/ms/timestamp/api/") ||
-    req.path.startsWith("/ms/who/api/") ||
-    req.path.startsWith("/ms/short/api/") ||
-    req.path.startsWith("/ms/tracker/") ||
-    req.path.startsWith("/ms/file") // we need to show the HTML in this path
-  ) {
-    return next();
+  // special handling for some courses
+  for (let p of ignoredPaths) {
+    if (req.path.startsWith(p)) {
+      return next();
+    }
   }
 
   let url = req.url;
