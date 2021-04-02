@@ -1,7 +1,6 @@
 const chaiHttp = require("chai-http");
 const chai = require("chai");
 const assert = chai.assert;
-const serverURL = `http://localhost:${process.env.PORT}/qa/chai`;
 
 chai.use(chaiHttp);
 

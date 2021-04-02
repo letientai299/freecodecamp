@@ -181,10 +181,24 @@ know any good resources or see any of my mistakes, I'm eager to learn.
 - [Course link][fcc_qa]
 - Cert: TODO
 
+For this course, honestly I'm not interested in the final projects. I like unit
+test, but I really hate:
+
+- Unclear spec that force us to guess what the author means.
+- Hidden tests that make it extremely frustrated to pass them. In real world, we
+  have [black box testing](https://en.wikipedia.org/wiki/Black-box_testing), in
+  which the code is hidden, but the tests are visible. This is the opposite.
+  Yes, I could find the source for the tests, but that doesn't change my feeling
+  about hidden tests.
+
+As a result of such bad feelings, I have to do my best to get rid of those
+projects as quicly as possible, including writing dummy tests to pass the FCC
+tests. Sorry.
+
 | Task                                             | Note                               | Site                                                     |
 | ------------------------------------------------ | ---------------------------------- | -------------------------------------------------------- |
 | [Metric-Imperial Converter][fcc_qa_converter]    | [./qa/converter](./qa/converter)   | [converter](https://fcc-box.herokuapp.com/qa/converter/) |
-| [Issue Tracker][fcc_qa_tracker]                  | [./qa/tracker](./qa/tracker)       | [??](https://fcc-box.herokuapp.com/qa/)                  |
+| [Issue Tracker][fcc_qa_tracker]                  | [./qa/tracker](./qa/tracker)       | [tracker](https://fcc-box.herokuapp.com/qa/tracker)      |
 | [Personal Library][fcc_qa_lib]                   | [./qa/lib](./qa/lib)               | [??](https://fcc-box.herokuapp.com/qa/)                  |
 | [Sudoku Solver][fcc_qa_sudoku]                   | [./qa/sudoku](./qa/sudoku)         | [??](https://fcc-box.herokuapp.com/qa/)                  |
 | [American British Translator][fcc_qa_translator] | [./qa/translator](./qa/translator) | [??](https://fcc-box.herokuapp.com/qa/)                  |
