@@ -12,6 +12,7 @@ const ignoredPaths = [
   "/qa/converter/api",
   "/qa/tracker/api",
   "/qa/lib/api",
+  "/qa/sudoku/api",
 ];
 
 /**
