@@ -9,7 +9,7 @@ const ignoredPaths = [
   "/ms/short/api/",
   "/ms/tracker/", // need HTML
   "/ms/file", // need HTML
-  "/qa/converter/api",
+  "/qa/converter", // need HTML and _api path
 ];
 
 /**

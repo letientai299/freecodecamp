@@ -4,7 +4,7 @@ chai.use(chaiHttp);
 
 let assert = chai.assert;
 let port = process.env.PORT;
-const serverURL = `http://localhost:${port ? port : 3000}/qa/metrics`;
+const serverURL = `http://localhost:${port ? port : 3000}/qa/converter`;
 
 suite("Functional Tests", function () {
   const testCases = {
