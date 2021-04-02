@@ -1,0 +1,19 @@
+body {
+  max-width: 800px;
+  margin: auto;
+}
+
+input,
+body {
+  font-size: 1.2em;
+  line-height: 1.4em;
+}
+
+code {
+  background-color: whitesmoke;
+}
+
+section,
+header {
+  margin: 50px;
+}
