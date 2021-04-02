@@ -9,7 +9,8 @@ const ignoredPaths = [
   "/ms/short/api/",
   "/ms/tracker/", // need HTML
   "/ms/file", // need HTML
-  "/qa/converter", // need HTML and _api path
+  "/qa/converter/api",
+  "/qa/tracker/api",
 ];
 
 /**
@@ -17,15 +18,15 @@ const ignoredPaths = [
  * files as expected.
  */
 router.use((req, res, next) => {
-  if (req.method !== "GET") {
-    return next();
-  }
-
   // special handling for some courses
   for (let p of ignoredPaths) {
     if (req.path.startsWith(p)) {
       return next();
     }
+  }
+
+  if (req.method !== "GET") {
+    return next();
   }
 
   let url = req.url;
