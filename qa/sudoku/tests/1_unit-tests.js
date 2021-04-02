@@ -95,4 +95,15 @@ suite("UnitTests", () => {
       });
     });
   });
+
+  suite("Solve", () => {
+    puzzles.forEach((ps) => {
+      test("solution must match", () => {
+        const pz = ps[0];
+        const want = ps[1];
+        const actual = solver.solve(pz);
+        assert.strictEqual(actual, want);
+      });
+    });
+  });
 });

@@ -52,8 +52,22 @@ module.exports = function (app) {
   });
 
   app.route("/api/solve").post((req, res) => {
-    // console.log(req.body);
-    return res.json("");
+    const pz = req.body.puzzle;
+    if (!pz) {
+      return res.json(err("Required field missing"));
+    }
+
+    const e = solver.validate(pz);
+    if (e) {
+      return res.json(err(e.message));
+    }
+
+    const sol = solver.solve(pz);
+    if (sol instanceof Error) {
+      return res.json(err(sol.message));
+    }
+
+    return res.json({ solution: sol });
   });
 };
 
