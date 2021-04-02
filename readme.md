@@ -146,7 +146,14 @@ OK inefficient workflows.
 ### APIs and Microservices
 
 - [Course link](https://www.freecodecamp.org/learn/apis-and-microservices/#basic-node-and-express)
-- Cert: TODO
+- [Cert](https://www.freecodecamp.org/certification/letientai299/apis-and-microservices)
+- Time:
+  - **15.5h** to setting up local development, heroku site, Github Actions, then
+    benchmark and try [nodejs cluster](https://nodejs.org/api/cluster.html) to
+    see if it could be faster. The result of this effort is used for other
+    courses like QA, infosec, so perhaps it's not fair for this course to to
+    include this time here. But, who care?
+  - **3.5h** to implement all final projects.
 
 This and other courses need a backend require more setup. So I build
 [a small Express app to serve all of them on Heroku](https://fcc-box.herokuapp.com/).
