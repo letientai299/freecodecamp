@@ -11,6 +11,7 @@ const ignoredPaths = [
   "/ms/file", // need HTML
   "/qa/converter/api",
   "/qa/tracker/api",
+  "/qa/lib/api",
 ];
 
 /**
