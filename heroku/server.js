@@ -43,11 +43,21 @@ if (cluster.isMaster) {
 } else {
   const express = require("express");
   const app = express();
-  app.use(
-    helmet({
-      referrerPolicy: false,
-    })
-  );
+  if (isProd) {
+    app.use(
+      helmet({
+        referrerPolicy: false,
+      })
+    );
+  } else {
+    app.use(
+      helmet({
+        // for live reload scripts
+        contentSecurityPolicy: false,
+        referrerPolicy: false,
+      })
+    );
+  }
 
   app.use(helmet.referrerPolicy({ policy: "same-origin" }));
 
