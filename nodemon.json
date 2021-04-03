@@ -1,5 +1,14 @@
 {
   "ext": "md,js",
   "verbose": true,
-  "ignore": [".git", ".idea", "pyda", "node_modules", "web", "public"]
+  "ignore": [
+    ".git",
+    ".idea",
+    "pyda",
+    "node_modules",
+    "web",
+    "public",
+    "views",
+    "**/tests/**"
+  ]
 }

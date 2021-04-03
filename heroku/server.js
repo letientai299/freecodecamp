@@ -46,8 +46,11 @@ if (cluster.isMaster) {
   app.use(
     helmet({
       contentSecurityPolicy: false,
+      referrerPolicy: false,
     })
   );
+
+  app.use(helmet.referrerPolicy({ policy: "same-origin" }));
 
   // the orders of these middlewares are important.
 

@@ -215,13 +215,13 @@ projects to pass the FCC tests. Sorry.
   - 40m for both helmet and python part. For python part, I just guess, didn't
     watch the videos.
 
-| Task                                              | Site |
-| ------------------------------------------------- | ---- |
-| [Stock Price Checker][fcc_sec_stonk]              | []() |
-| [Anonymous Message Board][fcc_sec_msg]            | []() |
-| [Port Scanner][fcc_sec_port]                      | []() |
-| [SHA-1 Password Cracker][fcc_sec_sha]             | []() |
-| [Secure Real Time Multiplayer Game][fcc_sec_game] | []() |
+| Task                                              | Note                                                 | Site                                                                    |
+| ------------------------------------------------- | ---------------------------------------------------- | ----------------------------------------------------------------------- |
+| [Stock Price Checker][fcc_sec_stonk]              | []()                                                 | []()                                                                    |
+| [Anonymous Message Board][fcc_sec_msg]            | [./infosec/bulletin-board](./infosec/bulletin-board) | [bulletin-board](https://fcc-box.herokuapp.com/infosec/bulletin-board/) |
+| [Port Scanner][fcc_sec_port]                      | []()                                                 | []()                                                                    |
+| [SHA-1 Password Cracker][fcc_sec_sha]             | []()                                                 | []()                                                                    |
+| [Secure Real Time Multiplayer Game][fcc_sec_game] | []()                                                 | []()                                                                    |
 
 ### Coding Interview Prep
 
