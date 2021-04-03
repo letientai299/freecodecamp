@@ -18,14 +18,18 @@ function setupLiveReload(router) {
   const liveReloadServer = livereload.createServer();
   let msPath = path.join(__dirname, "../microservices");
   liveReloadServer.watch(msPath);
+
   let qaPath = path.join(__dirname, "../qa");
   liveReloadServer.watch(qaPath);
+
+  let infosecPath = path.join(__dirname, "../infosec");
+  liveReloadServer.watch(infosecPath);
 
   // sent reload refresh to client  on local files chance.
   liveReloadServer.server.once("connection", () => {
     setTimeout(() => {
       liveReloadServer.refresh("/");
-    }, 100);
+    }, 1000);
   });
 
   // inject client script to receive reload notification from live reload server.

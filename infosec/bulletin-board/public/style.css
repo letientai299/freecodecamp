@@ -1,0 +1,90 @@
+* {
+  font-family: monospace;
+}
+
+body {
+  padding: 10px;
+  margin: auto;
+  max-width: 600px;
+  font-size: 1em;
+  line-height: 1.2em;
+}
+
+textarea {
+  resize: vertical;
+  height: fit-content;
+}
+
+code {
+  background-color: #efefef;
+  border: 1px solid gray;
+  border-radius: 2px;
+  padding: 0 3px;
+  font-weight: normal;
+}
+
+textarea,
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+}
+
+input {
+  font-size: 0.8em;
+}
+
+input[type="submit"] {
+  margin: 0;
+  padding: 0;
+  background: #eee;
+}
+
+legend {
+  font-weight: bold;
+}
+
+fieldset {
+  margin-top: 2em;
+  box-shadow: 1px 1px 2px;
+}
+
+fieldset:active {
+  box-shadow: 2px 2px 4px gray;
+}
+
+.fields-container {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-column-gap: 2em;
+  grid-row-gap: 0.2em;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.replies {
+  margin-left: 50px;
+}
+
+.reply {
+  border: 1px dotted black;
+  margin: 5px;
+  padding: 5px;
+}
+
+.newReply {
+  margin: 10px 5px 10px 5px;
+}
+
+.thread {
+  border: 2px solid black;
+  padding: 5px;
+  margin-bottom: 5px;
+}
+
+.id {
+  font-size: 10.5px;
+}
+
+#submitNewThread {
+  margin: 50px;
+}
