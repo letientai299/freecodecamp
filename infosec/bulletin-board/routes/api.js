@@ -5,7 +5,6 @@ const nanoid = require("nanoid").nanoid;
 let boards = initMem();
 
 function initMem() {
-  // TODO: put some default content here
   return {};
 }
 

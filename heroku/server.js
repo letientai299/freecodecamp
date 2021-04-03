@@ -45,7 +45,6 @@ if (cluster.isMaster) {
   const app = express();
   app.use(
     helmet({
-      contentSecurityPolicy: false,
       referrerPolicy: false,
     })
   );

@@ -217,7 +217,7 @@ projects to pass the FCC tests. Sorry.
 
 | Task                                              | Note                                                 | Site                                                                    |
 | ------------------------------------------------- | ---------------------------------------------------- | ----------------------------------------------------------------------- |
-| [Stock Price Checker][fcc_sec_stonk]              | []()                                                 | []()                                                                    |
+| [Stock Price Checker][fcc_sec_stonk]              | [./infosec/stonk](./infosec/stonk)                   | [stonk](https://fcc-box.herokuapp.com/infosec/stonk/)                   |
 | [Anonymous Message Board][fcc_sec_msg]            | [./infosec/bulletin-board](./infosec/bulletin-board) | [bulletin-board](https://fcc-box.herokuapp.com/infosec/bulletin-board/) |
 | [Port Scanner][fcc_sec_port]                      | [./infosec/portscan](./infosec/portscan)             | [Code on Github][fcc_infosec_portscan_solution]                         |
 | [SHA-1 Password Cracker][fcc_sec_sha]             | [./infosec/pwcracker](./infosec/pwcracker)           | [Code on Github][fcc_infosec_pw_solution]                               |
