@@ -179,7 +179,13 @@ know any good resources or see any of my mistakes, I'm eager to learn.
 ### Quality assurange
 
 - [Course link][fcc_qa]
-- Cert: TODO
+- [Cert](https://www.freecodecamp.org/certification/letientai299/quality-assurance-v7)
+- Time:
+  - 2.5h for the course, learn about using
+    [Passport.js](http://www.passportjs.org/), seem like a good framework to use
+    if I would build backend with NodeJS.
+  - 10h for final projects. I focused only on the API, ignored the UI. So please
+    don't expect the UI to be usable.
 
 For this course, honestly I'm not interested in the final projects. I like unit
 test, but I really hate this combination:

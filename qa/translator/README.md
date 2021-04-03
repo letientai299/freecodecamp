@@ -5,4 +5,4 @@ Build for
 
 This project is not interesting.
 
-Total time: **1h**
+Total time: **45m**
