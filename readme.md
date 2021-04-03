@@ -219,7 +219,7 @@ projects to pass the FCC tests. Sorry.
 | ------------------------------------------------- | ---------------------------------------------------- | ----------------------------------------------------------------------- |
 | [Stock Price Checker][fcc_sec_stonk]              | []()                                                 | []()                                                                    |
 | [Anonymous Message Board][fcc_sec_msg]            | [./infosec/bulletin-board](./infosec/bulletin-board) | [bulletin-board](https://fcc-box.herokuapp.com/infosec/bulletin-board/) |
-| [Port Scanner][fcc_sec_port]                      | []()                                                 | []()                                                                    |
+| [Port Scanner][fcc_sec_port]                      | [./infosec/portscan](./infosec/portscan)             | [Code on Github][fcc_infosec_portscan_solution]                         |
 | [SHA-1 Password Cracker][fcc_sec_sha]             | []()                                                 | []()                                                                    |
 | [Secure Real Time Multiplayer Game][fcc_sec_game] | []()                                                 | []()                                                                    |
 
@@ -345,3 +345,5 @@ See [its note here](./ai)
   https://www.freecodecamp.org/learn/information-security/information-security-projects/sha-1-password-cracker
 [fcc_sec_game]:
   https://www.freecodecamp.org/learn/information-security/information-security-projects/secure-real-time-multiplayer-game
+[fcc_infosec_portscan_solution]:
+  https://github.com/letientai299/freecodecamp/blob/master/infosec/portscan/port_scanner.py
