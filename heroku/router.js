@@ -16,6 +16,7 @@ const ignoredPaths = [
   "/qa/translator/api",
   "/infosec/bulletin-board/",
   "/infosec/stonk/",
+  "/infosec/game/",
 ];
 
 /**
