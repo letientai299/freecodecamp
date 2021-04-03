@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Anonymous Message Board</title>
+    <meta name="description" content="freeCodeCamp project boilerplate" />
+    <link
+      id="favicon"
+      rel="icon"
+      href="https://cdn.freecodecamp.org/universal/favicons/favicon-32x32.png"
+      type="image/x-icon"
+    />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./public/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>FCC Infosec | Anonymous Message Board</h1>
+    </header>
+    <div id="testui" style="margin-left: 5%">
+      <form action="./api/threads/test" method="post" id="newThread">
+        <fieldset>
+          <legend>New thread (<code>POST /api/threads/:board</code>)</legend>
+          <div class="fields-container">
+            <label for="board1">Board</label>
+            <input
+              type="text"
+              placeholder="board name, only allow lowercase letters, _ and -"
+              id="board1"
+              name="board"
+              required=""
+            />
+            <label for="thread-text">Thread text</label>
+            <textarea
+              id="thread-text"
+              type="text"
+              placeholder="Thread text, support markdown."
+              name="text"
+              required=""
+            >
+            </textarea>
+
+            <label for="password">Password</label>
+            <input
+              type="password"
+              id="password"
+              placeholder="password to delete"
+              name="delete_password"
+              required=""
+            />
+            <div></div>
+            <input type="submit" value="Submit" />
+          </div>
+        </fieldset>
+      </form>
+
+      <form id="reportThread">
+        <fieldset>
+          <legend>Report thread (<code>PUT /api/threads/:board</code>)</legend>
+          <div class="fields-container">
+            <label for="board2">Target board</label>
+            <input
+              type="text"
+              placeholder="board"
+              id="board2"
+              name="board"
+              required=""
+            />
+            <label for="report-id">ID to report</label>
+            <input
+              type="text"
+              id="report-id"
+              placeholder="id to report"
+              name="thread_id"
+              required=""
+            />
+            <div></div>
+            <input type="submit" value="Submit" />
+          </div>
+        </fieldset>
+      </form>
+
+      <form id="deleteThread">
+        <fieldset>
+          <legend>
+            Delete thread (<code>DELETE /api/threads/:board</code>)
+          </legend>
+          <div class="fields-container">
+            <label for="board3">Target board</label>
+            <input
+              type="text"
+              placeholder="board"
+              id="board3"
+              name="board"
+              required=""
+            />
+
+            <label for="thread-id">Thread ID</label>
+            <input
+              id="thread-id"
+              type="text"
+              placeholder="id to delete"
+              name="thread_id"
+              required=""
+            />
+
+            <label for="delete-password">Password</label>
+            <input
+              id="delete-password"
+              type="text"
+              placeholder="password"
+              name="delete_password"
+              required=""
+            />
+            <div></div>
+            <input type="submit" value="Submit" />
+          </div>
+        </fieldset>
+      </form>
+
+      <form action="./api/threads/test" method="post" id="newReply">
+        <fieldset>
+          <legend>New reply (<code>POST /api/replies/:board</code>)</legend>
+          <div class="fields-container">
+            <label for="board4">Board to reply</label>
+            <input
+              type="text"
+              placeholder="board"
+              id="board4"
+              name="board"
+              required=""
+            />
+            <label for="thread-reply-id">Thread ID</label>
+            <input
+              id="thread-reply-id"
+              type="text"
+              placeholder="thread id"
+              name="thread_id"
+              required=""
+            />
+            <label for="reply-msg-id">Reply message</label>
+            <textarea
+              type="text"
+              id="reply-msg-id"
+              placeholder="Thread text..."
+              name="text"
+              required=""
+            ></textarea>
+            <label for="reply-password">Password</label>
+            <input
+              id="reply-password"
+              type="text"
+              placeholder="password to delete"
+              name="delete_password"
+              required=""
+            />
+            <div></div>
+            <input type="submit" value="Submit" />
+          </div>
+        </fieldset>
+      </form>
+
+      <form id="reportReply">
+        <fieldset>
+          <legend>Report reply (<code>PUT /api/replies/:board</code>)</legend>
+          <div class="fields-container">
+            <label for="board5">Target board</label>
+            <input
+              type="text"
+              placeholder="board"
+              id="board5"
+              name="board"
+              required=""
+            />
+            <label for="report-reply-thread-id">Thread ID</label>
+            <input
+              id="report-reply-thread-id"
+              type="text"
+              placeholder="thread id"
+              name="thread_id"
+              required=""
+            />
+            <label for="report-reply-id">Reply ID</label>
+            <input
+              id="report-reply-id"
+              type="text"
+              placeholder="id to report"
+              name="reply_id"
+              required=""
+            />
+            <div></div>
+            <input type="submit" value="Submit" />
+          </div>
+        </fieldset>
+      </form>
+
+      <form id="deleteReply">
+        <fieldset>
+          <legend>
+            Delete reply (<code>DELETE /api/replies/:board</code>)
+          </legend>
+          <div class="fields-container">
+            <label for="board6">Target board</label>
+            <input
+              type="text"
+              placeholder="board"
+              id="board6"
+              name="board"
+              required=""
+            />
+            <label for="delete-thread-id">Thread ID</label>
+            <input
+              type="text"
+              id="delete-thread-id"
+              placeholder="thread id"
+              name="thread_id"
+              required=""
+            />
+            <label for="delete-thread-id">Reply ID</label>
+            <input
+              id="delete-thread-reply-id"
+              type="text"
+              placeholder="id to delete"
+              name="reply_id"
+              required=""
+            />
+            <label for="delete-thread-reply-password-id">Password</label>
+            <input
+              id="delete-thread-reply-password-id"
+              type="text"
+              placeholder="password"
+              name="delete_password"
+              required=""
+            />
+            <div></div>
+            <input type="submit" value="Submit" />
+          </div>
+        </fieldset>
+      </form>
+    </div>
+    <hr style="margin: 50px; margin-top: 200px" />
+    <!-- Your web-app is https, so your scripts need to be too -->
+    <script
+      src="https://code.jquery.com/jquery-2.2.1.min.js"
+      integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $(function () {
+        $("#newThread").submit(function () {
+          var board = $("#board1").val();
+          $(this).attr("action", "./api/threads/" + board);
+        });
+        $("#newReply").submit(function () {
+          var board = $("#board4").val();
+          $(this).attr("action", "./api/replies/" + board);
+        });
+        $("#reportThread").submit(function (e) {
+          var url = "./api/threads/" + $("#board2").val();
+          $.ajax({
+            type: "PUT",
+            url: url,
+            data: $(this).serialize(),
+            success: function (data) {
+              alert(data);
+            },
+          });
+          e.preventDefault();
+        });
+        $("#deleteThread").submit(function (e) {
+          var url = "./api/threads/" + $("#board3").val();
+          $.ajax({
+            type: "DELETE",
+            url: url,
+            data: $(this).serialize(),
+            success: function (data) {
+              alert(data);
+            },
+          });
+          e.preventDefault();
+        });
+        $("#reportReply").submit(function (e) {
+          var url = "./api/replies/" + $("#board5").val();
+          $.ajax({
+            type: "PUT",
+            url: url,
+            data: $(this).serialize(),
+            success: function (data) {
+              alert(data);
+            },
+          });
+          e.preventDefault();
+        });
+        $("#deleteReply").submit(function (e) {
+          var url = "./api/replies/" + $("#board6").val();
+          $.ajax({
+            type: "DELETE",
+            url: url,
+            data: $(this).serialize(),
+            success: function (data) {
+              alert(data);
+            },
+          });
+          e.preventDefault();
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -14,6 +14,7 @@ const ignoredPaths = [
   "/qa/lib/api",
   "/qa/sudoku/api",
   "/qa/translator/api",
+  "/infosec/bulletin-board/",
 ];
 
 /**
@@ -63,6 +64,7 @@ router.use((req, res, next) => {
 
 router.use("/ms", require("../microservices"));
 router.use("/qa", require("../qa"));
+router.use("/infosec", require("../infosec"));
 
 router.get("/", (req, res) => {
   res.end(
