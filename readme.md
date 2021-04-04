@@ -210,10 +210,13 @@ projects to pass the FCC tests. Sorry.
 ### Information Security
 
 - [Course link][fcc_sec]
-- Cert: TODO
+- [Cert](https://www.freecodecamp.org/certification/letientai299/information-security-v7)
 - Time:
   - 40m for both helmet and python part. For python part, I just guess, didn't
     watch the videos.
+  - 8h for the final projects. I've tried to build a proper game, but it needs
+    much more time, so let's do it later. See note for the game project for more
+    detail.
 
 | Task                                              | Note                                                 | Site                                                                    |
 | ------------------------------------------------- | ---------------------------------------------------- | ----------------------------------------------------------------------- |
