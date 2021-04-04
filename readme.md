@@ -219,9 +219,9 @@ projects to pass the FCC tests. Sorry.
 | ------------------------------------------------- | ---------------------------------------------------- | ----------------------------------------------------------------------- |
 | [Stock Price Checker][fcc_sec_stonk]              | [./infosec/stonk](./infosec/stonk)                   | [stonk](https://fcc-box.herokuapp.com/infosec/stonk/)                   |
 | [Anonymous Message Board][fcc_sec_msg]            | [./infosec/bulletin-board](./infosec/bulletin-board) | [bulletin-board](https://fcc-box.herokuapp.com/infosec/bulletin-board/) |
-| [Port Scanner][fcc_sec_port]                      | [./infosec/portscan](./infosec/portscan)             | [Code on Github][fcc_infosec_portscan_solution]                         |
-| [SHA-1 Password Cracker][fcc_sec_sha]             | [./infosec/pwcracker](./infosec/pwcracker)           | [Code on Github][fcc_infosec_pw_solution]                               |
-| [Secure Real Time Multiplayer Game][fcc_sec_game] | []()                                                 | []()                                                                    |
+| [Port Scanner][fcc_sec_port]                      | [./infosec/portscan](./infosec/portscan)             | [Code][fcc_infosec_portscan_solution]                                   |
+| [SHA-1 Password Cracker][fcc_sec_sha]             | [./infosec/pwcracker](./infosec/pwcracker)           | [Code][fcc_infosec_pw_solution]                                         |
+| [Secure Real Time Multiplayer Game][fcc_sec_game] | [./infosec/game](./infosec/game)                     | [game (unfinished)](https://fcc-box.herokuapp.com/infosec/game/)        |
 
 ### Coding Interview Prep
 

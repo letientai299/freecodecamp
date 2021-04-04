@@ -7,8 +7,8 @@
     "pyda",
     "node_modules",
     "web",
-    "public",
-    "views",
+    "**/public/**",
+    "**/views/**",
     "**/tests/**"
   ]
 }
