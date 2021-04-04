@@ -20,6 +20,7 @@ router.use((req, res, next) => {
 });
 
 router.use("/public", express.static(path.join(__dirname, "./public")));
+router.use("/assets", express.static(path.join(__dirname, "./assets")));
 
 router.use(bodyParser.json());
 router.use(bodyParser.urlencoded({ extended: true }));
