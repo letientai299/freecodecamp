@@ -14,10 +14,18 @@ jobs:
           submodules: true  # Fetch Hugo themes (true OR recursive)
           fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
 
-      - uses: actions/setup-python@v2
+      - uses: actions/setup-node@v2
         with:
-          python-version: '3.8'
-          architecture: 'x64'
+          node-version: '15'
+
+      - uses: actions/cache@v2
+        with:
+          # I know it's no recommened to cache node_modules, but I want faster
+          # build.
+          path: ~/.npm
+          key: modules-cache-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            modules-cache
 
       - name: Build and push to gh-pages branch
         run: |
@@ -30,9 +38,13 @@ jobs:
           find . -type d | grep -v '.git' | grep -vE '^\.$' | xargs rm -rf
 
           git checkout master .
-          npm install
-          export PATH="$PATH:$HOME/.local/bin"
+
+          # if node_modules exists in cache, copy them back to main workspace
+          [ -d ~/.npm/node_modules ] && mv ~/.npm/node_modules .
+          npm install --silent
           make all
+          # done with node_modules, move them to cache location
+          mv node_modules ~/.npm/node_modules
 
           echo
           echo "Remove every thing non-web"
