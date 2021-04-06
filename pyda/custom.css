@@ -5,9 +5,14 @@
   font-size: 1em;
 }
 
-
 a[href*="//"] {
   background: url(https://upload.wikimedia.org/wikipedia/commons/6/64/Icon_External_Link.png)
     center right no-repeat;
   padding-right: 13px;
+}
+
+@media print {
+  #toc-wrapper {
+    visibility: collapse;
+  }
 }
