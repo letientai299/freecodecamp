@@ -11,12 +11,12 @@ router.get("/", (req, res) => {
   return res.end(
     `
 This is build for a FCC final project. Exposed API on this path:
-    
+
 GET ./api/timestamp/:date?
 
 See the FCC link for usage details.
 
-https://www.freecodecamp.org/learn/apis-and-microservices/apis-and-microservices-projects/timestamp-microservice 
+https://www.freecodecamp.org/learn/apis-and-microservices/apis-and-microservices-projects/timestamp-microservice
 `.trim()
   );
 });
@@ -34,7 +34,7 @@ function genResponse(s) {
 
   return {
     unix: Math.floor(date.getTime()),
-    utc: date.toUTCString(),
+    utc: date.toUTCString()
   };
 }
 
