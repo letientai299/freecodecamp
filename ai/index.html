@@ -3,10 +3,11 @@
   GENERATED CODE: DO NOT EDIT
 -->
 <!DOCTYPE html>
-<html>
-  <head lang="en-US">
+<html lang="en-US">
+  <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
+    <meta name="Description" content="freeCodeCamp final projects solutions." />
     <title>AI |  FreeCodeCamp solutions</title>
     <link
       rel="stylesheet"
@@ -25,9 +26,16 @@
         box-shadow: 1px 1px 3px;
       }
 
+      .markdown-body * {
+        line-height: 1.6em !important;
+      }
+
       @media (max-width: 767px) {
         .markdown-body {
           padding: 15px;
+        }
+        a > img {
+          margin: 0.2em;
         }
       }
 
@@ -48,7 +56,7 @@ for these final projects, the amount of data is not that big to put on the
 cloud. So I decided to do it locally, with tensorflow and jupyter run within
 docker.</p>
 <p>See the
-<a target='_blank'  href="https://github.com/letientai299/freecodecamp/blob/master/ai/Dockerfile"><code>Dockerfile</code></a>
+<a target='_blank' rel='noreferrer' href="https://github.com/letientai299/freecodecamp/blob/master/ai/Dockerfile"><code>Dockerfile</code></a>
 for more details.</p>
 <p>To start Jupyter server in docker with provided tensorflow and other python libs
 needed for this course.</p>
@@ -64,7 +72,7 @@ $ docker run --rm -v $PWD:/tf/ai -p 8888:8888 --name tf tf
 <p>Note that for some notebook in this folder, if you look at the Github version,
 it might not run successfullly due to wget might fail to download full zip file.
 For that case, see my rendered HTML versions on the
-<a target='_blank'  href="https://letientai.io/freecodecamp">main page</a> or import it and run it on Colab
+<a target='_blank' rel='noreferrer' href="https://letientai.io/freecodecamp">main page</a> or import it and run it on Colab
 instead.</p>
 <p>Finally, if you&#39;re going to work with jupyter within docker, then make sure to
 give docker more memory. I got &quot;kernel die&quot; repeatedly with 2GB mem on my Mac.</p>
@@ -80,6 +88,7 @@ then tweak it over and over again for desired result.</p>
 
     <a
       target="_blank"
+      rel="noopener"
       href="https://github.com/letientai299/freecodecamp"
       class="github-corner"
       aria-label="View source on GitHub"

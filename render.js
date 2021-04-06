@@ -48,7 +48,7 @@ const render = function(mdFile) {
 const linkRender = function(href, title, text) {
   let link = marked.Renderer.prototype.link.call(this, href, title, text);
   if (href.includes("http")) {
-    return link.replace("<a", "<a target='_blank' ");
+    return link.replace("<a", "<a target='_blank' rel='noreferrer'");
   }
 
   if (href.includes(".ipynb")) {
