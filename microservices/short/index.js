@@ -14,15 +14,15 @@ router.get("/", (req, res) => {
   return res.end(
     `
 This is build for a FCC final project. Exposed API on this path:
-    
+
 - Create a new short URL
 
   POST ./api/shorturl/new
-  
+
 - Access a known URL
 
   POST ./api/shorturl/<short_url>
-  
+
   You will be redirected to the original URL.
 
 
@@ -30,7 +30,7 @@ See the FCC link for usage details.
 
 https://www.freecodecamp.org/learn/apis-and-microservices/apis-and-microservices-projects/url-shortener-microservice
 
-Note that the short URL will be cleared every 10m, because we store it in memory 
+Note that the short URL will be cleared every 10m, because we store it in memory
 just for the exercise, we don't want to introduce a DB.
 `.trim()
   );
@@ -55,7 +55,7 @@ router.post("/api/shorturl/new", (req, res) => {
   router.mem.push(url);
   return res.json({
     original_url: url,
-    short_url: router.mem.length - 1,
+    short_url: router.mem.length - 1
   });
 });
 

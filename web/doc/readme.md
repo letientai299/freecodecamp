@@ -523,7 +523,7 @@ or PR comments.
 ### Emoji
 
 Github supports emoji! Check out the
-[Emoji Cheat Sheet](https://www.emoji-cheat-sheet.com/).
+[Emoji Cheat Sheet](https://github.com/ikatyang/emoji-cheat-sheet).
 
 ## Gitlab Flavored Markdown
 

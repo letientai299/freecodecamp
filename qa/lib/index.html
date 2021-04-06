@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="Description" content="freeCodeCamp final projects solutions." />
-    <title>AI |  FreeCodeCamp solutions</title>
+    <title>QALIB/ |  FreeCodeCamp solutions</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/4.0.0/github-markdown.min.css"
@@ -48,41 +48,10 @@
   </head>
   <body>
     <article class="markdown-body">
-      <h1 id="ai-local-development-setup">AI local development setup</h1>
-<h2 id="local-development">Local development</h2>
-<p>It&#39;s good that for the final projects, FCC provide some template on Google Colab
-to getting started. But I can&#39;t stand waiting for the cloud server to run, and
-for these final projects, the amount of data is not that big to put on the
-cloud. So I decided to do it locally, with tensorflow and jupyter run within
-docker.</p>
-<p>See the
-<a target='_blank' rel='noreferrer' href="https://github.com/letientai299/freecodecamp/blob/master/ai/Dockerfile"><code>Dockerfile</code></a>
-for more details.</p>
-<p>To start Jupyter server in docker with provided tensorflow and other python libs
-needed for this course.</p>
-<pre><code class="language-sh"># build the image and name it &quot;tf&quot;
-$ docker build -t tf .
-
-# run the image we just built, expose jupyter web port 8888
-# don&#39;t use detach mode, as we need to see the token to connect
-# from Pycharm.
-$ docker run --rm -v $PWD:/tf/ai -p 8888:8888 --name tf tf
-</code></pre>
-<p>Now, we can copy the notebook from provided Colab links and work locally.</p>
-<p>Note that for some notebook in this folder, if you look at the Github version,
-it might not run successfullly due to wget might fail to download full zip file.
-For that case, see my rendered HTML versions on the
-<a target='_blank' rel='noreferrer' href="https://letientai.io/freecodecamp">main page</a> or import it and run it on Colab
-instead.</p>
-<p>Finally, if you&#39;re going to work with jupyter within docker, then make sure to
-give docker more memory. I got &quot;kernel die&quot; repeatedly with 2GB mem on my Mac.</p>
-<h2 id="note">Note</h2>
-<p>The Rock, Paper and Scissors is incredibly hard. The heuristic algorithm of the
-<code>abbey</code> player is great. I think I&#39;ll need to study more about optimization
-algorithms first if I want to invest more time on Machine Learning.</p>
-<p>However, once again, I realize Machine Learning, or AI is not for me. I like
-fast, precise algorithms. I don&#39;t want to wait minutes or hours to train a model
-then tweak it over and over again for desired result.</p>
+      <h1 id="personal-library">Personal Library</h1>
+<p>Build for
+<a target='_blank' rel='noreferrer' href="https://www.freecodecamp.org/learn/quality-assurance/quality-assurance-projects/personal-library">this FCC final project</a></p>
+<p>Total time: <strong>1h</strong></p>
 
     </article>
 

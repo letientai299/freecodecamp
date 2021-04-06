@@ -11,7 +11,7 @@ router.get("/", (req, res) => {
   return res.end(
     `
 This is build for a FCC final project. Exposed API on this path:
-    
+
 GET ./api/whoami
 
 See the FCC link for usage details.
@@ -25,7 +25,7 @@ router.get("/api/whoami", (req, res) => {
   return res.json({
     ipaddress: req.ip,
     language: req.headers["accept-language"],
-    software: req.headers["user-agent"],
+    software: req.headers["user-agent"]
   });
 });
 
