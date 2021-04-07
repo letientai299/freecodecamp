@@ -5,6 +5,16 @@ render them as a website.
 
 <!-- toc -->
 
+- [User guide](#user-guide)
+- [How this page was built?](#how-this-page-was-built)
+  - [Requirements and Design](#requirements-and-design)
+    - [Problem and solution pages](#problem-and-solution-pages)
+    - [Document page](#document-page)
+    - [Non functional](#non-functional)
+  - [Prepare data](#prepare-data)
+
+<!-- tocstop -->
+
 ## User guide
 
 If you're seeing this as a website, and interested in solution for a particular
