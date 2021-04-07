@@ -26,8 +26,8 @@ on [freeCodeCamp][fcc] in 2021.
   - [APIs and Microservices](#apis-and-microservices)
   - [Quality assurange](#quality-assurange)
   - [Information Security](#information-security)
-  - [Coding Interview Prep](#coding-interview-prep)
   - [Machine Learning with Python](#machine-learning-with-python)
+  - [Coding Interview Prep](#coding-interview-prep)
   - [Front End Development Libraries](#front-end-development-libraries)
 - [Local setup](#local-setup)
 
@@ -226,13 +226,6 @@ projects to pass the FCC tests. Sorry.
 | [SHA-1 Password Cracker][fcc_sec_sha]             | [./infosec/pwcracker](./infosec/pwcracker)           | [Code][fcc_infosec_pw_solution]                                         |
 | [Secure Real Time Multiplayer Game][fcc_sec_game] | [./infosec/game](./infosec/game)                     | [game (unfinished)](https://fcc-box.herokuapp.com/infosec/game/)        |
 
-### Coding Interview Prep
-
-- [Course link](https://www.freecodecamp.org/learn/coding-interview-prep/)
-
-This doesn't have a cert, but I still do it to understand more about JS. See
-[here for the notes and some solutions](./interview).
-
 ### Machine Learning with Python
 
 - [Course link](https://www.freecodecamp.org/learn/machine-learning-with-python/)
@@ -250,6 +243,13 @@ See [its note here](./ai)
 | [Book Recommendation Engine using K][fcc_ai_recommendation]    | [./ai/recommendation](./ai/recommendation)       |
 | [Linear Regression Health Costs Calculator][fcc_ai_regression] | [./ai/linear_regression](./ai/linear_regression) |
 | [Neural Network SMS Text Classifier][fcc_ai_nn]                | [./ai/nn](./ai/nn)                               |
+
+### Coding Interview Prep
+
+- [Course link](https://www.freecodecamp.org/learn/coding-interview-prep/)
+
+This doesn't have a cert, but I still do it to understand more about JS. See
+[here for the notes and some solutions](./interview).
 
 ### Front End Development Libraries
 
