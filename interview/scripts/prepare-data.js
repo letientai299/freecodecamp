@@ -92,6 +92,12 @@ class App {
         this.prepareProblemData(p);
       });
     });
+
+    // prepare data to render the navigation and search bar as well
+    fs.writeFileSync(
+      path.join(ops.out, "index.json"),
+      JSON.stringify(modules, null, 2)
+    );
   }
 
   prepareProblemData(p) {
@@ -127,7 +133,7 @@ class App {
             ),
             urlJsonData: `${urlPrefix}${slug}/page-data.json`,
             url: `${urlFCC}${slug}`,
-            title: c.title,
+            title: c.node.title,
             moduleName: c.node.fields.blockName,
           };
         })
@@ -140,6 +146,7 @@ class App {
             };
           }
 
+          c.id = ms[modulePath].problems.length + 1;
           ms[modulePath].problems.push(c);
           return ms;
         }, {})
@@ -219,7 +226,7 @@ class Option {
       if (i === args.length - 1 || args[i + 1][0] === "-") {
         this.help = true;
       } else {
-        this.out = path.join(process.cwd(), args[i + 1]);
+        this.out = args[i + 1];
       }
       break;
     }
