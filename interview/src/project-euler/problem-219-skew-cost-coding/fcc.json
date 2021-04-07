@@ -1,0 +1,6 @@
+{
+  "title": "Problem 219: Skew-cost coding",
+  "htmlDescription": "<section id=\"description\">\n<p>Let A and B be bit strings (sequences of 0's and 1's).</p>\n<p>If A is equal to the leftmost length(A) bits of B, then A is said to be a prefix of B.</p>\n<p>For example, 00110 is a prefix of 001101001, but not of 00111 or 100110.</p>\n<p>A prefix-free code of size n is a collection of n distinct bit strings such that no string is a prefix of any other. For example, this is a prefix-free code of size 6:</p>\n<p>0000, 0001, 001, 01, 10, 11</p>\n<p>Now suppose that it costs one penny to transmit a '0' bit, but four pence to transmit a '1'. Then the total cost of the prefix-free code shown above is 35 pence, which happens to be the cheapest possible for the skewed pricing scheme in question. In short, we write Cost(6) = 35.</p>\n<p>What is Cost(109) ?</p>\n</section>",
+  "boilerplate": "function euler219() {\n\n  return true;\n}\n\neuler219();",
+  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/project-euler/problem-219-skew-cost-coding"
+}

@@ -1,0 +1,6 @@
+{
+  "title": "Problem 335: Gathering the beans",
+  "htmlDescription": "<section id=\"description\">\n<p>Whenever Peter feels bored, he places some bowls, containing one bean each, in a circle. After this, he takes all the beans out of a certain bowl and drops them one by one in the bowls going clockwise. He repeats this, starting from the bowl he dropped the last bean in, until the initial situation appears again. For example with 5 bowls he acts as follows:</p>\n<p>So with 5 bowls it takes Peter 15 moves to return to the initial situation.</p>\n<p>Let M(x) represent the number of moves required to return to the initial situation, starting with x bowls. Thus, M(5) = 15. It can also be verified that M(100) = 10920.</p>\n<p>Find M(2k+1). Give your answer modulo 79.</p>\n</section>",
+  "boilerplate": "function euler335() {\n\n  return true;\n}\n\neuler335();",
+  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/project-euler/problem-335-gathering-the-beans"
+}

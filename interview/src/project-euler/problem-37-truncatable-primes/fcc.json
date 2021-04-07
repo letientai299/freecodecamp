@@ -1,0 +1,6 @@
+{
+  "title": "Problem 37: Truncatable primes",
+  "htmlDescription": "<section id=\"description\">\n<p>The number 3797 has an interesting property. Being prime itself, it is possible to continuously remove digits from left to right, and remain prime at each stage: 3797, 797, 97, and 7. Similarly we can work from right to left: 3797, 379, 37, and 3.</p>\n<p>Find the sum of the only <code>n</code> (8 ≤ <code>n</code> ≤ 11) primes that are both truncatable from left to right and right to left.</p>\n<p>NOTE: 2, 3, 5, and 7 are not considered to be truncatable primes.</p>\n</section>",
+  "boilerplate": "function truncatablePrimes(n) {\n\n  return n;\n}\n\ntruncatablePrimes(11);",
+  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/project-euler/problem-37-truncatable-primes"
+}

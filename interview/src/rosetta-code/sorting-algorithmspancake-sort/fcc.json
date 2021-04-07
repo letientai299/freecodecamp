@@ -1,0 +1,6 @@
+{
+  "title": "Sorting algorithms/Pancake sort",
+  "htmlDescription": "<section id=\"description\">\n<p>Write a function to sort an array of integers (of any convenient size) into ascending order using <a href=\"https://en.wikipedia.org/wiki/Pancake%20sorting\">Pancake sorting</a>. The function should return the sorted array.</p>\n<p>In short, instead of individual elements being sorted, the only operation allowed is to \"flip\" one end of the list, like so:</p>\n<pre>Before:\n<b>6 7 8 9</b> 2 5 3 4 1<br>\nAfter:\n<b>9 8 7 6</b> 2 5 3 4 1\n</pre>\n<p>Only one end of the list can be flipped; this should be the low end, but the high end is okay if it's easier to code or works better, but it <strong>must</strong> be the same end for the entire solution. (The end flipped can't be arbitrarily changed.)</p>\n</section>",
+  "boilerplate": "function pancakeSort(arr) {\n\n}",
+  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/rosetta-code/sorting-algorithmspancake-sort"
+}

@@ -1,0 +1,5 @@
+function happy(number) {
+
+}
+
+// TODO

@@ -1,0 +1,6 @@
+{
+  "title": "Problem 80: Square root digital expansion",
+  "htmlDescription": "<section id=\"description\">\n<p>It is well known that if the square root of a natural number is not an integer, then it is irrational. The decimal expansion of such square roots is infinite without any repeating pattern at all.</p>\n<p>The square root of two is 1.41421356237309504880..., and the digital sum of the first one hundred decimal digits is 475.</p>\n<p>For the first one hundred natural numbers, find the total of the digital sums of the first one hundred decimal digits for all the irrational square roots.</p>\n</section>",
+  "boilerplate": "function sqrtDigitalExpansion() {\n\n  return true;\n}\n\nsqrtDigitalExpansion();",
+  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/project-euler/problem-80-square-root-digital-expansion"
+}

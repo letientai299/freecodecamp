@@ -1,0 +1,6 @@
+{
+  "title": "Problem 275: Balanced Sculptures",
+  "htmlDescription": "<section id=\"description\">\n<p>Let us define a balanced sculpture of order n as follows:</p>\n<p>A polyomino made up of n+1 tiles known as the blocks (n tiles) and the plinth (remaining tile);</p>\n<p>the plinth has its centre at position (x = 0, y = 0);</p>\n<p>the blocks have y-coordinates greater than zero (so the plinth is the unique lowest tile);</p>\n<p>the centre of mass of all the blocks, combined, has x-coordinate equal to zero.</p>\n<p>When counting the sculptures, any arrangements which are simply reflections about the y-axis, are not counted as distinct. For example, the 18 balanced sculptures of order 6 are shown below; note that each pair of mirror images (about the y-axis) is counted as one sculpture:</p>\n<p>There are 964 balanced sculptures of order 10 and 360505 of order 15.How many balanced sculptures are there of order 18?</p>\n</section>",
+  "boilerplate": "function euler275() {\n\n  return true;\n}\n\neuler275();",
+  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/project-euler/problem-275-balanced-sculptures"
+}

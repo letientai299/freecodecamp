@@ -1,0 +1,6 @@
+{
+  "title": "Problem 213: Flea Circus",
+  "htmlDescription": "<section id=\"description\">\n<p>A 30×30 grid of squares contains 900 fleas, initially one flea per square.</p>\n<p>When a bell is rung, each flea jumps to an adjacent square at random (usually 4 possibilities, except for fleas on the edge of the grid or at the corners).</p>\n<p>What is the expected number of unoccupied squares after 50 rings of the bell? Give your answer rounded to six decimal places.</p>\n</section>",
+  "boilerplate": "function euler213() {\n\n  return true;\n}\n\neuler213();",
+  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/project-euler/problem-213-flea-circus"
+}

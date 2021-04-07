@@ -1,0 +1,5 @@
+function loopSimult(A) {
+
+}
+
+// TODO

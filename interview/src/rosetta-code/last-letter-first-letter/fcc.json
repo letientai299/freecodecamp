@@ -1,0 +1,6 @@
+{
+  "title": "Last letter-first letter",
+  "htmlDescription": "<section id=\"description\">\n<p>A certain children's game involves starting with a word in a particular category. Each participant in turn says a word, but that word must begin with the final letter of the previous word. Once a word has been given, it cannot be repeated. If an opponent cannot give a word in the category, they fall out of the game.</p>\n<p>For example, with \"animals\" as the category,</p>\n<pre>Child 1: dog\nChild 2: goldfish\nChild 1: hippopotamus\nChild 2: snake\n...\n</pre>\n</section>",
+  "boilerplate": "function findLongestChain(items) {\n\n}",
+  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/rosetta-code/last-letter-first-letter"
+}

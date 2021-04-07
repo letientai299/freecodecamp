@@ -1,0 +1,5 @@
+function findSequence(input) {
+
+}
+
+// TODO

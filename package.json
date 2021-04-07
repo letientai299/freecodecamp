@@ -16,7 +16,10 @@
     "glob": "7.1.6",
     "live-server": "1.2.1",
     "marked": "2.0.1",
-    "nodemon": "2.0.7"
+    "nodemon": "2.0.7",
+    "prettier": "2.2.1",
+    "turndown": "7.0.0",
+    "turndown-plugin-gfm": "1.0.2"
   },
   "dependencies": {
     "axios": "0.21.1",

@@ -1,0 +1,6 @@
+{
+  "title": "Loop over multiple arrays simultaneously",
+  "htmlDescription": "<section id=\"description\">\n<p>Loop over multiple arrays and create a new array whose $i^{th}$ element is the concatenation of $i^{th}$ element of each of the given.</p>\n<p>For this example, if you are given this array of arrays:</p>\n<pre><code class=\"language-js\">[ [\"a\", \"b\", \"c\"], [\"A\", \"B\", \"C\"], [1, 2, 3] ]\n</code></pre>\n<p>the output should be:</p>\n<pre><code class=\"language-js\">[\"aA1\",\"bB2\",\"cC3\"]\n</code></pre>\n</section>",
+  "boilerplate": "function loopSimult(A) {\n\n}",
+  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/rosetta-code/loop-over-multiple-arrays-simultaneously"
+}

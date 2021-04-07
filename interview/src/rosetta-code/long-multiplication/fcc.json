@@ -1,0 +1,6 @@
+{
+  "title": "Long multiplication",
+  "htmlDescription": "<section id=\"description\">\n<p>Explicitly implement <a href=\"https://en.wikipedia.org/wiki/long%20multiplication\">long multiplication</a>.</p>\n<p>This is one possible approach to arbitrary-precision integer algebra.</p>\n</section>",
+  "boilerplate": "function mult(strNum1, strNum2) {\n\n}",
+  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/rosetta-code/long-multiplication"
+}

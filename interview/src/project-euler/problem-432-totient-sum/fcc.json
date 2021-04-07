@@ -1,0 +1,6 @@
+{
+  "title": "Problem 432: Totient sum",
+  "htmlDescription": "<section id=\"description\">\n<p>Let S(n,m) = ∑φ(n × i) for 1 ≤ i ≤ m. (φ is Euler's totient function)</p>\n<p>You are given that S(510510,106 )= 45480596821125120.</p>\n<p>Find S(510510,1011). Give the last 9 digits of your answer.</p>\n</section>",
+  "boilerplate": "function euler432() {\n\n  return true;\n}\n\neuler432();",
+  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/project-euler/problem-432-totient-sum"
+}

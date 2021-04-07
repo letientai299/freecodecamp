@@ -1,0 +1,6 @@
+{
+  "title": "Problem 207: Integer partition equations",
+  "htmlDescription": "<section id=\"description\">\n<p>For some positive integers k, there exists an integer partition of the form 4t = 2t + k,</p>\n<p>where 4t, 2t, and k are all positive integers and t is a real number.</p>\n<p>The first two such partitions are 41 = 21 + 2 and 41.5849625... = 21.5849625... + 6.</p>\n<p>Partitions where t is also an integer are called perfect. For any m ≥ 1 let P(m) be the proportion of such partitions that are perfect with k ≤ m. Thus P(6) = 1/2.</p>\n<p>In the following table are listed some values of P(m) P(5) = 1/1 P(10) = 1/2 P(15) = 2/3 P(20) = 1/2 P(25) = 1/2 P(30) = 2/5 ... P(180) = 1/4 P(185) = 3/13</p>\n<p>Find the smallest m for which P(m) &#x3C; 1/12345</p>\n</section>",
+  "boilerplate": "function euler207() {\n\n  return true;\n}\n\neuler207();",
+  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/project-euler/problem-207-integer-partition-equations"
+}

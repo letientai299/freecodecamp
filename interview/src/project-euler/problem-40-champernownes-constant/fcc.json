@@ -1,0 +1,6 @@
+{
+  "title": "Problem 40: Champernowne's constant",
+  "htmlDescription": "<section id=\"description\">\n<p>An irrational decimal fraction is created by concatenating the positive integers:</p>\n<p>0.12345678910<strong>1</strong>112131415161718192021...</p>\n<p>It can be seen that the 12<sup>th</sup> digit of the fractional part is 1.</p>\n<p>If <em>d<sub>n</sub></em> represents the <em>n</em><sup>th</sup> digit of the fractional part, find the value of the following expression.</p>\n<p>d<sub>1</sub> × d<sub>10</sub> × d<sub>100</sub> × d<sub>1000</sub> × d<sub>10000</sub> × d<sub>100000</sub> × d<sub>1000000</sub></p>\n</section>",
+  "boilerplate": "function champernownesConstant(n) {\n\n  return true;\n}\n\nchampernownesConstant(100);",
+  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/project-euler/problem-40-champernownes-constant"
+}

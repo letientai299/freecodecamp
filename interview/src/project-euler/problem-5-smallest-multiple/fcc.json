@@ -1,0 +1,6 @@
+{
+  "title": "Problem 5: Smallest multiple",
+  "htmlDescription": "<section id=\"description\">\n<p>2520 is the smallest number that can be divided by each of the numbers from 1 to 10 without any remainder.</p>\n<p>What is the smallest positive number that is evenly divisible by all of the numbers from 1 to <code>n</code>?</p>\n</section>",
+  "boilerplate": "function smallestMult(n) {\n\n  return true;\n}\n\nsmallestMult(20);",
+  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/project-euler/problem-5-smallest-multiple"
+}

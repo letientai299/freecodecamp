@@ -1,0 +1,6 @@
+{
+  "title": "Averages/Root mean square",
+  "htmlDescription": "<section id=\"description\">\n<p>Compute the <a href=\"https://en.wikipedia.org/wiki/Root%20mean%20square\" title=\"wp: Root mean square\">Root mean square</a> of the numbers 1 through 10 inclusive.</p>\n<p>The <em>root mean square</em> is also known by its initials RMS (or rms), and as the <strong>quadratic mean</strong>.</p>\n<p>The RMS is calculated as the mean of the squares of the numbers, square-rooted:</p>\n<p>$$x_{\\mathrm{rms}} = \\sqrt {{{x_1}^2 + {x_2}^2 + \\cdots + {x_n}^2} \\over n}. $$</p>\n</section>",
+  "boilerplate": "function rms(arr) {\n\n}",
+  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/rosetta-code/averagesroot-mean-square"
+}

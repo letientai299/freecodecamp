@@ -1,0 +1,6 @@
+{
+  "title": "24 game",
+  "htmlDescription": "<section id=\"description\">\n<p>The <a href=\"https://en.wikipedia.org/wiki/24_Game\">24 Game</a> tests a person's mental arithmetic.</p>\n<p>The aim of the game is to arrange four numbers in a way that when evaluated, the result is 24</p>\n</section>",
+  "boilerplate": "function solve24 (numStr) {\n\n  return true;\n}",
+  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/rosetta-code/24-game"
+}

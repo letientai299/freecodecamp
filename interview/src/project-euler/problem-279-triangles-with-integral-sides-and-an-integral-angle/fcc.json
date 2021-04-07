@@ -1,0 +1,6 @@
+{
+  "title": "Problem 279: Triangles with integral sides and an integral angle",
+  "htmlDescription": "<section id=\"description\">\n<p>How many triangles are there with integral sides, at least one integral angle (measured in degrees), and a perimeter that does not exceed 108?</p>\n</section>",
+  "boilerplate": "function euler279() {\n\n  return true;\n}\n\neuler279();",
+  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/project-euler/problem-279-triangles-with-integral-sides-and-an-integral-angle"
+}

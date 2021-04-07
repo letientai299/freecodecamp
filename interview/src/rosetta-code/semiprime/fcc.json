@@ -1,0 +1,6 @@
+{
+  "title": "Semiprime",
+  "htmlDescription": "<section id=\"description\">\n<p>Semiprime numbers are natural numbers that are products of exactly two (possibly equal) <a href=\"https://rosettacode.org/wiki/prime_number\">prime numbers</a>.</p>\n<pre>1679  =  23 x 73</pre>\n</section>",
+  "boilerplate": "function isSemiPrime(n) {\n\n}",
+  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/rosetta-code/semiprime"
+}

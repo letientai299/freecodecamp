@@ -1,0 +1,5 @@
+function isLychrel(n) {
+
+}
+
+// TODO

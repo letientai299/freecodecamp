@@ -1,0 +1,6 @@
+{
+  "title": "Vector dot product",
+  "htmlDescription": "<section id=\"description\">\n<p>A vector can have one or more values represented by an ordered collection. Examples could be (x), (x, y), or (x, y, z).</p>\n</section>",
+  "boilerplate": "function dotProduct(...vectors) {\n\n}",
+  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/rosetta-code/vector-dot-product"
+}

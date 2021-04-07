@@ -1,0 +1,6 @@
+{
+  "title": "Zig-zag matrix",
+  "htmlDescription": "<section id=\"description\">\n<p>A 'zig-zag' array is a square arrangement of the first $N^2$ integers, where the numbers increase sequentially as you zig-zag along the array's <a href=\"https://en.wiktionary.org/wiki/antidiagonal\">anti-diagonals</a>.</p>\n<p>For example, for the input <code>5</code>, the following result should be produced:</p>\n<pre>\n 0  1  5  6 14\n 2  4  7 13 15\n 3  8 12 16 21\n 9 11 17 20 22\n10 18 19 23 24\n</pre>\n</section>",
+  "boilerplate": "function ZigZagMatrix(n) {\n\n  return [[], []];\n}",
+  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/rosetta-code/zig-zag-matrix"
+}

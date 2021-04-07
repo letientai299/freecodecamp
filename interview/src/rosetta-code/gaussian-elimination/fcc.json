@@ -1,0 +1,6 @@
+{
+  "title": "Gaussian elimination",
+  "htmlDescription": "<section id=\"description\">\n<p>Write a function to solve \\(Ax = b\\) using Gaussian elimination then backwards substitution.</p>\n<p>\\(A\\) being an \\(n \\times n\\) matrix. Also, \\(x\\) and \\(b\\) are \\(n\\) by 1 vectors.</p>\n<p>To improve accuracy, please use partial pivoting and scaling.</p>\n</section>",
+  "boilerplate": "function gaussianElimination(A,b) {\n\n}",
+  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/rosetta-code/gaussian-elimination"
+}

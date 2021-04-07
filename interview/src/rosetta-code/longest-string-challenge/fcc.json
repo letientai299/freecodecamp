@@ -1,0 +1,6 @@
+{
+  "title": "Longest string challenge",
+  "htmlDescription": "<section id=\"description\">\n<p>In this challenge, you have to find the strings that are the longest among the given strings.</p>\n</section>",
+  "boilerplate": "function longestString(strings) {\n\n}",
+  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/rosetta-code/longest-string-challenge"
+}

@@ -1,0 +1,6 @@
+{
+  "title": "Problem 469: Empty chairs",
+  "htmlDescription": "<section id=\"description\">\n<p>In a room N chairs are placed around a round table.</p>\n<p>Knights enter the room one by one and choose at random an available empty chair.</p>\n<p>To have enough elbow room the knights always leave at least one empty chair between each other.</p>\n<p>When there aren't any suitable chairs left, the fraction C of empty chairs is determined. We also define E(N) as the expected value of C. We can verify that E(4) = 1/2 and E(6) = 5/9.</p>\n<p>Find E(1018). Give your answer rounded to fourteen decimal places in the form 0.abcdefghijklmn.</p>\n</section>",
+  "boilerplate": "function euler469() {\n\n  return true;\n}\n\neuler469();",
+  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/project-euler/problem-469-empty-chairs"
+}

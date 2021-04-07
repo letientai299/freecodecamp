@@ -1,0 +1,6 @@
+{
+  "title": "Problem 48: Self powers",
+  "htmlDescription": "<section id=\"description\">\n<p>The series, 1<sup>1</sup> + 2<sup>2</sup> + 3<sup>3</sup> + ... + 10<sup>10</sup> = 10405071317.</p>\n<p>Find the last ten digits of the series, 1<sup>1</sup> + 2<sup>2</sup> + 3<sup>3</sup> + ... + 1000<sup>1000</sup>.</p>\n</section>",
+  "boilerplate": "function selfPowers(power, lastDigits) {\n\n  return true;\n}\n\nselfPowers(1000, 10);",
+  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/project-euler/problem-48-self-powers"
+}

@@ -1,0 +1,6 @@
+{
+  "title": "Problem 270: Cutting Squares",
+  "htmlDescription": "<section id=\"description\">\n<p>A square piece of paper with integer dimensions N×N is placed with a corner at the origin and two of its sides along the x- and y-axes. Then, we cut it up respecting the following rules:</p>\n<p>We only make straight cuts between two points lying on different sides of the square, and having integer coordinates.</p>\n<p>Two cuts cannot cross, but several cuts can meet at the same border point.</p>\n<p>Proceed until no more legal cuts can be made.</p>\n<p>Counting any reflections or rotations as distinct, we call C(N) the number of ways to cut an N×N square. For example, C(1) = 2 and C(2) = 30 (shown below).</p>\n<p>What is C(30) mod 108 ?</p>\n</section>",
+  "boilerplate": "function euler270() {\n\n  return true;\n}\n\neuler270();",
+  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/project-euler/problem-270-cutting-squares"
+}

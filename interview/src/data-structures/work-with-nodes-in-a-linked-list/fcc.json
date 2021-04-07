@@ -1,0 +1,6 @@
+{
+  "title": "Work with Nodes in a Linked List",
+  "htmlDescription": "<section id=\"description\">\n<p>Another common data structure you'll run into in computer science is the <dfn>linked list</dfn>. A linked list is a linear collection of data elements, called 'nodes', each of which points to the next. Each <dfn>node</dfn> in a linked list contains two key pieces of information: the <code>element</code> itself, and a reference to the next <code>node</code>.</p>\n<p>Imagine that you are in a conga line. You have your hands on the next person in the line, and the person behind you has their hands on you. You can see the person straight ahead of you, but they are blocking the view of the other people ahead in line. A node is just like a person in a conga line: they know who they are and they can only see the next person in line, but they are not aware of the other people ahead or behind them.</p>\n</section>",
+  "boilerplate": "var Node = function(element) {\n  this.element = element;\n  this.next = null;\n};\nvar Kitten = new Node('Kitten');\nvar Puppy = new Node('Puppy');\n\nKitten.next = Puppy;\n// Only change code below this line",
+  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/data-structures/work-with-nodes-in-a-linked-list"
+}

@@ -1,0 +1,6 @@
+{
+  "title": "Problem 453: Lattice Quadrilaterals",
+  "htmlDescription": "<section id=\"description\">\n<p>A simple quadrilateral is a polygon that has four distinct vertices, has no straight angles and does not self-intersect.</p>\n<p>Let Q(m, n) be the number of simple quadrilaterals whose vertices are lattice points with coordinates (x,y) satisfying 0 ≤ x ≤ m and 0 ≤ y ≤ n.</p>\n<p>For example, Q(2, 2) = 94 as can be seen below:</p>\n<p>It can also be verified that Q(3, 7) = 39590, Q(12, 3) = 309000 and Q(123, 45) = 70542215894646.</p>\n<p>Find Q(12345, 6789) mod 135707531.</p>\n</section>",
+  "boilerplate": "function euler453() {\n\n  return true;\n}\n\neuler453();",
+  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/project-euler/problem-453-lattice-quadrilaterals"
+}

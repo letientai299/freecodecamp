@@ -1,0 +1,6 @@
+{
+  "title": "Problem 85: Counting rectangles",
+  "htmlDescription": "<section id=\"description\">\n<p>By counting carefully it can be seen that a rectangular grid measuring 3 by 2 contains eighteen rectangles:</p>\n<img class=\"img-responsive center-block\" alt=\"a diagram of the different rectangles found within a 3 by 2 rectangular grid\" src=\"https://cdn-media-1.freecodecamp.org/project-euler/counting-rectangles.png\" style=\"background-color: white; padding: 10px;\">\n<p>Although there exists no rectangular grid that contains exactly two million rectangles, find the area of the grid with the nearest solution.</p>\n</section>",
+  "boilerplate": "function countingRectangles() {\n\n  return true;\n}\n\ncountingRectangles();",
+  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/project-euler/problem-85-counting-rectangles"
+}

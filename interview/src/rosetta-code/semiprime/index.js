@@ -1,0 +1,5 @@
+function isSemiPrime(n) {
+
+}
+
+// TODO

@@ -1,0 +1,6 @@
+{
+  "title": "Discordian date",
+  "htmlDescription": "<section id=\"description\">\n<p>Convert a given date from the <a href=\"https://en.wikipedia.org/wiki/Gregorian%20calendar\" title=\"wp: Gregorian calendar\">Gregorian calendar</a> to the <a href=\"https://en.wikipedia.org/wiki/Discordian%20calendar\" title=\"wp: Discordian calendar\">Discordian calendar</a>.</p>\n</section>",
+  "boilerplate": "function discordianDate(date) {\n\n  return true;\n}",
+  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/rosetta-code/discordian-date"
+}

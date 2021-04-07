@@ -1,0 +1,6 @@
+{
+  "title": "Sorting algorithms/Gnome sort",
+  "htmlDescription": "<section id=\"description\">\n<p>Gnome sort is a sorting algorithm which is similar to <a href=\"https://rosettacode.org/wiki/Insertion%20sort\">Insertion sort</a>, except that moving an element to its proper place is accomplished by a series of swaps, as in <a href=\"https://rosettacode.org/wiki/Bubble%20Sort\">Bubble Sort</a>.</p>\n<p>The pseudocode for the algorithm is:</p>\n<pre><b>function</b> <i>gnomeSort</i>(a[0..size-1])\n  i := 1\n  j := 2\n  <b>while</b> i &#x3C; size <b>do</b>\n    <b>if</b> a[i-1] &#x3C;= a[i] <b>then</b>\n      <i>/// for descending sort, use >= for comparison</i>\n      i := j\n      j := j + 1\n    <b>else</b>\n      <b>swap</b> a[i-1] <b>and</b> a[i]\n      i := i - 1\n      <b>if</b> i = 0 <b>then</b>\n        i := j\n        j := j + 1\n      <b>endif</b>\n    <b>endif</b>\n  <b>done</b>\n</pre>\n</section>",
+  "boilerplate": "function gnomeSort(a) {\n\n}",
+  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/rosetta-code/sorting-algorithmsgnome-sort"
+}

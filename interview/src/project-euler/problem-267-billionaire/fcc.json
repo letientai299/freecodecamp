@@ -1,0 +1,6 @@
+{
+  "title": "Problem 267: Billionaire",
+  "htmlDescription": "<section id=\"description\">\n<p>You are given a unique investment opportunity.</p>\n<p>Starting with £1 of capital, you can choose a fixed proportion, f, of your capital to bet on a fair coin toss repeatedly for 1000 tosses.</p>\n<p>Your return is double your bet for heads and you lose your bet for tails.</p>\n<p>For example, if f = 1/4, for the first toss you bet £0.25, and if heads comes up you win £0.5 and so then have £1.5. You then bet £0.375 and if the second toss is tails, you have £1.125.</p>\n<p>Choosing f to maximize your chances of having at least £1,000,000,000 after 1,000 flips, what is the chance that you become a billionaire?</p>\n<p>All computations are assumed to be exact (no rounding), but give your answer rounded to 12 digits behind the decimal point in the form 0.abcdefghijkl.</p>\n</section>",
+  "boilerplate": "function euler267() {\n\n  return true;\n}\n\neuler267();",
+  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/project-euler/problem-267-billionaire"
+}

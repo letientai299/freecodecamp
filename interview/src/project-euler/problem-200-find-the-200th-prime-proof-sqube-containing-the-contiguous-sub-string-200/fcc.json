@@ -1,0 +1,6 @@
+{
+  "title": "Problem 200: Find the 200th prime-proof sqube containing the contiguous sub-string \"200\"",
+  "htmlDescription": "<section id=\"description\">\n<p>We shall define a sqube to be a number of the form, p2q3, where p and q are distinct primes.</p>\n<p>For example, 200 = 5223 or 120072949 = 232613.</p>\n<p>The first five squbes are 72, 108, 200, 392, and 500.</p>\n<p>Interestingly, 200 is also the first number for which you cannot change any single digit to make a prime; we shall call such numbers, prime-proof. The next prime-proof sqube which contains the contiguous sub-string \"200\" is 1992008.</p>\n<p>Find the 200th prime-proof sqube containing the contiguous sub-string \"200\".</p>\n</section>",
+  "boilerplate": "function euler200() {\n\n  return true;\n}\n\neuler200();",
+  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/project-euler/problem-200-find-the-200th-prime-proof-sqube-containing-the-contiguous-sub-string-200"
+}

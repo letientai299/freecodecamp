@@ -1,0 +1,6 @@
+{
+  "title": "IBAN",
+  "htmlDescription": "<section id=\"description\">\n<p>The <a href=\"https://en.wikipedia.org/wiki/International_Bank_Account_Number\">International Bank Account Number (IBAN)</a> is an internationally agreed means of identifying bank accounts across national borders with a reduced risk of propagating <a href=\"https://en.wikipedia.org/wiki/Transcription_error\">transcription errors</a>.</p>\n<p>The IBAN consists of up to 34 alphanumeric characters:</p>\n<ul>\n  <li>first the two-letter ISO 3166-1 alpha-2 country code</li>\n  <li>then two check digits, and</li>\n  <li>finally a country-specific Basic Bank Account Number (BBAN).</li>\n</ul>\n<p>The check digits enable a sanity check of the bank account number to confirm its integrity even before submitting a transaction.</p>\n</section>",
+  "boilerplate": "function isValid(iban) {\n\n}",
+  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/rosetta-code/iban"
+}

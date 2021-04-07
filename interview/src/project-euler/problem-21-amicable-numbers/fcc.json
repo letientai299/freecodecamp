@@ -1,0 +1,6 @@
+{
+  "title": "Problem 21: Amicable numbers",
+  "htmlDescription": "<section id=\"description\">\n<p>Let d(<code>n</code>) be defined as the sum of proper divisors of <code>n</code> (numbers less than <code>n</code> which divide evenly into <code>n</code>).</p>\n<p>If d(<code>a</code>) = <code>b</code> and d(<code>b</code>) = <code>a</code>, where <code>a</code> ≠ <code>b</code>, then <code>a</code> and <code>b</code> are an amicable pair and each of <code>a</code> and <code>b</code> are called amicable numbers.</p>\n<p>For example, the proper divisors of 220 are 1, 2, 4, 5, 10, 11, 20, 22, 44, 55 and 110; therefore d(220) = 284. The proper divisors of 284 are 1, 2, 4, 71 and 142; so d(284) = 220.</p>\n<p>Evaluate the sum of all the amicable numbers under <code>n</code>.</p>\n</section>",
+  "boilerplate": "function sumAmicableNum(n) {\n\n  return n;\n}\n\nsumAmicableNum(10000);",
+  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/project-euler/problem-21-amicable-numbers"
+}

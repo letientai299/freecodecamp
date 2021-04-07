@@ -1,0 +1,6 @@
+{
+  "title": "Problem 372: Pencils of rays",
+  "htmlDescription": "<section id=\"description\">\n<p>Let R(M, N) be the number of lattice points (x, y) which satisfy M</p>\n<p>Note: represents the floor function.</p>\n</section>",
+  "boilerplate": "function euler372() {\n\n  return true;\n}\n\neuler372();",
+  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/project-euler/problem-372-pencils-of-rays"
+}

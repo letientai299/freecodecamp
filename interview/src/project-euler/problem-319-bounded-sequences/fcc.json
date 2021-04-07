@@ -1,0 +1,6 @@
+{
+  "title": "Problem 319: Bounded Sequences",
+  "htmlDescription": "<section id=\"description\">\n<p>Let x1, x2,..., xn be a sequence of length n such that:</p>\n<p>x1 = 2</p>\n<p>for all 1 &#x3C; i ≤ n : xi-1 &#x3C; xi</p>\n<p>for all i and j with 1 ≤ i, j ≤ n : (xi) j &#x3C; (xj + 1)i</p>\n<p>There are only five such sequences of length 2, namely: {2,4}, {2,5}, {2,6}, {2,7} and {2,8}. There are 293 such sequences of length 5; three examples are given below: {2,5,11,25,55}, {2,6,14,36,88}, {2,8,22,64,181}.</p>\n<p>Let t(n) denote the number of such sequences of length n. You are given that t(10) = 86195 and t(20) = 5227991891.</p>\n<p>Find t(1010) and give your answer modulo 109.</p>\n</section>",
+  "boilerplate": "function euler319() {\n\n  return true;\n}\n\neuler319();",
+  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/project-euler/problem-319-bounded-sequences"
+}

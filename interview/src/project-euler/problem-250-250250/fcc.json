@@ -1,0 +1,6 @@
+{
+  "title": "Problem 250: 250250",
+  "htmlDescription": "<section id=\"description\">\n<p>Find the number of non-empty subsets of {11, 22, 33,..., 250250250250}, the sum of whose elements is divisible by 250. Enter the rightmost 16 digits as your answer.</p>\n</section>",
+  "boilerplate": "function euler250() {\n\n  return true;\n}\n\neuler250();",
+  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/project-euler/problem-250-250250"
+}

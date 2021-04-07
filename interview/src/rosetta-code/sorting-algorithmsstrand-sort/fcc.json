@@ -1,0 +1,6 @@
+{
+  "title": "Sorting algorithms/Strand sort",
+  "htmlDescription": "<section id=\"description\">\n<p>Write a function to sort an array using the <a href=\"https://en.wikipedia.org/wiki/Strand%20sort\">Strand sort</a>. The function should return the sorted array.</p>\n<p>This is a way of sorting numbers by extracting shorter sequences of already sorted numbers from an unsorted list.</p>\n</section>",
+  "boilerplate": "function strandSort(list) {\n\n}",
+  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/rosetta-code/sorting-algorithmsstrand-sort"
+}

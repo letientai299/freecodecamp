@@ -1,0 +1,5 @@
+function gnomeSort(a) {
+
+}
+
+// TODO

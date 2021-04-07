@@ -1,0 +1,6 @@
+{
+  "title": "Remove items from a set in ES6",
+  "htmlDescription": "<section id=\"description\">\n<p>Let's practice removing items from an ES6 Set using the <code>delete</code> method.</p>\n<p>First, create an ES6 Set:</p>\n<pre><code class=\"language-js\">var set = new Set([1,2,3]);\n</code></pre>\n<p>Now remove an item from your Set with the <code>delete</code> method.</p>\n<pre><code class=\"language-js\">set.delete(1);\nconsole.log([...set]) // should return [ 2, 3 ]\n</code></pre>\n</section>",
+  "boilerplate": "function checkSet(){\n   var set = null;\n   return set;\n}",
+  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/data-structures/remove-items-from-a-set-in-es6"
+}

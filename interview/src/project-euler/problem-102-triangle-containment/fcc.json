@@ -1,0 +1,6 @@
+{
+  "title": "Problem 102: Triangle containment",
+  "htmlDescription": "<section id=\"description\">\n<p>Three distinct points are plotted at random on a Cartesian plane, for which -1000 ≤ x, y ≤ 1000, such that a triangle is formed.</p>\n<p>Consider the following two triangles:</p>\n<p>A(-340,495), B(-153,-910), C(835,-947)</p>\n<p>X(-175,41), Y(-421,-714), Z(574,-645)</p>\n<p>It can be verified that triangle ABC contains the origin, whereas triangle XYZ does not.</p>\n<p>Using triangles.txt (right click and 'Save Link/Target As...'), a 27K text file containing the coordinates of one thousand \"random\" triangles, find the number of triangles for which the interior contains the origin.</p>\n<p>NOTE: The first two examples in the file represent the triangles in the example given above.</p>\n</section>",
+  "boilerplate": "function euler102() {\n\n  return true;\n}\n\neuler102();",
+  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/project-euler/problem-102-triangle-containment"
+}

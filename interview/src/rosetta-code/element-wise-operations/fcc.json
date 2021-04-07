@@ -1,0 +1,6 @@
+{
+  "title": "Element-wise operations",
+  "htmlDescription": "<section id=\"description\">\n<p>Implement basic element-wise matrix-matrix and scalar-matrix operations.</p>\n<p><strong>Implement:</strong></p>\n<ul>\n  <li>addition</li>\n  <li>subtraction</li>\n  <li>multiplication</li>\n  <li>division</li>\n  <li>exponentiation</li>\n</ul>\n<p>The first parameter will be the operation to be performed, for example, \"m_add\" for matrix addition and \"s_add\" for scalar addition. The second and third parameters will be the matrices on which the operations are to be performed.</p>\n</section>",
+  "boilerplate": "function operation(op, arr1, arr2) {\n\n}",
+  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/rosetta-code/element-wise-operations"
+}

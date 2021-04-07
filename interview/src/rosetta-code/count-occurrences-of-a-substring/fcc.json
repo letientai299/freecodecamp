@@ -1,0 +1,6 @@
+{
+  "title": "Count occurrences of a substring",
+  "htmlDescription": "<section id=\"description\">\n<p>Create a function, or show a built-in function, to count the number of non-overlapping occurrences of a substring inside a string.</p>\n<p>The function should take two arguments:</p>\n<ul>\n  <li>the first argument being the string to search, and</li>\n  <li>the second a substring to be searched for.</li>\n</ul>\n<p>It should return an integer count.</p>\n<p>The matching should yield the highest number of non-overlapping matches.</p>\n<p>In general, this essentially means matching from left-to-right or right-to-left.</p>\n</section>",
+  "boilerplate": "function countSubstring(str, subStr) {\n\n  return true;\n}",
+  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/rosetta-code/count-occurrences-of-a-substring"
+}

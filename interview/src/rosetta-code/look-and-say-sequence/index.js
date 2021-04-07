@@ -1,0 +1,5 @@
+function lookAndSay(str) {
+
+}
+
+// TODO

@@ -1,0 +1,6 @@
+{
+  "title": "Problem 371: Licence plates",
+  "htmlDescription": "<section id=\"description\">\n<p>Oregon licence plates consist of three letters followed by a three digit number (each digit can be from [0..9]).</p>\n<p>While driving to work Seth plays the following game:</p>\n<p>Whenever the numbers of two licence plates seen on his trip add to 1000 that's a win.</p>\n<p>E.g. MIC-012 and HAN-988 is a win and RYU-500 and SET-500 too. (as long as he sees them in the same trip).</p>\n<p>Find the expected number of plates he needs to see for a win. Give your answer rounded to 8 decimal places behind the decimal point.</p>\n<p>Note: We assume that each licence plate seen is equally likely to have any three digit number on it.</p>\n</section>",
+  "boilerplate": "function euler371() {\n\n  return true;\n}\n\neuler371();",
+  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/project-euler/problem-371-licence-plates"
+}

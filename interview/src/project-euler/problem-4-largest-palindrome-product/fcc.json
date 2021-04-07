@@ -1,0 +1,6 @@
+{
+  "title": "Problem 4: Largest palindrome product",
+  "htmlDescription": "<section id=\"description\">\n<p>A palindromic number reads the same both ways. The largest palindrome made from the product of two 2-digit numbers is 9009 = 91 × 99.</p>\n<p>Find the largest palindrome made from the product of two <code>n</code>-digit numbers.</p>\n</section>",
+  "boilerplate": "function largestPalindromeProduct(n) {\n\n  return true;\n}\n\nlargestPalindromeProduct(3);",
+  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/project-euler/problem-4-largest-palindrome-product"
+}

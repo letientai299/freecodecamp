@@ -1,0 +1,6 @@
+{
+  "title": "Sudoku",
+  "htmlDescription": "<section id=\"description\">\n<p>Write a function to solve a partially filled-in normal 9x9 <a href=\"https://en.wikipedia.org/wiki/Sudoku\">Sudoku</a> grid and return the result. The blank fields are represented by 0s. <a href=\"https://en.wikipedia.org/wiki/Algorithmics_of_sudoku\">Algorithmics of Sudoku</a> may help implement this.</p>\n</section>",
+  "boilerplate": "function solveSudoku(puzzle) {\n\n}",
+  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/rosetta-code/sudoku"
+}

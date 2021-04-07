@@ -1,0 +1,6 @@
+{
+  "title": "Problem 137: Fibonacci golden nuggets",
+  "htmlDescription": "<section id=\"description\">\n<p>Consider the infinite polynomial series AF(x) = xF1 + x2F2 + x3F3 + ..., where Fk is the kth term in the Fibonacci sequence: 1, 1, 2, 3, 5, 8, ... ; that is, Fk = Fk−1 + Fk−2, F1 = 1 and F2 = 1.</p>\n<p>For this problem we shall be interested in values of x for which AF(x) is a positive integer.</p>\n<p>Surprisingly AF(1/2)</p>\n<p>=</p>\n<p>(1/2).1 + (1/2)2.1 + (1/2)3.2 + (1/2)4.3 + (1/2)5.5 + ...</p>\n<p>= 1/2 + 1/4 + 2/8 + 3/16 + 5/32 + ...</p>\n<p>= 2 The corresponding values of x for the first five natural numbers are shown below.</p>\n<p>xAF(x) √2−11 1/22 (√13−2)/33 (√89−5)/84 (√34−3)/55</p>\n<p>We shall call AF(x) a golden nugget if x is rational, because they become increasingly rarer; for example, the 10th golden nugget is 74049690. Find the 15th golden nugget.</p>\n</section>",
+  "boilerplate": "function euler137() {\n\n  return true;\n}\n\neuler137();",
+  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/project-euler/problem-137-fibonacci-golden-nuggets"
+}

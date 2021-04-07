@@ -1,0 +1,6 @@
+{
+  "title": "Problem 115: Counting block combinations II",
+  "htmlDescription": "<section id=\"description\">\n<p>NOTE: This is a more difficult version of Problem 114.</p>\n<p>A row measuring n units in length has red blocks with a minimum length of m units placed on it, such that any two red blocks (which are allowed to be different lengths) are separated by at least one black square.</p>\n<p>Let the fill-count function, F(m, n), represent the number of ways that a row can be filled.</p>\n<p>For example, F(3, 29) = 673135 and F(3, 30) = 1089155.</p>\n<p>That is, for m = 3, it can be seen that n = 30 is the smallest value for which the fill-count function first exceeds one million.</p>\n<p>In the same way, for m = 10, it can be verified that F(10, 56) = 880711 and F(10, 57) = 1148904, so n = 57 is the least value for which the fill-count function first exceeds one million.</p>\n<p>For m = 50, find the least value of n for which the fill-count function first exceeds one million.</p>\n</section>",
+  "boilerplate": "function euler115() {\n\n  return true;\n}\n\neuler115();",
+  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/project-euler/problem-115-counting-block-combinations-ii"
+}

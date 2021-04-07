@@ -1,0 +1,6 @@
+{
+  "title": "Longest increasing subsequence",
+  "htmlDescription": "<section id=\"description\">\n<p>The longest increasing subsequence problem is to find a subsequence of a given sequence in which the subsequence's elements are in sorted order, lowest to highest, and in which the subsequence is as long as possible. An example:</p>\n<p>For the following array:</p>\n<p>$\\{3, 10, 2, 1, 20\\}$</p>\n<p>Longest increasing sequence is:</p>\n<p>$\\{3, 10, 20\\}$</p>\n<p>For more information on this problem please see <a href=\"https://en.wikipedia.org/wiki/Longest%20increasing%20subsequence\">Wikipedia</a>.</p>\n</section>",
+  "boilerplate": "function findSequence(input) {\n\n}",
+  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/rosetta-code/longest-increasing-subsequence"
+}
