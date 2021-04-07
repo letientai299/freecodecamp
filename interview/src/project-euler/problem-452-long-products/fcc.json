@@ -1,0 +1,6 @@
+{
+  "title": "Problem 452: Long Products",
+  "htmlDescription": "<section id=\"description\">\n<p>Define F(m,n) as the number of n-tuples of positive integers for which the product of the elements doesn't exceed m.</p>\n<p>F(10, 10) = 571.</p>\n<p>F(106, 106) mod 1 234 567 891 = 252903833.</p>\n<p>Find F(109, 109) mod 1 234 567 891.</p>\n</section>",
+  "boilerplate": "function euler452() {\n\n  return true;\n}\n\neuler452();",
+  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/project-euler/problem-452-long-products"
+}

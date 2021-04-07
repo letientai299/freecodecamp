@@ -1,0 +1,6 @@
+{
+  "title": "Hofstadter Figure-Figure sequences",
+  "htmlDescription": "<section id=\"description\">\n<p>These two sequences of positive integers are defined as:</p>\n<p>$R(1)=1\\ ;\\ S(1)=2 \\\\R(n)=R(n-1)+S(n-1), \\quad n>1.$</p>\n<p>The sequence $S(n)$ is further defined as the sequence of positive integers not present in $R(n)$.</p>\n<p>Sequence $R$ starts:</p>\n<pre>1, 3, 7, 12, 18, ...</pre>\n<p>Sequence $S$ starts:</p>\n<pre>2, 4, 5, 6, 8, ...</pre>\n</section>",
+  "boilerplate": "function ffr(n) {\n  return n;\n}\n\nfunction ffs(n) {\n  return n;\n}",
+  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/rosetta-code/hofstadter-figure-figure-sequences"
+}

@@ -1,0 +1,6 @@
+{
+  "title": "Problem 94: Almost equilateral triangles",
+  "htmlDescription": "<section id=\"description\">\n<p>It is easily proved that no equilateral triangle exists with integral length sides and integral area. However, the <dfn>almost equilateral triangle</dfn> 5-5-6 has an area of 12 square units.</p>\n<p>We shall define an <dfn>almost equilateral triangle</dfn> to be a triangle for which two sides are equal and the third differs by no more than one unit.</p>\n<p>Find the sum of the perimeters of all <dfn>almost equilateral triangle</dfn> with integral side lengths and area and whose perimeters do not exceed one billion (1,000,000,000).</p>\n</section>",
+  "boilerplate": "function almostEquilateralTriangles() {\n\n  return true;\n}\n\nalmostEquilateralTriangles();",
+  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/project-euler/problem-94-almost-equilateral-triangles"
+}

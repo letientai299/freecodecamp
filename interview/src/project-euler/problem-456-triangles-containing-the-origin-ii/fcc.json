@@ -1,0 +1,6 @@
+{
+  "title": "Problem 456: Triangles containing the origin II",
+  "htmlDescription": "<section id=\"description\">\n<p>Define:xn = (1248n mod 32323) - 16161yn = (8421n mod 30103) - 15051</p>\n<p>Pn = {(x1, y1), (x2, y2), ..., (xn, yn)}</p>\n<p>For example, P8 = {(-14913, -6630), (-10161, 5625), (5226, 11896), (8340, -10778), (15852, -5203), (-15165, 11295), (-1427, -14495), (12407, 1060)}.</p>\n<p>Let C(n) be the number of triangles whose vertices are in Pn which contain the origin in the interior.</p>\n<p>Examples: C(8) = 20 C(600) = 8950634 C(40 000) = 2666610948988</p>\n<p>Find C(2 000 000).</p>\n</section>",
+  "boilerplate": "function euler456() {\n\n  return true;\n}\n\neuler456();",
+  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/project-euler/problem-456-triangles-containing-the-origin-ii"
+}

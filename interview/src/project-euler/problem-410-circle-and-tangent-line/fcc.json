@@ -1,0 +1,6 @@
+{
+  "title": "Problem 410: Circle and tangent line",
+  "htmlDescription": "<section id=\"description\">\n<p>Let C be the circle with radius r, x2 + y2 = r2. We choose two points P(a, b) and Q(-a, c) so that the line passing through P and Q is tangent to C.</p>\n<p>For example, the quadruplet (r, a, b, c) = (2, 6, 2, -7) satisfies this property.</p>\n<p>Let F(R, X) be the number of the integer quadruplets (r, a, b, c) with this property, and with 0 &#x3C; r ≤ R and 0 &#x3C; a ≤ X.</p>\n<p>We can verify that F(1, 5) = 10, F(2, 10) = 52 and F(10, 100) = 3384. Find F(108, 109) + F(109, 108).</p>\n</section>",
+  "boilerplate": "function euler410() {\n\n  return true;\n}\n\neuler410();",
+  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/project-euler/problem-410-circle-and-tangent-line"
+}

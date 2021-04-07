@@ -1,0 +1,6 @@
+{
+  "title": "Problem 136: Singleton difference",
+  "htmlDescription": "<section id=\"description\">\n<p>The positive integers, x, y, and z, are consecutive terms of an arithmetic progression. Given that n is a positive integer, the equation, x2 − y2 − z2 = n, has exactly one solution when n = 20:</p>\n<p>132 − 102 − 72 = 20</p>\n<p>In fact there are twenty-five values of n below one hundred for which the equation has a unique solution.</p>\n<p>How many values of n less than fifty million have exactly one solution?</p>\n</section>",
+  "boilerplate": "function euler136() {\n\n  return true;\n}\n\neuler136();",
+  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/project-euler/problem-136-singleton-difference"
+}

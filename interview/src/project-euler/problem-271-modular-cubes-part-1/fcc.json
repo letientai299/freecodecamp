@@ -1,0 +1,6 @@
+{
+  "title": "Problem 271: Modular Cubes, part 1",
+  "htmlDescription": "<section id=\"description\">\n<p>For a positive number n, define S(n) as the sum of the integers x, for which 1</p>\n<p>When n=91, there are 8 possible values for x, namely : 9, 16, 22, 29, 53, 74, 79, 81. Thus, S(91)=9+16+22+29+53+74+79+81=363.</p>\n<p>Find S(13082761331670030).</p>\n</section>",
+  "boilerplate": "function euler271() {\n\n  return true;\n}\n\neuler271();",
+  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/project-euler/problem-271-modular-cubes-part-1"
+}

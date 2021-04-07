@@ -1,0 +1,6 @@
+{
+  "title": "Fibonacci sequence",
+  "htmlDescription": "<section id=\"description\">\n<p>Write a function to generate the <code>n<sup>th</sup></code> Fibonacci number.</p>\n<p>The <code>n<sup>th</sup></code> Fibonacci number is given by:</p>\n<p><code>F<sub>n</sub> = F<sub>n-1</sub> + F<sub>n-2</sub></code></p>\n<p>The first two terms of the series are 0 and 1.</p>\n<p>Hence, the series is: 0, 1, 1, 2, 3, 5, 8, 13...</p>\n</section>",
+  "boilerplate": "function fibonacci(n) {\n\n}",
+  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/rosetta-code/fibonacci-sequence"
+}

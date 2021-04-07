@@ -1,0 +1,6 @@
+{
+  "title": "Deepcopy",
+  "htmlDescription": "<section id=\"description\">\n<p>Write a function that returns a deep copy of a given object. The copy must not be the same object that was given.</p>\n<p>This task will not test for:</p>\n<ul>\n  <li>Objects with properties that are functions</li>\n  <li>Date objects or object with properties that are Date objects</li>\n  <li>RegEx or object with properties that are RegEx objects</li>\n  <li>Prototype copying</li>\n</ul>\n</section>",
+  "boilerplate": "function deepcopy(obj) {\n\n  return true;\n}",
+  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/rosetta-code/deepcopy"
+}

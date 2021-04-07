@@ -1,0 +1,6 @@
+{
+  "title": "Split a character string based on change of character",
+  "htmlDescription": "<section id=\"description\">\n<p>Split a (character) string into comma (plus a blank) delimited strings based on a change of character (left to right). Blanks should be treated as any other character (except they are problematic to display clearly). The same applies to commas. For instance, the string:</p>\n<pre>\n\"gHHH5YY++///\\\\\"\n</pre>\n<p>should be split as:</p>\n<pre>\n[\"g\", \"HHH\", \"5\", \"YY\", \"++\", \"///\", \"\\\\\" ];\n</pre>\n</section>",
+  "boilerplate": "function split(str) {\n\n}",
+  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/rosetta-code/split-a-character-string-based-on-change-of-character"
+}

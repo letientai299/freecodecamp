@@ -1,0 +1,6 @@
+{
+  "title": "Cumulative standard deviation",
+  "htmlDescription": "<section id=\"description\">\n<p>Write a function that takes an array of numbers as parameter and returns the <a href=\"https://en.wikipedia.org/wiki/Standard%20Deviation\">standard deviation</a> of the series.</p>\n</section>",
+  "boilerplate": "function standardDeviation(arr) {\n\n}",
+  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/rosetta-code/cumulative-standard-deviation"
+}

@@ -1,0 +1,6 @@
+{
+  "title": "Problem 356: Largest roots of cubic polynomials",
+  "htmlDescription": "<section id=\"description\">\n<p>Let an be the largest real root of a polynomial g(x) = x3 - 2n·x2 + n.</p>\n<p>For example, a2 = 3.86619826...</p>\n<p>Find the last eight digits of.</p>\n<p>Note: represents the floor function.</p>\n</section>",
+  "boilerplate": "function euler356() {\n\n  return true;\n}\n\neuler356();",
+  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/project-euler/problem-356-largest-roots-of-cubic-polynomials"
+}

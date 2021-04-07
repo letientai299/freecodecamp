@@ -1,0 +1,6 @@
+{
+  "title": "Gamma function",
+  "htmlDescription": "<section id=\"description\">\n<p>Implement one algorithm (or more) to compute the <a href=\"https://en.wikipedia.org/wiki/Gamma%20function\">Gamma</a> ($\\Gamma$) function (in the real field only).</p>\n<p>The Gamma function can be defined as:</p>\n<div style='padding-left: 4em;'><big><big>$\\Gamma(x) = \\displaystyle\\int_0^\\infty t^{x-1}e^{-t} dt$</big></big></div>\n</section>",
+  "boilerplate": "function gamma(x) {\n\n}",
+  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/rosetta-code/gamma-function"
+}

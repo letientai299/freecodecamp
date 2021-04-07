@@ -1,0 +1,6 @@
+{
+  "title": "Leap year",
+  "htmlDescription": "<section id=\"description\">\n<p>Determine whether a given year is a leap year in the Gregorian calendar.</p>\n</section>",
+  "boilerplate": "function isLeapYear(year) {\n\n}",
+  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/rosetta-code/leap-year"
+}

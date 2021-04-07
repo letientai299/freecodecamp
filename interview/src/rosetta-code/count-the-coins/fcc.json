@@ -1,0 +1,6 @@
+{
+  "title": "Count the coins",
+  "htmlDescription": "<section id=\"description\">\n<p>There are four types of common coins in <a href=\"https://en.wikipedia.org/wiki/United_States\">US</a> currency:</p>\n<ul>\n  <li>quarters (25 cents)</li>\n  <li>dimes (10 cents)</li>\n  <li>nickels (5 cents), and</li>\n  <li>pennies (1 cent)</li>\n</ul>\n<p>There are six ways to make change for 15 cents:</p>\n<ul>\n  <li>A dime and a nickel</li>\n  <li>A dime and 5 pennies</li>\n  <li>3 nickels</li>\n  <li>2 nickels and 5 pennies</li>\n  <li>A nickel and 10 pennies</li>\n  <li>15 pennies</li>\n</ul>\n</section>",
+  "boilerplate": "function countCoins(cents) {\n\n  return true;\n}",
+  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/rosetta-code/count-the-coins"
+}

@@ -1,0 +1,6 @@
+{
+  "title": "Problem 16: Power digit sum",
+  "htmlDescription": "<section id=\"description\">\n<p>2<sup>15</sup> = 32768 and the sum of its digits is 3 + 2 + 7 + 6 + 8 = 26.</p>\n<p>What is the sum of the digits of the number 2<sup><code>exponent</code></sup>?</p>\n</section>",
+  "boilerplate": "function powerDigitSum(exponent) {\n\n  return true;\n}\n\npowerDigitSum(15);",
+  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/project-euler/problem-16-power-digit-sum"
+}

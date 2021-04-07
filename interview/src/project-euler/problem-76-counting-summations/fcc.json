@@ -1,0 +1,6 @@
+{
+  "title": "Problem 76: Counting summations",
+  "htmlDescription": "<section id=\"description\">\n<p>It is possible to write five as a sum in exactly six different ways:</p>\n<div style='margin-left: 4em;'>\n  4 + 1<br>\n  3 + 2<br>\n  3 + 1 + 1<br>\n  2 + 2 + 1<br>\n  2 + 1 + 1 + 1<br>\n  1 + 1 + 1 + 1 + 1<br>\n</div>\n<p>How many different ways can one hundred be written as a sum of at least two positive integers?</p>\n</section>",
+  "boilerplate": "function countingSummations() {\n\n  return true;\n}\n\ncountingSummations();",
+  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/project-euler/problem-76-counting-summations"
+}

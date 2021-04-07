@@ -1,0 +1,6 @@
+{
+  "title": "Spiral matrix",
+  "htmlDescription": "<section id=\"description\">\n<p>Produce a spiral array. A <em>spiral array</em> is a square arrangement of the first N<sup>2</sup> natural numbers, where the numbers increase sequentially as you go around the edges of the array spiraling inwards. For example, given <strong>5</strong>, produce this array:</p>\n<pre>\n0  1  2  3  4\n15 16 17 18 5\n14 23 24 19 6\n13 22 21 20 7\n12 11 10  9 8\n</pre>\n</section>",
+  "boilerplate": "function spiralArray(n) {\n\n}",
+  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/rosetta-code/spiral-matrix"
+}

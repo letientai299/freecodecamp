@@ -1,0 +1,6 @@
+{
+  "title": "Problem 14: Longest Collatz sequence",
+  "htmlDescription": "<section id=\"description\">\n<p>The following iterative sequence is defined for the set of positive integers:</p>\n<div style='padding-left: 4em;'><var>n</var> → <var>n</var>/2 (<var>n</var> is even)</div>\n<div style='padding-left: 4em;'><var>n</var> → 3<var>n</var> + 1 (<var>n</var> is odd)</div>\n<p>Using the rule above and starting with 13, we generate the following sequence:</p>\n<div style='text-align: center;'>13 → 40 → 20 → 10 → 5 → 16 → 8 → 4 → 2 → 1</div>\n<p>It can be seen that this sequence (starting at 13 and finishing at 1) contains 10 terms. Although it has not been proved yet (Collatz Problem), it is thought that all starting numbers finish at 1.</p>\n<p>Which starting number, under the given <code>limit</code>, produces the longest chain?</p>\n<p><strong>Note:</strong> Once the chain starts the terms are allowed to go above one million.</p>\n</section>",
+  "boilerplate": "function longestCollatzSequence(limit) {\n\n  return true;\n}\n\nlongestCollatzSequence(14);",
+  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/project-euler/problem-14-longest-collatz-sequence"
+}

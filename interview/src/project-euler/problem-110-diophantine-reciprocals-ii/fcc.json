@@ -1,0 +1,6 @@
+{
+  "title": "Problem 110: Diophantine Reciprocals II",
+  "htmlDescription": "<section id=\"description\">\n<p>In the following equation x, y, and n are positive integers.</p>\n<p>1/<code>x</code> + 1/<code>y</code> = 1/<code>n</code></p>\n<p>It can be verified that when <code>n</code> = 1260 there are 113 distinct solutions and this is the least value of <code>n</code> for which the total number of distinct solutions exceeds one hundred.</p>\n<p>What is the least value of <code>n</code> for which the number of distinct solutions exceeds four million?</p>\n</section>",
+  "boilerplate": "function diophantineTwo() {\n\n  return true;\n}\n\ndiophantineTwo();",
+  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/project-euler/problem-110-diophantine-reciprocals-ii"
+}

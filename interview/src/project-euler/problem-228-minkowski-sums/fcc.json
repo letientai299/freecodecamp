@@ -1,0 +1,6 @@
+{
+  "title": "Problem 228: Minkowski Sums",
+  "htmlDescription": "<section id=\"description\">\n<!-- TODO Use MathJax and re-write from projecteuler.net -->\n<p>Let Sn be the regular n-sided polygon – or shape – whose vertices</p>\n<p>vk (k = 1,2,…,n) have coordinates:</p>\n<p>xk = cos( 2k-1/n ×180° )</p>\n<p>yk = sin( 2k-1/n ×180° )</p>\n<p>Each Sn is to be interpreted as a filled shape consisting of all points on the perimeter and in the interior.</p>\n<p>The Minkowski sum, S+T, of two shapes S and T is the result of</p>\n<p>adding every point in S to every point in T, where point addition is performed coordinate-wise:</p>\n<p>(u, v) + (x, y) = (u+x, v+y).</p>\n<p>For example, the sum of S3 and S4 is the six-sided shape shown in pink below:</p>\n<p>How many sides does S1864 + S1865 + … + S1909 have?</p>\n</section>",
+  "boilerplate": "function euler228() {\n\n  return true;\n}\n\neuler228();",
+  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/project-euler/problem-228-minkowski-sums"
+}

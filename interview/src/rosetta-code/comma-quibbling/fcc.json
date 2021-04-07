@@ -1,0 +1,6 @@
+{
+  "title": "Comma quibbling",
+  "htmlDescription": "<section id=\"description\">\n<p>Comma quibbling is a task originally set by Eric Lippert in his <a href=\"https://blogs.msdn.com/b/ericlippert/archive/2009/04/15/comma-quibbling.aspx\">blog</a>.</p>\n</section>",
+  "boilerplate": "function quibble(words) {\n\n  return true;\n}",
+  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/rosetta-code/comma-quibbling"
+}

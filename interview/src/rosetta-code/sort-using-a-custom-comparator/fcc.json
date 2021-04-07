@@ -1,0 +1,6 @@
+{
+  "title": "Sort using a custom comparator",
+  "htmlDescription": "<section id=\"description\">\n<p>Write a function to sort an array (or list) of strings in order of descending length, and in ascending lexicographic order for strings of equal length.</p>\n</section>",
+  "boilerplate": "function lengthSorter(arr) {\n\n}",
+  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/rosetta-code/sort-using-a-custom-comparator"
+}

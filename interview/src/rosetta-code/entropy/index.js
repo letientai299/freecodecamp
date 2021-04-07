@@ -1,0 +1,5 @@
+function entropy(s) {
+
+}
+
+// TODO

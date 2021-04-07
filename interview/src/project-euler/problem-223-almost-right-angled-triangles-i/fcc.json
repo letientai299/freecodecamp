@@ -1,0 +1,6 @@
+{
+  "title": "Problem 223: Almost right-angled triangles I",
+  "htmlDescription": "<section id=\"description\">\n<p>Let us call an integer sided triangle with sides a ≤ b ≤ c barely acute if the sides satisfy a2 + b2 = c2 + 1.</p>\n<p>How many barely acute triangles are there with perimeter ≤ 25,000,000?</p>\n</section>",
+  "boilerplate": "function euler223() {\n\n  return true;\n}\n\neuler223();",
+  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/project-euler/problem-223-almost-right-angled-triangles-i"
+}

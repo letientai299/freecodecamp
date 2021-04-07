@@ -1,0 +1,6 @@
+{
+  "title": "Problem 388: Distinct Lines",
+  "htmlDescription": "<section id=\"description\">\n<p>Consider all lattice points (a,b,c) with 0 ≤ a,b,c ≤ N.</p>\n<p>From the origin O(0,0,0) all lines are drawn to the other lattice points. Let D(N) be the number of distinct such lines.</p>\n<p>You are given that D(1 000 000) = 831909254469114121.</p>\n<p>Find D(1010). Give as your answer the first nine digits followed by the last nine digits.</p>\n</section>",
+  "boilerplate": "function euler388() {\n\n  return true;\n}\n\neuler388();",
+  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/project-euler/problem-388-distinct-lines"
+}

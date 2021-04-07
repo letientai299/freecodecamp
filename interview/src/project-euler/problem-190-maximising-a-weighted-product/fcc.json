@@ -1,0 +1,6 @@
+{
+  "title": "Problem 190: Maximising a weighted product",
+  "htmlDescription": "<section id=\"description\">\n<p>Let Sm = (x1, x2, ... , xm) be the m-tuple of positive real numbers with x1 + x2 + ... + xm = m for which Pm = x1 * x22 * ... * xmm is maximised.</p>\n<p>For example, it can be verified that [P10] = 4112 ([ ] is the integer part function).</p>\n<p>Find Σ[Pm] for 2 ≤ m ≤ 15.</p>\n</section>",
+  "boilerplate": "function euler190() {\n\n  return true;\n}\n\neuler190();",
+  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/project-euler/problem-190-maximising-a-weighted-product"
+}

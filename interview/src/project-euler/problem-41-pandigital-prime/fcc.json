@@ -1,0 +1,6 @@
+{
+  "title": "Problem 41: Pandigital prime",
+  "htmlDescription": "<section id=\"description\">\n<p>We shall say that an <code>n</code>-digit number is pandigital if it makes use of all the digits 1 to <code>n</code> exactly once. For example, 2143 is a 4-digit pandigital and is also prime.</p>\n<p>What is the largest <code>n</code>-length digit pandigital prime that exists?</p>\n</section>",
+  "boilerplate": "function pandigitalPrime(n) {\n\n  return n;\n}\n\npandigitalPrime(7);",
+  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/project-euler/problem-41-pandigital-prime"
+}

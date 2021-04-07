@@ -1,0 +1,6 @@
+{
+  "title": "Circles of given radius through two points",
+  "htmlDescription": "<section id=\"description\">\n<p>Given two points on a plane and a radius, usually two circles of given radius can be drawn through the points.</p>\n<p><strong>Exceptions:</strong></p>\n<ul>\n  <li>A radius of zero should be treated as never describing circles (except in the case where the points are coincident).</li>\n  <li>If the points are coincident then an infinite number of circles with the point on their circumference can be drawn, unless the radius is equal to zero as well which then collapses the circles to a point.</li>\n  <li>If the points form a diameter then return a single circle.</li>\n  <li>If the points are too far apart then no circles can be drawn.</li>\n</ul>\n</section>",
+  "boilerplate": "function getCircles(...args) {\n\n  return true;\n}",
+  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/rosetta-code/circles-of-given-radius-through-two-points"
+}

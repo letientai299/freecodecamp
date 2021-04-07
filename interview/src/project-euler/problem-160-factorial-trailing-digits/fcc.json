@@ -1,0 +1,6 @@
+{
+  "title": "Problem 160: Factorial trailing digits",
+  "htmlDescription": "<section id=\"description\">\n<p>For any N, let f(N) be the last five digits before the trailing zeroes in N!.</p>\n<p>For example,</p>\n<p>9! = 362880 so f(9)=36288</p>\n<p>10! = 3628800 so f(10)=36288</p>\n<p>20! = 2432902008176640000 so f(20)=17664</p>\n<p>Find f(1,000,000,000,000)</p>\n</section>",
+  "boilerplate": "function euler160() {\n\n  return true;\n}\n\neuler160();",
+  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/project-euler/problem-160-factorial-trailing-digits"
+}

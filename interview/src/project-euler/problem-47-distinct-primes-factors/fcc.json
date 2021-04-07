@@ -1,0 +1,6 @@
+{
+  "title": "Problem 47: Distinct primes factors",
+  "htmlDescription": "<section id=\"description\">\n<p>The first two consecutive numbers to have two distinct prime factors are:</p>\n<div style='padding-left: 4em;'>\n  14 = 2 × 7<br>\n  15 = 3 × 5\n</div>\n<p>The first three consecutive numbers to have three distinct prime factors are:</p>\n<div style='padding-left: 4em;'>\n  644 = 2<sup>2</sup> × 7 × 23<br>\n  645 = 3 × 5 × 43<br>\n  646 = 2 × 17 × 19\n</div>\n<p>Find the first four consecutive integers to have four distinct prime factors each. What is the first of these numbers?</p>\n</section>",
+  "boilerplate": "function distinctPrimeFactors(targetNumPrimes, targetConsecutive) {\n\n  return true;\n}\n\ndistinctPrimeFactors(4, 4);",
+  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/project-euler/problem-47-distinct-primes-factors"
+}

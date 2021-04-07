@@ -1,0 +1,6 @@
+{
+  "title": "Check if Tree is Binary Search Tree",
+  "htmlDescription": "<section id=\"description\">\n<p>Since you already know what a binary search tree is, this challenge will establish how it is you can tell that a tree is a binary search tree or not.</p>\n<p>The main distinction of a binary search tree is that the nodes are ordered in an organized fashion. Nodes have at most 2 child nodes (placed to the right and/or left) based on if the child node's value is greater than or equal to (right) or less than (left) the parent node.</p>\n</section>",
+  "boilerplate": "var displayTree = (tree) => console.log(JSON.stringify(tree, null, 2));\nfunction Node(value) {\n  this.value = value;\n  this.left = null;\n  this.right = null;\n}\nfunction BinarySearchTree() {\n  this.root = null;\n}\nfunction isBinarySearchTree(tree) {\n  // Only change code below this line\n  \n  // Only change code above this line\n}",
+  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/data-structures/check-if-tree-is-binary-search-tree"
+}

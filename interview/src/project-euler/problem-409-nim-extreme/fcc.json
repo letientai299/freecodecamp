@@ -1,0 +1,6 @@
+{
+  "title": "Problem 409: Nim Extreme",
+  "htmlDescription": "<section id=\"description\">\n<p>Let n be a positive integer. Consider nim positions where:There are n non-empty piles.</p>\n<p>Each pile has size less than 2n.</p>\n<p>No two piles have the same size.</p>\n<p>Let W(n) be the number of winning nim positions satisfying the above</p>\n<p>conditions (a position is winning if the first player has a winning strategy). For example, W(1) = 1, W(2) = 6, W(3) = 168, W(5) = 19764360 and W(100) mod 1 000 000 007 = 384777056.</p>\n<p>Find W(10 000 000) mod 1 000 000 007.</p>\n</section>",
+  "boilerplate": "function euler409() {\n\n  return true;\n}\n\neuler409();",
+  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/project-euler/problem-409-nim-extreme"
+}

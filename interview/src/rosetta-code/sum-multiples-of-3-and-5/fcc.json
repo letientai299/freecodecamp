@@ -1,0 +1,6 @@
+{
+  "title": "Sum multiples of 3 and 5",
+  "htmlDescription": "<section id=\"description\">\n<p>The objective is to write a function that finds the sum of all positive multiples of 3 or 5 below <em>n</em>.</p>\n</section>",
+  "boilerplate": "function sumMults(n) {\n\n}",
+  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/rosetta-code/sum-multiples-of-3-and-5"
+}

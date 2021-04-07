@@ -1,0 +1,6 @@
+{
+  "title": "Gray code",
+  "htmlDescription": "<section id=\"description\">\n<p><a href=\"https://en.wikipedia.org/wiki/Gray%20code\">Gray code</a> is a form of binary encoding where transitions between consecutive numbers differ by only one bit.</p>\n<p>This is a useful encoding for reducing hardware data hazards with values that change rapidly and/or connect to slower hardware as inputs.</p>\n<p>It is also useful for generating inputs for <a href=\"https://en.wikipedia.org/wiki/Karnaugh%20map\">Karnaugh maps</a> in order from left to right or top to bottom.</p>\n</section>",
+  "boilerplate": "function gray(enc, number) {\n\n}",
+  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/rosetta-code/gray-code"
+}

@@ -1,0 +1,6 @@
+{
+  "title": "Hailstone sequence",
+  "htmlDescription": "<section id=\"description\">\n<p>The Hailstone sequence of numbers can be generated from a starting positive integer, <code>n</code> by:</p>\n<ul>\n<li>If <code>n</code> is <code>1</code> then the sequence ends</li>\n<li>If <code>n</code> is <code>even</code> then the next <code>n</code> of the sequence <code>= n/2</code></li>\n<li>If <code>n</code> is <code>odd</code> then the next <code>n</code> of the sequence <code>= (3 * n) + 1</code></li>\n</ul>\n<p>The (unproven) Collatz conjecture is that the hailstone sequence for any starting number always terminates.</p>\n<p>The hailstone sequence is also known as hailstone numbers (because the values are usually subject to multiple descents and ascents like hailstones in a cloud), or as the Collatz sequence.</p>\n</section>",
+  "boilerplate": "function hailstoneSequence(limit) {\n  const res = [];\n\n\n  return res;\n}",
+  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/rosetta-code/hailstone-sequence"
+}

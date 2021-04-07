@@ -1,0 +1,5 @@
+function sumsq(array) {
+
+}
+
+// TODO

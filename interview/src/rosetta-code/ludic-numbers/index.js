@@ -1,0 +1,5 @@
+function ludic(n) {
+
+}
+
+// TODO

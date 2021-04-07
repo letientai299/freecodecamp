@@ -1,0 +1,6 @@
+{
+  "title": "SHA-256",
+  "htmlDescription": "<section id=\"description\">\n<p><strong><a href=\"https://en.wikipedia.org/wiki/SHA-256\">SHA-256</a></strong> is the recommended stronger alternative to <a href=\"https://rosettacode.org/wiki/SHA-1\">SHA-1</a>.</p>\n</section>",
+  "boilerplate": "function SHA256(input) {\n\n}",
+  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/rosetta-code/sha-256"
+}

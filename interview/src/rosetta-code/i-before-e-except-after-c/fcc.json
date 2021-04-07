@@ -1,0 +1,6 @@
+{
+  "title": "I before E except after C",
+  "htmlDescription": "<section id=\"description\">\n<p>The phrase <a href=\"https://en.wikipedia.org/wiki/I%20before%20E%20except%20after%20C\">\"I before E, except after C\"</a> is a widely known mnemonic which is supposed to help when spelling English words.</p>\n<p>Using the words provided, check if the two sub-clauses of the phrase are plausible individually:</p>\n<ol>\n  <li>\n    <i>\"I before E when not preceded by C\".</i>\n  </li>\n  <li>\n    <i>\"E before I when preceded by C\".</i>\n  </li>\n</ol>\n<p>If both sub-phrases are plausible then the original phrase can be said to be plausible.</p>\n</section>",
+  "boilerplate": "function IBeforeExceptC(word) {\n\n}",
+  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/rosetta-code/i-before-e-except-after-c"
+}

@@ -1,0 +1,6 @@
+{
+  "title": "Evaluate binomial coefficients",
+  "htmlDescription": "<section id=\"description\">\n<p>Write a function to calculate the binomial coefficient for the given value of n and k.</p>\n<p>This formula is recommended:</p>\n<p>$\\binom{n}{k} = \\frac{n!}{(n-k)!k!} = \\frac{n(n-1)(n-2)\\ldots(n-k+1)}{k(k-1)(k-2)\\ldots 1}$</p>\n</section>",
+  "boilerplate": "function binom(n, k) {\n\n}",
+  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/rosetta-code/evaluate-binomial-coefficients"
+}

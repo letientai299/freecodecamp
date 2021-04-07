@@ -1,0 +1,5 @@
+function isSelfDescribing(n) {
+
+}
+
+// TODO

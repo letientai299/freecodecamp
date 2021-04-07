@@ -1,0 +1,6 @@
+{
+  "title": "ABC Problem",
+  "htmlDescription": "<section id=\"description\">\n<p>You are given a collection of ABC blocks (e.g., childhood alphabet blocks). There are 20 blocks with two letters on each block. A complete alphabet is guaranteed amongst all sides of the blocks. The sample collection of blocks:</p>\n<pre>(B O)\n(X K)\n(D Q)\n(C P)\n(N A)\n(G T)\n(R E)\n(T G)\n(Q D)\n(F S)\n(J W)\n(H U)\n(V I)\n(A N)\n(O B)\n(E R)\n(F S)\n(L Y)\n(P C)\n(Z M)\n</pre>\n</section>",
+  "boilerplate": "function canMakeWord(word) {\n\n}",
+  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/rosetta-code/abc-problem"
+}

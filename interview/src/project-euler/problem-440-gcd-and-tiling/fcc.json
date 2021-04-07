@@ -1,0 +1,6 @@
+{
+  "title": "Problem 440: GCD and Tiling",
+  "htmlDescription": "<section id=\"description\">\n<p>We want to tile a board of length n and height 1 completely, with either 1 × 2 blocks or 1 × 1 blocks with a single decimal digit on top:</p>\n<p>For example, here are some of the ways to tile a board of length n = 8:</p>\n<p>Let T(n) be the number of ways to tile a board of length n as described above.</p>\n<p>For example, T(1) = 10 and T(2) = 101.</p>\n<p>Let S(L) be the triple sum ∑a,b,c gcd(T(ca), T(cb)) for 1 ≤ a, b, c ≤ L. For example: S(2) = 10444 S(3) = 1292115238446807016106539989 S(4) mod 987 898 789 = 670616280.</p>\n<p>Find S(2000) mod 987 898 789.</p>\n</section>",
+  "boilerplate": "function euler440() {\n\n  return true;\n}\n\neuler440();",
+  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/project-euler/problem-440-gcd-and-tiling"
+}

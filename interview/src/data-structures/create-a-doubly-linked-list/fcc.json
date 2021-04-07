@@ -1,0 +1,6 @@
+{
+  "title": "Create a Doubly Linked List",
+  "htmlDescription": "<section id=\"description\">\n<p>All of the linked lists we've created so far are singly linked lists. Here, we'll create a <dfn>doubly linked list</dfn>. As the name implies, nodes in a doubly linked list have references to the next and previous node in the list.</p>\n<p>This allows us to traverse the list in both directions but it also requires more memory to be used because every node must contain an additional reference to the previous node in the list.</p>\n</section>",
+  "boilerplate": "var Node = function(data, prev) {\n  this.data = data;\n  this.prev = prev;\n  this.next = null;\n};\nvar DoublyLinkedList = function() {\n  this.head = null;\n  this.tail = null;\n  // Only change code below this line\n  \n  // Only change code above this line\n};",
+  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/data-structures/create-a-doubly-linked-list"
+}

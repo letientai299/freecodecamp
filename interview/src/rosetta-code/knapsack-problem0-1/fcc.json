@@ -1,0 +1,6 @@
+{
+  "title": "Knapsack problem/0-1",
+  "htmlDescription": "<section id=\"description\">\n<p>The 0-1 knapsack problem is defined as follows:</p>\n<p>You are given an array of objects representing items to be put in a knapsack. The objects have 3 attributes: name, weight, and value. The items need to be selected so that the total weight does not exceed the maximum weight and the value is maximized.</p>\n</section>",
+  "boilerplate": "function knapsack(items, maxweight) {\n\n}",
+  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/rosetta-code/knapsack-problem0-1"
+}

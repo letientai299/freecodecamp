@@ -1,0 +1,6 @@
+{
+  "title": "Problem 258: A lagged Fibonacci sequence",
+  "htmlDescription": "<section id=\"description\">\n<p>A sequence is defined as:</p>\n<p>gk = 1, for 0 ≤ k ≤ 1999 gk = gk-2000 + gk-1999, for k ≥ 2000. Find gk mod 20092010 for k = 1018.</p>\n</section>",
+  "boilerplate": "function euler258() {\n\n  return true;\n}\n\neuler258();",
+  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/project-euler/problem-258-a-lagged-fibonacci-sequence"
+}

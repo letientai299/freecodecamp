@@ -1,0 +1,6 @@
+{
+  "title": "Problem 412: Gnomon numbering",
+  "htmlDescription": "<section id=\"description\">\n<p>For integers m, n (0 ≤ n &#x3C; m), let L(m, n) be an m×m grid with the top-right n×n grid removed.</p>\n<p>For example, L(5, 3) looks like this:</p>\n<p>We want to number each cell of L(m, n) with consecutive integers 1, 2, 3, ... such that the number in every cell is smaller than the number below it and to the left of it.</p>\n<p>For example, here are two valid numberings of L(5, 3):</p>\n<p>Let LC(m, n) be the number of valid numberings of L(m, n). It can be verified that LC(3, 0) = 42, LC(5, 3) = 250250, LC(6, 3) = 406029023400 and LC(10, 5) mod 76543217 = 61251715.</p>\n<p>Find LC(10000, 5000) mod 76543217.</p>\n</section>",
+  "boilerplate": "function euler412() {\n\n  return true;\n}\n\neuler412();",
+  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/project-euler/problem-412-gnomon-numbering"
+}

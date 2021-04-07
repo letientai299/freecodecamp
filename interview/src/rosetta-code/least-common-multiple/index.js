@@ -1,0 +1,5 @@
+function LCM(A) {
+
+}
+
+// TODO

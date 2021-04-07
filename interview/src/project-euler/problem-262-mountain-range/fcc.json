@@ -1,0 +1,6 @@
+{
+  "title": "Problem 262: Mountain Range",
+  "htmlDescription": "<section id=\"description\">\n<p>The following equation represents the continuous topography of a mountainous region, giving the elevation h at any point (x,y):</p>\n<p>A mosquito intends to fly from A(200,200) to B(1400,1400), without leaving the area given by 0 ≤ x, y ≤ 1600.</p>\n<p>Because of the intervening mountains, it first rises straight up to a point A', having elevation f. Then, while remaining at the same elevation f, it flies around any obstacles until it arrives at a point B' directly above B.</p>\n<p>First, determine fmin which is the minimum constant elevation allowing such a trip from A to B, while remaining in the specified area. Then, find the length of the shortest path between A' and B', while flying at that constant elevation fmin.</p>\n<p>Give that length as your answer, rounded to three decimal places.</p>\n<p>Note: For convenience, the elevation function shown above is repeated below, in a form suitable for most programming languages: h=( 5000-0.005*(x<em>x+y</em>y+x<em>y)+12.5</em>(x+y) )* exp( -abs(0.000001*(x<em>x+y</em>y)-0.0015*(x+y)+0.7) )</p>\n</section>",
+  "boilerplate": "function euler262() {\n\n  return true;\n}\n\neuler262();",
+  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/project-euler/problem-262-mountain-range"
+}

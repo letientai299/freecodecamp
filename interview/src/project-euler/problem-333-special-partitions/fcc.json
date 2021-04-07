@@ -1,0 +1,6 @@
+{
+  "title": "Problem 333: Special partitions",
+  "htmlDescription": "<section id=\"description\">\n<p>All positive integers can be partitioned in such a way that each and every term of the partition can be expressed as 2ix3j, where i,j ≥ 0.</p>\n<p>Let's consider only those such partitions where none of the terms can divide any of the other terms. For example, the partition of 17 = 2 + 6 + 9 = (21x30 + 21x31 + 20x32) would not be valid since 2 can divide 6. Neither would the partition 17 = 16 + 1 = (24x30 + 20x30) since 1 can divide 16. The only valid partition of 17 would be 8 + 9 = (23x30 + 20x32).</p>\n<p>Many integers have more than one valid partition, the first being 11 having the following two partitions. 11 = 2 + 9 = (21x30 + 20x32) 11 = 8 + 3 = (23x30 + 20x31)</p>\n<p>Let's define P(n) as the number of valid partitions of n. For example, P(11) = 2.</p>\n<p>Let's consider only the prime integers q which would have a single valid partition such as P(17).</p>\n<p>The sum of the primes q &#x3C;100 such that P(q)=1 equals 233.</p>\n<p>Find the sum of the primes q &#x3C;1000000 such that P(q)=1.</p>\n</section>",
+  "boilerplate": "function euler333() {\n\n  return true;\n}\n\neuler333();",
+  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/project-euler/problem-333-special-partitions"
+}

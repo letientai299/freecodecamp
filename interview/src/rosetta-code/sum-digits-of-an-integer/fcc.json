@@ -1,0 +1,6 @@
+{
+  "title": "Sum digits of an integer",
+  "htmlDescription": "<section id=\"description\">\n<p>Write a function that takes a string as a parameter. This string represents a number that can be in any base (less than 37) and return the sum of its digits.</p>\n<ul>\n  <li><b>1</b><sub>10</sub> sums to <b>1</b></li>\n  <li><b>1234</b><sub>10</sub> sums to <b>10</b></li>\n  <li><b>fe</b><sub>16</sub> sums to <b>29</b></li>\n  <li><b>f0e</b><sub>16</sub> sums to <b>29</b></li>\n</ul>\n</section>",
+  "boilerplate": "function sumDigits(n) {\n\n}",
+  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/rosetta-code/sum-digits-of-an-integer"
+}

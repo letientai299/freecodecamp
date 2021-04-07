@@ -1,0 +1,6 @@
+{
+  "title": "Use Breadth First Search in a Binary Search Tree",
+  "htmlDescription": "<section id=\"description\">\n<p>Here we will introduce another tree traversal method: breadth-first search. In contrast to the depth-first search methods from the last challenge, breadth-first search explores all the nodes in a given level within a tree before continuing on to the next level. Typically, queues are utilized as helper data structures in the design of breadth-first search algorithms.</p>\n<p>In this method, we start by adding the root node to a queue. Then we begin a loop where we dequeue the first item in the queue, add it to a new array, and then inspect both its child subtrees. If its children are not null, they are each enqueued. This process continues until the queue is empty.</p>\n</section>",
+  "boilerplate": "var displayTree = tree => console.log(JSON.stringify(tree, null, 2));\nfunction Node(value) {\n  this.value = value;\n  this.left = null;\n  this.right = null;\n}\nfunction BinarySearchTree() {\n  this.root = null;\n  // Only change code below this line\n  \n  // Only change code above this line\n}",
+  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/data-structures/use-breadth-first-search-in-a-binary-search-tree"
+}

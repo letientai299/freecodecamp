@@ -1,0 +1,6 @@
+{
+  "title": "Problem 476: Circle Packing II",
+  "htmlDescription": "<section id=\"description\">\n<p>Let R(a, b, c) be the maximum area covered by three non-overlapping circles inside a triangle with edge lengths a, b and c.</p>\n<p>Let S(n) be the average value of R(a, b, c) over all integer triplets (a, b, c) such that 1 ≤ a ≤ b ≤ c &#x3C; a + b ≤ n</p>\n<p>You are given S(2) = R(1, 1, 1) ≈ 0.31998, S(5) ≈ 1.25899.</p>\n<p>Find S(1803) rounded to 5 decimal places behind the decimal point.</p>\n</section>",
+  "boilerplate": "function euler476() {\n\n  return true;\n}\n\neuler476();",
+  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/project-euler/problem-476-circle-packing-ii"
+}

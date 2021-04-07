@@ -1,0 +1,5 @@
+function getFinalOpenedDoors(numDoors) {
+
+}
+
+// TODO

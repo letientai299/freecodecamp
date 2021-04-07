@@ -1,0 +1,6 @@
+{
+  "title": "Problem 264: Triangle Centres",
+  "htmlDescription": "<section id=\"description\">\n<p>Consider all the triangles having:</p>\n<p>All their vertices on lattice points.</p>\n<p>Circumcentre at the origin O.</p>\n<p>Orthocentre at the point H(5, 0).</p>\n<p>There are nine such triangles having a perimeter ≤ 50.</p>\n<p>Listed and shown in ascending order of their perimeter, they are:</p>\n<p>A(-4, 3), B(5, 0), C(4, -3) A(4, 3), B(5, 0), C(-4, -3) A(-3, 4), B(5, 0), C(3, -4) A(3, 4), B(5, 0), C(-3, -4) A(0, 5), B(5, 0), C(0, -5) A(1, 8), B(8, -1), C(-4, -7) A(8, 1), B(1, -8), C(-4, 7) A(2, 9), B(9, -2), C(-6, -7) A(9, 2), B(2, -9), C(-6, 7)</p>\n<p>The sum of their perimeters, rounded to four decimal places, is 291.0089.</p>\n<p>Find all such triangles with a perimeter ≤ 105. Enter as your answer the sum of their perimeters rounded to four decimal places.</p>\n</section>",
+  "boilerplate": "function euler264() {\n\n  return true;\n}\n\neuler264();",
+  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/project-euler/problem-264-triangle-centres"
+}
