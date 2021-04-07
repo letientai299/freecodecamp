@@ -230,7 +230,8 @@ projects to pass the FCC tests. Sorry.
 
 - [Course link](https://www.freecodecamp.org/learn/coding-interview-prep/)
 
-This doesn't have a cert. Not sure if I would done it all or not.
+This doesn't have a cert, but I still do it to understand more about JS. See
+[here for the notes and some solutions](./interview).
 
 ### Machine Learning with Python
 
