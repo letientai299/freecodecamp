@@ -1,7 +1,6 @@
 const marked = require("marked");
 const fs = require("fs");
 const glob = require("glob");
-const { log } = require("util");
 
 const TEMPLATE_FILE = "./tpl.html";
 const tpl = fs.readFileSync(TEMPLATE_FILE).toString();
