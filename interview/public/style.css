@@ -1,0 +1,38 @@
+aside,
+main,
+section,
+div {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow: hidden;
+  font-size: 1.2em;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-column-gap: 10px;
+  height: 100vh;
+  width: 100vw;
+}
+
+header {
+  border: 1px solid red;
+}
+
+aside {
+  max-width: 24em;
+  overflow-y: scroll;
+  height: 100vh;
+}
+
+.doc-content {
+  overflow-y: scroll;
+  height: 100vh;
+  overflow: scroll;
+  margin-right: 10px;
+  padding: 0;
+}
