@@ -8,7 +8,7 @@
     />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>{{title}}</title>
-    <meta name="Description" content="{{description}}" />
+    <meta name="Description" content="{{metaDescription}}" />
 
     <link
       rel="stylesheet"
@@ -16,40 +16,6 @@
     />
 
     <link rel="stylesheet" href="./style.css" />
-
-    <style>
-      .markdown-body {
-        box-sizing: border-box;
-        min-width: 200px;
-        max-width: 800px;
-        margin: 0 auto;
-        padding: 45px;
-        border: solid 1px lightgray;
-        border-radius: 5px;
-        box-shadow: 1px 1px 3px;
-      }
-
-      .markdown-body * {
-        line-height: 1.6em !important;
-      }
-
-      @media (max-width: 767px) {
-        .markdown-body {
-          padding: 15px;
-        }
-
-        a > img {
-          margin: 0.2em;
-        }
-      }
-
-      a[href*="//"]
-      {
-        background: url(https://upload.wikimedia.org/wikipedia/commons/6/64/Icon_External_Link.png)
-          center right no-repeat;
-        padding-right: 13px;
-      }
-    </style>
   </head>
   <body>
     <div class="container">
@@ -61,5 +27,36 @@
         </main>
       </div>
     </div>
+
+    <div id="shortcut-dialog" style="visibility: hidden">
+      <strong>Shortcuts on this page</strong>
+      <button
+        onclick="setShortcutDialogVisible(null, false)"
+        class="btn btn-top-right"
+      >
+        X
+      </button>
+      <hr />
+      <p>Use <kbd>Cmd</kbd> instead of <kbd>Ctrl</kbd> if you're on a Mac.</p>
+      <table>
+        <tr>
+          <td><kbd>]</kbd></td>
+          <td>Next challenge</td>
+        </tr>
+
+        <tr>
+          <td><kbd>?</kbd></td>
+          <td>Show this dialog</td>
+        </tr>
+
+        <tr>
+          <td><kbd>ESC</kbd></td>
+          <td>Hide this dialog</td>
+        </tr>
+      </table>
+    </div>
+
+    <script src="https://unpkg.com/hotkeys-js/dist/hotkeys.min.js"></script>
+    <script src="./client.js"></script>
   </body>
 </html>

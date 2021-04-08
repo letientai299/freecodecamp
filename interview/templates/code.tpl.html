@@ -8,16 +8,162 @@
     />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>{{title}}</title>
-    <meta name="Description" content="{{description}}" />
+    <meta name="Description" content="{{metaDescription}}" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.60.0/codemirror.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.60.0/theme/monokai.min.css"
+    />
+    <link rel="stylesheet" href="../../style.css" />
+    <link rel="stylesheet" href="../../default-hljs.css" />
   </head>
   <body>
-    <header>{{header}}</header>
-    <aside>{{sidebar}}</aside>
-    <main>
-      <section>{{description}}</section>
-      <section>{{code}}</section>
-      <section>{{test}}</section>
-      <section>{{console}}</section>
-    </main>
+    <div class="container">
+      <aside>{{sidebar}}</aside>
+      <div class="code-content">
+        <header>{{header}}</header>
+        <main class="col-2">
+          <div class="row-2">
+            <section id="problem-description" class="markdown-body">
+              {{description}}
+            </section>
+            <section id="problem-test">
+              <h2>Test</h2>
+              {{test}}
+            </section>
+          </div>
+          <div class="row-2">
+            <section id="editor-cell">
+              <div id="editor-wrapper">
+                <label for="editor">Boilerplate code</label>
+                <textarea id="editor">{{code}}</textarea>
+              </div>
+              <div class="panel bottom">
+                <button class="btn btn-primary" id="code-run">Run</button>
+                <button class="btn btn-danger" id="code-reset">Reset</button>
+                <button class="btn btn-info" id="code-show-solution">
+                  Solution
+                </button>
+                <button class="btn" id="code-clear-console">
+                  Clear output
+                </button>
+                <button class="btn" id="code-copy">Copy</button>
+              </div>
+            </section>
+            <section id="console-cell">
+              <h2>Console output</h2>
+              <code id="console-wrapper">
+                <pre id="console"></pre>
+              </code>
+            </section>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <div id="shortcut-dialog" style="visibility: hidden">
+      <strong>Shortcuts on this page</strong>
+      <button
+        onclick="setShortcutDialogVisible(null, false)"
+        class="btn btn-top-right"
+      >
+        X
+      </button>
+      <hr />
+      <p>Use <kbd>Cmd</kbd> instead of <kbd>Ctrl</kbd> if you're on a Mac.</p>
+      <table>
+        <tr>
+          <td><kbd>g</kbd></td>
+          <td>Focus editor</td>
+        </tr>
+
+        <tr>
+          <td><kbd>Ctrl</kbd>-<kbd>Enter</kbd></td>
+          <td>Run the test with current code</td>
+        </tr>
+
+        <tr>
+          <td><kbd>Ctrl</kbd>-<kbd>Shift</kbd>-<kbd>K</kbd></td>
+          <td>Reset the editor</td>
+        </tr>
+
+        <tr>
+          <td><kbd>Ctrl</kbd>-<kbd>Shift</kbd>-<kbd>L</kbd></td>
+          <td>Clear console output</td>
+        </tr>
+
+        <tr>
+          <td><kbd>Ctrl</kbd>-<kbd>Shift</kbd>-<kbd>X</kbd></td>
+          <td>Show the solution</td>
+        </tr>
+
+        <tr>
+          <td><kbd>[</kbd></td>
+          <td>Previous challenge</td>
+        </tr>
+
+        <tr>
+          <td><kbd>]</kbd></td>
+          <td>Next challenge</td>
+        </tr>
+
+        <tr>
+          <td><kbd>T</kbd></td>
+          <td>Back to top page</td>
+        </tr>
+
+        <tr>
+          <td><kbd>?</kbd></td>
+          <td>Show this dialog</td>
+        </tr>
+
+        <tr>
+          <td><kbd>ESC</kbd></td>
+          <td>Hide this dialog</td>
+        </tr>
+
+        <tr>
+          <td><kbd>Shift</kbd>-<kbd>ESC</kbd></td>
+          <td>Blur focus from editor</td>
+        </tr>
+      </table>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.60.0/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.60.0/mode/javascript/javascript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.60.0/keymap/vim.min.js"></script>
+    <script src="https://unpkg.com/hotkeys-js/dist/hotkeys.min.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.css"
+      integrity="sha384-t5CR+zwDAROtph0PXGte6ia8heboACF9R5l/DiY+WZ3P2lxNgvJkQk5n7GPvLMYw"
+      crossorigin="anonymous"
+    />
+
+    <!-- The loading of KaTeX is deferred to speed up page rendering -->
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.js"
+      integrity="sha384-FaFLTlohFghEIZkw6VGwmf9ISTubWAVYW8tG8+w2LAIftJEULZABrF9PPFv+tVkH"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.13.2/dist/contrib/auto-render.min.js"
+      integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="../../acorn_interpreter.js"></script>
+    <script src="../../client.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/4.0.0/github-markdown.min.css"
+    />
   </body>
 </html>

@@ -1,0 +1,10 @@
+{
+  "ext": "js,html,css",
+  "verbose": true,
+  "ignore": ["dist"],
+  "watch": ["src", "templates", "scripts", "public"],
+  "verbose": false,
+  "events": {
+    "restart": "node ./scripts/render.js"
+  }
+}
