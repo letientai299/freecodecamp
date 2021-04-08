@@ -8,3 +8,6 @@ serve: ## start live-server and rerender on code change
 
 clean: ## Remove dist files
 	@rm -rf ./dist
+
+render: ## Render the contents
+	@node ./scripts/render.js

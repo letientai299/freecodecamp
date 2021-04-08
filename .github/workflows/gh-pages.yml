@@ -43,6 +43,14 @@ jobs:
           [ -d ~/.npm/node_modules ] && mv ~/.npm/node_modules .
           npm install --silent
           make all
+
+          # render interview contents
+          cd interview
+          make render
+          rm -rf public templates src scripts .gitignore
+          mv ./dist/* .
+          cd ..
+
           # done with node_modules, move them to cache location
           mv node_modules ~/.npm/node_modules
 
