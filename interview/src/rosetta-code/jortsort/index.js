@@ -1,5 +1,0 @@
-function jortsort(array) {
-
-}
-
-// TODO

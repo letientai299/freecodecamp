@@ -1,6 +1,0 @@
-{
-  "title": "Problem 466: Distinct terms in a multiplication table",
-  "htmlDescription": "<section id=\"description\">\n<p>Let P(m,n) be the number of distinct terms in an m×n multiplication table.</p>\n<p>For example, a 3×4 multiplication table looks like this:</p>\n<p>× 12341 12342 24683 36912</p>\n<p>There are 8 distinct terms {1,2,3,4,6,8,9,12}, therefore P(3,4) = 8.</p>\n<p>You are given that: P(64,64) = 1263, P(12,345) = 1998, and P(32,1015) = 13826382602124302.</p>\n<p>Find P(64,1016).</p>\n</section>",
-  "boilerplate": "function euler466() {\n\n  return true;\n}\n\neuler466();",
-  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/project-euler/problem-466-distinct-terms-in-a-multiplication-table"
-}

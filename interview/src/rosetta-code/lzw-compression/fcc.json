@@ -1,6 +1,0 @@
-{
-  "title": "LZW compression",
-  "htmlDescription": "<section id=\"description\">\n<p>The Lempel-Ziv-Welch (LZW) algorithm provides loss-less data compression.</p>\n<p>You can read a complete description of it in the <a href=\"https://en.wikipedia.org/wiki/Lempel-Ziv-Welch\">Wikipedia article</a> on the subject.</p>\n</section>",
-  "boilerplate": "function LZW (compressData, input) {\n\n}",
-  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/rosetta-code/lzw-compression"
-}

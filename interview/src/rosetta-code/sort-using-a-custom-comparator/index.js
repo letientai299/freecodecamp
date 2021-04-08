@@ -1,5 +1,0 @@
-function lengthSorter(arr) {
-
-}
-
-// TODO

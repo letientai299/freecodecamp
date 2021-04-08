@@ -1,6 +1,0 @@
-{
-  "title": "Greatest common divisor",
-  "htmlDescription": "<section id=\"description\">\n<p>Write a function that returns the greatest common divisor of two integers.</p>\n</section>",
-  "boilerplate": "function gcd(a, b) {\n\n}",
-  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/rosetta-code/greatest-common-divisor"
-}

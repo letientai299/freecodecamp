@@ -1,5 +1,0 @@
-function luDecomposition(A) {
-
-}
-
-// TODO

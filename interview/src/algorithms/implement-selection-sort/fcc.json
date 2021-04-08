@@ -1,6 +1,0 @@
-{
-  "title": "Implement Selection Sort",
-  "htmlDescription": "<section id=\"description\">\n<p>Here we will implement selection sort. Selection sort works by selecting the minimum value in a list and swapping it with the first value in the list. It then starts at the second position, selects the smallest value in the remaining list, and swaps it with the second element. It continues iterating through the list and swapping elements until it reaches the end of the list. Now the list is sorted. Selection sort has quadratic time complexity in all cases.</p>\n<p><strong>Instructions</strong>: Write a function <code>selectionSort</code> which takes an array of integers as input and returns an array of these integers in sorted order from least to greatest.</p>\n</section>",
-  "boilerplate": "function selectionSort(array) {\n  // Only change code below this line\n  return array;\n  // Only change code above this line\n}\n\n\nselectionSort([1, 4, 2, 8, 345, 123, 43, 32, 5643, 63, 123, 43, 2, 55, 1, 234, 92]);",
-  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/algorithms/implement-selection-sort"
-}

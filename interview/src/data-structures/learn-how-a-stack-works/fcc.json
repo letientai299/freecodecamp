@@ -1,6 +1,0 @@
-{
-  "title": "Learn how a Stack Works",
-  "htmlDescription": "<section id=\"description\">\n<p>You are probably familiar with stack of books on your table. You have likely used the undo feature of a text editor. You are also probably used to hitting the back button on your phone to go back to the previous view in your app.</p>\n<p>You know what they all have in common? They all store the data in a way so that you can traverse backwards.</p>\n<p>The topmost book in the stack was the one that was put there last. If you remove that book from your stack's top, you would expose the book that was put there before the last book and so on.</p>\n<p>If you think about it, in all the above examples, you are getting <dfn>Last-In-First-Out</dfn> type of service. We will try to mimic this with our code.</p>\n<p>This data storage scheme is called a <dfn>Stack</dfn>. In particular, we would have to implement the <code>push()</code> method that pushes JavaScript objects at the top of the stack; and <code>pop()</code> method, that removes the JavaScript object that's at the top of the stack at the current moment.</p>\n</section>",
-  "boilerplate": "var homeworkStack = [\"BIO12\",\"HIS80\",\"MAT122\",\"PSY44\"];\n// Only change code below this line",
-  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/data-structures/learn-how-a-stack-works"
-}

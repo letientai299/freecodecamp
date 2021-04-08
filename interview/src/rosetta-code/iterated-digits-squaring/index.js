@@ -1,5 +1,0 @@
-function iteratedSquare(n) {
-
-}
-
-// TODO

@@ -1,6 +1,0 @@
-{
-  "title": "Problem 461: Almost Pi",
-  "htmlDescription": "<section id=\"description\">\n<p>Let <code>f(k, n)</code> = $e^\\frac{k}{n} - 1$, for all non-negative integers <code>k</code>.</p>\n<p>Remarkably, <code>f(6, 200) + f(75, 200) + f(89, 200) + f(226, 200)</code> = 3.1415926… ≈ π.</p>\n<p>In fact, it is the best approximation of π of the form <code>f(a, 200) + f(b, 200) + f(c, 200) + f(d, 200)</code>.</p>\n<p>Let <code>almostPi(n)</code> = a<sup>2</sup> + b<sup>2</sup> + c<sup>2</sup> + d<sup>2</sup> for a, b, c, d that minimize the error: $\\lvert f(a,n) + f(b,n) + f(c,n) + f(d,n) - \\Pi\\rvert$</p>\n<p>You are given <code>almostPi(200)</code> = 6<sup>2</sup> + 75<sup>2</sup> + 89<sup>2</sup> + 226<sup>2</sup> = 64658.</p>\n</section>",
-  "boilerplate": "function almostPi(n) {\n  \n  return true;\n}",
-  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/project-euler/problem-461-almost-pi"
-}

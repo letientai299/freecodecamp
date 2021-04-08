@@ -1,5 +1,0 @@
-function emirps(n) {
-
-}
-
-// TODO

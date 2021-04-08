@@ -1,6 +1,0 @@
-{
-  "title": "Factors of an integer",
-  "htmlDescription": "<section id=\"description\">\n<p>Write a function that returns the factors of a positive integer as an array.</p>\n<p>These factors are the positive integers by which the number being factored can be divided to yield a positive integer result.</p>\n</section>",
-  "boilerplate": "function factors(num) {\n\n}",
-  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/rosetta-code/factors-of-an-integer"
-}

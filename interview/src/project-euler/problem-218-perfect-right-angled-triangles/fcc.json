@@ -1,6 +1,0 @@
-{
-  "title": "Problem 218: Perfect right-angled triangles",
-  "htmlDescription": "<section id=\"description\">\n<p>Consider the right angled triangle with sides a=7, b=24 and c=25.</p>\n<p>The area of this triangle is 84, which is divisible by the perfect numbers 6 and 28.</p>\n<p>Moreover it is a primitive right angled triangle as gcd(a,b)=1 and gcd(b,c)=1.</p>\n<p>Also c is a perfect square.</p>\n<p>We will call a right angled triangle perfect if -it is a primitive right angled triangle -its hypotenuse is a perfect square</p>\n<p>We will call a right angled triangle super-perfect if -it is a perfect right angled triangle and -its area is a multiple of the perfect numbers 6 and 28.</p>\n<p>How many perfect right-angled triangles with c≤1016 exist that are not super-perfect?</p>\n</section>",
-  "boilerplate": "function euler218() {\n\n  return true;\n}\n\neuler218();",
-  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/project-euler/problem-218-perfect-right-angled-triangles"
-}

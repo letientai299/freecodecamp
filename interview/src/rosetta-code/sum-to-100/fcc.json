@@ -1,6 +1,0 @@
-{
-  "title": "Sum to 100",
-  "htmlDescription": "<section id=\"description\">\n<p>Find solutions to the <em>sum to one hundred</em> puzzle.</p>\n<p>Add (insert) the mathematical operators <strong>+</strong> or <strong>─</strong> (plus or minus) before any of the digits in the decimal numeric string <strong>123456789</strong> such that the resulting mathematical expression adds up to a particular sum (in this iconic case, <strong>100</strong>).</p>\n<p>Example:</p>\n<pre><b>123 + 4 - 5 + 67 - 89   =   100</b></pre>\n</section>",
-  "boilerplate": "function sumTo100(n) {\n\n}",
-  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/rosetta-code/sum-to-100"
-}

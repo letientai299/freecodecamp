@@ -1,6 +1,0 @@
-{
-  "title": "Straddling checkerboard",
-  "htmlDescription": "<section id=\"description\">\n<p>Implement functions to encrypt and decrypt a message using the <a href=\"https://en.wikipedia.org/wiki/Straddling_checkerboard\">straddling checkerboard</a> method. The functions will take a string and an array as parameters. The array has 3 strings representing the 3 rows of the checkerboard. The output will be a series of decimal digits. Numbers should be encrypted by inserting the escape character before each digit, then including the digit unencrypted. This should be reversed for decryption.</p>\n</section>",
-  "boilerplate": "function straddle(message, alphabet) {\n\n}\n\nfunction unstraddle(message, alphabet) {\n\n}",
-  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/rosetta-code/straddling-checkerboard"
-}

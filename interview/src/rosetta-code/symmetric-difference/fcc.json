@@ -1,6 +1,0 @@
-{
-  "title": "Symmetric difference",
-  "htmlDescription": "<section id=\"description\">\n<p>Given two <a href=\"https://rosettacode.org/wiki/set\">set</a>s <em>A</em> and <em>B</em>, compute $(A \\setminus B) \\cup (B \\setminus A).$ That is, enumerate the items that are in <em>A</em> or <em>B</em> but not both. This set is called the <a href=\"https://en.wikipedia.org/wiki/Symmetric%20difference\">symmetric difference</a> of <em>A</em> and <em>B</em>. In other words: $(A \\cup B) \\setminus (A \\cap B)$ (the set of items that are in at least one of <em>A</em> or <em>B</em> minus the set of items that are in both <em>A</em> and <em>B</em>).</p>\n</section>",
-  "boilerplate": "function symmetricDifference(A, B) {\n\n}",
-  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/rosetta-code/symmetric-difference"
-}

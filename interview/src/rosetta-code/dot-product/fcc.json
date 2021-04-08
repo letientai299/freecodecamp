@@ -1,6 +1,0 @@
-{
-  "title": "Dot product",
-  "htmlDescription": "<section id=\"description\">\n<p>Create a function, to compute the <strong><a href=\"https://en.wikipedia.org/wiki/Dot%20product\">dot product</a></strong>, also known as the <strong>scalar product</strong> of two vectors.</p>\n</section>",
-  "boilerplate": "function dotProduct(ary1, ary2) {\n\n}",
-  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/rosetta-code/dot-product"
-}

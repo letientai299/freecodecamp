@@ -1,6 +1,0 @@
-{
-  "title": "Sum of a series",
-  "htmlDescription": "<section id=\"description\">\n<p>Compute the <strong>n</strong><sup>th</sup> term of a <a href=\"https://en.wikipedia.org/wiki/Series%20(mathematics)\">series</a>, i.e. the sum of the <strong>n</strong> first terms of the corresponding <a href=\"https://en.wikipedia.org/wiki/sequence\">sequence</a>. Informally this value, or its limit when <strong>n</strong> tends to infinity, is also called the <em>sum of the series</em>, thus the title of this task. For this task, use: $S_n = \\displaystyle\\sum_{k=1}^n \\frac{1}{k^2}$.</p>\n</section>",
-  "boilerplate": "function sum(a, b) {\n\n}",
-  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/rosetta-code/sum-of-a-series"
-}

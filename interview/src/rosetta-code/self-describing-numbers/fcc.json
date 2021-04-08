@@ -1,6 +1,0 @@
-{
-  "title": "Self Describing Numbers",
-  "htmlDescription": "<section id=\"description\">\n<p>There are several so-called \"self describing\" or <a href=\"https://en.wikipedia.org/wiki/Self-descriptive_number\">\"self-descriptive\"</a> integers.</p>\n<p>An integer is said to be \"self-describing\" if it has the property that, when digit positions are labeled 0 to N-1, the digit in each position is equal to the number of times that digit appears in the number.</p>\n<p>For example, <strong>2020</strong> is a four-digit self describing number:</p>\n<ul>\n    <li> position 0 has value 2 and there are two 0s in the number; </li>\n    <li> position 1 has value 0 and there are no 1s in the number; </li>\n    <li> position 2 has value 2 and there are two 2s; </li>\n    <li> position 3 has value 0 and there are zero 3s; </li>\n</ul>\n<p>Self-describing numbers &#x3C; 100,000,000 are: 1210, 2020, 21200, 3211000, 42101000.</p>\n</section>",
-  "boilerplate": "function isSelfDescribing(n) {\n\n}",
-  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/rosetta-code/self-describing-numbers"
-}

@@ -1,5 +1,0 @@
-function standardDeviation(arr) {
-
-}
-
-// TODO

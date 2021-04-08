@@ -1,6 +1,0 @@
-{
-  "title": "Identity matrix",
-  "htmlDescription": "<section id=\"description\">\n<p>An <em>identity matrix</em> is a square matrix of size \\( n \\times n \\), where the diagonal elements are all <code>1</code>s (ones), and all the other elements are all <code>0</code>s (zeroes).</p>\n<ul>\n  <li style='list-style: none;'>\\(\\displaystyle I_{n}=\\begin{bmatrix} 1 &#x26; 0 &#x26; 0 \\cr 0 &#x26; 1 &#x26; 0 \\cr 0 &#x26; 0 &#x26; 1 \\cr \\end{bmatrix}\\)</li>\n</ul>\n</section>",
-  "boilerplate": "function idMatrix(n) {\n\n}",
-  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/rosetta-code/identity-matrix"
-}

@@ -1,6 +1,0 @@
-{
-  "title": "Taxicab numbers",
-  "htmlDescription": "<section id=\"description\">\n<p>A <a href=\"https://en.wikipedia.org/wiki/Hardy%E2%80%93Ramanujan%20number\" title=\"wp: Hardy–Ramanujan number\">taxicab number</a> (the definition that is being used here) is a positive integer that can be expressed as the sum of two positive cubes in more than one way.</p>\n<p>The first taxicab number is <code>1729</code>, which is:</p>\n<p>1<sup>3</sup> + 12<sup>3</sup> and</p>\n<p>9<sup>3</sup> + 10<sup>3</sup>.</p>\n<p>Taxicab numbers are also known as:</p>\n<ul>\n  <li>taxi numbers</li>\n  <li>taxi-cab numbers</li>\n  <li>taxi cab numbers</li>\n  <li>Hardy-Ramanujan numbers</li>\n</ul>\n</section>",
-  "boilerplate": "function taxicabNumbers(n) {\n\n  return true;\n}",
-  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/rosetta-code/taxicab-numbers"
-}

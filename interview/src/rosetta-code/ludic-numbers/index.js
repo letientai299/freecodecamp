@@ -1,5 +1,0 @@
-function ludic(n) {
-
-}
-
-// TODO

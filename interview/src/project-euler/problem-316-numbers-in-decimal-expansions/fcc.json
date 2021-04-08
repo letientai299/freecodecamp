@@ -1,6 +1,0 @@
-{
-  "title": "Problem 316: Numbers in decimal expansions",
-  "htmlDescription": "<section id=\"description\">\n<p>Let p = p1 p2 p3 ... be an infinite sequence of random digits, selected from {0,1,2,3,4,5,6,7,8,9} with equal probability.</p>\n<p>It can be seen that p corresponds to the real number 0.p1 p2 p3 ....</p>\n<p>It can also be seen that choosing a random real number from the interval [0,1) is equivalent to choosing an infinite sequence of random digits selected from {0,1,2,3,4,5,6,7,8,9} with equal probability.</p>\n<p>For any positive integer n with d decimal digits, let k be the smallest index such that pk, pk+1, ...pk+d-1 are the decimal digits of n, in the same order. Also, let g(n) be the expected value of k; it can be proven that g(n) is always finite and, interestingly, always an integer number.</p>\n<p>For example, if n = 535, then for p = 31415926535897...., we get k = 9 for p = 355287143650049560000490848764084685354..., we get k = 36 etc and we find that g(535) = 1008.</p>\n<p>Given that , find</p>\n<p>Note: represents the floor function.</p>\n</section>",
-  "boilerplate": "function euler316() {\n\n  return true;\n}\n\neuler316();",
-  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/project-euler/problem-316-numbers-in-decimal-expansions"
-}

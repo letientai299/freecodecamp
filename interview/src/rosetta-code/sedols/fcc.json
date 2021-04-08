@@ -1,6 +1,0 @@
-{
-  "title": "SEDOLs",
-  "htmlDescription": "<section id=\"description\">\n<p>For each number list of 6-digit <a href=\"https://en.wikipedia.org/wiki/SEDOL\" title=\"wp: SEDOL\">SEDOL</a>s, calculate and append the checksum digit. That is, given the input string on the left, your function should return the corresponding string on the right:</p>\n<pre>\n710889 => 7108899\nB0YBKJ => B0YBKJ7\n406566 => 4065663\nB0YBLH => B0YBLH2\n228276 => 2282765\nB0YBKL => B0YBKL9\n557910 => 5579107\nB0YBKR => B0YBKR5\n585284 => 5852842\nB0YBKT => B0YBKT7\nB00030 => B000300\n</pre>\n<p>Check that each input is correctly formed, especially with respect to valid characters allowed in a SEDOL string. Your function should return <code>null</code> on an invalid input.</p>\n</section>",
-  "boilerplate": "function sedol(input) {\n\n  return true;\n}",
-  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/rosetta-code/sedols"
-}

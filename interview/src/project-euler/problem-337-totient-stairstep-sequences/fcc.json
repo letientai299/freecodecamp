@@ -1,6 +1,0 @@
-{
-  "title": "Problem 337: Totient Stairstep Sequences",
-  "htmlDescription": "<section id=\"description\">\n<p>Let {a1, a2,..., an} be an integer sequence of length n such that:</p>\n<p>a1 = 6</p>\n<p>for all 1 ≤ i &#x3C; n : φ(ai) &#x3C; φ(ai+1) &#x3C; ai &#x3C; ai+11</p>\n<p>Let S(N) be the number of such sequences with an ≤ N.</p>\n<p>For example, S(10) = 4: {6}, {6, 8}, {6, 8, 9} and {6, 10}.</p>\n<p>We can verify that S(100) = 482073668 and S(10 000) mod 108 = 73808307.</p>\n<p>Find S(20 000 000) mod 108.</p>\n<p>1 φ denotes Euler's totient function.</p>\n</section>",
-  "boilerplate": "function euler337() {\n\n  return true;\n}\n\neuler337();",
-  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/project-euler/problem-337-totient-stairstep-sequences"
-}

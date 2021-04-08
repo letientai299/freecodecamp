@@ -1,6 +1,0 @@
-{
-  "title": "Babbage problem",
-  "htmlDescription": "<section id=\"description\">\n<p><a href=\"https://en.wikipedia.org/wiki/Charles_Babbage\" title=\"wp: Charles_Babbage\">Charles Babbage</a>, looking ahead to the sorts of problems his Analytical Engine would be able to solve, gave this example:</p>\n<blockquote>\n  What is the smallest positive integer whose square ends in the digits 269,696?\n  <footer style='margin-left: 2em;'>Babbage, letter to Lord Bowden, 1837; see Hollingdale and Tootill, <i>Electronic Computers</i>, second edition, 1970, p. 125.</footer>\n</blockquote>\n<p>He thought the answer might be 99,736, whose square is 9,947,269,696; but he couldn't be certain.</p>\n<p>The task is to find out if Babbage had the right answer.</p>\n</section>",
-  "boilerplate": "function babbage(babbageNum, endDigits) {\n\n  return true;\n}",
-  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/rosetta-code/babbage-problem"
-}

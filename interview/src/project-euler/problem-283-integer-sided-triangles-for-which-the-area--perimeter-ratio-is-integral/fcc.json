@@ -1,6 +1,0 @@
-{
-  "title": "Problem 283: Integer sided triangles for which the area * perimeter ratio is integral",
-  "htmlDescription": "<section id=\"description\">\n<p>Consider the triangle with sides 6, 8 and 10. It can be seen that the perimeter and the area are both equal to 24.</p>\n<p>So the area/perimeter ratio is equal to 1.</p>\n<p>Consider also the triangle with sides 13, 14 and 15. The perimeter equals 42 while the area is equal to 84.</p>\n<p>So for this triangle the area/perimeter ratio is equal to 2.</p>\n<p>Find the sum of the perimeters of all integer sided triangles for which the area/perimeter ratios are equal to positive integers not exceeding 1000.</p>\n</section>",
-  "boilerplate": "function euler283() {\n\n  return true;\n}\n\neuler283();",
-  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/project-euler/problem-283-integer-sided-triangles-for-which-the-area--perimeter-ratio-is-integral"
-}

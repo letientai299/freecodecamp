@@ -1,6 +1,0 @@
-{
-  "title": "Problem 171: Finding numbers for which the sum of the squares of the digits is a square",
-  "htmlDescription": "<section id=\"description\">\n<p>For a positive integer n, let f(n) be the sum of the squares of the digits (in base 10) of n, e.g.</p>\n<p>f(3) = 32 = 9,</p>\n<p>f(25) = 22 + 52 = 4 + 25 = 29,</p>\n<p>f(442) = 42 + 42 + 22 = 16 + 16 + 4 = 36</p>\n<p>Find the last nine digits of the sum of all n, 0 &#x3C; n &#x3C; 1020, such that f(n) is a perfect square.</p>\n</section>",
-  "boilerplate": "function euler171() {\n\n  return true;\n}\n\neuler171();",
-  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/project-euler/problem-171-finding-numbers-for-which-the-sum-of-the-squares-of-the-digits-is-a-square"
-}

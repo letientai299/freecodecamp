@@ -1,6 +1,0 @@
-{
-  "title": "Inventory Update",
-  "htmlDescription": "<section id=\"description\">\n<p>Compare and update the inventory stored in a 2D array against a second 2D array of a fresh delivery. Update the current existing inventory item quantities (in <code>arr1</code>). If an item cannot be found, add the new item and quantity into the inventory array. The returned inventory array should be in alphabetical order by item.</p>\n</section>",
-  "boilerplate": "function updateInventory(arr1, arr2) {\n    return arr1;\n}\n\n// Example inventory lists\nvar curInv = [\n    [21, \"Bowling Ball\"],\n    [2, \"Dirty Sock\"],\n    [1, \"Hair Pin\"],\n    [5, \"Microphone\"]\n];\n\nvar newInv = [\n    [2, \"Hair Pin\"],\n    [3, \"Half-Eaten Apple\"],\n    [67, \"Bowling Ball\"],\n    [7, \"Toothpaste\"]\n];\n\nupdateInventory(curInv, newInv);",
-  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/algorithms/inventory-update"
-}

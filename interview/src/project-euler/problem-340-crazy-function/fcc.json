@@ -1,6 +1,0 @@
-{
-  "title": "Problem 340: Crazy Function",
-  "htmlDescription": "<section id=\"description\">\n<p>For fixed integers a, b, c, define the crazy function F(n) as follows:</p>\n<p>F(n) = n - c for all n > b</p>\n<p>F(n) = F(a + F(a + F(a + F(a + n)))) for all n ≤ b.</p>\n<p>Also, define S(a, b, c) = .</p>\n<p>For example, if a = 50, b = 2000 and c = 40, then F(0) = 3240 and F(2000) = 2040. Also, S(50, 2000, 40) = 5204240.</p>\n<p>Find the last 9 digits of S(217, 721, 127).</p>\n</section>",
-  "boilerplate": "function euler340() {\n\n  return true;\n}\n\neuler340();",
-  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/project-euler/problem-340-crazy-function"
-}

@@ -1,6 +1,0 @@
-{
-  "title": "Problem 310: Nim Square",
-  "htmlDescription": "<section id=\"description\">\n<p>Alice and Bob play the game Nim Square.</p>\n<p>Nim Square is just like ordinary three-heap normal play Nim, but the players may only remove a square number of stones from a heap.</p>\n<p>The number of stones in the three heaps is represented by the ordered triple (a,b,c).</p>\n<p>If 0≤a≤b≤c≤29 then the number of losing positions for the next player is 1160.</p>\n<p>Find the number of losing positions for the next player if 0≤a≤b≤c≤100 000.</p>\n</section>",
-  "boilerplate": "function euler310() {\n\n  return true;\n}\n\neuler310();",
-  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/project-euler/problem-310-nim-square"
-}

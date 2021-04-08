@@ -1,6 +1,0 @@
-{
-  "title": "Factorial",
-  "htmlDescription": "<section id=\"description\">\n<p>Write a function to return the factorial of a number.</p>\n<p>Factorial of a number is given by:</p>\n<pre><big>n! = n * (n-1) * (n-2) * ..... * 1</big>\n</pre>\n<p>For example:</p>\n<ul>\n  <li><code>3! = 3 * 2 * 1 = 6</code></li>\n  <li><code>4! = 4 * 3 * 2 * 1 = 24</code></li>\n</ul>\n<p><strong>Note:</strong> <code>0! = 1</code></p>\n</section>",
-  "boilerplate": "function factorial(n) {\n\n}",
-  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/rosetta-code/factorial"
-}

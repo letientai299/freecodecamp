@@ -1,6 +1,0 @@
-{
-  "title": "Problem 231: The prime factorisation of binomial coefficients",
-  "htmlDescription": "<section id=\"description\">\n<p>The binomial coefficient 10C3 = 120.</p>\n<p>120 = 23 × 3 × 5 = 2 × 2 × 2 × 3 × 5, and 2 + 2 + 2 + 3 + 5 = 14.</p>\n<p>So the sum of the terms in the prime factorisation of 10C3 is 14.</p>\n<p>Find the sum of the terms in the prime factorisation of 20000000C15000000.</p>\n</section>",
-  "boilerplate": "function euler231() {\n\n  return true;\n}\n\neuler231();",
-  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/project-euler/problem-231-the-prime-factorisation-of-binomial-coefficients"
-}

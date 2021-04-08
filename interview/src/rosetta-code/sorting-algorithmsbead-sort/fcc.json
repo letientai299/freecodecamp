@@ -1,6 +1,0 @@
-{
-  "title": "Sorting algorithms/Bead sort",
-  "htmlDescription": "<section id=\"description\">\n<p>Sort an array of positive integers using the <a href=\"https://en.wikipedia.org/wiki/Bead_sort\">Bead Sort Algorithm</a>.</p>\n<p>A <em>bead sort</em> is also known as a <em>gravity sort</em>.</p>\n<p>The algorithm has O(S), where S is the sum of the integers in the input set: Each bead is moved individually.</p>\n<p>This is the case when bead sort is implemented without a mechanism to assist in finding empty spaces below the beads, such as in software implementations.</p>\n</section>",
-  "boilerplate": "function beadSort(arr) {\n\n}",
-  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/rosetta-code/sorting-algorithmsbead-sort"
-}

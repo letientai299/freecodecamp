@@ -1,6 +1,0 @@
-{
-  "title": "Extensible prime generator",
-  "htmlDescription": "<section id=\"description\">\n<p>Write a generator of prime numbers, in order, that will automatically adjust to accommodate the generation of any reasonably high prime.</p>\n<p>The generator should be able to:</p>\n<ul>\n  <li>Show the first <code>n</code> prime numbers</li>\n  <li>Show the prime numbers in a range</li>\n  <li>Show the number of primes in a range</li>\n  <li>Show the <code>n<sup>th</sup></code> prime number</li>\n</ul>\n<p>The function should have two parameters. The first will receive <code>n</code> or the range as an array. The second will receive a boolean, that specifies if the function returns the prime numbers as an array or a single number(the number of primes in the range or the <code>n<sup>th</sup></code> prime). According to the parameters the function should return an array.</p>\n</section>",
-  "boilerplate": "function primeGenerator(num, showPrimes) {\n\n}",
-  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/rosetta-code/extensible-prime-generator"
-}

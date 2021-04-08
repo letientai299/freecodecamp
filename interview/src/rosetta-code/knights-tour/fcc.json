@@ -1,6 +1,0 @@
-{
-  "title": "Knight's tour",
-  "htmlDescription": "<section id=\"description\">\n<p><a href=\"https://en.wikipedia.org/wiki/Knight%27s_tour\">Knight's Tour</a> Problem: You have an empty <code>w</code> * <code>h</code> chessboard, but for a single knight on some square. The knight must perform a sequence of legal moves that result in the knight visiting every square on the chessboard exactly once. Note that it is <em>not</em> a requirement that the tour be \"closed\"; that is, the knight need not end within a single move of its start position.</p>\n</section>",
-  "boilerplate": "function knightTour(w, h) {\n\n}",
-  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/rosetta-code/knights-tour"
-}

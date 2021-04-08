@@ -1,6 +1,0 @@
-{
-  "title": "Problem 181: Investigating in how many ways objects of two different colours can be grouped",
-  "htmlDescription": "<section id=\"description\">\n<p>Having three black objects B and one white object W they can be grouped in 7 ways like this:</p>\n<p>(BBBW)(B,BBW)(B,B,BW)(B,B,B,W)</p>\n<p>(B,BB,W)(BBB,W)(BB,BW)</p>\n<p>In how many ways can sixty black objects B and forty white objects W be thus grouped?</p>\n</section>",
-  "boilerplate": "function euler181() {\n\n  return true;\n}\n\neuler181();",
-  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/project-euler/problem-181-investigating-in-how-many-ways-objects-of-two-different-colours-can-be-grouped"
-}

@@ -1,6 +1,0 @@
-{
-  "title": "Problem 36: Double-base palindromes",
-  "htmlDescription": "<section id=\"description\">\n<p>The decimal number, 585 = 1001001001<sub>2</sub> (binary), is palindromic in both bases.</p>\n<p>Find the sum of all numbers, less than <code>n</code>, whereas 1000 ≤ <code>n</code> ≤ 1000000, which are palindromic in base 10 and base 2.</p>\n<p>(Please note that the palindromic number, in either base, may not include leading zeros.)</p>\n</section>",
-  "boilerplate": "function doubleBasePalindromes(n) {\n\n  return n;\n}\n\ndoubleBasePalindromes(1000000);",
-  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/project-euler/problem-36-double-base-palindromes"
-}

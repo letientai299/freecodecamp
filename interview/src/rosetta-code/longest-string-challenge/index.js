@@ -1,5 +1,0 @@
-function longestString(strings) {
-
-}
-
-// TODO

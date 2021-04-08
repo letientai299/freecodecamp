@@ -1,6 +1,0 @@
-{
-  "title": "Problem 180: Rational zeros of a function of three variables",
-  "htmlDescription": "<section id=\"description\">\n<p>For any integer n, consider the three functions</p>\n<p>f1,n(x,y,z) = xn+1 + yn+1 − zn+1f2,n(x,y,z) = (xy + yz + zx)*(xn-1 + yn-1 − zn-1)f3,n(x,y,z) = xyz*(xn-2 + yn-2 − zn-2)</p>\n<p>and their combination</p>\n<p>fn(x,y,z) = f1,n(x,y,z) + f2,n(x,y,z) − f3,n(x,y,z)</p>\n<p>We call (x,y,z) a golden triple of order k if x, y, and z are all rational numbers of the form a / b with</p>\n<p>0 &#x3C; a &#x3C; b ≤ k and there is (at least) one integer n, so that fn(x,y,z) = 0.</p>\n<p>Let s(x,y,z) = x + y + z.</p>\n<p>Let t = u / v be the sum of all distinct s(x,y,z) for all golden triples (x,y,z) of order 35. All the s(x,y,z) and t must be in reduced form.</p>\n<p>Find u + v.</p>\n</section>",
-  "boilerplate": "function euler180() {\n\n  return true;\n}\n\neuler180();",
-  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/project-euler/problem-180-rational-zeros-of-a-function-of-three-variables"
-}

@@ -1,6 +1,0 @@
-{
-  "title": "Y combinator",
-  "htmlDescription": "<section id=\"description\">\n<p>In strict <a href=\"https://en.wikipedia.org/wiki/Functional%20programming\" title=\"wp: functional programming\">functional programming</a> and the <a href=\"https://en.wikipedia.org/wiki/lambda%20calculus\" title=\"wp: lambda calculus\">lambda calculus</a>, functions (lambda expressions) don't have state and are only allowed to refer to arguments of enclosing functions. This rules out the usual definition of a recursive function wherein a function is associated with the state of a variable and this variable's state is used in the body of the function. The <a href=\"https://mvanier.livejournal.com/2897.html\">Y combinator</a> is itself a stateless function that, when applied to another stateless function, returns a recursive version of the function. The Y combinator is the simplest of the class of such functions, called <a href=\"https://en.wikipedia.org/wiki/Fixed-point%20combinator\" title=\"wp: fixed-point combinator\">fixed-point combinators</a>.</p>\n</section>",
-  "boilerplate": "function Y(f) {\n  return function() {\n\n  };\n}\n\nvar factorial = Y(function(f) {\n  return function (n) {\n    return n > 1 ? n * f(n - 1) : 1;\n  };\n});",
-  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/rosetta-code/y-combinator"
-}

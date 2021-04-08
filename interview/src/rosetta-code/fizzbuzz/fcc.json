@@ -1,6 +1,0 @@
-{
-  "title": "FizzBuzz",
-  "htmlDescription": "<section id=\"description\">\n<p>Write a program that generates an array of integers from 1 to 100 (inclusive). But:</p>\n<ul>\n    <li>for multiples of 3, add <code>\"Fizz\"</code> to the array instead of the number</li>\n    <li>for multiples of 5, add <code>\"Buzz\"</code> to the array instead of the number</li>\n    <li>for multiples of 3 and 5, add <code>\"FizzBuzz\"</code> to the array instead of the number</li>\n</ul>\n</section>",
-  "boilerplate": "function fizzBuzz() {\n\n}",
-  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/rosetta-code/fizzbuzz"
-}

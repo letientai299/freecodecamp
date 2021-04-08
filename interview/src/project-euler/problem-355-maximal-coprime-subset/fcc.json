@@ -1,6 +1,0 @@
-{
-  "title": "Problem 355: Maximal coprime subset",
-  "htmlDescription": "<section id=\"description\">\n<p>Define Co(n) to be the maximal possible sum of a set of mutually co-prime elements from {1, 2, ..., n}. For example Co(10) is 30 and hits that maximum on the subset {1, 5, 7, 8, 9}.</p>\n<p>You are given that Co(30) = 193 and Co(100) = 1356.</p>\n<p>Find Co(200000).</p>\n</section>",
-  "boilerplate": "function euler355() {\n\n  return true;\n}\n\neuler355();",
-  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/project-euler/problem-355-maximal-coprime-subset"
-}

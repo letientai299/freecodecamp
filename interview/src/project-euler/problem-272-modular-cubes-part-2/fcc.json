@@ -1,6 +1,0 @@
-{
-  "title": "Problem 272: Modular Cubes, part 2",
-  "htmlDescription": "<section id=\"description\">\n<p>For a positive number n, define C(n) as the number of the integers x, for which 1</p>\n<p>When n=91, there are 8 possible values for x, namely : 9, 16, 22, 29, 53, 74, 79, 81. Thus, C(91)=8.</p>\n<p>Find the sum of the positive numbers n≤1011 for which C(n)=242.</p>\n</section>",
-  "boilerplate": "function euler272() {\n\n  return true;\n}\n\neuler272();",
-  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/project-euler/problem-272-modular-cubes-part-2"
-}

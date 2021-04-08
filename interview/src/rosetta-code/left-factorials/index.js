@@ -1,5 +1,0 @@
-function leftFactorial(n) {
-
-}
-
-// TODO

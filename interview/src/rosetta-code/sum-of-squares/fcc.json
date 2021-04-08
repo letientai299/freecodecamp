@@ -1,6 +1,0 @@
-{
-  "title": "Sum of squares",
-  "htmlDescription": "<section id=\"description\">\n<p>Write a function to find the sum of squares of an array of integers.</p>\n</section>",
-  "boilerplate": "function sumsq(array) {\n\n}",
-  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/rosetta-code/sum-of-squares"
-}

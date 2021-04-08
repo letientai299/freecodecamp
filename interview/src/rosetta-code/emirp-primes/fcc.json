@@ -1,6 +1,0 @@
-{
-  "title": "Emirp primes",
-  "htmlDescription": "<section id=\"description\">\n<p>An emirp (<strong>prime</strong> spelled backwards) are primes that when reversed (in their decimal representation) are a different prime.</p>\n</section>",
-  "boilerplate": "function emirps(n) {\n\n}",
-  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/rosetta-code/emirp-primes"
-}

@@ -1,6 +1,0 @@
-{
-  "title": "Stream Merge",
-  "htmlDescription": "<section id=\"description\">\n<p>Write a function that takes multiple sorted arrays of items, and returns one array of sorted items.</p>\n</section>",
-  "boilerplate": "function mergeLists(lists) {\n\n}",
-  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/rosetta-code/stream-merge"
-}

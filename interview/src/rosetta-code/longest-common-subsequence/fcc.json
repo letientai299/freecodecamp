@@ -1,6 +1,0 @@
-{
-  "title": "Longest common subsequence",
-  "htmlDescription": "<section id=\"description\">\n<p>The <strong>longest common subsequence</strong> (or <a href=\"http://en.wikipedia.org/wiki/Longest_common_subsequence_problem\"><strong>LCS</strong></a>) of groups A and B is the longest group of elements from A and B that are common between the two groups and in the same order in each group. For example, the sequences \"1234\" and \"1224533324\" have an LCS of \"1234\":</p>\n<p><em><strong>1234</strong></em></p>\n<p><em><strong>12</strong></em>245<em><strong>3</strong></em>332<em><strong>4</strong></em></p>\n<p>For a string example, consider the sequences \"thisisatest\" and \"testing123testing\". An LCS would be \"tsitest\":</p>\n<p><em><strong>t</strong></em>hi<em><strong>si</strong></em>sa<em><strong>test</strong></em></p>\n<p><em><strong>t</strong></em>e<em><strong>s</strong></em>t<em><strong>i</strong></em>ng123<em><strong>test</strong></em>ing.</p>\n<p>Your code only needs to deal with strings.</p>\n<p>For more information on this problem please see <a href=\"https://en.wikipedia.org/wiki/Longest_common_subsequence_problem\">Wikipedia</a>.</p>\n</section>",
-  "boilerplate": "function lcs(a, b) {\n\n}",
-  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/rosetta-code/longest-common-subsequence"
-}

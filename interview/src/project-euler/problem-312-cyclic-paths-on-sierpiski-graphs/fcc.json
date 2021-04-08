@@ -1,6 +1,0 @@
-{
-  "title": "Problem 312: Cyclic paths on Sierpiński graphs",
-  "htmlDescription": "<section id=\"description\">\n<p>- A Sierpiński graph of order-1 (S1) is an equilateral triangle.</p>\n<p>- Sn+1 is obtained from Sn by positioning three copies of Sn so that every pair of copies has one common corner.</p>\n<p>Let C(n) be the number of cycles that pass exactly once through all the vertices of Sn. For example, C(3) = 8 because eight such cycles can be drawn on S3, as shown below:</p>\n<p>It can also be verified that : C(1) = C(2) = 1 C(5) = 71328803586048 C(10 000) mod 108 = 37652224 C(10 000) mod 138 = 617720485</p>\n<p>Find C(C(C(10 000))) mod 138.</p>\n</section>",
-  "boilerplate": "function euler312() {\n\n  return true;\n}\n\neuler312();",
-  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/project-euler/problem-312-cyclic-paths-on-sierpiski-graphs"
-}

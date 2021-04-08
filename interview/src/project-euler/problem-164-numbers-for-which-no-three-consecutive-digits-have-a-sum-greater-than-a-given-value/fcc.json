@@ -1,6 +1,0 @@
-{
-  "title": "Problem 164: Numbers for which no three consecutive digits have a sum greater than a given value",
-  "htmlDescription": "<section id=\"description\">\n<p>How many 20 digit numbers n (without any leading zero) exist such that no three consecutive digits of n have a sum greater than 9?</p>\n</section>",
-  "boilerplate": "function euler164() {\n\n  return true;\n}\n\neuler164();",
-  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/project-euler/problem-164-numbers-for-which-no-three-consecutive-digits-have-a-sum-greater-than-a-given-value"
-}

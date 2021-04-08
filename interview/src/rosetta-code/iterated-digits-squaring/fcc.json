@@ -1,6 +1,0 @@
-{
-  "title": "Iterated digits squaring",
-  "htmlDescription": "<section id=\"description\">\n<p>If you add the square of the digits of a Natural number (an integer bigger than zero), you always end with either 1 or 89:</p>\n<pre>15 -> 26 -> 40 -> 16 -> 37 -> 58 -> 89\n7 -> 49 -> 97 -> 130 -> 10 -> 1\n</pre>\n</section>",
-  "boilerplate": "function iteratedSquare(n) {\n\n}",
-  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/rosetta-code/iterated-digits-squaring"
-}

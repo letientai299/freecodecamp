@@ -1,5 +1,0 @@
-function luhnTest(str) {
-
-}
-
-// TODO

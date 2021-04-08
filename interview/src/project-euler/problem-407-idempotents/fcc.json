@@ -1,6 +1,0 @@
-{
-  "title": "Problem 407: Idempotents",
-  "htmlDescription": "<section id=\"description\">\n<p>If we calculate a2 mod 6 for 0 ≤ a ≤ 5 we get: 0,1,4,3,4,1.</p>\n<p>The largest value of a such that a2 ≡ a mod 6 is 4. Let's call M(n) the largest value of a &#x3C; n such that a2 ≡ a (mod n). So M(6) = 4.</p>\n<p>Find ∑M(n) for 1 ≤ n ≤ 107.</p>\n</section>",
-  "boilerplate": "function euler407() {\n\n  return true;\n}\n\neuler407();",
-  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/project-euler/problem-407-idempotents"
-}

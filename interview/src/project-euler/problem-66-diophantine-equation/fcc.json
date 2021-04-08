@@ -1,6 +1,0 @@
-{
-  "title": "Problem 66: Diophantine equation",
-  "htmlDescription": "<section id=\"description\">\n<p>Consider quadratic Diophantine equations of the form:</p>\n<div style='text-align: center;'>x<sup>2</sup> – Dy<sup>2</sup> = 1</div>\n<p>For example, when D=13, the minimal solution in x is 649<sup>2</sup> – 13×180<sup>2</sup> = 1.</p>\n<p>It can be assumed that there are no solutions in positive integers when D is square.</p>\n<p>By finding minimal solutions in x for D = {2, 3, 5, 6, 7}, we obtain the following:</p>\n<div style='margin-left: 2em;'>\n  3<sup>2</sup> – 2×2<sup>2</sup> = 1<br>\n  2<sup>2</sup> – 3×1<sup>2</sup> = 1<br>\n  <strong><span style='color: red;'>9</span></strong><sup>2</sup> – 5×4<sup>2</sup> = 1<br>\n  5<sup>2</sup> – 6×2<sup>2</sup> = 1<br>\n  8<sup>2</sup> – 7×3<sup>2</sup> = 1<br>\n</div>\n<p>Hence, by considering minimal solutions in <code>x</code> for D ≤ 7, the largest <code>x</code> is obtained when D=5.</p>\n<p>Find the value of D ≤ 1000 in minimal solutions of <code>x</code> for which the largest value of <code>x</code> is obtained.</p>\n</section>",
-  "boilerplate": "function diophantineEquation() {\n\n  return true;\n}\n\ndiophantineEquation();",
-  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/project-euler/problem-66-diophantine-equation"
-}

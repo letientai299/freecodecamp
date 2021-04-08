@@ -1,6 +1,0 @@
-{
-  "title": "Problem 70: Totient permutation",
-  "htmlDescription": "<section id=\"description\">\n<p>Euler's Totient function, φ(<code>n</code>) [sometimes called the phi function], is used to determine the number of positive numbers less than or equal to <code>n</code> which are relatively prime to <code>n</code>. For example, as 1, 2, 4, 5, 7, and 8, are all less than nine and relatively prime to nine, φ(9)=6. The number 1 is considered to be relatively prime to every positive number, so φ(1)=1.</p>\n<p>Interestingly, φ(87109)=79180, and it can be seen that 87109 is a permutation of 79180.</p>\n<p>Find the value of <code>n</code>, 1 &#x3C; <code>n</code> &#x3C; 10<sup>7</sup>, for which φ(<code>n</code>) is a permutation of <code>n</code> and the ratio <code>n</code>/φ(<code>n</code>) produces a minimum.</p>\n</section>",
-  "boilerplate": "function totientPermutation() {\n\n  return true;\n}\n\ntotientPermutation();",
-  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/project-euler/problem-70-totient-permutation"
-}

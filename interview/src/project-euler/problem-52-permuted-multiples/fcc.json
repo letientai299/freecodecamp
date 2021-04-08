@@ -1,6 +1,0 @@
-{
-  "title": "Problem 52: Permuted multiples",
-  "htmlDescription": "<section id=\"description\">\n<p>It can be seen that the number, 125874, and its double, 251748, contain exactly the same digits, but in a different order.</p>\n<p>Find the smallest positive integer, <code>x</code>, such that <code>2x</code>, <code>3x</code>, <code>4x</code>, <code>5x</code>, and <code>6x</code>, contain the same digits.</p>\n</section>",
-  "boilerplate": "function permutedMultiples() {\n\n  return true;\n}\n\npermutedMultiples();",
-  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/project-euler/problem-52-permuted-multiples"
-}

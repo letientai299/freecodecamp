@@ -1,6 +1,0 @@
-{
-  "title": "Left factorials",
-  "htmlDescription": "<section id=\"description\">\n<p><strong>Left factorials</strong>, $ !n $, may refer to either <em>subfactorials</em> or to <em>factorial sums</em>. The same notation can be confusingly seen used for the two different definitions. Sometimes, <em>subfactorials</em> (also known as <em>derangements</em>) may use any of the notations:</p>\n<ul>\n  <li>$!n`$</li>\n  <li>$!n$</li>\n  <li>$n¡$</li>\n</ul>\n<p>(It may not be visually obvious, but the last example uses an upside-down exclamation mark.) This task will be using this formula for <strong>left factorial</strong>:</p>\n<p>$ !n = \\sum_{k=0}^{n-1} k! $</p>\n<p>where $!0 = 0$</p>\n</section>",
-  "boilerplate": "function leftFactorial(n) {\n\n}",
-  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/rosetta-code/left-factorials"
-}

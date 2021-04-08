@@ -1,6 +1,0 @@
-{
-  "title": "Find the Minimum and Maximum Value in a Binary Search Tree",
-  "htmlDescription": "<section id=\"description\">\n<p>In this challenge you will define two methods, <code>findMin</code> and <code>findMax</code>. These methods should return the minimum and maximum value held in the binary search tree (don't worry about adding values to the tree for now, we have added some in the background). If you get stuck, reflect on the invariant that must be true for binary search trees: each left subtree is less than or equal to its parent and each right subtree is greater than or equal to its parent. Let's also say that our tree can only store integer values. If the tree is empty, either method should return <code>null</code>.</p>\n</section>",
-  "boilerplate": "var displayTree = tree => console.log(JSON.stringify(tree, null, 2));\nfunction Node(value) {\n  this.value = value;\n  this.left = null;\n  this.right = null;\n}\nfunction BinarySearchTree() {\n  this.root = null;\n  // Only change code below this line\n  \n  // Only change code above this line\n}",
-  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/data-structures/find-the-minimum-and-maximum-value-in-a-binary-search-tree"
-}

@@ -1,6 +1,0 @@
-{
-  "title": "Problem 209: Circular Logic",
-  "htmlDescription": "<section id=\"description\">\n<p>A k-input binary truth table is a map from k input bits</p>\n<p>(binary digits, 0 [false] or 1 [true]) to 1 output bit. For example, the 2-input binary truth tables for the logical AND and XOR functions are:</p>\n<p>x y x AND y000010100111x y x XOR y000011101110How many 6-input binary truth tables, τ, satisfy the formula</p>\n<p>τ(a, b, c, d, e, f) AND τ(b, c, d, e, f, a XOR (b AND c)) = 0 for all 6-bit inputs (a, b, c, d, e, f)?</p>\n</section>",
-  "boilerplate": "function euler209() {\n\n  return true;\n}\n\neuler209();",
-  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/project-euler/problem-209-circular-logic"
-}

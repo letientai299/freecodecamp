@@ -1,6 +1,0 @@
-{
-  "title": "Sort stability",
-  "htmlDescription": "<section id=\"description\">\n<p>When sorting records in a table by a particular column or field, a <a href=\"https://en.wikipedia.org/wiki/Stable_sort#Stability\">stable sort</a> will always retain the relative order of records that have the same key.</p>\n<p>For example, in this table of countries and cities, a stable sort on the <strong>second</strong> column, the cities, would keep the US Birmingham above the UK Birmingham. (Although an unstable sort <em>might</em>, in this case, place the US Birmingham above the UK Birmingham, a stable sort routine would <em>guarantee</em> it).</p>\n<pre>UK  London\nUS  New York\nUS  Birmingham\nUK  Birmingham\n</pre>\n<p>Similarly, stable sorting on just the first column would generate \"UK London\" as the first item and \"US Birmingham\" as the last item (since the order of the elements having the same first word – \"UK\" or \"US\" – would be maintained).</p>\n</section>",
-  "boilerplate": "function stableSort(arr) {\n\n}",
-  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/rosetta-code/sort-stability"
-}

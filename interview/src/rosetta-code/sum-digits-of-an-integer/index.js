@@ -1,5 +1,0 @@
-function sumDigits(n) {
-
-}
-
-// TODO

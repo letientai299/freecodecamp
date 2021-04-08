@@ -1,6 +1,0 @@
-{
-  "title": "Problem 291: Panaitopol Primes",
-  "htmlDescription": "<section id=\"description\">\n<p>A prime number p is called a Panaitopol prime if for some positive integersx and y.</p>\n<p>Find how many Panaitopol primes are less than 5×1015.</p>\n</section>",
-  "boilerplate": "function euler291() {\n\n  return true;\n}\n\neuler291();",
-  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/project-euler/problem-291-panaitopol-primes"
-}

@@ -1,5 +1,0 @@
-function maxCombine(xs) {
-
-}
-
-// TODO

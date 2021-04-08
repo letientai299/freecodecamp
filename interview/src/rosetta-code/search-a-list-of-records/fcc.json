@@ -1,6 +1,0 @@
-{
-  "title": "Search a list of records",
-  "htmlDescription": "<section id=\"description\">\n<p>A record consists of attributes that describe an entity. Each attribute has a name and a value. For example, a person can have an attribute <code>age</code> with a value of 25. An important operation on a list of records is to find a record with a particular attribute value.</p>\n</section>",
-  "boilerplate": "function searchCity(name) {\n\n}\n\nconst list = [\n  { name: 'Lagos', population: 21.0 },\n  { name: 'Cairo', population: 15.2 },\n  { name: 'Kinshasa-Brazzaville', population: 11.3 },\n  { name: 'Greater Johannesburg', population: 7.55 },\n  { name: 'Mogadishu', population: 5.85 },\n  { name: 'Khartoum-Omdurman', population: 4.98 },\n  { name: 'Dar Es Salaam', population: 4.7 },\n  { name: 'Alexandria', population: 4.58 },\n  { name: 'Abidjan', population: 4.4 },\n  { name: 'Casablanca', population: 3.98 }\n];",
-  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/rosetta-code/search-a-list-of-records"
-}

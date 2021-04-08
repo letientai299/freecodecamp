@@ -1,6 +1,0 @@
-{
-  "title": "Problem 457: A polynomial modulo the square of a prime",
-  "htmlDescription": "<section id=\"description\">\n<p>Let f(n) = n2 - 3n - 1.</p>\n<p>Let p be a prime.</p>\n<p>Let R(p) be the smallest positive integer n such that f(n) mod p2 = 0 if such an integer n exists, otherwise R(p) = 0.</p>\n<p>Let SR(L) be ∑R(p) for all primes not exceeding L.</p>\n<p>Find SR(107).</p>\n</section>",
-  "boilerplate": "function euler457() {\n\n  return true;\n}\n\neuler457();",
-  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/project-euler/problem-457-a-polynomial-modulo-the-square-of-a-prime"
-}

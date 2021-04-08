@@ -1,6 +1,0 @@
-{
-  "title": "Problem 365: A huge binomial coefficient",
-  "htmlDescription": "<section id=\"description\">\n<p>The binomial coefficient C(1018,109) is a number with more than 9 billion (9×109) digits.</p>\n<p>Let M(n,k,m) denote the binomial coefficient C(n,k) modulo m.</p>\n<p>Calculate ∑M(1018,109,p<em>q</em>r) for 1000&#x3C;p&#x3C;q&#x3C;r&#x3C;5000 and p,q,r prime.</p>\n</section>",
-  "boilerplate": "function euler365() {\n\n  return true;\n}\n\neuler365();",
-  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/project-euler/problem-365-a-huge-binomial-coefficient"
-}

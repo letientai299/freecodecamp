@@ -1,6 +1,0 @@
-{
-  "title": "Amicable pairs",
-  "htmlDescription": "<section id=\"description\">\n<p>Two integers $N$ and $M$ are said to be <a href=\"https://en.wikipedia.org/wiki/Amicable%20numbers\" title=\"wp: Amicable numbers\">amicable pairs</a> if $N \\neq M$ and the sum of the <a href=\"https://rosettacode.org/wiki/Proper%20divisors\" title=\"Proper divisors\">proper divisors</a> of $N$ ($\\mathrm{sum}(\\mathrm{propDivs}(N))$) $= M$ as well as $\\mathrm{sum}(\\mathrm{propDivs}(M)) = N$.</p>\n<p><strong>Example:</strong></p>\n<p><strong>1184</strong> and <strong>1210</strong> are an amicable pair, with proper divisors:</p>\n<ul>\n  <li>1, 2, 4, 8, 16, 32, 37, 74, 148, 296, 592  and</li>\n  <li>1, 2, 5, 10, 11, 22, 55, 110, 121, 242, 605   respectively.</li>\n</ul>\n</section>",
-  "boilerplate": "function amicablePairsUpTo(maxNum) {\n\n  return true;\n}",
-  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/rosetta-code/amicable-pairs"
-}

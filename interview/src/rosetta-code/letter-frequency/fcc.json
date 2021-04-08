@@ -1,6 +1,0 @@
-{
-  "title": "Letter frequency",
-  "htmlDescription": "<section id=\"description\">\n<p>Given a string, calculate the frequency of each character.</p>\n<p>All characters should be counted. This includes lower and upper case letters, digits, whitespace, special characters, or any other distinct characters.</p>\n</section>",
-  "boilerplate": "function letterFrequency(txt) {\n\n}",
-  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/rosetta-code/letter-frequency"
-}

@@ -1,6 +1,0 @@
-{
-  "title": "Problem 433: Steps in Euclid's algorithm",
-  "htmlDescription": "<section id=\"description\">\n<p>Let E(x0, y0) be the number of steps it takes to determine the greatest common divisor of x0 and y0 with Euclid's algorithm. More formally:x1 = y0, y1 = x0 mod y0xn = yn-1, yn = xn-1 mod yn-1</p>\n<p>E(x0, y0) is the smallest n such that yn = 0.</p>\n<p>We have E(1,1) = 1, E(10,6) = 3 and E(6,10) = 4.</p>\n<p>Define S(N) as the sum of E(x,y) for 1 ≤ x,y ≤ N. We have S(1) = 1, S(10) = 221 and S(100) = 39826.</p>\n<p>Find S(5·106).</p>\n</section>",
-  "boilerplate": "function euler433() {\n\n  return true;\n}\n\neuler433();",
-  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/project-euler/problem-433-steps-in-euclids-algorithm"
-}

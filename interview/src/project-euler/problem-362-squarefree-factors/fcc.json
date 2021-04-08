@@ -1,6 +1,0 @@
-{
-  "title": "Problem 362: Squarefree factors",
-  "htmlDescription": "<section id=\"description\">\n<p>Consider the number 54.</p>\n<p>54 can be factored in 7 distinct ways into one or more factors larger than 1:</p>\n<p>54, 2×27, 3×18, 6×9, 3×3×6, 2×3×9 and 2×3×3×3.</p>\n<p>If we require that the factors are all squarefree only two ways remain: 3×3×6 and 2×3×3×3.</p>\n<p>Let's call Fsf(n) the number of ways n can be factored into one or more squarefree factors larger than 1, so Fsf(54)=2.</p>\n<p>Let S(n) be ∑Fsf(k) for k=2 to n.</p>\n<p>S(100)=193.</p>\n<p>Find S(10 000 000 000).</p>\n</section>",
-  "boilerplate": "function euler362() {\n\n  return true;\n}\n\neuler362();",
-  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/project-euler/problem-362-squarefree-factors"
-}

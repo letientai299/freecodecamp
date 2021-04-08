@@ -1,5 +1,0 @@
-function accumulator(sum) {
-
-}
-
-// TODO

@@ -1,6 +1,0 @@
-{
-  "title": "Vector cross product",
-  "htmlDescription": "<section id=\"description\">\n<p>A vector is defined as having three dimensions as being represented by an ordered collection of three numbers: (X, Y, Z).</p>\n</section>",
-  "boilerplate": "function crossProduct(a, b) {\n\n}",
-  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/rosetta-code/vector-cross-product"
-}

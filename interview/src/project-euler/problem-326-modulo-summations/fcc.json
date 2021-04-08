@@ -1,6 +1,0 @@
-{
-  "title": "Problem 326: Modulo Summations",
-  "htmlDescription": "<section id=\"description\">\n<p>Let an be a sequence recursively defined by: .</p>\n<p>So the first 10 elements of an are: 1,1,0,3,0,3,5,4,1,9.</p>\n<p>Let f(N,M) represent the number of pairs (p,q) such that:</p>\n<p>It can be seen that f(10,10)=4 with the pairs (3,3), (5,5), (7,9) and (9,10).</p>\n<p>You are also given that f(104,103)=97158.</p>\n<p>Find f(1012,106).</p>\n</section>",
-  "boilerplate": "function euler326() {\n\n  return true;\n}\n\neuler326();",
-  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/project-euler/problem-326-modulo-summations"
-}

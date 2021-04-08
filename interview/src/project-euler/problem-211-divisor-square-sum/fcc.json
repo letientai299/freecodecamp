@@ -1,6 +1,0 @@
-{
-  "title": "Problem 211: Divisor Square Sum",
-  "htmlDescription": "<section id=\"description\">\n<p>For a positive integer n, let σ2(n) be the sum of the squares of its divisors. For example,</p>\n<p>σ2(10) = 1 + 4 + 25 + 100 = 130.</p>\n<p>Find the sum of all n, 0 &#x3C; n &#x3C; 64,000,000 such that σ2(n) is a perfect square.</p>\n</section>",
-  "boilerplate": "function euler211() {\n\n  return true;\n}\n\neuler211();",
-  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/project-euler/problem-211-divisor-square-sum"
-}

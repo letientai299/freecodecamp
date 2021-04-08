@@ -1,6 +1,0 @@
-{
-  "title": "Use .has and .size on an ES6 Set",
-  "htmlDescription": "<section id=\"description\">\n<p>Let's look at the .has and .size methods available on the ES6 Set object.</p>\n<p>First, create an ES6 Set</p>\n<pre><code class=\"language-js\">var set = new Set([1,2,3]);\n</code></pre>\n<p>The .has method will check if the value is contained within the set.</p>\n<pre><code class=\"language-js\">var hasTwo = set.has(2);\n</code></pre>\n<p>The .size method will return an integer representing the size of the Set</p>\n<pre><code class=\"language-js\">var howBig = set.size;\n</code></pre>\n</section>",
-  "boilerplate": "function checkSet(arrToBeSet, checkValue){\n\n   // Only change code below this line\n\n   // Only change code above this line\n\n}",
-  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/data-structures/use--has-and--size-on-an-es6-set"
-}

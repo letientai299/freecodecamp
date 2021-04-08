@@ -1,6 +1,0 @@
-{
-  "title": "Problem 192: Best Approximations",
-  "htmlDescription": "<section id=\"description\">\n<p>Let x be a real number.</p>\n<p>A best approximation to x for the denominator bound d is a rational number r/s in reduced form, with s ≤ d, such that any rational number which is closer to x than r/s has a denominator larger than d:</p>\n<p>|p/q-x| &#x3C; |r/s-x| ⇒ q > d</p>\n<p>For example, the best approximation to √13 for the denominator bound 20 is 18/5 and the best approximation to √13 for the denominator bound 30 is 101/28.</p>\n<p>Find the sum of all denominators of the best approximations to √n for the denominator bound 1012, where n is not a perfect square and 1 &#x3C; n ≤ 100000.</p>\n</section>",
-  "boilerplate": "function euler192() {\n\n  return true;\n}\n\neuler192();",
-  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/project-euler/problem-192-best-approximations"
-}

@@ -1,6 +1,0 @@
-{
-  "title": "Hash from two arrays",
-  "htmlDescription": "<section id=\"description\">\n<p>Using two Arrays of equal length, create a Hash object where the elements from one array (the keys) are linked to the elements of the other (the values).</p>\n<p><strong>Related task:</strong></p>\n<ul>\n  <li><a href='https://rosettacode.org/wiki/Associative arrays/Creation' title='Associative arrays/Creation' target='_blank'>Associative arrays/Creation</a></li>\n</ul>\n</section>",
-  "boilerplate": "function arrToObj (keys, vals) {\n\n  return true;\n}",
-  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/rosetta-code/hash-from-two-arrays"
-}

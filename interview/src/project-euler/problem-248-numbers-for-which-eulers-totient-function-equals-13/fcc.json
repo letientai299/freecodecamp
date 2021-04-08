@@ -1,6 +1,0 @@
-{
-  "title": "Problem 248: Numbers for which Euler’s totient function equals 13!",
-  "htmlDescription": "<section id=\"description\">\n<p>The first number n for which φ(n)=13! is 6227180929.</p>\n<p>Find the 150,000th such number.</p>\n</section>",
-  "boilerplate": "function euler248() {\n\n  return true;\n}\n\neuler248();",
-  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/project-euler/problem-248-numbers-for-which-eulers-totient-function-equals-13"
-}

@@ -1,6 +1,0 @@
-{
-  "title": "Create a Stack Class",
-  "htmlDescription": "<section id=\"description\">\n<p>In the last section, we talked about what a stack is and how we can use an array to represent a stack. In this section, we will be creating our own stack class. Although you can use arrays to create stacks, sometimes it is best to limit the amount of control we have with our stacks. Apart from the <code>push</code> and <code>pop</code> method, stacks have other useful methods. Let's add a <code>peek</code>, <code>isEmpty</code>, and <code>clear</code> method to our stack class.</p>\n</section>",
-  "boilerplate": "function Stack() {\n  var collection = [];\n  this.print = function() {\n    console.log(collection);\n  };\n  // Only change code below this line\n\n  // Only change code above this line\n}",
-  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/data-structures/create-a-stack-class"
-}

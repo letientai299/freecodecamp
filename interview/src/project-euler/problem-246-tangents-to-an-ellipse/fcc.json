@@ -1,6 +1,0 @@
-{
-  "title": "Problem 246: Tangents to an ellipse",
-  "htmlDescription": "<section id=\"description\">\n<p>A definition for an ellipse is:</p>\n<p>Given a circle c with centre M and radius r and a point G such that d(G,M)</p>\n<p>The construction of the points of the ellipse is shown below.</p>\n<p>Given are the points M(-2000,1500) and G(8000,1500). Given is also the circle c with centre M and radius 15000. The locus of the points that are equidistant from G and c form an ellipse e. From a point P outside e the two tangents t1 and t2 to the ellipse are drawn. Let the points where t1 and t2 touch the ellipse be R and S.</p>\n<p>For how many lattice points P is angle RPS greater than 45 degrees?</p>\n</section>",
-  "boilerplate": "function euler246() {\n\n  return true;\n}\n\neuler246();",
-  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/project-euler/problem-246-tangents-to-an-ellipse"
-}

@@ -1,6 +1,0 @@
-{
-  "title": "Problem 389: Platonic Dice",
-  "htmlDescription": "<section id=\"description\">\n<p>An unbiased single 4-sided die is thrown and its value, T, is noted.T unbiased 6-sided dice are thrown and their scores are added together. The sum, C, is noted.C unbiased 8-sided dice are thrown and their scores are added together. The sum, O, is noted.O unbiased 12-sided dice are thrown and their scores are added together. The sum, D, is noted.D unbiased 20-sided dice are thrown and their scores are added together. The sum, I, is noted.</p>\n<p>Find the variance of I, and give your answer rounded to 4 decimal places.</p>\n</section>",
-  "boilerplate": "function euler389() {\n\n  return true;\n}\n\neuler389();",
-  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/project-euler/problem-389-platonic-dice"
-}

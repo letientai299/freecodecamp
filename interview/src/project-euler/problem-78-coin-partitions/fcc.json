@@ -1,6 +1,0 @@
-{
-  "title": "Problem 78: Coin partitions",
-  "htmlDescription": "<section id=\"description\">\n<p>Let p(n) represent the number of different ways in which n coins can be separated into piles. For example, five coins can be separated into piles in exactly seven different ways, so p(5)=7.</p>\n<div style='text-align: center;'>\n<table>\n<thead>\n<tr>\n<th>Coin piles</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>OOOOO</td>\n</tr>\n<tr>\n<td>OOOO   O</td>\n</tr>\n<tr>\n<td>OOO   OO</td>\n</tr>\n<tr>\n<td>OOO   O   O</td>\n</tr>\n<tr>\n<td>OO   OO   O</td>\n</tr>\n<tr>\n<td>OO   O   O   O</td>\n</tr>\n<tr>\n<td>O   O   O   O   O</td>\n</tr>\n</tbody>\n</table>\n</div>\n<p>Find the least value of <code>n</code> for which p(<code>n</code>) is divisible by one million.</p>\n</section>",
-  "boilerplate": "function coinPartitions() {\n\n  return true;\n}\n\ncoinPartitions();",
-  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/project-euler/problem-78-coin-partitions"
-}

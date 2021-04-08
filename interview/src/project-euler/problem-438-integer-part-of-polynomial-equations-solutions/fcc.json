@@ -1,6 +1,0 @@
-{
-  "title": "Problem 438: Integer part of polynomial equation's solutions",
-  "htmlDescription": "<section id=\"description\">\n<p>For an n-tuple of integers t = (a1, ..., an), let (x1, ..., xn) be the solutions of the polynomial equation xn + a1xn-1 + a2xn-2 + ... + an-1x + an = 0.</p>\n<p>Consider the following two conditions: x1, ..., xn are all real. If x1, ..., xn are sorted, ⌊xi⌋ = i for 1 ≤ i ≤ n. (⌊·⌋: floor function.)</p>\n<p>In the case of n = 4, there are 12 n-tuples of integers which satisfy both conditions. We define S(t) as the sum of the absolute values of the integers in t. For n = 4 we can verify that ∑S(t) = 2087 for all n-tuples t which satisfy both conditions.</p>\n<p>Find ∑S(t) for n = 7.</p>\n</section>",
-  "boilerplate": "function euler438() {\n\n  return true;\n}\n\neuler438();",
-  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/project-euler/problem-438-integer-part-of-polynomial-equations-solutions"
-}

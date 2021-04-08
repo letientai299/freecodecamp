@@ -1,6 +1,0 @@
-{
-  "title": "Problem 405: A rectangular tiling",
-  "htmlDescription": "<section id=\"description\">\n<p>We wish to tile a rectangle whose length is twice its width.</p>\n<p>Let T(0) be the tiling consisting of a single rectangle.</p>\n<p>For n > 0, let T(n) be obtained from T(n-1) by replacing all tiles in the following manner:</p>\n<p>The following animation demonstrates the tilings T(n) for n from 0 to 5:</p>\n<p>Let f(n) be the number of points where four tiles meet in T(n). For example, f(1) = 0, f(4) = 82 and f(109) mod 177 = 126897180.</p>\n<p>Find f(10k) for k = 1018, give your answer modulo 177.</p>\n</section>",
-  "boilerplate": "function euler405() {\n\n  return true;\n}\n\neuler405();",
-  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/project-euler/problem-405-a-rectangular-tiling"
-}

@@ -1,6 +1,0 @@
-{
-  "title": "Problem 425: Prime connection",
-  "htmlDescription": "<section id=\"description\">\n<p>Two positive numbers A and B are said to be connected (denoted by \"A ↔ B\") if one of these conditions holds:</p>\n<p>(1) A and B have the same length and differ in exactly one digit; for example, 123 ↔ 173.</p>\n<p>(2) Adding one digit to the left of A (or B) makes B (or A); for example, 23 ↔ 223 and 123 ↔ 23.</p>\n<p>We call a prime P a 2's relative if there exists a chain of connected primes between 2 and P and no prime in the chain exceeds P.</p>\n<p>For example, 127 is a 2's relative. One of the possible chains is shown below: 2 ↔ 3 ↔ 13 ↔ 113 ↔ 103 ↔ 107 ↔ 127 However, 11 and 103 are not 2's relatives.</p>\n<p>Let F(N) be the sum of the primes ≤ N which are not 2's relatives. We can verify that F(103) = 431 and F(104) = 78728.</p>\n<p>Find F(107).</p>\n</section>",
-  "boilerplate": "function euler425() {\n\n  return true;\n}\n\neuler425();",
-  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/project-euler/problem-425-prime-connection"
-}

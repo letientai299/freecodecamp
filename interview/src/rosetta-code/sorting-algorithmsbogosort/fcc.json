@@ -1,6 +1,0 @@
-{
-  "title": "Sorting algorithms/Bogosort",
-  "htmlDescription": "<section id=\"description\">\n<p><a href=\"https://en.wikipedia.org/wiki/Bogosort\">Bogosort</a> a list of numbers.</p>\n<p>Bogosort simply shuffles a collection randomly until it is sorted.</p>\n<p>\"Bogosort\" is a perversely inefficient algorithm only used as an in-joke.</p>\n<p>Its average run-time is O(n!) because the chance that any given shuffle of a set will end up in sorted order is about one in <em>n</em> factorial, and the worst case is infinite since there's no guarantee that a random shuffling will ever produce a sorted sequence.</p>\n<p>Its best case is O(n) since a single pass through the elements may suffice to order them.</p>\n<p>Pseudocode:</p>\n<pre><b>while not</b> InOrder(list) <b>do</b>\n  Shuffle(list)\n<b>done</b>\n</pre>\n</section>",
-  "boilerplate": "function bogosort(v) {\n\n}",
-  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/rosetta-code/sorting-algorithmsbogosort"
-}

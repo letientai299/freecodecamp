@@ -1,6 +1,0 @@
-{
-  "title": "Problem 443: GCD sequence",
-  "htmlDescription": "<section id=\"description\">\n<p>Let g(n) be a sequence defined as follows: g(4) = 13, g(n) = g(n-1) + gcd(n, g(n-1)) for n > 4.</p>\n<p>The first few values are:</p>\n<p>n 4567891011121314151617181920... g(n) 1314161718272829303132333451545560...</p>\n<!-- TODO Use MathJax -->\n<p>You are given that g(1 000) = 2524 and g(1 000 000) = 2624152.</p>\n<p>Find g(1015).</p>\n</section>",
-  "boilerplate": "function euler443() {\n\n  return true;\n}\n\neuler443();",
-  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/project-euler/problem-443-gcd-sequence"
-}

@@ -1,6 +1,0 @@
-{
-  "title": "Problem 464: Möbius function and intervals",
-  "htmlDescription": "<section id=\"description\">\n<p>The Möbius function, denoted μ(n), is defined as:</p>\n<p>μ(n) = (-1)ω(n) if n is squarefree (where ω(n) is the number of distinct prime factors of n)</p>\n<p>μ(n) = 0 if n is not squarefree.</p>\n<p>Let P(a,b) be the number of integers n in the interval [a,b] such that μ(n) = 1. Let N(a,b) be the number of integers n in the interval [a,b] such that μ(n) = -1. For example, P(2,10) = 2 and N(2,10) = 4.</p>\n<p>Let C(n) be the number of integer pairs (a,b) such that: 1 ≤ a ≤ b ≤ n, 99·N(a,b) ≤ 100·P(a,b), and 99·P(a,b) ≤ 100·N(a,b).</p>\n<p>For example, C(10) = 13, C(500) = 16676 and C(10 000) = 20155319.</p>\n<p>Find C(20 000 000).</p>\n</section>",
-  "boilerplate": "function euler464() {\n\n  return true;\n}\n\neuler464();",
-  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/project-euler/problem-464-mbius-function-and-intervals"
-}

@@ -1,5 +1,0 @@
-function idMatrix(n) {
-
-}
-
-// TODO

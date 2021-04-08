@@ -1,6 +1,0 @@
-{
-  "title": "Problem 447: Retractions C",
-  "htmlDescription": "<section id=\"description\">\n<p>For every integer n>1, the family of functions fn,a,b is defined</p>\n<p>by fn,a,b(x)≡ax+b mod n for a,b,x integer and 0</p>\n<p>F(N)=∑R(n) for 2≤n≤N. F(107)≡638042271 (mod 1 000 000 007).</p>\n<p>Find F(1014) (mod 1 000 000 007).</p>\n</section>",
-  "boilerplate": "function euler447() {\n\n  return true;\n}\n\neuler447();",
-  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/project-euler/problem-447-retractions-c"
-}

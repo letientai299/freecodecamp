@@ -1,6 +1,0 @@
-{
-  "title": "Problem 370: Geometric triangles",
-  "htmlDescription": "<section id=\"description\">\n<p>Let us define a geometric triangle as an integer sided triangle with sides a ≤ b ≤ c so that its sides form a geometric progression, i.e. b2 = a · c .</p>\n<p>An example of such a geometric triangle is the triangle with sides a = 144, b = 156 and c = 169.</p>\n<p>There are 861805 geometric triangles with perimeter ≤ 106 .</p>\n<p>How many geometric triangles exist with perimeter ≤ 2.5·1013 ?</p>\n</section>",
-  "boilerplate": "function euler370() {\n\n  return true;\n}\n\neuler370();",
-  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/project-euler/problem-370-geometric-triangles"
-}

@@ -1,6 +1,0 @@
-{
-  "title": "Date manipulation",
-  "htmlDescription": "<section id=\"description\">\n<p>Given a date string in EST, output the given date as a string with 12 hours added to the time. Time zone should be preserved.</p>\n<p>Example input: <code>\"March 6 2009 7:30pm EST\"</code></p>\n<p>Example output: <code>\"March 7 2009 7:30am EST\"</code></p>\n</section>",
-  "boilerplate": "function add12Hours(dateString) {\n\n  return true;\n}",
-  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/rosetta-code/date-manipulation"
-}

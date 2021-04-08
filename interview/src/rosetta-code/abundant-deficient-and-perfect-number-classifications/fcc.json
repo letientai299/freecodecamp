@@ -1,6 +1,0 @@
-{
-  "title": "Abundant, deficient and perfect number classifications",
-  "htmlDescription": "<section id=\"description\">\n<p>These define three classifications of positive integers based on their <a href=\"https://rosettacode.org/wiki/Proper%20divisors\" title=\"Proper divisors\">proper divisors</a>.</p>\n<p>Let $P(n)$ be the sum of the proper divisors of <code>n</code> where proper divisors are all positive integers <code>n</code> other than <code>n</code> itself.</p>\n<p>If <code>P(n) &#x3C; n</code> then <code>n</code> is classed as <code>deficient</code></p>\n<p>If <code>P(n) === n</code> then <code>n</code> is classed as <code>perfect</code></p>\n<p>If <code>P(n) > n</code> then <code>n</code> is classed as <code>abundant</code></p>\n<p><strong>Example</strong>: <code>6</code> has proper divisors of <code>1</code>, <code>2</code>, and <code>3</code>. <code>1 + 2 + 3 = 6</code>, so <code>6</code> is classed as a perfect number.</p>\n</section>",
-  "boilerplate": "function getDPA(num) {\n\n}",
-  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/rosetta-code/abundant-deficient-and-perfect-number-classifications"
-}

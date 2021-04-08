@@ -1,6 +1,0 @@
-{
-  "title": "Use Spread and Notes for ES5 Set() Integration",
-  "htmlDescription": "<section id=\"description\">\n<p>Do you remember the ES6 spread operator <code>...</code>?</p>\n<p><code>...</code> can take iterable objects in ES6 and turn them into arrays.</p>\n<p>Let's create a Set, and check out the spread function.</p>\n<pre><code class=\"language-js\">var set = new Set([1,2,3]);\nvar setToArr = [...set]\nconsole.log(setToArr) // returns [ 1, 2, 3 ]\n</code></pre>\n</section>",
-  "boilerplate": "function checkSet(set){\n   // Only change code below this line\n\n   // Only change code above this line\n}",
-  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/data-structures/use-spread-and-notes-for-es5-set-integration"
-}

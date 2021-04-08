@@ -1,6 +1,0 @@
-{
-  "title": "Problem 285: Pythagorean odds",
-  "htmlDescription": "<section id=\"description\">\n<p>Albert chooses a positive integer k, then two real numbers a, b are randomly chosen in the interval [0,1] with uniform distribution.</p>\n<p>The square root of the sum (k·a+1)2 + (k·b+1)2 is then computed and rounded to the nearest integer. If the result is equal to k, he scores k points; otherwise he scores nothing.</p>\n<p>For example, if k = 6, a = 0.2 and b = 0.85, then (k·a+1)2 + (k·b+1)2 = 42.05. The square root of 42.05 is 6.484... and when rounded to the nearest integer, it becomes 6. This is equal to k, so he scores 6 points.</p>\n<p>It can be shown that if he plays 10 turns with k = 1, k = 2, ..., k = 10, the expected value of his total score, rounded to five decimal places, is 10.20914.</p>\n<p>If he plays 105 turns with k = 1, k = 2, k = 3, ..., k = 105, what is the expected value of his total score, rounded to five decimal places?</p>\n</section>",
-  "boilerplate": "function euler285() {\n\n  return true;\n}\n\neuler285();",
-  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/project-euler/problem-285-pythagorean-odds"
-}

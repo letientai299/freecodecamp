@@ -1,6 +1,0 @@
-{
-  "title": "Last Friday of each month",
-  "htmlDescription": "<section id=\"description\">\n<p>Write a function that returns the date of the last Friday of a given month for a given year.</p>\n</section>",
-  "boilerplate": "function lastFriday(year, month) {\n\n}",
-  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/rosetta-code/last-friday-of-each-month"
-}

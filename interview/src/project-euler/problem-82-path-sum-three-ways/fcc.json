@@ -1,6 +1,0 @@
-{
-  "title": "Problem 82: Path sum: three ways",
-  "htmlDescription": "<section id=\"description\">\n<p><strong>Note:</strong> This problem is a more challenging version of Problem 81.</p>\n<p>The minimal path sum in the 5 by 5 matrix below, by starting in any cell in the left column and finishing in any cell in the right column, and only moving up, down, and right, is indicated in red and bold; the sum is equal to 994.</p>\n<div style='text-align: center;'>\n  $\\begin{pmatrix}\n  131 & 673 & \\color{red}{234} & \\color{red}{103} & \\color{red}{18}\\\\\\\\\n  \\color{red}{201} & \\color{red}{96} & \\color{red}{342} & 965 & 150\\\\\\\\\n  630 & 803 & 746 & 422 & 111\\\\\\\\\n  537 & 699 & 497 & 121 & 956\\\\\\\\\n  805 & 732 & 524 & 37 & 331\n  \\end{pmatrix}$\n</div>\n<p>Find the minimal path sum from the left column to the right column in <code>matrix</code>, a 2D array containing an 80 by 80 matrix.</p>\n</section>",
-  "boilerplate": "function pathSumThreeWays(arr) {\n\n  return true;\n}\n\n// Only change code above this line\n\nconst testMatrix = [\n  [131, 673, 234, 103, 18],\n  [201, 96, 342, 965, 150],\n  [630, 803, 746, 422, 111],\n  [537, 699, 497, 121, 956],\n  [805, 732, 524, 37, 331]\n];\n\npathSumThreeWays(testMatrix);",
-  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/project-euler/problem-82-path-sum-three-ways"
-}

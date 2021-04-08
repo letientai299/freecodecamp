@@ -1,6 +1,0 @@
-{
-  "title": "Compare a list of strings",
-  "htmlDescription": "<section id=\"description\">\n<p>Given a <a href=\"https://en.wikipedia.org/wiki/List_(abstract_data_type)\" title=\"wp: List_(abstract_data_type)\">list</a> of arbitrarily many strings, implement a function for each of the following conditions:</p>\n<ul>\n  <li>test if they are all lexically equal</li>\n  <li>test if every string is lexically less than the one after it  (i.e. whether the list is in strict ascending order)</li>\n</ul>\n</section>",
-  "boilerplate": "function allEqual(arr) {\n\n  return true;\n}\n\nfunction azSorted(arr) {\n\n  return true;\n}",
-  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/rosetta-code/compare-a-list-of-strings"
-}

@@ -1,6 +1,0 @@
-{
-  "title": "SHA-1",
-  "htmlDescription": "<section id=\"description\">\n<p><strong>SHA-1</strong> or <strong>SHA1</strong> is a one-way hash function; it computes a 160-bit message digest.</p>\n<p>SHA-1 often appears in security protocols; for example, many HTTPS websites use RSA with SHA-1 to secure their connections.</p>\n<p>BitTorrent uses SHA-1 to verify downloads.</p>\n<p>Git and Mercurial use SHA-1 digests to identify commits.</p>\n<p>A US government standard, <a href=\"https://rosettacode.org/wiki/SHA-1/FIPS-180-1\">FIPS 180-1</a>, defines SHA-1.</p>\n</section>",
-  "boilerplate": "function SHA1(input) {\n\n}",
-  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/rosetta-code/sha-1"
-}

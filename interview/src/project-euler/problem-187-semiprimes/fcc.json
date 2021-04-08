@@ -1,6 +1,0 @@
-{
-  "title": "Problem 187: Semiprimes",
-  "htmlDescription": "<section id=\"description\">\n<p>A composite is a number containing at least two prime factors. For example, 15 = 3 × 5; 9 = 3 × 3; 12 = 2 × 2 × 3.</p>\n<p>There are ten composites below thirty containing precisely two, not necessarily distinct, prime factors: 4, 6, 9, 10, 14, 15, 21, 22, 25, 26.</p>\n<p>How many composite integers, n &#x3C; 108, have precisely two, not necessarily distinct, prime factors?</p>\n</section>",
-  "boilerplate": "function euler187() {\n\n  return true;\n}\n\neuler187();",
-  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/project-euler/problem-187-semiprimes"
-}

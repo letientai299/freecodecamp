@@ -1,6 +1,0 @@
-{
-  "title": "Problem 251: Cardano Triplets",
-  "htmlDescription": "<section id=\"description\">\n<p>A triplet of positive integers (a,b,c) is called a Cardano Triplet if it satisfies the condition:</p>\n<p>For example, (2,1,5) is a Cardano Triplet.</p>\n<p>There exist 149 Cardano Triplets for which a+b+c ≤ 1000.</p>\n<p>Find how many Cardano Triplets exist such that a+b+c ≤ 110,000,000.</p>\n</section>",
-  "boilerplate": "function euler251() {\n\n  return true;\n}\n\neuler251();",
-  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/project-euler/problem-251-cardano-triplets"
-}

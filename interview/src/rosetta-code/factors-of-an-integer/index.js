@@ -1,5 +1,0 @@
-function factors(num) {
-
-}
-
-// TODO

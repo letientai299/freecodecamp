@@ -1,5 +1,0 @@
-function lucasLehmer(p) {
-
-}
-
-// TODO

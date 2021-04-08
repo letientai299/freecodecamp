@@ -1,6 +1,0 @@
-{
-  "title": "Generate lower case ASCII alphabet",
-  "htmlDescription": "<section id=\"description\">\n<p>Write a function to generate an array of lower case ASCII characters for a given range. For example, given the range <code>['a', 'd']</code>, the function should return <code>['a', 'b', 'c', 'd']</code>.</p>\n</section>",
-  "boilerplate": "function lascii(cFrom, cTo) {\n\n}",
-  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/rosetta-code/generate-lower-case-ascii-alphabet"
-}

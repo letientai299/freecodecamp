@@ -1,6 +1,0 @@
-{
-  "title": "Problem 32: Pandigital products",
-  "htmlDescription": "<section id=\"description\">\n<p>We shall say that an <code>n</code>-digit number is pandigital if it makes use of all the digits 1 to <code>n</code> exactly once; for example, the 5-digit number, 15234, is 1 through 5 pandigital.</p>\n<p>The product 7254 is unusual, as the identity, 39 × 186 = 7254, containing multiplicand, multiplier, and product is 1 through 9 pandigital.</p>\n<p>Find the sum of all products whose multiplicand/multiplier/product identity can be written as a 1 through 9 pandigital.</p>\n<p><strong>Hint:</strong> Some products can be obtained in more than one way so be sure to only include it once in your sum.</p>\n</section>",
-  "boilerplate": "function pandigitalProducts() {\n\n  return true;\n}\n\npandigitalProducts();",
-  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/project-euler/problem-32-pandigital-products"
-}

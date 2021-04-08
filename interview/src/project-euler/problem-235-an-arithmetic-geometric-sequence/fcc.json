@@ -1,6 +1,0 @@
-{
-  "title": "Problem 235: An Arithmetic Geometric sequence",
-  "htmlDescription": "<section id=\"description\">\n<p>Given is the arithmetic-geometric sequence u(k) = (900-3k)rk-1.</p>\n<p>Let s(n) = Σk=1...nu(k).</p>\n<p>Find the value of r for which s(5000) = -600,000,000,000.</p>\n<p>Give your answer rounded to 12 places behind the decimal point.</p>\n</section>",
-  "boilerplate": "function euler235() {\n\n  return true;\n}\n\neuler235();",
-  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/project-euler/problem-235-an-arithmetic-geometric-sequence"
-}

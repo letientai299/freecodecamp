@@ -1,6 +1,0 @@
-{
-  "title": "Reverse a Doubly Linked List",
-  "htmlDescription": "<section id=\"description\">\n<p>Let's create one more method for our doubly linked list called reverse which reverses the list in place. Once the method is executed the head should point to the previous tail and the tail should point to the previous head. Now, if we traverse the list from head to tail we should meet the nodes in a reverse order compared to the original list. Trying to reverse an empty list should return null.</p>\n</section>",
-  "boilerplate": "var Node = function(data, prev) {\n  this.data = data;\n  this.prev = prev;\n  this.next = null;\n};\nvar DoublyLinkedList = function() {\n  this.head = null;\n  this.tail = null;\n  // Only change code below this line\n  \n  // Only change code above this line\n};",
-  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/data-structures/reverse-a-doubly-linked-list"
-}

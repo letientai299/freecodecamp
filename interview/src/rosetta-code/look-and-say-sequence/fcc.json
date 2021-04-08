@@ -1,6 +1,0 @@
-{
-  "title": "Look-and-say sequence",
-  "htmlDescription": "<section id=\"description\">\n<p>The <a href=\"https://en.wikipedia.org/wiki/Look%20and%20say%20sequence\">Look and say sequence</a> is a recursively defined sequence of numbers.</p>\n<p>Sequence Definition</p>\n<ul><li>Take a decimal number</li>\n<li><span>Look</span> at the number, visually grouping consecutive runs of the same digit.</li>\n<li><span>Say</span> the number, from left to right, group by group; as how many of that digit there are - followed by the digit grouped.</li></ul><span> This becomes the next number of the sequence.</span>\n<p>An example:</p>\n<ul><li>Starting with the number 1, you have <span>one</span> 1 which produces 11</li>\n<li>Starting with 11, you have <span>two</span> 1's. I.E.: 21</li>\n<li>Starting with 21, you have <span>one</span> 2, then <span>one</span> 1. I.E.: (12)(11) which becomes 1211</li>\n<li>Starting with 1211, you have <span>one</span> 1, <span>one</span> 2, then <span>two</span> 1's. I.E.: (11)(12)(21) which becomes 111221</li></ul>\n</section>",
-  "boilerplate": "function lookAndSay(str) {\n\n}",
-  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/rosetta-code/look-and-say-sequence"
-}

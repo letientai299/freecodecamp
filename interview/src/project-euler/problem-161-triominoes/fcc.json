@@ -1,6 +1,0 @@
-{
-  "title": "Problem 161: Triominoes",
-  "htmlDescription": "<section id=\"description\">\n<p>A triomino is a shape consisting of three squares joined via the edges.</p>\n<p>There are two basic forms:</p>\n<p>If all possible orientations are taken into account there are six:</p>\n<p>Any n by m grid for which nxm is divisible by 3 can be tiled with triominoes. If we consider tilings that can be obtained by reflection or rotation from another tiling as different there are 41 ways a 2 by 9 grid can be tiled with triominoes:</p>\n<p>In how many ways can a 9 by 12 grid be tiled in this way by triominoes?</p>\n</section>",
-  "boilerplate": "function euler161() {\n\n  return true;\n}\n\neuler161();",
-  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/project-euler/problem-161-triominoes"
-}

@@ -1,6 +1,0 @@
-{
-  "title": "Equilibrium index",
-  "htmlDescription": "<section id=\"description\">\n<p>An equilibrium index of a sequence is an index into the sequence such that the sum of elements at lower indices is equal to the sum of elements at higher indices.</p>\n<p>For example, in a sequence $A$:</p>\n<ul style='list-style: none;'>\n  <li><big>$A_0 = -7$</big></li>\n  <li><big>$A_1 =  1$</big></li>\n  <li><big>$A_2 =  5$</big></li>\n  <li><big>$A_3 =  2$</big></li>\n  <li><big>$A_4 = -4$</big></li>\n  <li><big>$A_5 =  3$</big></li>\n  <li><big>$A_6 =  0$</big></li>\n</ul>\n<p><code>3</code> is an equilibrium index, because:</p>\n<ul style='list-style: none;'>\n  <li><big>$A_0 + A_1 + A_2 = A_4 + A_5 + A_6$</big></li>\n</ul>\n<p><code>6</code> is also an equilibrium index, because:</p>\n<ul style='list-style: none;'>\n  <li><big>$A_0 + A_1 + A_2 + A_3 + A_4 + A_5 = 0$</big></li>\n</ul>\n<p>(sum of zero elements is zero)</p>\n<p><code>7</code> is not an equilibrium index, because it is not a valid index of sequence $A$.</p>\n</section>",
-  "boilerplate": "function equilibrium(a) {\n\n}",
-  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/rosetta-code/equilibrium-index"
-}

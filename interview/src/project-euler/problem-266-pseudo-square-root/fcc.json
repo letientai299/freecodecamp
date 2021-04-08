@@ -1,6 +1,0 @@
-{
-  "title": "Problem 266: Pseudo Square Root",
-  "htmlDescription": "<section id=\"description\">\n<p>The divisors of 12 are: 1,2,3,4,6 and 12.</p>\n<p>The largest divisor of 12 that does not exceed the square root of 12 is 3.</p>\n<p>We shall call the largest divisor of an integer n that does not exceed the square root of n the pseudo square root (PSR) of n.</p>\n<p>It can be seen that PSR(3102)=47.</p>\n<p>Let p be the product of the primes below 190. Find PSR(p) mod 1016.</p>\n</section>",
-  "boilerplate": "function euler266() {\n\n  return true;\n}\n\neuler266();",
-  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/project-euler/problem-266-pseudo-square-root"
-}

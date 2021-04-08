@@ -1,6 +1,0 @@
-{
-  "title": "Problem 7: 10001st prime",
-  "htmlDescription": "<section id=\"description\">\n<p>By listing the first six prime numbers: 2, 3, 5, 7, 11, and 13, we can see that the 6th prime is 13.</p>\n<p>What is the <code>n</code>th prime number?</p>\n</section>",
-  "boilerplate": "function nthPrime(n) {\n\n  return true;\n}\n\nnthPrime(10001);",
-  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/project-euler/problem-7-10001st-prime"
-}

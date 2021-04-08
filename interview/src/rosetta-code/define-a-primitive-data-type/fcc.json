@@ -1,6 +1,0 @@
-{
-  "title": "Define a primitive data type",
-  "htmlDescription": "<section id=\"description\">\n<p>Define a type that behaves like an integer but has a lowest valid value of 1 and a highest valid value of 10.</p>\n<p>Error handling:</p>\n<ul>\n  <li>If you try to instantiate a <code>Num</code> with a value outside of 1 - 10, it should throw a <code>TypeError</code> with an error message of <code>'Out of range'</code>.</li>\n  <li>If you try to instantiate a <code>Num</code> with a value that is not a number, it should throw a <code>TypeError</code> with an error message of <code>'Not a Number'</code>.</li>\n</ul>\n</section>",
-  "boilerplate": "function Num(n) {\n\n  return n;\n}",
-  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/rosetta-code/define-a-primitive-data-type"
-}

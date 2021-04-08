@@ -1,6 +1,0 @@
-{
-  "title": "Problem 404: Crisscross Ellipses",
-  "htmlDescription": "<section id=\"description\">\n<p>Ea is an ellipse with an equation of the form x2 + 4y2 = 4a2.</p>\n<p>Ea' is the rotated image of Ea by θ degrees counterclockwise around the origin O(0, 0) for 0° &#x3C; θ &#x3C; 90°.</p>\n<p>b is the distance to the origin of the two intersection points closest to the origin and c is the distance of the two other intersection points. We call an ordered triplet (a, b, c) a canonical ellipsoidal triplet if a, b and c are positive integers. For example, (209, 247, 286) is a canonical ellipsoidal triplet.</p>\n<p>Let C(N) be the number of distinct canonical ellipsoidal triplets (a, b, c) for a ≤ N. It can be verified that C(103) = 7, C(104) = 106 and C(106) = 11845.</p>\n<p>Find C(1017).</p>\n</section>",
-  "boilerplate": "function euler404() {\n\n  return true;\n}\n\neuler404();",
-  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/project-euler/problem-404-crisscross-ellipses"
-}

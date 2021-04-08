@@ -1,6 +1,0 @@
-{
-  "title": "Sorting algorithms/Permutation sort",
-  "htmlDescription": "<section id=\"description\">\n<p>Write a function to implement a permutation sort, which proceeds by generating the possible permutations of the input array until discovering the sorted one. The function should return the sorted array.</p>\n<p>Pseudocode:</p>\n<pre><b>while not</b> InOrder(list) <b>do</b>\n  nextPermutation(list)\n<b>done</b>\n</pre>\n</section>",
-  "boilerplate": "function permutationSort(arr) {\n\n}",
-  "url": "https://www.freecodecamp.org/learn/coding-interview-prep/rosetta-code/sorting-algorithmspermutation-sort"
-}
