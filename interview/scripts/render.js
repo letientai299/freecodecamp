@@ -4,13 +4,13 @@ const path = require("path");
 const hljs = require("highlight.js");
 const marked = require("marked");
 marked.setOptions({
-  highlight: function(code, lang) {
+  highlight: function (code, lang) {
     if (!lang || lang === "") {
       return code;
     }
 
     return hljs.highlight(code, { language: lang }).value;
-  }
+  },
 });
 
 const SRC = path.join(__dirname, "../src");
@@ -20,12 +20,12 @@ const PUBLIC = path.join(__dirname, "../public");
 /**
  * Prepare sidebar HTML contents
  */
-function prepareSidebar() {
+function prepareSidebar(isTop = false) {
   const raw = fs.readFileSync(path.join(SRC, "index.json"));
   const modules = JSON.parse(raw);
 
   // create list of lists of solution links
-  const lists = modulesToSidebarHTML(modules);
+  const lists = modulesToSidebarHTML(modules, isTop);
 
   // add the main pages to the list
   const headerHTMl = `
@@ -37,28 +37,28 @@ ${lists}
   const paths = modulesToPaths(modules);
   return {
     html: headerHTMl,
-    paths: paths
+    paths: paths,
   };
 }
 
-const renderProblemForSideBar = problems => {
+const renderProblemForSideBar = (problems, isTop = false) => {
   return problems
-    .map(p => {
-      const slug = p.dir.replace("src/", "../../");
+    .map((p) => {
+      const slug = p.dir.replace("src/", isTop ? "./" : "./../../");
       return `<li><a href="${slug}">${p.title}</a></li>`.trim();
     })
     .join("\n");
 };
 
-function modulesToSidebarHTML(modules) {
+function modulesToSidebarHTML(modules, isTop) {
   return Object.keys(modules)
-    .map(k => {
+    .map((k) => {
       const m = modules[k];
       return `
 <li>
 <p>${m.name}</p>
 <ul>
-${renderProblemForSideBar(m.problems)}
+${renderProblemForSideBar(m.problems, isTop)}
 </ul>
 </li>`.trim();
     })
@@ -67,10 +67,10 @@ ${renderProblemForSideBar(m.problems)}
 
 function modulesToPaths(modules) {
   return Object.keys(modules)
-    .flatMap(k => {
+    .flatMap((k) => {
       return modules[k].problems;
     })
-    .map(c => {
+    .map((c) => {
       c.path = c.dir.replace("src/", "./");
       return c;
     });
@@ -90,7 +90,7 @@ function renderDoc(sidebar, header) {
   let renderer = new marked.Renderer();
   renderer.link = docLinkRender;
   marked.setOptions({
-    renderer: renderer
+    renderer: renderer,
   });
 
   const rendered = marked(md).toString();
@@ -121,12 +121,12 @@ if (!fs.existsSync(DIST)) {
 }
 
 // copy public files to dist
-fs.readdirSync(PUBLIC).forEach(f => {
+fs.readdirSync(PUBLIC).forEach((f) => {
   // minify it
   fs.copyFileSync(path.join(PUBLIC, f), path.join(DIST, f));
 });
 
-const sidebar = prepareSidebar();
+let sidebar = prepareSidebar(true);
 const headerTpl = fs
   .readFileSync(path.join(__dirname, "../templates/_header.tpl.html"))
   .toString();
@@ -190,6 +190,9 @@ const docHeader = renderHeader(
   true
 );
 renderDoc(sidebar.html, docHeader);
+
+// render the sidebar again for problem pages
+sidebar = prepareSidebar(false);
 
 // const paths = sidebar.paths.slice(0, 10);
 const paths = sidebar.paths;
