@@ -27,6 +27,7 @@ function setupEditor() {
     tabSize: 2,
     extraKeys: createEditorExtraKeys(getModKey()),
     autofocus: false,
+    screenReaderLabel: "code editor",
   });
 
   reloadSavedCode();

@@ -5,6 +5,12 @@ const GITHUB_PREFIX =
 
 const hljs = require("highlight.js");
 const marked = require("marked");
+let renderer = new marked.Renderer();
+renderer.link = docLinkRender;
+marked.setOptions({
+  renderer: renderer,
+});
+
 marked.setOptions({
   highlight: function (code, lang) {
     if (!lang || lang === "") {
@@ -89,12 +95,6 @@ function renderDoc(sidebar, header) {
   const outFile = path.join(DIST, "index.html");
   const md = fs.readFileSync(mdFile).toString();
 
-  let renderer = new marked.Renderer();
-  renderer.link = docLinkRender;
-  marked.setOptions({
-    renderer: renderer,
-  });
-
   const rendered = marked(md).toString();
 
   let html = docTpl
@@ -161,11 +161,8 @@ function renderCode(back, p, next) {
 
   const fccRaw = fs.readFileSync(path.join(SRC, p.path, "fcc.json")).toString();
   const fccJSON = JSON.parse(fccRaw);
-  let desc = `<h1>${p.title}</h1>` + fccJSON.htmlDescription;
-  if (desc.includes(`class="language-`)) {
-    const md = fs.readFileSync(path.join(SRC, p.path, "readme.md")).toString();
-    desc = marked(md);
-  }
+  const md = fs.readFileSync(path.join(SRC, p.path, "readme.md")).toString();
+  let desc = marked(md).toString();
 
   const html = codeTpl
     .replace("{{header}}", header)
