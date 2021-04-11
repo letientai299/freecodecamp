@@ -172,6 +172,11 @@ function renderCode(back, p, next) {
   const html = codeTpl
     .replace("{{header}}", header)
     .replace("{{sidebar}}", sidebar.html)
+    .replace("{{title}}", `${p.title} | FCC solutions - Coding Interview Prep`)
+    .replace(
+      "{{metaDescription}}",
+      `${p.title} | FCC solutions - Coding Interview Prep`
+    )
     .replace("{{description}}", desc)
     .replace("{{code}}", fccJSON.boilerplate);
 
