@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Problem 445: Retractions A | FCC solutions - Coding Interview Prep</title>
+    <meta name="Description" content="Problem 445: Retractions A | FCC solutions - Coding Interview Prep" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.60.0/codemirror.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.60.0/theme/monokai.min.css"
+    />
+    <link rel="stylesheet" href="../../style.css" />
+    <link rel="stylesheet" href="../../default-hljs.css" />
+  </head>
+  <body>
+    <div class="container">
+      <aside><ul>
+<li>
+<p class="module-name module-close">Algorithms</p>
+<ul class="module-problems">
+<li ><a href="./../../algorithms/find-the-symmetric-difference">Find the Symmetric Difference</a></li>
+<li ><a href="./../../algorithms/inventory-update">Inventory Update</a></li>
+<li ><a href="./../../algorithms/no-repeats-please">No Repeats Please</a></li>
+<li ><a href="./../../algorithms/pairwise">Pairwise</a></li>
+<li ><a href="./../../algorithms/implement-bubble-sort">Implement Bubble Sort</a></li>
+<li ><a href="./../../algorithms/implement-selection-sort">Implement Selection Sort</a></li>
+<li ><a href="./../../algorithms/implement-insertion-sort">Implement Insertion Sort</a></li>
+<li ><a href="./../../algorithms/implement-quick-sort">Implement Quick Sort</a></li>
+<li ><a href="./../../algorithms/implement-merge-sort">Implement Merge Sort</a></li>
+</ul>
+</li>
+<li>
+<p class="module-name module-close">Data Structures</p>
+<ul class="module-problems">
+<li ><a href="./../../data-structures/typed-arrays">Typed Arrays</a></li>
+<li ><a href="./../../data-structures/learn-how-a-stack-works">Learn how a Stack Works</a></li>
+<li ><a href="./../../data-structures/create-a-stack-class">Create a Stack Class</a></li>
+<li ><a href="./../../data-structures/create-a-queue-class">Create a Queue Class</a></li>
+<li ><a href="./../../data-structures/create-a-priority-queue-class">Create a Priority Queue Class</a></li>
+<li ><a href="./../../data-structures/create-a-circular-queue">Create a Circular Queue</a></li>
+<li ><a href="./../../data-structures/create-a-set-class">Create a Set Class</a></li>
+<li ><a href="./../../data-structures/perform-a-union-on-two-sets">Perform a Union on Two Sets</a></li>
+<li ><a href="./../../data-structures/perform-an-intersection-on-two-sets-of-data">Perform an Intersection on Two Sets of Data</a></li>
+<li ><a href="./../../data-structures/perform-a-difference-on-two-sets-of-data">Perform a Difference on Two Sets of Data</a></li>
+<li ><a href="./../../data-structures/perform-a-subset-check-on-two-sets-of-data">Perform a Subset Check on Two Sets of Data</a></li>
+<li ><a href="./../../data-structures/create-and-add-to-sets-in-es6">Create and Add to Sets in ES6</a></li>
+<li ><a href="./../../data-structures/remove-items-from-a-set-in-es6">Remove items from a set in ES6</a></li>
+<li ><a href="./../../data-structures/use--has-and--size-on-an-es6-set">Use .has and .size on an ES6 Set</a></li>
+<li ><a href="./../../data-structures/use-spread-and-notes-for-es5-set-integration">Use Spread and Notes for ES5 Set() Integration</a></li>
+<li ><a href="./../../data-structures/create-a-map-data-structure">Create a Map Data Structure</a></li>
+<li ><a href="./../../data-structures/create-an-es6-javascript-map">Create an ES6 JavaScript Map</a></li>
+<li ><a href="./../../data-structures/create-a-hash-table">Create a Hash Table</a></li>
+<li ><a href="./../../data-structures/work-with-nodes-in-a-linked-list">Work with Nodes in a Linked List</a></li>
+<li ><a href="./../../data-structures/create-a-linked-list-class">Create a Linked List Class</a></li>
+<li ><a href="./../../data-structures/remove-elements-from-a-linked-list">Remove Elements from a Linked List</a></li>
+<li ><a href="./../../data-structures/search-within-a-linked-list">Search within a Linked List</a></li>
+<li ><a href="./../../data-structures/remove-elements-from-a-linked-list-by-index">Remove Elements from a Linked List by Index</a></li>
+<li ><a href="./../../data-structures/add-elements-at-a-specific-index-in-a-linked-list">Add Elements at a Specific Index in a Linked List</a></li>
+<li ><a href="./../../data-structures/create-a-doubly-linked-list">Create a Doubly Linked List</a></li>
+<li ><a href="./../../data-structures/reverse-a-doubly-linked-list">Reverse a Doubly Linked List</a></li>
+<li ><a href="./../../data-structures/add-a-new-element-to-a-binary-search-tree">Add a New Element to a Binary Search Tree</a></li>
+<li ><a href="./../../data-structures/find-the-minimum-and-maximum-value-in-a-binary-search-tree">Find the Minimum and Maximum Value in a Binary Search Tree</a></li>
+<li ><a href="./../../data-structures/check-if-an-element-is-present-in-a-binary-search-tree">Check if an Element is Present in a Binary Search Tree</a></li>
+<li ><a href="./../../data-structures/check-if-tree-is-binary-search-tree">Check if Tree is Binary Search Tree</a></li>
+<li ><a href="./../../data-structures/find-the-minimum-and-maximum-height-of-a-binary-search-tree">Find the Minimum and Maximum Height of a Binary Search Tree</a></li>
+<li ><a href="./../../data-structures/use-depth-first-search-in-a-binary-search-tree">Use Depth First Search in a Binary Search Tree</a></li>
+<li ><a href="./../../data-structures/use-breadth-first-search-in-a-binary-search-tree">Use Breadth First Search in a Binary Search Tree</a></li>
+<li ><a href="./../../data-structures/delete-a-leaf-node-in-a-binary-search-tree">Delete a Leaf Node in a Binary Search Tree</a></li>
+<li ><a href="./../../data-structures/delete-a-node-with-one-child-in-a-binary-search-tree">Delete a Node with One Child in a Binary Search Tree</a></li>
+<li ><a href="./../../data-structures/delete-a-node-with-two-children-in-a-binary-search-tree">Delete a Node with Two Children in a Binary Search Tree</a></li>
+<li ><a href="./../../data-structures/invert-a-binary-tree">Invert a Binary Tree</a></li>
+<li ><a href="./../../data-structures/create-a-trie-search-tree">Create a Trie Search Tree</a></li>
+<li ><a href="./../../data-structures/insert-an-element-into-a-max-heap">Insert an Element into a Max Heap</a></li>
+<li ><a href="./../../data-structures/remove-an-element-from-a-max-heap">Remove an Element from a Max Heap</a></li>
+<li ><a href="./../../data-structures/implement-heap-sort-with-a-min-heap">Implement Heap Sort with a Min Heap</a></li>
+<li ><a href="./../../data-structures/adjacency-list">Adjacency List</a></li>
+<li ><a href="./../../data-structures/adjacency-matrix">Adjacency Matrix</a></li>
+<li ><a href="./../../data-structures/incidence-matrix">Incidence Matrix</a></li>
+<li ><a href="./../../data-structures/breadth-first-search">Breadth-First Search</a></li>
+<li ><a href="./../../data-structures/depth-first-search">Depth-First Search</a></li>
+</ul>
+</li>
+<li>
+<p class="module-name module-close">Rosetta Code</p>
+<ul class="module-problems">
+<li ><a href="./../../rosetta-code/100-doors">100 doors</a></li>
+<li ><a href="./../../rosetta-code/24-game">24 game</a></li>
+<li ><a href="./../../rosetta-code/9-billion-names-of-god-the-integer">9 billion names of God the integer</a></li>
+<li ><a href="./../../rosetta-code/abc-problem">ABC Problem</a></li>
+<li ><a href="./../../rosetta-code/abundant-deficient-and-perfect-number-classifications">Abundant, deficient and perfect number classifications</a></li>
+<li ><a href="./../../rosetta-code/accumulator-factory">Accumulator factory</a></li>
+<li ><a href="./../../rosetta-code/ackermann-function">Ackermann function</a></li>
+<li ><a href="./../../rosetta-code/align-columns">Align columns</a></li>
+<li ><a href="./../../rosetta-code/amicable-pairs">Amicable pairs</a></li>
+<li ><a href="./../../rosetta-code/averagesmode">Averages/Mode</a></li>
+<li ><a href="./../../rosetta-code/averagespythagorean-means">Averages/Pythagorean means</a></li>
+<li ><a href="./../../rosetta-code/averagesroot-mean-square">Averages/Root mean square</a></li>
+<li ><a href="./../../rosetta-code/babbage-problem">Babbage problem</a></li>
+<li ><a href="./../../rosetta-code/balanced-brackets">Balanced brackets</a></li>
+<li ><a href="./../../rosetta-code/circles-of-given-radius-through-two-points">Circles of given radius through two points</a></li>
+<li ><a href="./../../rosetta-code/closest-pair-problem">Closest-pair problem</a></li>
+<li ><a href="./../../rosetta-code/combinations">Combinations</a></li>
+<li ><a href="./../../rosetta-code/comma-quibbling">Comma quibbling</a></li>
+<li ><a href="./../../rosetta-code/compare-a-list-of-strings">Compare a list of strings</a></li>
+<li ><a href="./../../rosetta-code/convert-seconds-to-compound-duration">Convert seconds to compound duration</a></li>
+<li ><a href="./../../rosetta-code/count-occurrences-of-a-substring">Count occurrences of a substring</a></li>
+<li ><a href="./../../rosetta-code/count-the-coins">Count the coins</a></li>
+<li ><a href="./../../rosetta-code/cramers-rule">Cramer's rule</a></li>
+<li ><a href="./../../rosetta-code/cumulative-standard-deviation">Cumulative standard deviation</a></li>
+<li ><a href="./../../rosetta-code/cusip">CUSIP</a></li>
+<li ><a href="./../../rosetta-code/cut-a-rectangle">Cut a rectangle</a></li>
+<li ><a href="./../../rosetta-code/date-format">Date format</a></li>
+<li ><a href="./../../rosetta-code/date-manipulation">Date manipulation</a></li>
+<li ><a href="./../../rosetta-code/day-of-the-week">Day of the week</a></li>
+<li ><a href="./../../rosetta-code/deal-cards-for-freecell">Deal cards for FreeCell</a></li>
+<li ><a href="./../../rosetta-code/deepcopy">Deepcopy</a></li>
+<li ><a href="./../../rosetta-code/define-a-primitive-data-type">Define a primitive data type</a></li>
+<li ><a href="./../../rosetta-code/department-numbers">Department Numbers</a></li>
+<li ><a href="./../../rosetta-code/discordian-date">Discordian date</a></li>
+<li ><a href="./../../rosetta-code/dot-product">Dot product</a></li>
+<li ><a href="./../../rosetta-code/element-wise-operations">Element-wise operations</a></li>
+<li ><a href="./../../rosetta-code/emirp-primes">Emirp primes</a></li>
+<li ><a href="./../../rosetta-code/entropy">Entropy</a></li>
+<li ><a href="./../../rosetta-code/equilibrium-index">Equilibrium index</a></li>
+<li ><a href="./../../rosetta-code/ethiopian-multiplication">Ethiopian multiplication</a></li>
+<li ><a href="./../../rosetta-code/euler-method">Euler method</a></li>
+<li ><a href="./../../rosetta-code/evaluate-binomial-coefficients">Evaluate binomial coefficients</a></li>
+<li ><a href="./../../rosetta-code/execute-a-markov-algorithm">Execute a Markov algorithm</a></li>
+<li ><a href="./../../rosetta-code/execute-brain">Execute Brain****</a></li>
+<li ><a href="./../../rosetta-code/extensible-prime-generator">Extensible prime generator</a></li>
+<li ><a href="./../../rosetta-code/factorial">Factorial</a></li>
+<li ><a href="./../../rosetta-code/factors-of-a-mersenne-number">Factors of a Mersenne number</a></li>
+<li ><a href="./../../rosetta-code/factors-of-an-integer">Factors of an integer</a></li>
+<li ><a href="./../../rosetta-code/farey-sequence">Farey sequence</a></li>
+<li ><a href="./../../rosetta-code/fibonacci-n-step-number-sequences">Fibonacci n-step number sequences</a></li>
+<li ><a href="./../../rosetta-code/fibonacci-sequence">Fibonacci sequence</a></li>
+<li ><a href="./../../rosetta-code/fibonacci-word">Fibonacci word</a></li>
+<li ><a href="./../../rosetta-code/fizzbuzz">FizzBuzz</a></li>
+<li ><a href="./../../rosetta-code/fractran">Fractran</a></li>
+<li ><a href="./../../rosetta-code/gamma-function">Gamma function</a></li>
+<li ><a href="./../../rosetta-code/gaussian-elimination">Gaussian elimination</a></li>
+<li ><a href="./../../rosetta-code/general-fizzbuzz">General FizzBuzz</a></li>
+<li ><a href="./../../rosetta-code/generate-lower-case-ascii-alphabet">Generate lower case ASCII alphabet</a></li>
+<li ><a href="./../../rosetta-code/generatorexponential">Generator/Exponential</a></li>
+<li ><a href="./../../rosetta-code/gray-code">Gray code</a></li>
+<li ><a href="./../../rosetta-code/greatest-common-divisor">Greatest common divisor</a></li>
+<li ><a href="./../../rosetta-code/greatest-subsequential-sum">Greatest subsequential sum</a></li>
+<li ><a href="./../../rosetta-code/hailstone-sequence">Hailstone sequence</a></li>
+<li ><a href="./../../rosetta-code/happy-numbers">Happy numbers</a></li>
+<li ><a href="./../../rosetta-code/harshad-or-niven-series">Harshad or Niven series</a></li>
+<li ><a href="./../../rosetta-code/hash-from-two-arrays">Hash from two arrays</a></li>
+<li ><a href="./../../rosetta-code/hash-join">Hash join</a></li>
+<li ><a href="./../../rosetta-code/heronian-triangles">Heronian triangles</a></li>
+<li ><a href="./../../rosetta-code/hofstadter-figure-figure-sequences">Hofstadter Figure-Figure sequences</a></li>
+<li ><a href="./../../rosetta-code/hofstadter-q-sequence">Hofstadter Q sequence</a></li>
+<li ><a href="./../../rosetta-code/i-before-e-except-after-c">I before E except after C</a></li>
+<li ><a href="./../../rosetta-code/iban">IBAN</a></li>
+<li ><a href="./../../rosetta-code/identity-matrix">Identity matrix</a></li>
+<li ><a href="./../../rosetta-code/iterated-digits-squaring">Iterated digits squaring</a></li>
+<li ><a href="./../../rosetta-code/jaro-distance">Jaro distance</a></li>
+<li ><a href="./../../rosetta-code/jortsort">JortSort</a></li>
+<li ><a href="./../../rosetta-code/josephus-problem">Josephus problem</a></li>
+<li ><a href="./../../rosetta-code/k-d-tree">K-d tree</a></li>
+<li ><a href="./../../rosetta-code/kaprekar-numbers">Kaprekar numbers</a></li>
+<li ><a href="./../../rosetta-code/knapsack-problem0-1">Knapsack problem/0-1</a></li>
+<li ><a href="./../../rosetta-code/knapsack-problembounded">Knapsack problem/Bounded</a></li>
+<li ><a href="./../../rosetta-code/knapsack-problemcontinuous">Knapsack problem/Continuous</a></li>
+<li ><a href="./../../rosetta-code/knapsack-problemunbounded">Knapsack problem/Unbounded</a></li>
+<li ><a href="./../../rosetta-code/knights-tour">Knight's tour</a></li>
+<li ><a href="./../../rosetta-code/largest-int-from-concatenated-ints">Largest int from concatenated ints</a></li>
+<li ><a href="./../../rosetta-code/last-letter-first-letter">Last letter-first letter</a></li>
+<li ><a href="./../../rosetta-code/last-friday-of-each-month">Last Friday of each month</a></li>
+<li ><a href="./../../rosetta-code/leap-year">Leap year</a></li>
+<li ><a href="./../../rosetta-code/least-common-multiple">Least common multiple</a></li>
+<li ><a href="./../../rosetta-code/left-factorials">Left factorials</a></li>
+<li ><a href="./../../rosetta-code/letter-frequency">Letter frequency</a></li>
+<li ><a href="./../../rosetta-code/levenshtein-distance">Levenshtein distance</a></li>
+<li ><a href="./../../rosetta-code/linear-congruential-generator">Linear congruential generator</a></li>
+<li ><a href="./../../rosetta-code/long-multiplication">Long multiplication</a></li>
+<li ><a href="./../../rosetta-code/longest-common-subsequence">Longest common subsequence</a></li>
+<li ><a href="./../../rosetta-code/longest-increasing-subsequence">Longest increasing subsequence</a></li>
+<li ><a href="./../../rosetta-code/longest-string-challenge">Longest string challenge</a></li>
+<li ><a href="./../../rosetta-code/look-and-say-sequence">Look-and-say sequence</a></li>
+<li ><a href="./../../rosetta-code/loop-over-multiple-arrays-simultaneously">Loop over multiple arrays simultaneously</a></li>
+<li ><a href="./../../rosetta-code/lu-decomposition">LU decomposition</a></li>
+<li ><a href="./../../rosetta-code/lucas-lehmer-test">Lucas-Lehmer test</a></li>
+<li ><a href="./../../rosetta-code/ludic-numbers">Ludic numbers</a></li>
+<li ><a href="./../../rosetta-code/luhn-test-of-credit-card-numbers">Luhn test of credit card numbers</a></li>
+<li ><a href="./../../rosetta-code/lychrel-numbers">Lychrel numbers</a></li>
+<li ><a href="./../../rosetta-code/lzw-compression">LZW compression</a></li>
+<li ><a href="./../../rosetta-code/s-expressions">S-Expressions</a></li>
+<li ><a href="./../../rosetta-code/sailors-coconuts-and-a-monkey-problem">Sailors, coconuts and a monkey problem</a></li>
+<li ><a href="./../../rosetta-code/search-a-list-of-records">Search a list of records</a></li>
+<li ><a href="./../../rosetta-code/sedols">SEDOLs</a></li>
+<li ><a href="./../../rosetta-code/self-describing-numbers">Self Describing Numbers</a></li>
+<li ><a href="./../../rosetta-code/self-referential-sequence">Self-referential sequence</a></li>
+<li ><a href="./../../rosetta-code/semiprime">Semiprime</a></li>
+<li ><a href="./../../rosetta-code/set-consolidation">Set consolidation</a></li>
+<li ><a href="./../../rosetta-code/set-of-real-numbers">Set of real numbers</a></li>
+<li ><a href="./../../rosetta-code/sha-1">SHA-1</a></li>
+<li ><a href="./../../rosetta-code/sha-256">SHA-256</a></li>
+<li ><a href="./../../rosetta-code/sort-an-array-of-composite-structures">Sort an array of composite structures</a></li>
+<li ><a href="./../../rosetta-code/sort-disjoint-sublist">Sort disjoint sublist</a></li>
+<li ><a href="./../../rosetta-code/sort-stability">Sort stability</a></li>
+<li ><a href="./../../rosetta-code/sort-using-a-custom-comparator">Sort using a custom comparator</a></li>
+<li ><a href="./../../rosetta-code/sorting-algorithmsbead-sort">Sorting algorithms/Bead sort</a></li>
+<li ><a href="./../../rosetta-code/sorting-algorithmsbogosort">Sorting algorithms/Bogosort</a></li>
+<li ><a href="./../../rosetta-code/sorting-algorithmscocktail-sort">Sorting algorithms/Cocktail sort</a></li>
+<li ><a href="./../../rosetta-code/sorting-algorithmscomb-sort">Sorting algorithms/Comb sort</a></li>
+<li ><a href="./../../rosetta-code/sorting-algorithmsgnome-sort">Sorting algorithms/Gnome sort</a></li>
+<li ><a href="./../../rosetta-code/sorting-algorithmspancake-sort">Sorting algorithms/Pancake sort</a></li>
+<li ><a href="./../../rosetta-code/sorting-algorithmspermutation-sort">Sorting algorithms/Permutation sort</a></li>
+<li ><a href="./../../rosetta-code/sorting-algorithmsshell-sort">Sorting algorithms/Shell sort</a></li>
+<li ><a href="./../../rosetta-code/sorting-algorithmsstooge-sort">Sorting algorithms/Stooge sort</a></li>
+<li ><a href="./../../rosetta-code/sorting-algorithmsstrand-sort">Sorting algorithms/Strand sort</a></li>
+<li ><a href="./../../rosetta-code/soundex">Soundex</a></li>
+<li ><a href="./../../rosetta-code/spiral-matrix">Spiral matrix</a></li>
+<li ><a href="./../../rosetta-code/split-a-character-string-based-on-change-of-character">Split a character string based on change of character</a></li>
+<li ><a href="./../../rosetta-code/state-name-puzzle">State name puzzle</a></li>
+<li ><a href="./../../rosetta-code/stern-brocot-sequence">Stern-Brocot sequence</a></li>
+<li ><a href="./../../rosetta-code/straddling-checkerboard">Straddling checkerboard</a></li>
+<li ><a href="./../../rosetta-code/stream-merge">Stream Merge</a></li>
+<li ><a href="./../../rosetta-code/strip-control-codes-and-extended-characters-from-a-string">Strip control codes and extended characters from a string</a></li>
+<li ><a href="./../../rosetta-code/subleq">Subleq</a></li>
+<li ><a href="./../../rosetta-code/sudoku">Sudoku</a></li>
+<li ><a href="./../../rosetta-code/sum-digits-of-an-integer">Sum digits of an integer</a></li>
+<li ><a href="./../../rosetta-code/sum-multiples-of-3-and-5">Sum multiples of 3 and 5</a></li>
+<li ><a href="./../../rosetta-code/sum-of-a-series">Sum of a series</a></li>
+<li ><a href="./../../rosetta-code/sum-of-squares">Sum of squares</a></li>
+<li ><a href="./../../rosetta-code/sum-to-100">Sum to 100</a></li>
+<li ><a href="./../../rosetta-code/sutherland-hodgman-polygon-clipping">Sutherland-Hodgman polygon clipping</a></li>
+<li ><a href="./../../rosetta-code/symmetric-difference">Symmetric difference</a></li>
+<li ><a href="./../../rosetta-code/taxicab-numbers">Taxicab numbers</a></li>
+<li ><a href="./../../rosetta-code/tokenize-a-string-with-escaping">Tokenize a string with escaping</a></li>
+<li ><a href="./../../rosetta-code/topological-sort">Topological sort</a></li>
+<li ><a href="./../../rosetta-code/top-rank-per-group">Top rank per group</a></li>
+<li ><a href="./../../rosetta-code/towers-of-hanoi">Towers of Hanoi</a></li>
+<li ><a href="./../../rosetta-code/vector-cross-product">Vector cross product</a></li>
+<li ><a href="./../../rosetta-code/vector-dot-product">Vector dot product</a></li>
+<li ><a href="./../../rosetta-code/word-frequency">Word frequency</a></li>
+<li ><a href="./../../rosetta-code/word-wrap">Word wrap</a></li>
+<li ><a href="./../../rosetta-code/y-combinator">Y combinator</a></li>
+<li ><a href="./../../rosetta-code/zeckendorf-number-representation">Zeckendorf number representation</a></li>
+<li ><a href="./../../rosetta-code/zhang-suen-thinning-algorithm">Zhang-Suen thinning algorithm</a></li>
+<li ><a href="./../../rosetta-code/zig-zag-matrix">Zig-zag matrix</a></li>
+</ul>
+</li>
+<li>
+<p class="module-name module-open">Project Euler</p>
+<ul class="module-problems">
+<li ><a href="./../../project-euler/problem-1-multiples-of-3-and-5">Problem 1: Multiples of 3 and 5</a></li>
+<li ><a href="./../../project-euler/problem-2-even-fibonacci-numbers">Problem 2: Even Fibonacci Numbers</a></li>
+<li ><a href="./../../project-euler/problem-3-largest-prime-factor">Problem 3: Largest prime factor</a></li>
+<li ><a href="./../../project-euler/problem-4-largest-palindrome-product">Problem 4: Largest palindrome product</a></li>
+<li ><a href="./../../project-euler/problem-5-smallest-multiple">Problem 5: Smallest multiple</a></li>
+<li ><a href="./../../project-euler/problem-6-sum-square-difference">Problem 6: Sum square difference</a></li>
+<li ><a href="./../../project-euler/problem-7-10001st-prime">Problem 7: 10001st prime</a></li>
+<li ><a href="./../../project-euler/problem-8-largest-product-in-a-series">Problem 8: Largest product in a series</a></li>
+<li ><a href="./../../project-euler/problem-9-special-pythagorean-triplet">Problem 9: Special Pythagorean triplet</a></li>
+<li ><a href="./../../project-euler/problem-10-summation-of-primes">Problem 10: Summation of primes</a></li>
+<li ><a href="./../../project-euler/problem-11-largest-product-in-a-grid">Problem 11: Largest product in a grid</a></li>
+<li ><a href="./../../project-euler/problem-12-highly-divisible-triangular-number">Problem 12: Highly divisible triangular number</a></li>
+<li ><a href="./../../project-euler/problem-13-large-sum">Problem 13: Large sum</a></li>
+<li ><a href="./../../project-euler/problem-14-longest-collatz-sequence">Problem 14: Longest Collatz sequence</a></li>
+<li ><a href="./../../project-euler/problem-15-lattice-paths">Problem 15: Lattice paths</a></li>
+<li ><a href="./../../project-euler/problem-16-power-digit-sum">Problem 16: Power digit sum</a></li>
+<li ><a href="./../../project-euler/problem-17-number-letter-counts">Problem 17: Number letter counts</a></li>
+<li ><a href="./../../project-euler/problem-18-maximum-path-sum-i">Problem 18: Maximum path sum I</a></li>
+<li ><a href="./../../project-euler/problem-19-counting-sundays">Problem 19: Counting Sundays</a></li>
+<li ><a href="./../../project-euler/problem-20-factorial-digit-sum">Problem 20: Factorial digit sum</a></li>
+<li ><a href="./../../project-euler/problem-21-amicable-numbers">Problem 21: Amicable numbers</a></li>
+<li ><a href="./../../project-euler/problem-22-names-scores">Problem 22: Names scores</a></li>
+<li ><a href="./../../project-euler/problem-23-non-abundant-sums">Problem 23: Non-abundant sums</a></li>
+<li ><a href="./../../project-euler/problem-24-lexicographic-permutations">Problem 24: Lexicographic permutations</a></li>
+<li ><a href="./../../project-euler/problem-25-1000-digit-fibonacci-number">Problem 25: 1000-digit Fibonacci number</a></li>
+<li ><a href="./../../project-euler/problem-26-reciprocal-cycles">Problem 26: Reciprocal cycles</a></li>
+<li ><a href="./../../project-euler/problem-27-quadratic-primes">Problem 27: Quadratic primes</a></li>
+<li ><a href="./../../project-euler/problem-28-number-spiral-diagonals">Problem 28: Number spiral diagonals</a></li>
+<li ><a href="./../../project-euler/problem-29-distinct-powers">Problem 29: Distinct powers</a></li>
+<li ><a href="./../../project-euler/problem-30-digit-n-powers">Problem 30: Digit n powers</a></li>
+<li ><a href="./../../project-euler/problem-31-coin-sums">Problem 31: Coin sums</a></li>
+<li ><a href="./../../project-euler/problem-32-pandigital-products">Problem 32: Pandigital products</a></li>
+<li ><a href="./../../project-euler/problem-33-digit-cancelling-fractions">Problem 33: Digit cancelling fractions</a></li>
+<li ><a href="./../../project-euler/problem-34-digit-factorials">Problem 34: Digit factorials</a></li>
+<li ><a href="./../../project-euler/problem-35-circular-primes">Problem 35: Circular primes</a></li>
+<li ><a href="./../../project-euler/problem-36-double-base-palindromes">Problem 36: Double-base palindromes</a></li>
+<li ><a href="./../../project-euler/problem-37-truncatable-primes">Problem 37: Truncatable primes</a></li>
+<li ><a href="./../../project-euler/problem-38-pandigital-multiples">Problem 38: Pandigital multiples</a></li>
+<li ><a href="./../../project-euler/problem-39-integer-right-triangles">Problem 39: Integer right triangles</a></li>
+<li ><a href="./../../project-euler/problem-40-champernownes-constant">Problem 40: Champernowne's constant</a></li>
+<li ><a href="./../../project-euler/problem-41-pandigital-prime">Problem 41: Pandigital prime</a></li>
+<li ><a href="./../../project-euler/problem-42-coded-triangle-numbers">Problem 42: Coded triangle numbers</a></li>
+<li ><a href="./../../project-euler/problem-43-sub-string-divisibility">Problem 43: Sub-string divisibility</a></li>
+<li ><a href="./../../project-euler/problem-44-pentagon-numbers">Problem 44: Pentagon numbers</a></li>
+<li ><a href="./../../project-euler/problem-45-triangular-pentagonal-and-hexagonal">Problem 45: Triangular, pentagonal, and hexagonal</a></li>
+<li ><a href="./../../project-euler/problem-46-goldbachs-other-conjecture">Problem 46: Goldbach's other conjecture</a></li>
+<li ><a href="./../../project-euler/problem-47-distinct-primes-factors">Problem 47: Distinct primes factors</a></li>
+<li ><a href="./../../project-euler/problem-48-self-powers">Problem 48: Self powers</a></li>
+<li ><a href="./../../project-euler/problem-49-prime-permutations">Problem 49: Prime permutations</a></li>
+<li ><a href="./../../project-euler/problem-50-consecutive-prime-sum">Problem 50: Consecutive prime sum</a></li>
+<li ><a href="./../../project-euler/problem-51-prime-digit-replacements">Problem 51: Prime digit replacements</a></li>
+<li ><a href="./../../project-euler/problem-52-permuted-multiples">Problem 52: Permuted multiples</a></li>
+<li ><a href="./../../project-euler/problem-53-combinatoric-selections">Problem 53: Combinatoric selections</a></li>
+<li ><a href="./../../project-euler/problem-54-poker-hands">Problem 54: Poker hands</a></li>
+<li ><a href="./../../project-euler/problem-55-lychrel-numbers">Problem 55: Lychrel numbers</a></li>
+<li ><a href="./../../project-euler/problem-56-powerful-digit-sum">Problem 56: Powerful digit sum</a></li>
+<li ><a href="./../../project-euler/problem-57-square-root-convergents">Problem 57: Square root convergents</a></li>
+<li ><a href="./../../project-euler/problem-58-spiral-primes">Problem 58: Spiral primes</a></li>
+<li ><a href="./../../project-euler/problem-59-xor-decryption">Problem 59: XOR decryption</a></li>
+<li ><a href="./../../project-euler/problem-60-prime-pair-sets">Problem 60: Prime pair sets</a></li>
+<li ><a href="./../../project-euler/problem-61-cyclical-figurate-numbers">Problem 61: Cyclical figurate numbers</a></li>
+<li ><a href="./../../project-euler/problem-62-cubic-permutations">Problem 62: Cubic permutations</a></li>
+<li ><a href="./../../project-euler/problem-63-powerful-digit-counts">Problem 63: Powerful digit counts</a></li>
+<li ><a href="./../../project-euler/problem-64-odd-period-square-roots">Problem 64: Odd period square roots</a></li>
+<li ><a href="./../../project-euler/problem-65-convergents-of-e">Problem 65: Convergents of e</a></li>
+<li ><a href="./../../project-euler/problem-66-diophantine-equation">Problem 66: Diophantine equation</a></li>
+<li ><a href="./../../project-euler/problem-67-maximum-path-sum-ii">Problem 67: Maximum path sum II</a></li>
+<li ><a href="./../../project-euler/problem-68-magic-5-gon-ring">Problem 68: Magic 5-gon ring</a></li>
+<li ><a href="./../../project-euler/problem-69-totient-maximum">Problem 69: Totient maximum</a></li>
+<li ><a href="./../../project-euler/problem-70-totient-permutation">Problem 70: Totient permutation</a></li>
+<li ><a href="./../../project-euler/problem-71-ordered-fractions">Problem 71: Ordered fractions</a></li>
+<li ><a href="./../../project-euler/problem-72-counting-fractions">Problem 72: Counting fractions</a></li>
+<li ><a href="./../../project-euler/problem-73-counting-fractions-in-a-range">Problem 73: Counting fractions in a range</a></li>
+<li ><a href="./../../project-euler/problem-74-digit-factorial-chains">Problem 74: Digit factorial chains</a></li>
+<li ><a href="./../../project-euler/problem-75-singular-integer-right-triangles">Problem 75: Singular integer right triangles</a></li>
+<li ><a href="./../../project-euler/problem-76-counting-summations">Problem 76: Counting summations</a></li>
+<li ><a href="./../../project-euler/problem-77-prime-summations">Problem 77: Prime summations</a></li>
+<li ><a href="./../../project-euler/problem-78-coin-partitions">Problem 78: Coin partitions</a></li>
+<li ><a href="./../../project-euler/problem-79-passcode-derivation">Problem 79: Passcode derivation</a></li>
+<li ><a href="./../../project-euler/problem-80-square-root-digital-expansion">Problem 80: Square root digital expansion</a></li>
+<li ><a href="./../../project-euler/problem-81-path-sum-two-ways">Problem 81: Path sum: two ways</a></li>
+<li ><a href="./../../project-euler/problem-82-path-sum-three-ways">Problem 82: Path sum: three ways</a></li>
+<li ><a href="./../../project-euler/problem-83-path-sum-four-ways">Problem 83: Path sum: four ways</a></li>
+<li ><a href="./../../project-euler/problem-84-monopoly-odds">Problem 84: Monopoly odds</a></li>
+<li ><a href="./../../project-euler/problem-85-counting-rectangles">Problem 85: Counting rectangles</a></li>
+<li ><a href="./../../project-euler/problem-86-cuboid-route">Problem 86: Cuboid route</a></li>
+<li ><a href="./../../project-euler/problem-87-prime-power-triples">Problem 87: Prime power triples</a></li>
+<li ><a href="./../../project-euler/problem-88-product-sum-numbers">Problem 88: Product-sum numbers</a></li>
+<li ><a href="./../../project-euler/problem-89-roman-numerals">Problem 89: Roman numerals</a></li>
+<li ><a href="./../../project-euler/problem-90-cube-digit-pairs">Problem 90: Cube digit pairs</a></li>
+<li ><a href="./../../project-euler/problem-91-right-triangles-with-integer-coordinates">Problem 91: Right triangles with integer coordinates</a></li>
+<li ><a href="./../../project-euler/problem-92-square-digit-chains">Problem 92: Square digit chains</a></li>
+<li ><a href="./../../project-euler/problem-93-arithmetic-expressions">Problem 93: Arithmetic expressions</a></li>
+<li ><a href="./../../project-euler/problem-94-almost-equilateral-triangles">Problem 94: Almost equilateral triangles</a></li>
+<li ><a href="./../../project-euler/problem-95-amicable-chains">Problem 95: Amicable chains</a></li>
+<li ><a href="./../../project-euler/problem-96-su-doku">Problem 96: Su Doku</a></li>
+<li ><a href="./../../project-euler/problem-97-large-non-mersenne-prime">Problem 97: Large non-Mersenne prime</a></li>
+<li ><a href="./../../project-euler/problem-98-anagramic-squares">Problem 98: Anagramic squares</a></li>
+<li ><a href="./../../project-euler/problem-99-largest-exponential">Problem 99: Largest exponential</a></li>
+<li ><a href="./../../project-euler/problem-100-arranged-probability">Problem 100: Arranged probability</a></li>
+<li ><a href="./../../project-euler/problem-101-optimum-polynomial">Problem 101: Optimum polynomial</a></li>
+<li ><a href="./../../project-euler/problem-102-triangle-containment">Problem 102: Triangle containment</a></li>
+<li ><a href="./../../project-euler/problem-103-special-subset-sums-optimum">Problem 103: Special subset sums: optimum</a></li>
+<li ><a href="./../../project-euler/problem-104-pandigital-fibonacci-ends">Problem 104: Pandigital Fibonacci ends</a></li>
+<li ><a href="./../../project-euler/problem-105-special-subset-sums-testing">Problem 105: Special subset sums: testing</a></li>
+<li ><a href="./../../project-euler/problem-106-special-subset-sums-meta-testing">Problem 106: Special subset sums: meta-testing</a></li>
+<li ><a href="./../../project-euler/problem-107-minimal-network">Problem 107: Minimal network</a></li>
+<li ><a href="./../../project-euler/problem-108-diophantine-reciprocals-i">Problem 108: Diophantine Reciprocals I</a></li>
+<li ><a href="./../../project-euler/problem-109-darts">Problem 109: Darts</a></li>
+<li ><a href="./../../project-euler/problem-110-diophantine-reciprocals-ii">Problem 110: Diophantine Reciprocals II</a></li>
+<li ><a href="./../../project-euler/problem-111-primes-with-runs">Problem 111: Primes with runs</a></li>
+<li ><a href="./../../project-euler/problem-112-bouncy-numbers">Problem 112: Bouncy numbers</a></li>
+<li ><a href="./../../project-euler/problem-113-non-bouncy-numbers">Problem 113: Non-bouncy numbers</a></li>
+<li ><a href="./../../project-euler/problem-114-counting-block-combinations-i">Problem 114: Counting block combinations I</a></li>
+<li ><a href="./../../project-euler/problem-115-counting-block-combinations-ii">Problem 115: Counting block combinations II</a></li>
+<li ><a href="./../../project-euler/problem-116-red-green-or-blue-tiles">Problem 116: Red, green or blue tiles</a></li>
+<li ><a href="./../../project-euler/problem-117-red-green-and-blue-tiles">Problem 117: Red, green, and blue tiles</a></li>
+<li ><a href="./../../project-euler/problem-118-pandigital-prime-sets">Problem 118: Pandigital prime sets</a></li>
+<li ><a href="./../../project-euler/problem-119-digit-power-sum">Problem 119: Digit power sum</a></li>
+<li ><a href="./../../project-euler/problem-120-square-remainders">Problem 120: Square remainders</a></li>
+<li ><a href="./../../project-euler/problem-121-disc-game-prize-fund">Problem 121: Disc game prize fund</a></li>
+<li ><a href="./../../project-euler/problem-122-efficient-exponentiation">Problem 122: Efficient exponentiation</a></li>
+<li ><a href="./../../project-euler/problem-123-prime-square-remainders">Problem 123: Prime square remainders</a></li>
+<li ><a href="./../../project-euler/problem-124-ordered-radicals">Problem 124: Ordered radicals</a></li>
+<li ><a href="./../../project-euler/problem-125-palindromic-sums">Problem 125: Palindromic sums</a></li>
+<li ><a href="./../../project-euler/problem-126-cuboid-layers">Problem 126: Cuboid layers</a></li>
+<li ><a href="./../../project-euler/problem-127-abc-hits">Problem 127: abc-hits</a></li>
+<li ><a href="./../../project-euler/problem-128-hexagonal-tile-differences">Problem 128: Hexagonal tile differences</a></li>
+<li ><a href="./../../project-euler/problem-129-repunit-divisibility">Problem 129: Repunit divisibility</a></li>
+<li ><a href="./../../project-euler/problem-130-composites-with-prime-repunit-property">Problem 130: Composites with prime repunit property</a></li>
+<li ><a href="./../../project-euler/problem-131-prime-cube-partnership">Problem 131: Prime cube partnership</a></li>
+<li ><a href="./../../project-euler/problem-132-large-repunit-factors">Problem 132: Large repunit factors</a></li>
+<li ><a href="./../../project-euler/problem-133-repunit-nonfactors">Problem 133: Repunit nonfactors</a></li>
+<li ><a href="./../../project-euler/problem-134-prime-pair-connection">Problem 134: Prime pair connection</a></li>
+<li ><a href="./../../project-euler/problem-135-same-differences">Problem 135: Same differences</a></li>
+<li ><a href="./../../project-euler/problem-136-singleton-difference">Problem 136: Singleton difference</a></li>
+<li ><a href="./../../project-euler/problem-137-fibonacci-golden-nuggets">Problem 137: Fibonacci golden nuggets</a></li>
+<li ><a href="./../../project-euler/problem-138-special-isosceles-triangles">Problem 138: Special isosceles triangles</a></li>
+<li ><a href="./../../project-euler/problem-139-pythagorean-tiles">Problem 139: Pythagorean tiles</a></li>
+<li ><a href="./../../project-euler/problem-140-modified-fibonacci-golden-nuggets">Problem 140: Modified Fibonacci golden nuggets</a></li>
+<li ><a href="./../../project-euler/problem-141-investigating-progressive-numbers-n-which-are-also-square">Problem 141: Investigating progressive numbers, n, which are also square</a></li>
+<li ><a href="./../../project-euler/problem-142-perfect-square-collection">Problem 142: Perfect Square Collection</a></li>
+<li ><a href="./../../project-euler/problem-143-investigating-the-torricelli-point-of-a-triangle">Problem 143: Investigating the Torricelli point of a triangle</a></li>
+<li ><a href="./../../project-euler/problem-144-investigating-multiple-reflections-of-a-laser-beam">Problem 144: Investigating multiple reflections of a laser beam</a></li>
+<li ><a href="./../../project-euler/problem-145-how-many-reversible-numbers-are-there-below-one-billion">Problem 145: How many reversible numbers are there below one-billion?</a></li>
+<li ><a href="./../../project-euler/problem-146-investigating-a-prime-pattern">Problem 146: Investigating a Prime Pattern</a></li>
+<li ><a href="./../../project-euler/problem-147-rectangles-in-cross-hatched-grids">Problem 147: Rectangles in cross-hatched grids</a></li>
+<li ><a href="./../../project-euler/problem-148-exploring-pascals-triangle">Problem 148: Exploring Pascal's triangle</a></li>
+<li ><a href="./../../project-euler/problem-149-searching-for-a-maximum-sum-subsequence">Problem 149: Searching for a maximum-sum subsequence</a></li>
+<li ><a href="./../../project-euler/problem-150-searching-a-triangular-array-for-a-sub-triangle-having-minimum-sum">Problem 150: Searching a triangular array for a sub-triangle having minimum-sum</a></li>
+<li ><a href="./../../project-euler/problem-151-paper-sheets-of-standard-sizes-an-expected-value-problem">Problem 151: Paper sheets of standard sizes: an expected-value problem</a></li>
+<li ><a href="./../../project-euler/problem-152-writing-one-half-as-a-sum-of-inverse-squares">Problem 152: Writing one half as a sum of inverse squares</a></li>
+<li ><a href="./../../project-euler/problem-153-investigating-gaussian-integers">Problem 153: Investigating Gaussian Integers</a></li>
+<li ><a href="./../../project-euler/problem-154-exploring-pascals-pyramid">Problem 154: Exploring Pascal's pyramid</a></li>
+<li ><a href="./../../project-euler/problem-155-counting-capacitor-circuits">Problem 155: Counting Capacitor Circuits</a></li>
+<li ><a href="./../../project-euler/problem-156-counting-digits">Problem 156: Counting Digits</a></li>
+<li ><a href="./../../project-euler/problem-157-solving-the-diophantine-equation">Problem 157: Solving the diophantine equation</a></li>
+<li ><a href="./../../project-euler/problem-158-exploring-strings-for-which-only-one-character-comes-lexicographically-after-its-neighbour-to-the-left">Problem 158: Exploring strings for which only one character comes lexicographically after its neighbour to the left</a></li>
+<li ><a href="./../../project-euler/problem-159-digital-root-sums-of-factorisations">Problem 159: Digital root sums of factorisations</a></li>
+<li ><a href="./../../project-euler/problem-160-factorial-trailing-digits">Problem 160: Factorial trailing digits</a></li>
+<li ><a href="./../../project-euler/problem-161-triominoes">Problem 161: Triominoes</a></li>
+<li ><a href="./../../project-euler/problem-162-hexadecimal-numbers">Problem 162: Hexadecimal numbers</a></li>
+<li ><a href="./../../project-euler/problem-163-cross-hatched-triangles">Problem 163: Cross-hatched triangles</a></li>
+<li ><a href="./../../project-euler/problem-164-numbers-for-which-no-three-consecutive-digits-have-a-sum-greater-than-a-given-value">Problem 164: Numbers for which no three consecutive digits have a sum greater than a given value</a></li>
+<li ><a href="./../../project-euler/problem-165-intersections">Problem 165: Intersections</a></li>
+<li ><a href="./../../project-euler/problem-166-criss-cross">Problem 166: Criss Cross</a></li>
+<li ><a href="./../../project-euler/problem-167-investigating-ulam-sequences">Problem 167: Investigating Ulam sequences</a></li>
+<li ><a href="./../../project-euler/problem-168-number-rotations">Problem 168: Number Rotations</a></li>
+<li ><a href="./../../project-euler/problem-169-exploring-the-number-of-different-ways-a-number-can-be-expressed-as-a-sum-of-powers-of-2">Problem 169: Exploring the number of different ways a number can be expressed as a sum of powers of 2</a></li>
+<li ><a href="./../../project-euler/problem-170-find-the-largest-0-to-9-pandigital-that-can-be-formed-by-concatenating-products">Problem 170: Find the largest 0 to 9 pandigital that can be formed by concatenating products</a></li>
+<li ><a href="./../../project-euler/problem-171-finding-numbers-for-which-the-sum-of-the-squares-of-the-digits-is-a-square">Problem 171: Finding numbers for which the sum of the squares of the digits is a square</a></li>
+<li ><a href="./../../project-euler/problem-172-investigating-numbers-with-few-repeated-digits">Problem 172: Investigating numbers with few repeated digits</a></li>
+<li ><a href="./../../project-euler/problem-173-using-up-to-one-million-tiles-how-many-different-hollow-square-laminae-can-be-formed">Problem 173: Using up to one million tiles how many different "hollow" square laminae can be formed?</a></li>
+<li ><a href="./../../project-euler/problem-174-counting-the-number-of-hollow-square-laminae-that-can-form-one-two-three-----distinct-arrangements">Problem 174: Counting the number of "hollow" square laminae that can form one, two, three, ... distinct arrangements</a></li>
+<li ><a href="./../../project-euler/problem-175-fractions-involving-the-number-of-different-ways-a-number-can-be-expressed-as-a-sum-of-powers-of-2">Problem 175: Fractions involving the number of different ways a number can be expressed as a sum of powers of 2</a></li>
+<li ><a href="./../../project-euler/problem-176-right-angled-triangles-that-share-a-cathetus">Problem 176: Right-angled triangles that share a cathetus</a></li>
+<li ><a href="./../../project-euler/problem-177-integer-angled-quadrilaterals">Problem 177: Integer angled Quadrilaterals</a></li>
+<li ><a href="./../../project-euler/problem-178-step-numbers">Problem 178: Step Numbers</a></li>
+<li ><a href="./../../project-euler/problem-179-consecutive-positive-divisors">Problem 179: Consecutive positive divisors</a></li>
+<li ><a href="./../../project-euler/problem-180-rational-zeros-of-a-function-of-three-variables">Problem 180: Rational zeros of a function of three variables</a></li>
+<li ><a href="./../../project-euler/problem-181-investigating-in-how-many-ways-objects-of-two-different-colours-can-be-grouped">Problem 181: Investigating in how many ways objects of two different colours can be grouped</a></li>
+<li ><a href="./../../project-euler/problem-182-rsa-encryption">Problem 182: RSA encryption</a></li>
+<li ><a href="./../../project-euler/problem-183-maximum-product-of-parts">Problem 183: Maximum product of parts</a></li>
+<li ><a href="./../../project-euler/problem-184-triangles-containing-the-origin">Problem 184: Triangles containing the origin</a></li>
+<li ><a href="./../../project-euler/problem-185-number-mind">Problem 185: Number Mind</a></li>
+<li ><a href="./../../project-euler/problem-186-connectedness-of-a-network">Problem 186: Connectedness of a network</a></li>
+<li ><a href="./../../project-euler/problem-187-semiprimes">Problem 187: Semiprimes</a></li>
+<li ><a href="./../../project-euler/problem-188-the-hyperexponentiation-of-a-number">Problem 188: The hyperexponentiation of a number</a></li>
+<li ><a href="./../../project-euler/problem-189-tri-colouring-a-triangular-grid">Problem 189: Tri-colouring a triangular grid</a></li>
+<li ><a href="./../../project-euler/problem-190-maximising-a-weighted-product">Problem 190: Maximising a weighted product</a></li>
+<li ><a href="./../../project-euler/problem-191-prize-strings">Problem 191: Prize Strings</a></li>
+<li ><a href="./../../project-euler/problem-192-best-approximations">Problem 192: Best Approximations</a></li>
+<li ><a href="./../../project-euler/problem-193-squarefree-numbers">Problem 193: Squarefree Numbers</a></li>
+<li ><a href="./../../project-euler/problem-194-coloured-configurations">Problem 194: Coloured Configurations</a></li>
+<li ><a href="./../../project-euler/problem-195-inscribed-circles-of-triangles-with-one-angle-of-60-degrees">Problem 195: Inscribed circles of triangles with one angle of 60 degrees</a></li>
+<li ><a href="./../../project-euler/problem-196-prime-triplets">Problem 196: Prime triplets</a></li>
+<li ><a href="./../../project-euler/problem-197-investigating-the-behaviour-of-a-recursively-defined-sequence">Problem 197: Investigating the behaviour of a recursively defined sequence</a></li>
+<li ><a href="./../../project-euler/problem-198-ambiguous-numbers">Problem 198: Ambiguous Numbers</a></li>
+<li ><a href="./../../project-euler/problem-199-iterative-circle-packing">Problem 199: Iterative Circle Packing</a></li>
+<li ><a href="./../../project-euler/problem-200-find-the-200th-prime-proof-sqube-containing-the-contiguous-sub-string-200">Problem 200: Find the 200th prime-proof sqube containing the contiguous sub-string "200"</a></li>
+<li ><a href="./../../project-euler/problem-201-subsets-with-a-unique-sum">Problem 201: Subsets with a unique sum</a></li>
+<li ><a href="./../../project-euler/problem-202-laserbeam">Problem 202: Laserbeam</a></li>
+<li ><a href="./../../project-euler/problem-203-squarefree-binomial-coefficients">Problem 203: Squarefree Binomial Coefficients</a></li>
+<li ><a href="./../../project-euler/problem-204-generalised-hamming-numbers">Problem 204: Generalised Hamming Numbers</a></li>
+<li ><a href="./../../project-euler/problem-205-dice-game">Problem 205: Dice Game</a></li>
+<li ><a href="./../../project-euler/problem-206-concealed-square">Problem 206: Concealed Square</a></li>
+<li ><a href="./../../project-euler/problem-207-integer-partition-equations">Problem 207: Integer partition equations</a></li>
+<li ><a href="./../../project-euler/problem-208-robot-walks">Problem 208: Robot Walks</a></li>
+<li ><a href="./../../project-euler/problem-209-circular-logic">Problem 209: Circular Logic</a></li>
+<li ><a href="./../../project-euler/problem-210-obtuse-angled-triangles">Problem 210: Obtuse Angled Triangles</a></li>
+<li ><a href="./../../project-euler/problem-211-divisor-square-sum">Problem 211: Divisor Square Sum</a></li>
+<li ><a href="./../../project-euler/problem-212-combined-volume-of-cuboids">Problem 212: Combined Volume of Cuboids</a></li>
+<li ><a href="./../../project-euler/problem-213-flea-circus">Problem 213: Flea Circus</a></li>
+<li ><a href="./../../project-euler/problem-214-totient-chains">Problem 214: Totient Chains</a></li>
+<li ><a href="./../../project-euler/problem-215-crack-free-walls">Problem 215: Crack-free Walls</a></li>
+<li ><a href="./../../project-euler/problem-216-investigating-the-primality-of-numbers-of-the-form-2n2-1">Problem 216: Investigating the primality of numbers of the form 2n2-1</a></li>
+<li ><a href="./../../project-euler/problem-217-balanced-numbers">Problem 217: Balanced Numbers</a></li>
+<li ><a href="./../../project-euler/problem-218-perfect-right-angled-triangles">Problem 218: Perfect right-angled triangles</a></li>
+<li ><a href="./../../project-euler/problem-219-skew-cost-coding">Problem 219: Skew-cost coding</a></li>
+<li ><a href="./../../project-euler/problem-220-heighway-dragon">Problem 220: Heighway Dragon</a></li>
+<li ><a href="./../../project-euler/problem-221-alexandrian-integers">Problem 221: Alexandrian Integers</a></li>
+<li ><a href="./../../project-euler/problem-222-sphere-packing">Problem 222: Sphere Packing</a></li>
+<li ><a href="./../../project-euler/problem-223-almost-right-angled-triangles-i">Problem 223: Almost right-angled triangles I</a></li>
+<li ><a href="./../../project-euler/problem-224-almost-right-angled-triangles-ii">Problem 224: Almost right-angled triangles II</a></li>
+<li ><a href="./../../project-euler/problem-225-tribonacci-non-divisors">Problem 225: Tribonacci non-divisors</a></li>
+<li ><a href="./../../project-euler/problem-226-a-scoop-of-blancmange">Problem 226: A Scoop of Blancmange</a></li>
+<li ><a href="./../../project-euler/problem-227-the-chase">Problem 227: The Chase</a></li>
+<li ><a href="./../../project-euler/problem-228-minkowski-sums">Problem 228: Minkowski Sums</a></li>
+<li ><a href="./../../project-euler/problem-229-four-representations-using-squares">Problem 229: Four Representations using Squares</a></li>
+<li ><a href="./../../project-euler/problem-230-fibonacci-words">Problem 230: Fibonacci Words</a></li>
+<li ><a href="./../../project-euler/problem-231-the-prime-factorisation-of-binomial-coefficients">Problem 231: The prime factorisation of binomial coefficients</a></li>
+<li ><a href="./../../project-euler/problem-232-the-race">Problem 232: The Race</a></li>
+<li ><a href="./../../project-euler/problem-233-lattice-points-on-a-circle">Problem 233: Lattice points on a circle</a></li>
+<li ><a href="./../../project-euler/problem-234-semidivisible-numbers">Problem 234: Semidivisible numbers</a></li>
+<li ><a href="./../../project-euler/problem-235-an-arithmetic-geometric-sequence">Problem 235: An Arithmetic Geometric sequence</a></li>
+<li ><a href="./../../project-euler/problem-236-luxury-hampers">Problem 236: Luxury Hampers</a></li>
+<li ><a href="./../../project-euler/problem-237-tours-on-a-4-x-n-playing-board">Problem 237: Tours on a 4 x n playing board</a></li>
+<li ><a href="./../../project-euler/problem-238-infinite-string-tour">Problem 238: Infinite string tour</a></li>
+<li ><a href="./../../project-euler/problem-239-twenty-two-foolish-primes">Problem 239: Twenty-two Foolish Primes</a></li>
+<li ><a href="./../../project-euler/problem-240-top-dice">Problem 240: Top Dice</a></li>
+<li ><a href="./../../project-euler/problem-241-perfection-quotients">Problem 241: Perfection Quotients</a></li>
+<li ><a href="./../../project-euler/problem-242-odd-triplets">Problem 242: Odd Triplets</a></li>
+<li ><a href="./../../project-euler/problem-243-resilience">Problem 243: Resilience</a></li>
+<li ><a href="./../../project-euler/problem-244-sliders">Problem 244: Sliders</a></li>
+<li ><a href="./../../project-euler/problem-245-coresilience">Problem 245: Coresilience</a></li>
+<li ><a href="./../../project-euler/problem-246-tangents-to-an-ellipse">Problem 246: Tangents to an ellipse</a></li>
+<li ><a href="./../../project-euler/problem-247-squares-under-a-hyperbola">Problem 247: Squares under a hyperbola</a></li>
+<li ><a href="./../../project-euler/problem-248-numbers-for-which-eulers-totient-function-equals-13">Problem 248: Numbers for which Euler’s totient function equals 13!</a></li>
+<li ><a href="./../../project-euler/problem-249-prime-subset-sums">Problem 249: Prime Subset Sums</a></li>
+<li ><a href="./../../project-euler/problem-250-250250">Problem 250: 250250</a></li>
+<li ><a href="./../../project-euler/problem-251-cardano-triplets">Problem 251: Cardano Triplets</a></li>
+<li ><a href="./../../project-euler/problem-252-convex-holes">Problem 252: Convex Holes</a></li>
+<li ><a href="./../../project-euler/problem-253-tidying-up">Problem 253: Tidying up</a></li>
+<li ><a href="./../../project-euler/problem-254-sums-of-digit-factorials">Problem 254: Sums of Digit Factorials</a></li>
+<li ><a href="./../../project-euler/problem-255-rounded-square-roots">Problem 255: Rounded Square Roots</a></li>
+<li ><a href="./../../project-euler/problem-256-tatami-free-rooms">Problem 256: Tatami-Free Rooms</a></li>
+<li ><a href="./../../project-euler/problem-257-angular-bisectors">Problem 257: Angular Bisectors</a></li>
+<li ><a href="./../../project-euler/problem-258-a-lagged-fibonacci-sequence">Problem 258: A lagged Fibonacci sequence</a></li>
+<li ><a href="./../../project-euler/problem-259-reachable-numbers">Problem 259: Reachable Numbers</a></li>
+<li ><a href="./../../project-euler/problem-260-stone-game">Problem 260: Stone Game</a></li>
+<li ><a href="./../../project-euler/problem-261-pivotal-square-sums">Problem 261: Pivotal Square Sums</a></li>
+<li ><a href="./../../project-euler/problem-262-mountain-range">Problem 262: Mountain Range</a></li>
+<li ><a href="./../../project-euler/problem-263-an-engineers-dream-come-true">Problem 263: An engineers' dream come true</a></li>
+<li ><a href="./../../project-euler/problem-264-triangle-centres">Problem 264: Triangle Centres</a></li>
+<li ><a href="./../../project-euler/problem-265-binary-circles">Problem 265: Binary Circles</a></li>
+<li ><a href="./../../project-euler/problem-266-pseudo-square-root">Problem 266: Pseudo Square Root</a></li>
+<li ><a href="./../../project-euler/problem-267-billionaire">Problem 267: Billionaire</a></li>
+<li ><a href="./../../project-euler/problem-268-counting-numbers-with-at-least-four-distinct-prime-factors-less-than-100">Problem 268: Counting numbers with at least four distinct prime factors less than 100</a></li>
+<li ><a href="./../../project-euler/problem-269-polynomials-with-at-least-one-integer-root">Problem 269: Polynomials with at least one integer root</a></li>
+<li ><a href="./../../project-euler/problem-270-cutting-squares">Problem 270: Cutting Squares</a></li>
+<li ><a href="./../../project-euler/problem-271-modular-cubes-part-1">Problem 271: Modular Cubes, part 1</a></li>
+<li ><a href="./../../project-euler/problem-272-modular-cubes-part-2">Problem 272: Modular Cubes, part 2</a></li>
+<li ><a href="./../../project-euler/problem-273-sum-of-squares">Problem 273: Sum of Squares</a></li>
+<li ><a href="./../../project-euler/problem-274-divisibility-multipliers">Problem 274: Divisibility Multipliers</a></li>
+<li ><a href="./../../project-euler/problem-275-balanced-sculptures">Problem 275: Balanced Sculptures</a></li>
+<li ><a href="./../../project-euler/problem-276-primitive-triangles">Problem 276: Primitive Triangles</a></li>
+<li ><a href="./../../project-euler/problem-277-a-modified-collatz-sequence">Problem 277: A Modified Collatz sequence</a></li>
+<li ><a href="./../../project-euler/problem-278-linear-combinations-of-semiprimes">Problem 278: Linear Combinations of Semiprimes</a></li>
+<li ><a href="./../../project-euler/problem-279-triangles-with-integral-sides-and-an-integral-angle">Problem 279: Triangles with integral sides and an integral angle</a></li>
+<li ><a href="./../../project-euler/problem-280-ant-and-seeds">Problem 280: Ant and seeds</a></li>
+<li ><a href="./../../project-euler/problem-281-pizza-toppings">Problem 281: Pizza Toppings</a></li>
+<li ><a href="./../../project-euler/problem-282-the-ackermann-function">Problem 282: The Ackermann function</a></li>
+<li ><a href="./../../project-euler/problem-283-integer-sided-triangles-for-which-the-area--perimeter-ratio-is-integral">Problem 283: Integer sided triangles for which the area * perimeter ratio is integral</a></li>
+<li ><a href="./../../project-euler/problem-284-steady-squares">Problem 284: Steady Squares</a></li>
+<li ><a href="./../../project-euler/problem-285-pythagorean-odds">Problem 285: Pythagorean odds</a></li>
+<li ><a href="./../../project-euler/problem-286-scoring-probabilities">Problem 286: Scoring probabilities</a></li>
+<li ><a href="./../../project-euler/problem-287-quadtree-encoding-a-simple-compression-algorithm">Problem 287: Quadtree encoding (a simple compression algorithm)</a></li>
+<li ><a href="./../../project-euler/problem-288-an-enormous-factorial">Problem 288: An enormous factorial</a></li>
+<li ><a href="./../../project-euler/problem-289-eulerian-cycles">Problem 289: Eulerian Cycles</a></li>
+<li ><a href="./../../project-euler/problem-290-digital-signature">Problem 290: Digital Signature</a></li>
+<li ><a href="./../../project-euler/problem-291-panaitopol-primes">Problem 291: Panaitopol Primes</a></li>
+<li ><a href="./../../project-euler/problem-292-pythagorean-polygons">Problem 292: Pythagorean Polygons</a></li>
+<li ><a href="./../../project-euler/problem-293-pseudo-fortunate-numbers">Problem 293: Pseudo-Fortunate Numbers</a></li>
+<li ><a href="./../../project-euler/problem-294-sum-of-digits---experience-23">Problem 294: Sum of digits - experience #23</a></li>
+<li ><a href="./../../project-euler/problem-295-lenticular-holes">Problem 295: Lenticular holes</a></li>
+<li ><a href="./../../project-euler/problem-296-angular-bisector-and-tangent">Problem 296: Angular Bisector and Tangent</a></li>
+<li ><a href="./../../project-euler/problem-297-zeckendorf-representation">Problem 297: Zeckendorf Representation</a></li>
+<li ><a href="./../../project-euler/problem-298-selective-amnesia">Problem 298: Selective Amnesia</a></li>
+<li ><a href="./../../project-euler/problem-299-three-similar-triangles">Problem 299: Three similar triangles</a></li>
+<li ><a href="./../../project-euler/problem-300-protein-folding">Problem 300: Protein folding</a></li>
+<li ><a href="./../../project-euler/problem-301-nim">Problem 301: Nim</a></li>
+<li ><a href="./../../project-euler/problem-302-strong-achilles-numbers">Problem 302: Strong Achilles Numbers</a></li>
+<li ><a href="./../../project-euler/problem-303-multiples-with-small-digits">Problem 303: Multiples with small digits</a></li>
+<li ><a href="./../../project-euler/problem-304-primonacci">Problem 304: Primonacci</a></li>
+<li ><a href="./../../project-euler/problem-305-reflexive-position">Problem 305: Reflexive Position</a></li>
+<li ><a href="./../../project-euler/problem-306-paper-strip-game">Problem 306: Paper-strip Game</a></li>
+<li ><a href="./../../project-euler/problem-307-chip-defects">Problem 307: Chip Defects</a></li>
+<li ><a href="./../../project-euler/problem-308-an-amazing-prime-generating-automaton">Problem 308: An amazing Prime-generating Automaton</a></li>
+<li ><a href="./../../project-euler/problem-309-integer-ladders">Problem 309: Integer Ladders</a></li>
+<li ><a href="./../../project-euler/problem-310-nim-square">Problem 310: Nim Square</a></li>
+<li ><a href="./../../project-euler/problem-311-biclinic-integral-quadrilaterals">Problem 311: Biclinic Integral Quadrilaterals</a></li>
+<li ><a href="./../../project-euler/problem-312-cyclic-paths-on-sierpiski-graphs">Problem 312: Cyclic paths on Sierpiński graphs</a></li>
+<li ><a href="./../../project-euler/problem-313-sliding-game">Problem 313: Sliding game</a></li>
+<li ><a href="./../../project-euler/problem-314-the-mouse-on-the-moon">Problem 314: The Mouse on the Moon</a></li>
+<li ><a href="./../../project-euler/problem-315-digital-root-clocks">Problem 315: Digital root clocks</a></li>
+<li ><a href="./../../project-euler/problem-316-numbers-in-decimal-expansions">Problem 316: Numbers in decimal expansions</a></li>
+<li ><a href="./../../project-euler/problem-317-firecracker">Problem 317: Firecracker</a></li>
+<li ><a href="./../../project-euler/problem-318-2011-nines">Problem 318: 2011 nines</a></li>
+<li ><a href="./../../project-euler/problem-319-bounded-sequences">Problem 319: Bounded Sequences</a></li>
+<li ><a href="./../../project-euler/problem-320-factorials-divisible-by-a-huge-integer">Problem 320: Factorials divisible by a huge integer</a></li>
+<li ><a href="./../../project-euler/problem-321-swapping-counters">Problem 321: Swapping Counters</a></li>
+<li ><a href="./../../project-euler/problem-322-binomial-coefficients-divisible-by-10">Problem 322: Binomial coefficients divisible by 10</a></li>
+<li ><a href="./../../project-euler/problem-323-bitwise-or-operations-on-random-integers">Problem 323: Bitwise-OR operations on random integers</a></li>
+<li ><a href="./../../project-euler/problem-324-building-a-tower">Problem 324: Building a tower</a></li>
+<li ><a href="./../../project-euler/problem-325-stone-game-ii">Problem 325: Stone Game II</a></li>
+<li ><a href="./../../project-euler/problem-326-modulo-summations">Problem 326: Modulo Summations</a></li>
+<li ><a href="./../../project-euler/problem-327-rooms-of-doom">Problem 327: Rooms of Doom</a></li>
+<li ><a href="./../../project-euler/problem-328-lowest-cost-search">Problem 328: Lowest-cost Search</a></li>
+<li ><a href="./../../project-euler/problem-329-prime-frog">Problem 329: Prime Frog</a></li>
+<li ><a href="./../../project-euler/problem-330-eulers-number">Problem 330: Euler's Number</a></li>
+<li ><a href="./../../project-euler/problem-331-cross-flips">Problem 331: Cross flips</a></li>
+<li ><a href="./../../project-euler/problem-332-spherical-triangles">Problem 332: Spherical triangles</a></li>
+<li ><a href="./../../project-euler/problem-333-special-partitions">Problem 333: Special partitions</a></li>
+<li ><a href="./../../project-euler/problem-334-spilling-the-beans">Problem 334: Spilling the beans</a></li>
+<li ><a href="./../../project-euler/problem-335-gathering-the-beans">Problem 335: Gathering the beans</a></li>
+<li ><a href="./../../project-euler/problem-336-maximix-arrangements">Problem 336: Maximix Arrangements</a></li>
+<li ><a href="./../../project-euler/problem-337-totient-stairstep-sequences">Problem 337: Totient Stairstep Sequences</a></li>
+<li ><a href="./../../project-euler/problem-338-cutting-rectangular-grid-paper">Problem 338: Cutting Rectangular Grid Paper</a></li>
+<li ><a href="./../../project-euler/problem-339-peredur-fab-efrawg">Problem 339: Peredur fab Efrawg</a></li>
+<li ><a href="./../../project-euler/problem-340-crazy-function">Problem 340: Crazy Function</a></li>
+<li ><a href="./../../project-euler/problem-341-golombs-self-describing-sequence">Problem 341: Golomb's self-describing sequence</a></li>
+<li ><a href="./../../project-euler/problem-342-the-totient-of-a-square-is-a-cube">Problem 342: The totient of a square is a cube</a></li>
+<li ><a href="./../../project-euler/problem-343-fractional-sequences">Problem 343: Fractional Sequences</a></li>
+<li ><a href="./../../project-euler/problem-344-silver-dollar-game">Problem 344: Silver dollar game</a></li>
+<li ><a href="./../../project-euler/problem-345-matrix-sum">Problem 345: Matrix Sum</a></li>
+<li ><a href="./../../project-euler/problem-346-strong-repunits">Problem 346: Strong Repunits</a></li>
+<li ><a href="./../../project-euler/problem-347-largest-integer-divisible-by-two-primes">Problem 347: Largest integer divisible by two primes</a></li>
+<li ><a href="./../../project-euler/problem-348-sum-of-a-square-and-a-cube">Problem 348: Sum of a square and a cube</a></li>
+<li ><a href="./../../project-euler/problem-349-langtons-ant">Problem 349: Langton's ant</a></li>
+<li ><a href="./../../project-euler/problem-350-constraining-the-least-greatest-and-the-greatest-least">Problem 350: Constraining the least greatest and the greatest least</a></li>
+<li ><a href="./../../project-euler/problem-351-hexagonal-orchards">Problem 351: Hexagonal orchards</a></li>
+<li ><a href="./../../project-euler/problem-352-blood-tests">Problem 352: Blood tests</a></li>
+<li ><a href="./../../project-euler/problem-353-risky-moon">Problem 353: Risky moon</a></li>
+<li ><a href="./../../project-euler/problem-354-distances-in-a-bees-honeycomb">Problem 354: Distances in a bee's honeycomb</a></li>
+<li ><a href="./../../project-euler/problem-355-maximal-coprime-subset">Problem 355: Maximal coprime subset</a></li>
+<li ><a href="./../../project-euler/problem-356-largest-roots-of-cubic-polynomials">Problem 356: Largest roots of cubic polynomials</a></li>
+<li ><a href="./../../project-euler/problem-357-prime-generating-integers">Problem 357: Prime generating integers</a></li>
+<li ><a href="./../../project-euler/problem-358-cyclic-numbers">Problem 358: Cyclic numbers</a></li>
+<li ><a href="./../../project-euler/problem-359-hilberts-new-hotel">Problem 359: Hilbert's New Hotel</a></li>
+<li ><a href="./../../project-euler/problem-360-scary-sphere">Problem 360: Scary Sphere</a></li>
+<li ><a href="./../../project-euler/problem-361-subsequence-of-thue-morse-sequence">Problem 361: Subsequence of Thue-Morse sequence</a></li>
+<li ><a href="./../../project-euler/problem-362-squarefree-factors">Problem 362: Squarefree factors</a></li>
+<li ><a href="./../../project-euler/problem-363-bzier-curves">Problem 363: Bézier Curves</a></li>
+<li ><a href="./../../project-euler/problem-364-comfortable-distance">Problem 364: Comfortable distance</a></li>
+<li ><a href="./../../project-euler/problem-365-a-huge-binomial-coefficient">Problem 365: A huge binomial coefficient</a></li>
+<li ><a href="./../../project-euler/problem-366-stone-game-iii">Problem 366: Stone Game III</a></li>
+<li ><a href="./../../project-euler/problem-367-bozo-sort">Problem 367: Bozo sort</a></li>
+<li ><a href="./../../project-euler/problem-368-a-kempner-like-series">Problem 368: A Kempner-like series</a></li>
+<li ><a href="./../../project-euler/problem-369-badugi">Problem 369: Badugi</a></li>
+<li ><a href="./../../project-euler/problem-370-geometric-triangles">Problem 370: Geometric triangles</a></li>
+<li ><a href="./../../project-euler/problem-371-licence-plates">Problem 371: Licence plates</a></li>
+<li ><a href="./../../project-euler/problem-372-pencils-of-rays">Problem 372: Pencils of rays</a></li>
+<li ><a href="./../../project-euler/problem-373-circumscribed-circles">Problem 373: Circumscribed Circles</a></li>
+<li ><a href="./../../project-euler/problem-374-maximum-integer-partition-product">Problem 374: Maximum Integer Partition Product</a></li>
+<li ><a href="./../../project-euler/problem-375-minimum-of-subsequences">Problem 375: Minimum of subsequences</a></li>
+<li ><a href="./../../project-euler/problem-376-nontransitive-sets-of-dice">Problem 376: Nontransitive sets of dice</a></li>
+<li ><a href="./../../project-euler/problem-377-sum-of-digits-experience-13">Problem 377: Sum of digits, experience 13</a></li>
+<li ><a href="./../../project-euler/problem-378-triangle-triples">Problem 378: Triangle Triples</a></li>
+<li ><a href="./../../project-euler/problem-379-least-common-multiple-count">Problem 379: Least common multiple count</a></li>
+<li ><a href="./../../project-euler/problem-380-amazing-mazes">Problem 380: Amazing Mazes!</a></li>
+<li ><a href="./../../project-euler/problem-381-prime-k-factorial">Problem 381: (prime-k) factorial</a></li>
+<li ><a href="./../../project-euler/problem-382-generating-polygons">Problem 382: Generating polygons</a></li>
+<li ><a href="./../../project-euler/problem-383-divisibility-comparison-between-factorials">Problem 383: Divisibility comparison between factorials</a></li>
+<li ><a href="./../../project-euler/problem-384-rudin-shapiro-sequence">Problem 384: Rudin-Shapiro sequence</a></li>
+<li ><a href="./../../project-euler/problem-385-ellipses-inside-triangles">Problem 385: Ellipses inside triangles</a></li>
+<li ><a href="./../../project-euler/problem-386-maximum-length-of-an-antichain">Problem 386: Maximum length of an antichain</a></li>
+<li ><a href="./../../project-euler/problem-387-harshad-numbers">Problem 387: Harshad Numbers</a></li>
+<li ><a href="./../../project-euler/problem-388-distinct-lines">Problem 388: Distinct Lines</a></li>
+<li ><a href="./../../project-euler/problem-389-platonic-dice">Problem 389: Platonic Dice</a></li>
+<li ><a href="./../../project-euler/problem-390-triangles-with-non-rational-sides-and-integral-area">Problem 390: Triangles with non rational sides and integral area</a></li>
+<li ><a href="./../../project-euler/problem-391-hopping-game">Problem 391: Hopping Game</a></li>
+<li ><a href="./../../project-euler/problem-392-enmeshed-unit-circle">Problem 392: Enmeshed unit circle</a></li>
+<li ><a href="./../../project-euler/problem-393-migrating-ants">Problem 393: Migrating ants</a></li>
+<li ><a href="./../../project-euler/problem-394-eating-pie">Problem 394: Eating pie</a></li>
+<li ><a href="./../../project-euler/problem-395-pythagorean-tree">Problem 395: Pythagorean tree</a></li>
+<li ><a href="./../../project-euler/problem-396-weak-goodstein-sequence">Problem 396: Weak Goodstein sequence</a></li>
+<li ><a href="./../../project-euler/problem-397-triangle-on-parabola">Problem 397: Triangle on parabola</a></li>
+<li ><a href="./../../project-euler/problem-398-cutting-rope">Problem 398: Cutting rope</a></li>
+<li ><a href="./../../project-euler/problem-399-squarefree-fibonacci-numbers">Problem 399: Squarefree Fibonacci Numbers</a></li>
+<li ><a href="./../../project-euler/problem-400-fibonacci-tree-game">Problem 400: Fibonacci tree game</a></li>
+<li ><a href="./../../project-euler/problem-401-sum-of-squares-of-divisors">Problem 401: Sum of squares of divisors</a></li>
+<li ><a href="./../../project-euler/problem-402-integer-valued-polynomials">Problem 402: Integer-valued polynomials</a></li>
+<li ><a href="./../../project-euler/problem-403-lattice-points-enclosed-by-parabola-and-line">Problem 403: Lattice points enclosed by parabola and line</a></li>
+<li ><a href="./../../project-euler/problem-404-crisscross-ellipses">Problem 404: Crisscross Ellipses</a></li>
+<li ><a href="./../../project-euler/problem-405-a-rectangular-tiling">Problem 405: A rectangular tiling</a></li>
+<li ><a href="./../../project-euler/problem-406-guessing-game">Problem 406: Guessing Game</a></li>
+<li ><a href="./../../project-euler/problem-407-idempotents">Problem 407: Idempotents</a></li>
+<li ><a href="./../../project-euler/problem-408-admissible-paths-through-a-grid">Problem 408: Admissible paths through a grid</a></li>
+<li ><a href="./../../project-euler/problem-409-nim-extreme">Problem 409: Nim Extreme</a></li>
+<li ><a href="./../../project-euler/problem-410-circle-and-tangent-line">Problem 410: Circle and tangent line</a></li>
+<li ><a href="./../../project-euler/problem-411-uphill-paths">Problem 411: Uphill paths</a></li>
+<li ><a href="./../../project-euler/problem-412-gnomon-numbering">Problem 412: Gnomon numbering</a></li>
+<li ><a href="./../../project-euler/problem-413-one-child-numbers">Problem 413: One-child Numbers</a></li>
+<li ><a href="./../../project-euler/problem-414-kaprekar-constant">Problem 414: Kaprekar constant</a></li>
+<li ><a href="./../../project-euler/problem-415-titanic-sets">Problem 415: Titanic sets</a></li>
+<li ><a href="./../../project-euler/problem-416-a-frogs-trip">Problem 416: A frog's trip</a></li>
+<li ><a href="./../../project-euler/problem-417-reciprocal-cycles-ii">Problem 417: Reciprocal cycles II</a></li>
+<li ><a href="./../../project-euler/problem-418-factorisation-triples">Problem 418: Factorisation triples</a></li>
+<li ><a href="./../../project-euler/problem-419-look-and-say-sequence">Problem 419: Look and say sequence</a></li>
+<li ><a href="./../../project-euler/problem-420-2x2-positive-integer-matrix">Problem 420: 2x2 positive integer matrix</a></li>
+<li ><a href="./../../project-euler/problem-421-prime-factors-of-n151">Problem 421: Prime factors of n15+1</a></li>
+<li ><a href="./../../project-euler/problem-422-sequence-of-points-on-a-hyperbola">Problem 422: Sequence of points on a hyperbola</a></li>
+<li ><a href="./../../project-euler/problem-423-consecutive-die-throws">Problem 423: Consecutive die throws</a></li>
+<li ><a href="./../../project-euler/problem-424-kakuro">Problem 424: Kakuro</a></li>
+<li ><a href="./../../project-euler/problem-425-prime-connection">Problem 425: Prime connection</a></li>
+<li ><a href="./../../project-euler/problem-426-box-ball-system">Problem 426: Box-ball system</a></li>
+<li ><a href="./../../project-euler/problem-427-n-sequences">Problem 427: n-sequences</a></li>
+<li ><a href="./../../project-euler/problem-428-necklace-of-circles">Problem 428: Necklace of Circles</a></li>
+<li ><a href="./../../project-euler/problem-429-sum-of-squares-of-unitary-divisors">Problem 429: Sum of squares of unitary divisors</a></li>
+<li ><a href="./../../project-euler/problem-430-range-flips">Problem 430: Range flips</a></li>
+<li ><a href="./../../project-euler/problem-431-square-space-silo">Problem 431: Square Space Silo</a></li>
+<li ><a href="./../../project-euler/problem-432-totient-sum">Problem 432: Totient sum</a></li>
+<li ><a href="./../../project-euler/problem-433-steps-in-euclids-algorithm">Problem 433: Steps in Euclid's algorithm</a></li>
+<li ><a href="./../../project-euler/problem-434-rigid-graphs">Problem 434: Rigid graphs</a></li>
+<li ><a href="./../../project-euler/problem-435-polynomials-of-fibonacci-numbers">Problem 435: Polynomials of Fibonacci numbers</a></li>
+<li ><a href="./../../project-euler/problem-436-unfair-wager">Problem 436: Unfair wager</a></li>
+<li ><a href="./../../project-euler/problem-437-fibonacci-primitive-roots">Problem 437: Fibonacci primitive roots</a></li>
+<li ><a href="./../../project-euler/problem-438-integer-part-of-polynomial-equations-solutions">Problem 438: Integer part of polynomial equation's solutions</a></li>
+<li ><a href="./../../project-euler/problem-439-sum-of-sum-of-divisors">Problem 439: Sum of sum of divisors</a></li>
+<li ><a href="./../../project-euler/problem-440-gcd-and-tiling">Problem 440: GCD and Tiling</a></li>
+<li ><a href="./../../project-euler/problem-441-the-inverse-summation-of-coprime-couples">Problem 441: The inverse summation of coprime couples</a></li>
+<li ><a href="./../../project-euler/problem-442-eleven-free-integers">Problem 442: Eleven-free integers</a></li>
+<li ><a href="./../../project-euler/problem-443-gcd-sequence">Problem 443: GCD sequence</a></li>
+<li ><a href="./../../project-euler/problem-444-the-roundtable-lottery">Problem 444: The Roundtable Lottery</a></li>
+<li class="current-problem"><a href="./../../project-euler/problem-445-retractions-a">Problem 445: Retractions A</a></li>
+<li ><a href="./../../project-euler/problem-446-retractions-b">Problem 446: Retractions B</a></li>
+<li ><a href="./../../project-euler/problem-447-retractions-c">Problem 447: Retractions C</a></li>
+<li ><a href="./../../project-euler/problem-448-average-least-common-multiple">Problem 448: Average least common multiple</a></li>
+<li ><a href="./../../project-euler/problem-449-chocolate-covered-candy">Problem 449: Chocolate covered candy</a></li>
+<li ><a href="./../../project-euler/problem-450-hypocycloid-and-lattice-points">Problem 450: Hypocycloid and Lattice points</a></li>
+<li ><a href="./../../project-euler/problem-451-modular-inverses">Problem 451: Modular inverses</a></li>
+<li ><a href="./../../project-euler/problem-452-long-products">Problem 452: Long Products</a></li>
+<li ><a href="./../../project-euler/problem-453-lattice-quadrilaterals">Problem 453: Lattice Quadrilaterals</a></li>
+<li ><a href="./../../project-euler/problem-454-diophantine-reciprocals-iii">Problem 454: Diophantine reciprocals III</a></li>
+<li ><a href="./../../project-euler/problem-455-powers-with-trailing-digits">Problem 455: Powers With Trailing Digits</a></li>
+<li ><a href="./../../project-euler/problem-456-triangles-containing-the-origin-ii">Problem 456: Triangles containing the origin II</a></li>
+<li ><a href="./../../project-euler/problem-457-a-polynomial-modulo-the-square-of-a-prime">Problem 457: A polynomial modulo the square of a prime</a></li>
+<li ><a href="./../../project-euler/problem-458-permutations-of-project">Problem 458: Permutations of Project</a></li>
+<li ><a href="./../../project-euler/problem-459-flipping-game">Problem 459: Flipping game</a></li>
+<li ><a href="./../../project-euler/problem-460-an-ant-on-the-move">Problem 460: An ant on the move</a></li>
+<li ><a href="./../../project-euler/problem-461-almost-pi">Problem 461: Almost Pi</a></li>
+<li ><a href="./../../project-euler/problem-462-permutation-of-3-smooth-numbers">Problem 462: Permutation of 3-smooth numbers</a></li>
+<li ><a href="./../../project-euler/problem-463-a-weird-recurrence-relation">Problem 463: A weird recurrence relation</a></li>
+<li ><a href="./../../project-euler/problem-464-mbius-function-and-intervals">Problem 464: Möbius function and intervals</a></li>
+<li ><a href="./../../project-euler/problem-465-polar-polygons">Problem 465: Polar polygons</a></li>
+<li ><a href="./../../project-euler/problem-466-distinct-terms-in-a-multiplication-table">Problem 466: Distinct terms in a multiplication table</a></li>
+<li ><a href="./../../project-euler/problem-467-superinteger">Problem 467: Superinteger</a></li>
+<li ><a href="./../../project-euler/problem-468-smooth-divisors-of-binomial-coefficients">Problem 468: Smooth divisors of binomial coefficients</a></li>
+<li ><a href="./../../project-euler/problem-469-empty-chairs">Problem 469: Empty chairs</a></li>
+<li ><a href="./../../project-euler/problem-470-super-ramvok">Problem 470: Super Ramvok</a></li>
+<li ><a href="./../../project-euler/problem-471-triangle-inscribed-in-ellipse">Problem 471: Triangle inscribed in ellipse</a></li>
+<li ><a href="./../../project-euler/problem-472-comfortable-distance-ii">Problem 472: Comfortable Distance II</a></li>
+<li ><a href="./../../project-euler/problem-473-phigital-number-base">Problem 473: Phigital number base</a></li>
+<li ><a href="./../../project-euler/problem-474-last-digits-of-divisors">Problem 474: Last digits of divisors</a></li>
+<li ><a href="./../../project-euler/problem-475-music-festival">Problem 475: Music festival</a></li>
+<li ><a href="./../../project-euler/problem-476-circle-packing-ii">Problem 476: Circle Packing II</a></li>
+<li ><a href="./../../project-euler/problem-477-number-sequence-game">Problem 477: Number Sequence Game</a></li>
+<li ><a href="./../../project-euler/problem-478-mixtures">Problem 478: Mixtures</a></li>
+<li ><a href="./../../project-euler/problem-479-roots-on-the-rise">Problem 479: Roots on the Rise</a></li>
+<li ><a href="./../../project-euler/problem-480-the-last-question">Problem 480: The Last Question</a></li>
+</ul>
+</li>
+</ul></aside>
+      <div class="code-content">
+        <header><nav class="header">
+  <a id="back-link" href="./../.././project-euler/problem-444-the-roundtable-lottery" class="">Previous</a>
+  <div class="header-center">
+    <a id="top-link" href="./../..">Top <kbd>T</kbd> | </a>
+    <a href="#" onclick="setShortcutDialogVisible(null, true)"
+      >Shortcuts <kbd>? </kbd> |
+    </a>
+    <a href="https://github.com/letientai299/freecodecamp/blob/master/interview/src/./project-euler/problem-445-retractions-a" target="_blank" rel="noopener">Edit on Github</a>
+  </div>
+  <a id="next-link" href="./../.././project-euler/problem-446-retractions-b" class="">Next</a>
+</nav>
+</header>
+        <main class="cells">
+          <div class="half-cells">
+            <section id="problem-description" class="markdown-body">
+              <h1 id="problem-445-retractions-a">Problem 445: Retractions A</h1>
+<p><a target='_blank' rel='noreferrer' href="https://www.freecodecamp.org/learn/coding-interview-prep/project-euler/problem-445-retractions-a">FCC link</a></p>
+<p>For every integer n&gt;1, the family of functions fn,a,b is defined</p>
+<p>by fn,a,b(x)≡ax+b mod n for a,b,x integer and 0</p>
+<p>You are given that ∑ R(c) for c=C(100 000,k), and 1 ≤ k ≤99 999 ≡628701600 (mod
+1 000 000 007). (C(n,k) is the binomial coefficient).</p>
+<p>Find ∑ R(c) for c=C(10 000 000,k), and 1 ≤k≤ 9 999 999. Give your answer modulo
+1 000 000 007.</p>
+
+            </section>
+            <section id="problem-test">
+              <h2>Test</h2>
+              {{test}}
+            </section>
+          </div>
+          <div class="half-cells">
+            <section id="editor-cell">
+              <div id="editor-wrapper">
+                <label for="editor">Boilerplate code</label>
+                <textarea id="editor">function euler445() {
+
+  return true;
+}
+
+euler445();</textarea>
+              </div>
+              <div class="panel bottom">
+                <button class="btn btn-primary" id="code-run">Run</button>
+                <button class="btn btn-danger" id="code-reset">Reset</button>
+                <button class="btn btn-info" id="code-show-solution">
+                  Solution
+                </button>
+                <button class="btn" id="code-clear-console">
+                  Clear output
+                </button>
+                <button class="btn" id="code-copy">Copy</button>
+              </div>
+            </section>
+            <section id="console-cell">
+              <h2>Console output</h2>
+              <code id="console-wrapper">
+                <pre id="console"></pre>
+              </code>
+            </section>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <div id="shortcut-dialog" style="visibility: hidden">
+      <strong>Shortcuts on this page</strong>
+      <button
+        onclick="setShortcutDialogVisible(null, false)"
+        class="btn btn-top-right"
+      >
+        X
+      </button>
+      <hr />
+      <p>Use <kbd>Cmd</kbd> instead of <kbd>Ctrl</kbd> if you're on a Mac.</p>
+      <table>
+        <tr>
+          <td><kbd>g</kbd></td>
+          <td>Focus editor</td>
+        </tr>
+
+        <tr>
+          <td><kbd>Ctrl</kbd>-<kbd>Enter</kbd></td>
+          <td>Run the test with current code</td>
+        </tr>
+
+        <tr>
+          <td><kbd>Ctrl</kbd>-<kbd>Shift</kbd>-<kbd>K</kbd></td>
+          <td>Reset the editor</td>
+        </tr>
+
+        <tr>
+          <td><kbd>Ctrl</kbd>-<kbd>Shift</kbd>-<kbd>L</kbd></td>
+          <td>Clear console output</td>
+        </tr>
+
+        <tr>
+          <td><kbd>Ctrl</kbd>-<kbd>Shift</kbd>-<kbd>X</kbd></td>
+          <td>Show the solution</td>
+        </tr>
+
+        <tr>
+          <td><kbd>[</kbd></td>
+          <td>Previous challenge</td>
+        </tr>
+
+        <tr>
+          <td><kbd>]</kbd></td>
+          <td>Next challenge</td>
+        </tr>
+
+        <tr>
+          <td><kbd>T</kbd></td>
+          <td>Back to top page</td>
+        </tr>
+
+        <tr>
+          <td><kbd>?</kbd></td>
+          <td>Show this dialog</td>
+        </tr>
+
+        <tr>
+          <td><kbd>ESC</kbd></td>
+          <td>Hide this dialog</td>
+        </tr>
+
+        <tr>
+          <td><kbd>Shift</kbd>-<kbd>ESC</kbd></td>
+          <td>Blur focus from editor</td>
+        </tr>
+      </table>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.60.0/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.60.0/mode/javascript/javascript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.60.0/keymap/vim.min.js"></script>
+    <script src="https://unpkg.com/hotkeys-js/dist/hotkeys.min.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.css"
+      integrity="sha384-t5CR+zwDAROtph0PXGte6ia8heboACF9R5l/DiY+WZ3P2lxNgvJkQk5n7GPvLMYw"
+      crossorigin="anonymous"
+    />
+
+    <!-- The loading of KaTeX is deferred to speed up page rendering -->
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.js"
+      integrity="sha384-FaFLTlohFghEIZkw6VGwmf9ISTubWAVYW8tG8+w2LAIftJEULZABrF9PPFv+tVkH"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.13.2/dist/contrib/auto-render.min.js"
+      integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="../../acorn_interpreter.js"></script>
+    <script src="../../client.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/4.0.0/github-markdown.min.css"
+    />
+  </body>
+</html>
