@@ -38,10 +38,41 @@ body {
   visibility: hidden;
 }
 
+.module-close + .module-problems {
+  display: none;
+}
+
+.module-name {
+  font-size: 1.2em;
+}
+
+.module-close:before {
+  content: "▶ ";
+}
+
+.module-open:before {
+  content: "▼ ";
+}
+
+.current-problem {
+  font-weight: bold;
+  border: 1px solid darkblue;
+  box-sizing: border-box;
+}
+
 aside {
   max-width: 20em;
-  overflow-y: scroll;
-  height: 100vh;
+  overflow-y: auto;
+  max-height: 100vh;
+  min-width: 15em;
+}
+
+aside ul {
+  list-style: none;
+}
+
+aside a {
+  text-decoration: none;
 }
 
 .doc-content {
@@ -59,8 +90,7 @@ aside {
   padding: 0;
 }
 
-/* 2 columns not scrollable */
-.col-2 {
+.cells {
   height: 100%;
   overflow: hidden;
   display: grid;
@@ -68,7 +98,7 @@ aside {
   grid-column-gap: 1em;
 }
 
-.row-2 {
+.half-cells {
   height: 100%;
   overflow: hidden;
   display: grid;
@@ -119,7 +149,7 @@ aside {
   box-shadow: 1px 1px gray;
   border-radius: 0;
   color: white;
-  background-color: gray;
+  background-color: #222;
 }
 
 .btn-primary {
@@ -237,5 +267,30 @@ table {
 
   a > img {
     margin: 0.2em;
+  }
+}
+
+@media (max-width: 1200px) {
+  .container {
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  .cells {
+    overflow-y: scroll;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row-gap: 1em;
+  }
+
+  .half-cells {
+    height: fit-content;
+    overflow: auto;
+    display: grid;
+    grid-template-rows: 1fr;
+  }
+
+  #editor-cell {
+    min-height: 400px;
   }
 }
