@@ -59,8 +59,7 @@ aside {
   padding: 0;
 }
 
-/* 2 columns not scrollable */
-.col-2 {
+.cells {
   height: 100%;
   overflow: hidden;
   display: grid;
@@ -68,7 +67,7 @@ aside {
   grid-column-gap: 1em;
 }
 
-.row-2 {
+.half-cells {
   height: 100%;
   overflow: hidden;
   display: grid;
@@ -237,5 +236,30 @@ table {
 
   a > img {
     margin: 0.2em;
+  }
+}
+
+@media (max-width: 1200px) {
+  .container {
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  .cells {
+    overflow-y: scroll;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row-gap: 1em;
+  }
+
+  .half-cells {
+    height: fit-content;
+    overflow: auto;
+    display: grid;
+    grid-template-rows: 1fr;
+  }
+
+  #editor-cell {
+    min-height: 400px;
   }
 }
