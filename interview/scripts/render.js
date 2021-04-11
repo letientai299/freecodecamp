@@ -28,45 +28,36 @@ const PUBLIC = path.join(__dirname, "../public");
 /**
  * Prepare sidebar HTML contents
  */
-function prepareSidebar(isTop = false) {
-  const raw = fs.readFileSync(path.join(SRC, "index.json"));
-  const modules = JSON.parse(raw);
-
+function prepareSidebar(modules, problem) {
   // create list of lists of solution links
-  const lists = modulesToSidebarHTML(modules, isTop);
-
-  // add the main pages to the list
-  const headerHTMl = `
+  const lists = modulesToSidebarHTML(modules, problem);
+  return `
 <ul>
 ${lists}
 </ul>`.trim();
-
-  // create the list of paths to generate next and previous for the headers.
-  const paths = modulesToPaths(modules);
-  return {
-    html: headerHTMl,
-    paths: paths,
-  };
 }
 
-const renderProblemForSideBar = (problems, isTop = false) => {
+const renderProblemForSideBar = (problems, current = null) => {
   return problems
     .map((p) => {
-      const slug = p.dir.replace("src/", isTop ? "./" : "./../../");
-      return `<li><a href="${slug}">${p.title}</a></li>`.trim();
+      const slug = p.dir.replace("src/", !current ? "./" : "./../../");
+      const cls =
+        current && p.path === current.path ? `class="current-problem"` : "";
+      return `<li ${cls}><a href="${slug}">${p.title}</a></li>`.trim();
     })
     .join("\n");
 };
 
-function modulesToSidebarHTML(modules, isTop) {
+function modulesToSidebarHTML(modules, problem) {
   return Object.keys(modules)
     .map((k) => {
       const m = modules[k];
+      const cls = m.problems.includes(problem) ? "module-open" : "module-close";
       return `
 <li>
-<p>${m.name}</p>
-<ul>
-${renderProblemForSideBar(m.problems, isTop)}
+<p class="module-name ${cls}">${m.name}</p>
+<ul class="module-problems">
+${renderProblemForSideBar(m.problems, problem)}
 </ul>
 </li>`.trim();
     })
@@ -87,7 +78,16 @@ function modulesToPaths(modules) {
 /**
  * Render the readme to the index page.
  */
-function renderDoc(sidebar, header) {
+function renderDoc(next) {
+  const sidebar = prepareSidebar(modules);
+  console.log(next);
+
+  const docHeader = renderHeader(
+    "", // there's no back link for home
+    next,
+    `${GITHUB_PREFIX}/readme.md`,
+    true
+  );
   // hard code file path because we don't have any other readme to render
   const DOC_TEMPLATE = path.join(__dirname, "../templates/doc.tpl.html");
   const mdFile = path.join(__dirname, "../readme.md");
@@ -100,7 +100,7 @@ function renderDoc(sidebar, header) {
   let html = docTpl
     .replace("{{sidebar}}", sidebar)
     .replace("{{readme}}", rendered)
-    .replace("{{header}}", header)
+    .replace("{{header}}", docHeader)
     .replace("{{title}}", "FCC Coding Interview Prep Solutions")
     .replace(
       "{{description}}",
@@ -128,7 +128,11 @@ fs.readdirSync(PUBLIC).forEach((f) => {
   fs.copyFileSync(path.join(PUBLIC, f), path.join(DIST, f));
 });
 
-let sidebar = prepareSidebar(true);
+const raw = fs.readFileSync(path.join(SRC, "index.json"));
+const modules = JSON.parse(raw);
+// create the list of paths to generate next and previous for the headers.
+const paths = modulesToPaths(modules);
+
 const headerTpl = fs
   .readFileSync(path.join(__dirname, "../templates/_header.tpl.html"))
   .toString();
@@ -164,9 +168,10 @@ function renderCode(back, p, next) {
   const md = fs.readFileSync(path.join(SRC, p.path, "readme.md")).toString();
   let desc = marked(md).toString();
 
+  const sidebar = prepareSidebar(modules, p);
   const html = codeTpl
     .replace("{{header}}", header)
-    .replace("{{sidebar}}", sidebar.html)
+    .replace("{{sidebar}}", sidebar)
     .replace("{{title}}", `${p.title} | FCC solutions - Coding Interview Prep`)
     .replace(
       "{{metaDescription}}",
@@ -183,19 +188,8 @@ function renderCode(back, p, next) {
   fs.writeFileSync(path.join(outDir, "index.html"), html);
 }
 
-const docHeader = renderHeader(
-  "", // there's no back link for home
-  sidebar.paths[0].path,
-  `${GITHUB_PREFIX}/readme.md`,
-  true
-);
-renderDoc(sidebar.html, docHeader);
+renderDoc(paths[0].path);
 
-// render the sidebar again for problem pages
-sidebar = prepareSidebar(false);
-
-// const paths = sidebar.paths.slice(0, 10);
-const paths = sidebar.paths;
 let back = "./../.."; // home location
 
 for (let i = 0; i < paths.length; i++) {

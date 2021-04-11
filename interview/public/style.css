@@ -38,10 +38,41 @@ body {
   visibility: hidden;
 }
 
+.module-close + .module-problems {
+  display: none;
+}
+
+.module-name {
+  font-size: 1.2em;
+}
+
+.module-close:before {
+  content: "▶ ";
+}
+
+.module-open:before {
+  content: "▼ ";
+}
+
+.current-problem {
+  font-weight: bold;
+  border: 1px solid darkblue;
+  box-sizing: border-box;
+}
+
 aside {
   max-width: 20em;
-  overflow-y: scroll;
-  height: 100vh;
+  overflow-y: auto;
+  max-height: 100vh;
+  min-width: 15em;
+}
+
+aside ul {
+  list-style: none;
+}
+
+aside a {
+  text-decoration: none;
 }
 
 .doc-content {

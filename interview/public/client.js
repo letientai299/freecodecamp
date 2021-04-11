@@ -206,6 +206,7 @@ function fakeLog(std, args) {
 // time the clipboard is used (per session).
 //
 // Copied and modified from https://stackoverflow.com/a/33928558/3869533
+
 function copyToClipboard(text) {
   if (window.clipboardData && window.clipboardData.setData) {
     // Internet Explorer-specific code path to prevent textarea being shown
@@ -234,4 +235,29 @@ function copyToClipboard(text) {
       document.body.removeChild(textarea);
     }
   }
+}
+
+function makeSidebarInteractive() {
+  const modules = document.getElementsByClassName("module-name");
+
+  for (let m of modules) {
+    m.addEventListener("click", () => toggleModule(m));
+  }
+
+  let currentProblem = document.getElementsByClassName("current-problem")[0];
+  if (currentProblem) {
+    currentProblem.scrollIntoView({ behavior: "smooth" });
+  }
+}
+
+window.addEventListener("load", () => makeSidebarInteractive());
+
+function toggleModule(m) {
+  let cls = m.className;
+  if (cls.includes("module-open")) {
+    cls = cls.replace("open", "close");
+  } else {
+    cls = cls.replace("close", "open");
+  }
+  m.className = cls;
 }
