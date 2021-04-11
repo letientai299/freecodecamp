@@ -24,6 +24,7 @@ body {
 }
 
 .header {
+  margin: 0.5em 0;
   padding: 0.5em 0.3em;
   display: flex;
   justify-content: space-between;
@@ -34,12 +35,21 @@ body {
   text-decoration: none;
 }
 
+.header a:focus,
+.header a:active {
+  background-color: cyan;
+}
+
 .disabled-link {
   visibility: hidden;
 }
 
 .module-close + .module-problems {
   display: none;
+}
+
+.module-in-searching + .module-problems {
+  display: inherit !important;
 }
 
 .module-name {
@@ -50,13 +60,18 @@ body {
   content: "▶ ";
 }
 
+.module-in-searching:before,
 .module-open:before {
-  content: "▼ ";
+  content: "▼ " !important;
 }
 
 .current-problem {
-  font-weight: bold;
-  border: 1px solid darkblue;
+  font-weight: bolder;
+  box-sizing: border-box;
+}
+
+aside p,
+aside li {
   box-sizing: border-box;
 }
 
@@ -67,12 +82,21 @@ aside {
   min-width: 15em;
 }
 
+aside p:focus,
+aside li:focus {
+  background-color: cyan;
+}
+
 aside ul {
   list-style: none;
 }
 
 aside a {
   text-decoration: none;
+}
+
+aside a:before {
+  content: "✻ ";
 }
 
 .doc-content {
@@ -146,7 +170,7 @@ aside a {
 .btn {
   font-size: 0.9em;
   display: block;
-  box-shadow: 1px 1px gray;
+  /*box-shadow: 1px 1px gray;*/
   border-radius: 0;
   color: white;
   background-color: #222;
@@ -165,8 +189,8 @@ aside a {
 }
 
 .btn:hover,
-btn:active,
-btn:focus {
+.btn:active,
+.btn:focus {
   box-shadow: 2px 2px 2px gray;
 }
 
@@ -195,6 +219,7 @@ a[href*="//"]
   max-height: 100%;
 }
 
+/*TODO: this doesn't look good on low height*/
 #shortcut-dialog {
   position: absolute;
   z-index: 10;
@@ -241,7 +266,7 @@ th[scope="row"] {
   background-color: #d7d9f2;
 }
 
-table {
+#shortcut-dialog table {
   width: 100%;
   border-collapse: collapse;
   border: 2px solid rgb(200, 200, 200);
@@ -258,6 +283,20 @@ table {
 
 .markdown-body * {
   line-height: 1.6em !important;
+}
+
+#searchbar {
+  width: 100%;
+  margin: 1em 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+#problem-search-input {
+  font-size: 1em;
+  margin: 0 1em;
+  -webkit-appearance: none;
 }
 
 @media (max-width: 767px) {

@@ -1,11 +1,17 @@
 <nav class="header">
-  <a id="back-link" href="{{backURL}}" class="{{backClass}}">Previous</a>
+  <a tabindex="0" id="back-link" href="{{backURL}}" class="{{backClass}}">
+    Previous</a
+  >
   <div class="header-center">
-    <a id="top-link" href="{{topURL}}">Top <kbd>T</kbd> | </a>
-    <a href="#" onclick="setShortcutDialogVisible(null, true)"
+    <a tabindex="0" id="top-link" href="{{topURL}}">Top <kbd>T</kbd> | </a>
+    <a tabindex="0" href="#" onclick="setShortcutDialogVisible(null, true)"
       >Shortcuts <kbd>? </kbd> |
     </a>
-    <a href="{{githubURL}}" target="_blank" rel="noopener">Edit on Github</a>
+    <a tabindex="0" href="{{githubURL}}" target="_blank" rel="noopener"
+      >Edit on Github</a
+    >
   </div>
-  <a id="next-link" href="{{nextURL}}" class="{{nextClass}}">Next</a>
+  <a tabindex="0" id="next-link" href="{{nextURL}}" class="{{nextClass}}">
+    Next</a
+  >
 </nav>

@@ -32,6 +32,7 @@ function prepareSidebar(modules, problem) {
   // create list of lists of solution links
   const lists = modulesToSidebarHTML(modules, problem);
   return `
+${searchbar}
 <ul>
 ${lists}
 </ul>`.trim();
@@ -43,7 +44,7 @@ const renderProblemForSideBar = (problems, current = null) => {
       const slug = p.dir.replace("src/", !current ? "./" : "./../../");
       const cls =
         current && p.path === current.path ? `class="current-problem"` : "";
-      return `<li ${cls}><a href="${slug}">${p.title}</a></li>`.trim();
+      return `<li tabindex="0" ${cls}><a href="${slug}">${p.title}</a></li>`.trim();
     })
     .join("\n");
 };
@@ -55,7 +56,7 @@ function modulesToSidebarHTML(modules, problem) {
       const cls = m.problems.includes(problem) ? "module-open" : "module-close";
       return `
 <li>
-<p class="module-name ${cls}">${m.name}</p>
+<p tabindex="0" class="module-name ${cls}">${m.name}</p>
 <ul class="module-problems">
 ${renderProblemForSideBar(m.problems, problem)}
 </ul>
@@ -127,6 +128,10 @@ fs.readdirSync(PUBLIC).forEach((f) => {
   // minify it
   fs.copyFileSync(path.join(PUBLIC, f), path.join(DIST, f));
 });
+
+const searchbar = fs
+  .readFileSync(path.join(__dirname, "../templates/_search.tpl.html"))
+  .toString();
 
 const raw = fs.readFileSync(path.join(SRC, "index.json"));
 const modules = JSON.parse(raw);
