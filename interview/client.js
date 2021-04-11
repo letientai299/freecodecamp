@@ -244,10 +244,40 @@ function makeSidebarInteractive() {
     m.addEventListener("click", () => toggleModule(m));
   }
 
+  // scroll to current problem
   let currentProblem = document.getElementsByClassName("current-problem")[0];
   if (currentProblem) {
     currentProblem.scrollIntoView({ behavior: "smooth" });
   }
+
+  const searchTargets = document.querySelectorAll("aside p, aside a");
+  searchTargets.forEach((t) => {
+    let clickable = t;
+    if (t.tagName.toLowerCase() === "a") {
+      clickable = t.closest("li");
+    }
+
+    clickable.addEventListener("keydown", (ev) => {
+      if (ev.key === "Enter") {
+        t.click();
+        console.log("clicked");
+      }
+    });
+
+    t.preparedText = fuzzysort.prepare(t.innerText.toLowerCase());
+  });
+
+  const targets = [...searchTargets];
+
+  const inputBox = document.getElementById("problem-search-input");
+  inputBox.addEventListener("change", () =>
+    handleSearchInputChange(inputBox, targets)
+  );
+  inputBox.addEventListener(
+    "input",
+    throttle(() => handleSearchInputChange(inputBox, targets), 1000)
+  );
+  handleSearchInputChange(inputBox, targets);
 }
 
 window.addEventListener("load", () => makeSidebarInteractive());
@@ -260,4 +290,106 @@ function toggleModule(m) {
     cls = cls.replace("close", "open");
   }
   m.className = cls;
+}
+
+// Returns a function, that, when invoked, will only be triggered at most once
+// during a given window of time. Normally, the throttled function will run
+// as much as it can, without ever going more than once per `wait` duration;
+// but if you'd like to disable the execution on the leading edge, pass
+// `{leading: false}`. To disable execution on the trailing edge, ditto.
+function throttle(func, wait, options) {
+  let context, args, result;
+  let timeout = null;
+  let previous = 0;
+  if (!options) options = {};
+  let later = function () {
+    previous = options.leading === false ? 0 : Date.now();
+    timeout = null;
+    result = func.apply(context, args);
+    if (!timeout) context = args = null;
+  };
+  return function () {
+    let now = Date.now();
+    if (!previous && options.leading === false) previous = now;
+    let remaining = wait - (now - previous);
+    context = this;
+    args = arguments;
+    if (remaining <= 0 || remaining > wait) {
+      if (timeout) {
+        clearTimeout(timeout);
+        timeout = null;
+      }
+      previous = now;
+      result = func.apply(context, args);
+      if (!timeout) context = args = null;
+    } else if (!timeout && options.trailing !== false) {
+      timeout = setTimeout(later, remaining);
+    }
+    return result;
+  };
+}
+
+function hideSidebarItem(e) {
+  e.setAttribute("style", "display:none");
+  if (e.tagName.toLowerCase() === "a") {
+    e = e.closest("li");
+  }
+  e.setAttribute("tabindex", "-1");
+}
+
+function showSidebarItem(e) {
+  e.setAttribute("style", "display:inherit");
+  if (e.tagName.toLowerCase() !== "a") {
+    e.setattribute("tabindex", "0");
+  }
+
+  let li = e.closest("li");
+  li.setAttribute("tabindex", "0");
+  const m = li
+    .closest("ul")
+    .closest("li")
+    .getElementsByClassName("module-name")[0];
+  m.setAttribute("style", "display:inherit");
+}
+
+function handleSearchInputChange(input, targets) {
+  const s = input.value.toLowerCase().trim();
+
+  if (!s) {
+    [...document.getElementsByClassName("module-name")].forEach((e) => {
+      let cls = e.className;
+      e.className = cls.replace("module-in-searching", "");
+    });
+
+    targets.forEach((e) => {
+      e.setAttribute("style", "display:block");
+      e.setAttribute("tabindex", "0");
+    });
+    return;
+  }
+
+  [...document.getElementsByClassName("module-name")].forEach((e) => {
+    let cls = e.className.split(" ");
+    if (!cls.includes("module-in-searching")) {
+      cls.push("module-in-searching");
+      e.className = cls.join(" ");
+    }
+  });
+
+  let res = new Set(
+    fuzzysort
+      .go(s, targets, {
+        key: "preparedText",
+        allowTypo: false,
+      })
+      .map((r) => r.obj)
+  );
+
+  targets.forEach((e) => {
+    if (res.has(e)) {
+      showSidebarItem(e);
+    } else {
+      hideSidebarItem(e);
+    }
+  });
 }
