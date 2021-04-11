@@ -1,5 +1,7 @@
 const fs = require("fs");
 const path = require("path");
+const GITHUB_PREFIX =
+  "https://github.com/letientai299/freecodecamp/blob/master/interview";
 
 const hljs = require("highlight.js");
 const marked = require("marked");
@@ -155,11 +157,7 @@ function renderCode(back, p, next) {
     next = parents + next;
   }
 
-  const header = renderHeader(
-    back,
-    next,
-    "" // TODO: github
-  );
+  const header = renderHeader(back, next, `${GITHUB_PREFIX}/src/${p.path}`);
 
   const fccRaw = fs.readFileSync(path.join(SRC, p.path, "fcc.json")).toString();
   const fccJSON = JSON.parse(fccRaw);
@@ -191,7 +189,7 @@ function renderCode(back, p, next) {
 const docHeader = renderHeader(
   "", // there's no back link for home
   sidebar.paths[0].path,
-  "", // TODO github link
+  `${GITHUB_PREFIX}/readme.md`,
   true
 );
 renderDoc(sidebar.html, docHeader);
