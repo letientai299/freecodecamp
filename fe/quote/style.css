@@ -1,0 +1,64 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+#quote-box {
+  margin: auto;
+  text-align: center;
+}
+
+#text,
+#text:before,
+#text:after {
+  margin: auto;
+  max-width: 80%;
+  font-size: 3rem;
+  font-style: italic;
+  font-weight: lighter;
+}
+
+#text:before {
+  content: "“";
+}
+
+#text:after {
+  content: "”";
+}
+
+#author {
+  font-size: 1.5rem;
+  font-weight: bolder;
+}
+
+#buttons {
+  margin: auto;
+}
+
+#buttons > a {
+  padding: 0 20px 0 20px;
+}
+
+path {
+  fill: #da4567;
+}
+
+#progress {
+  height: 2px;
+  margin: auto;
+  margin-bottom: 20px;
+  max-width: 80%;
+  background: green;
+  animation-name: progressing;
+}
+
+@keyframes progressing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 80%;
+  }
+}

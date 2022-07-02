@@ -254,6 +254,16 @@ This doesn't have a cert, but I still do it to understand more about JS. See
 ### Front End Development Libraries
 
 - [Course link](https://www.freecodecamp.org/learn/front-end-libraries/)
+- Cert: TODO
+- Time:
+
+| Task                                         | Site                           |
+| -------------------------------------------- | ------------------------------ |
+| [Build a Random Quote Machine][fcc_fe_quote] | [./fe/quote](./fe/quote)       |
+| [Build a Markdown Previewer][fcc_fe_md]      | [./fe/markdown](./fe/markdown) |
+| [Build a Drum Machine][fcc_fe_drum]          | [./fe/drum](./fe/drum)         |
+| [Build a JavaScript Calculator][fcc_fe_calc] | [./fe/calc](./fe/calc)         |
+| [Build a 25 + 5 Clock][fcc_fe_clock]         | [./fe/clock](./fe/clock)       |
 
 ## Local setup
 
@@ -353,3 +363,13 @@ This doesn't have a cert, but I still do it to understand more about JS. See
   https://github.com/letientai299/freecodecamp/blob/master/infosec/portscan/port_scanner.py
 [fcc_infosec_pw_solution]:
   https://github.com/letientai299/freecodecamp/blob/master/infosec/pwcracker/password_cracker.py
+[fcc_fe_quote]:
+  https://www.freecodecamp.org/learn/front-end-development-libraries/front-end-development-libraries-projects/build-a-random-quote-machine
+[fcc_fe_md]:
+  https://www.freecodecamp.org/learn/front-end-development-libraries/front-end-development-libraries-projects/build-a-markdown-previewer
+[fcc_fe_drum]:
+  https://www.freecodecamp.org/learn/front-end-development-libraries/front-end-development-libraries-projects/build-a-markdown-previewer
+[fcc_fe_calc]:
+  https://www.freecodecamp.org/learn/front-end-development-libraries/front-end-development-libraries-projects/build-a-javascript-calculator
+[fcc_fe_clock]:
+  https://www.freecodecamp.org/learn/front-end-development-libraries/front-end-development-libraries-projects/build-a-25--5-clock
