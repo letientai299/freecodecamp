@@ -257,13 +257,21 @@ This doesn't have a cert, but I still do it to understand more about JS. See
 - Cert: TODO
 - Time:
 
-| Task                                         | Site                           |
-| -------------------------------------------- | ------------------------------ |
-| [Build a Random Quote Machine][fcc_fe_quote] | [./fe/quote](./fe/quote)       |
-| [Build a Markdown Previewer][fcc_fe_md]      | [./fe/markdown](./fe/markdown) |
-| [Build a Drum Machine][fcc_fe_drum]          | [./fe/drum](./fe/drum)         |
-| [Build a JavaScript Calculator][fcc_fe_calc] | [./fe/calc](./fe/calc)         |
-| [Build a 25 + 5 Clock][fcc_fe_clock]         | [./fe/clock](./fe/clock)       |
+| Task                                         | Site                           | Time |
+| -------------------------------------------- | ------------------------------ | ---- |
+| [Build a Random Quote Machine][fcc_fe_quote] | [./fe/quote](./fe/quote)       | 4h   |
+| [Build a Markdown Previewer][fcc_fe_md]      | [./fe/markdown](./fe/markdown) |      |
+| [Build a Drum Machine][fcc_fe_drum]          | [./fe/drum](./fe/drum)         |      |
+| [Build a JavaScript Calculator][fcc_fe_calc] | [./fe/calc](./fe/calc)         |      |
+| [Build a 25 + 5 Clock][fcc_fe_clock]         | [./fe/clock](./fe/clock)       |      |
+
+Note:
+
+- I tried to use a minimal setup for these exercises, which load the UI
+  libraries (React, Vue) directly in the browser instead of using typical NodeJS
+  build process.
+- Learned about various `<script>` types: `module`,`babel/text`, `importmap`
+  (doesn't work natively on Firefox and Safari at the moment)
 
 ## Local setup
 
