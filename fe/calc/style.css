@@ -1,0 +1,98 @@
+:root {
+  --btn-size: 2em;
+  --btn-margin: 1px;
+  --font-size: 3em;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  line-height: var(--font-size);
+  background-color: grey;
+}
+
+main > div {
+  background: white;
+}
+
+@font-face {
+  font-family: "CursedTimerUlil";
+  src: url(./CursedTimerUlil-Aznm.ttf) format("truetype");
+}
+
+#calculator * {
+  font-family: "CursedTimerUlil", "Courier New", Courier, monospace;
+}
+
+#calculator {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  padding: 2em;
+  border-radius: 2em;
+  box-shadow: 0 0 0 4px #353535, 0 0 0 5px #3e3e3e,
+    inset 0 0 10px rgba(0, 0, 0, 1), 0 5px 20px rgba(0, 0, 0, 0.5),
+    inset 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn {
+  padding: var(--btn-margin);
+  margin: var(--btn-margin);
+  width: var(--btn-size);
+  height: var(--btn-size);
+  font-size: 3em;
+  border-radius: 10px;
+}
+
+#zero {
+  grid-column: 2/4;
+  width: calc(2 * var(--btn-size) * 2 * var(--btn-margin));
+}
+
+#clear {
+  grid-column: 5/6;
+  grid-row: 3/7;
+  height: calc(4 * var(--btn-size) + 11 * var(--btn-margin));
+}
+
+#equals {
+  grid-column: 1/6;
+  width: calc(5 * var(--btn-size) + 12 * var(--btn-margin));
+}
+
+#note * {
+  font-family: "Courier New", Courier, monospace;
+}
+
+#note {
+  line-height: 1rem;
+  font-family: "Courier New", Courier, monospace;
+  width: 0;
+  min-width: 100%;
+  grid-row: 8;
+  grid-column: 1/6;
+}
+
+.input,
+.output {
+  border-radius: 20px;
+  margin: var(--btn-margin);
+  padding: var(--btn-margin);
+  text-align: right;
+  align-content: center;
+  font-size: 3em;
+  grid-column: 1/6;
+  width: calc(5 * var(--btn-size) + 10 * var(--btn-margin));
+  height: calc(var(--btn-size) - 2 * var(--btn-margin));
+  line-height: calc(var(--btn-size) - 2 * var(--btn-margin));
+}
+
+.output {
+  background-color: darkgray;
+  color: white;
+}

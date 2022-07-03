@@ -262,7 +262,7 @@ This doesn't have a cert, but I still do it to understand more about JS. See
 | [Build a Random Quote Machine][fcc_fe_quote] | [./fe/quote](./fe/quote)       | 4h   | React  |
 | [Build a Markdown Previewer][fcc_fe_md]      | [./fe/markdown](./fe/markdown) | 4h   | Vue    |
 | [Build a Drum Machine][fcc_fe_drum]          | [./fe/drum](./fe/drum)         | 3h   | Svelte |
-| [Build a JavaScript Calculator][fcc_fe_calc] | [./fe/calc](./fe/calc)         |      |        |
+| [Build a JavaScript Calculator][fcc_fe_calc] | [./fe/calc](./fe/calc)         | 3h   | (none) |
 | [Build a 25 + 5 Clock][fcc_fe_clock]         | [./fe/clock](./fe/clock)       |      |        |
 
 Note:
