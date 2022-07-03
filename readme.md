@@ -4,11 +4,11 @@
 [![Deploy Heroku](https://github.com/letientai299/freecodecamp/actions/workflows/deploy-heroku.yml/badge.svg)](https://github.com/letientai299/freecodecamp/actions/workflows/deploy-heroku.yml)
 [![GitHub stars](https://img.shields.io/github/stars/letientai299/freecodecamp?style=social&label=Star&maxAge=2592000)](https://GitHub.com/letientai299/freecodecamp/stargazers/)
 
-This repo contains my final projects solutions for web-related cources I've done
+This repo contains my final projects solutions for web-related courses I've done
 on [freeCodeCamp][fcc] in 2021.
 
 - [Visit here to see actual web pages.](https://letientai.io/freecodecamp/)
-- [See my timeline on freecodecamp here](https://www.freecodecamp.org/letientai299):
+- [See my timeline on freeCodeCamp here](https://www.freecodecamp.org/letientai299):
   start in 2021/03/11, finish in TBD
 - If you want to play around with this repo locally, see
   [local setup guide](#local-setup)
@@ -24,7 +24,7 @@ on [freeCodeCamp][fcc] in 2021.
   - [Scientific Computing with Python](#scientific-computing-with-python)
   - [Data Analysis with Python](#data-analysis-with-python)
   - [APIs and Microservices](#apis-and-microservices)
-  - [Quality assurange](#quality-assurange)
+  - [Quality assurance](#quality-assurance)
   - [Information Security](#information-security)
   - [Machine Learning with Python](#machine-learning-with-python)
   - [Coding Interview Prep](#coding-interview-prep)
@@ -42,14 +42,14 @@ on [freeCodeCamp][fcc] in 2021.
 
 ### JavaScript Algorithms and Data Structures
 
-- [Cource link][fcc_algo]
+- [Course link][fcc_algo]
 - [Cert](https://www.freecodecamp.org/certification/letientai299/javascript-algorithms-and-data-structures)
 - Total time: 10h
 
 This is easy if since I already have
-[some experience with leetcode](https://github.com/letientai299/leetcode), just
+[some experience with LeetCode](https://github.com/letientai299/leetcode), just
 need to get a bit more familiar with data structure in JS. Thankfully, JS has
-strong support for functinal programming.
+strong support for functional programming.
 
 ### Responsive Web Design
 
@@ -107,7 +107,7 @@ more about JS performance. The code could also be structured better.
 
 | Task                                         | Code (on Github)                                                                                                     |
 | -------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| [Arithemetic Formater][fcc_py_fmt]           | [arithmetic_arranger.py](https://github.com/letientai299/freecodecamp/blob/master/python/fmt/arithmetic_arranger.py) |
+| [Arithmetic Formatter][fcc_py_fmt]           | [arithmetic_arranger.py](https://github.com/letientai299/freecodecamp/blob/master/python/fmt/arithmetic_arranger.py) |
 | [Time Calculator][fcc_py_time]               | [time_calculator.py](https://github.com/letientai299/freecodecamp/blob/master/python/time/time_calculator.py)        |
 | [Budget App][fcc_py_budget]                  | [budget.py](https://github.com/letientai299/freecodecamp/blob/master/python/budget/budget.py)                        |
 | [Polygon Area Calculator][fcc_py_area]       | [shape_calculator.py](https://github.com/letientai299/freecodecamp/blob/master/python/area/shape_calculator.py)      |
@@ -158,9 +158,9 @@ OK inefficient workflows.
 This and other courses need a backend require more setup. So I build
 [a small Express app to serve all of them on Heroku](https://fcc-box.herokuapp.com/).
 
-In order to do that, I had to modify some files that're suppose to not modified,
+In order to do that, I had to modify some files that's suppose to not modified,
 remove the `app = express()` and expose `express.Router()`. See the main app
-code and some custom middlewares in
+code and some custom middleware in
 [heroku folder](https://github.com/letientai299/freecodecamp/tree/master/heroku)
 
 The setup works quite well for passing the courses quickly, but I'm not happy
@@ -176,7 +176,7 @@ know any good resources or see any of my mistakes, I'm eager to learn.
 | [Exercise Tracker][fcc_ms_exercise]                 | [./microservices/tracker](./microservices/tracker)     | [tracker](https://fcc-box.herokuapp.com/ms/tracker/)     |
 | [File Metadata Microservice][fcc_ms_file]           | [./microservices/file](./microservices/file)           | [file](https://fcc-box.herokuapp.com/ms/file/)           |
 
-### Quality assurange
+### Quality assurance
 
 - [Course link][fcc_qa]
 - [Cert](https://www.freecodecamp.org/certification/letientai299/quality-assurance-v7)
@@ -196,7 +196,7 @@ test, but I really hate this combination:
   tests.
 
 As a result of such bad feelings, I have to do my best to get rid of those
-projects as quicly as possible, including writing dummy tests in some of below
+projects as quickly as possible, including writing dummy tests in some of below
 projects to pass the FCC tests. Sorry.
 
 | Task                                             | Note                               | Site                                                      |
@@ -257,19 +257,21 @@ This doesn't have a cert, but I still do it to understand more about JS. See
 - Cert: TODO
 - Time:
 
-| Task                                         | Site                           | Time |
-| -------------------------------------------- | ------------------------------ | ---- |
-| [Build a Random Quote Machine][fcc_fe_quote] | [./fe/quote](./fe/quote)       | 4h   |
-| [Build a Markdown Previewer][fcc_fe_md]      | [./fe/markdown](./fe/markdown) |      |
-| [Build a Drum Machine][fcc_fe_drum]          | [./fe/drum](./fe/drum)         |      |
-| [Build a JavaScript Calculator][fcc_fe_calc] | [./fe/calc](./fe/calc)         |      |
-| [Build a 25 + 5 Clock][fcc_fe_clock]         | [./fe/clock](./fe/clock)       |      |
+| Task                                         | Site                           | Time | Lib    |
+| -------------------------------------------- | ------------------------------ | ---- | ------ |
+| [Build a Random Quote Machine][fcc_fe_quote] | [./fe/quote](./fe/quote)       | 4h   | React  |
+| [Build a Markdown Previewer][fcc_fe_md]      | [./fe/markdown](./fe/markdown) | 4h   | Vue    |
+| [Build a Drum Machine][fcc_fe_drum]          | [./fe/drum](./fe/drum)         | 3h   | Svelte |
+| [Build a JavaScript Calculator][fcc_fe_calc] | [./fe/calc](./fe/calc)         |      |        |
+| [Build a 25 + 5 Clock][fcc_fe_clock]         | [./fe/clock](./fe/clock)       |      |        |
 
 Note:
 
 - I tried to use a minimal setup for these exercises, which load the UI
-  libraries (React, Vue) directly in the browser instead of using typical NodeJS
-  build process.
+  libraries (React, Vue, ...) directly in the browser instead of using typical
+  NodeJS build process, because I don't want to pull thousands of modules and
+  also to challenge myself.
+
 - Learned about various `<script>` types: `module`,`babel/text`, `importmap`
   (doesn't work natively on Firefox and Safari at the moment)
 
