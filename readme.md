@@ -9,9 +9,14 @@ on [freeCodeCamp][fcc] in 2021.
 
 - [Visit here to see actual web pages.](https://letientai.io/freecodecamp/)
 - [See my timeline on freeCodeCamp here](https://www.freecodecamp.org/letientai299):
-  start in 2021/03/11, finish in TBD
-- If you want to play around with this repo locally, see
-  [local setup guide](#local-setup)
+  start in 2021/03/11, finish in 2022/07/04. There is a big gap in this journey,
+  after I finished all the courses listed below except the "Front End
+  Development Libraries". It's because after gone through that course, I still
+  feel uncomfortable developing Front End. Too many libs, frameworks, tools,
+  concepts.
+- If you want to play around with this repo locally, fork it, inspect the code,
+  especially the shell scripts, `Makefile` and `.github` workflows. The repo
+  should be runable after cloning via `make serve`
 
 ## Table of contents
 
@@ -32,11 +37,6 @@ on [freeCodeCamp][fcc] in 2021.
 - [Local setup](#local-setup)
 
 <!-- tocstop -->
-
-> TODO:
->
-> - get all the certs
-> - make header clickable and generate anchor links
 
 ## Course
 
@@ -254,8 +254,8 @@ This doesn't have a cert, but I still do it to understand more about JS. See
 ### Front End Development Libraries
 
 - [Course link](https://www.freecodecamp.org/learn/front-end-libraries/)
-- Cert: TODO
-- Time:
+- [Cert](https://freecodecamp.org/certification/letientai299/front-end-development-libraries)
+- Time: more than 20h, span through 1 year due to procrastination
 
 | Task                                         | Site                           | Time | Lib    |
 | -------------------------------------------- | ------------------------------ | ---- | ------ |
@@ -283,10 +283,6 @@ Note:
   failing, there's also funny error message like
   `Value in element with id of "break-length" is less than 1.: expected '5' to equal '1'`).
   I spent too much time try to work around their test, but eventually gave up.
-
-## Local setup
-
-> TODO
 
 <!-- ref -->
 
