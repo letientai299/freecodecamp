@@ -263,7 +263,7 @@ This doesn't have a cert, but I still do it to understand more about JS. See
 | [Build a Markdown Previewer][fcc_fe_md]      | [./fe/markdown](./fe/markdown) | 4h   | Vue    |
 | [Build a Drum Machine][fcc_fe_drum]          | [./fe/drum](./fe/drum)         | 3h   | Svelte |
 | [Build a JavaScript Calculator][fcc_fe_calc] | [./fe/calc](./fe/calc)         | 3h   | (none) |
-| [Build a 25 + 5 Clock][fcc_fe_clock]         | [./fe/clock](./fe/clock)       |      |        |
+| [Build a 25 + 5 Clock][fcc_fe_clock]         | [./fe/clock](./fe/clock)       | 4h   | React  |
 
 Note:
 
@@ -274,6 +274,15 @@ Note:
 
 - Learned about various `<script>` types: `module`,`babel/text`, `importmap`
   (doesn't work natively on Firefox and Safari at the moment)
+
+- I actually didn't pass all the test for the last project (25 + 5 clock),
+  although my implementation should cover all user stories. Their requirements
+  are incomplete (what happens when we click `*-increment`, `*-decrement`
+  buttons during timer running), and their tests are faulty (clicking `reset`
+  button in my solution perfectly reset all the labels and values, but it keeps
+  failing, there's also funny error message like
+  `Value in element with id of "break-length" is less than 1.: expected '5' to equal '1'`).
+  I spent too much time try to work around their test, but eventually gave up.
 
 ## Local setup
 
