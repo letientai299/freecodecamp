@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/vue@3"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.0.17/marked.min.js"
+      integrity="sha512-vSD33WvMJMZwnOWxigzY4MmmUnGqY4APr91CZ4h3UTJ29AmZ8vW3WOwKycGptx7ow1f2SDYKLchv/qKnYHWI+w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/default.min.css"
+    />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./github-markdown-light.css" />
+
+    <title>Markdown Previewer</title>
+  </head>
+  <body>
+    <div id="app">
+      <textarea name="Editor" id="editor" v-model="text"></textarea>
+      <div id="preview" class="markdown-body" v-html="renderMD()"></div>
+    </div>
+
+    <textarea style="visibility: hidden" id="example">
+# React Markdown Previewer!
+
+![freeCodeCamp Logo](https://freecodecamp.org/favicon-32x32.png)
+
+## About
+
+This is the solution for [Build a Markdown Previewer][fcc] exercice, build using:
+
+- [Vue 3](https://vuejs.org)
+- [marked.js](https://marked.js.org)
+- [highlight.js](https://highlightjs.org/)
+
+[fcc]: https://www.freecodecamp.org/learn/front-end-development-libraries/front-end-development-libraries-projects/build-a-markdown-previewer
+
+## Note
+
+> This section is written both for document my progress and for satisfy the FCC tests.
+
+Total time for this project is around 4h. However, all the test cases was passed around 2h. I spent the remaining time to try (and failed) to integrate some code editor such as Ace, Monator and CodeMirror to make this `textarea` works better.
+
+FCC test suit **doens't work well with Vue `v-mode`**, hence, I need to check their test code and use below cheat to _make it happies._
+
+```js
+mounted() {
+  //...
+  // hack to make FCC test work!
+  const editor = document.getElementById("editor");
+  const preview = document.getElementById("preview");
+  const dispatch = editor.dispatchEvent;
+  editor.dispatchEvent = (ev) => {
+    if (ev.type == "keyup") {
+      ev.preventDefault();
+      this.text = editor.value;
+      preview.innerHTML = this.renderMD();
+      return;
+    }
+
+    dispatch(ev);
+  };
+},
+```
+    </textarea>
+
+    <script type="module" src="./index.js"></script>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+  </body>
+</html>
